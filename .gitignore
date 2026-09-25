@@ -1,0 +1,23 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Python & environments
+.venv/
+__pycache__/
+*.pyc
+
+# Old deliverease / external assets
+Lumina-main/
+coolvetica (1)/
+*.gif
+*.db
+scratch/
+.vscode/
+server.py
+app.css
+app.js
+space_viewer.html
+supabase-config.js
+supabase_schema.sql
+requirements.txt
