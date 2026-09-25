@@ -29,6 +29,9 @@ html_template = """<!DOCTYPE html>
       --correct-border: #10b981;
       --wrong-bg: #451010;
       --wrong-border: #ef4444;
+      --timer-color: #f59e0b;
+      --timer-bg: rgba(245, 158, 11, 0.12);
+      --timer-border: rgba(245, 158, 11, 0.35);
     }
 
     body {
@@ -67,6 +70,8 @@ html_template = """<!DOCTYPE html>
       border-bottom: 1px solid var(--border-color);
       font-size: 0.92rem;
       font-weight: 600;
+      gap: 0.5rem;
+      flex-wrap: wrap;
     }
 
     .mode-badge {
@@ -79,10 +84,37 @@ html_template = """<!DOCTYPE html>
       border-radius: 2rem;
       font-size: 0.8rem;
       border: 1px solid rgba(56, 189, 248, 0.3);
-      max-width: 250px;
+      max-width: 220px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    /* Stopwatch Badge */
+    .stopwatch-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--timer-bg);
+      color: var(--timer-color);
+      border: 1px solid var(--timer-border);
+      padding: 0.35rem 0.8rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.04em;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.15);
+      transition: all 0.2s ease;
+    }
+
+    .stopwatch-badge.running {
+      animation: timerPulse 2s infinite ease-in-out;
+    }
+
+    @keyframes timerPulse {
+      0%, 100% { border-color: rgba(245, 158, 11, 0.3); }
+      50% { border-color: rgba(245, 158, 11, 0.7); box-shadow: 0 0 14px rgba(245, 158, 11, 0.3); }
     }
 
     .live-score {
@@ -93,6 +125,7 @@ html_template = """<!DOCTYPE html>
       border-radius: 2rem;
       font-size: 0.82rem;
       font-weight: 700;
+      white-space: nowrap;
     }
 
     /* ── Progress Bar ─────────────────────────────────────── */
@@ -348,6 +381,11 @@ html_template = """<!DOCTYPE html>
       transform: translateY(-2px);
     }
 
+    .mode-card.mock-featured {
+      border-color: #f59e0b;
+      background: linear-gradient(145deg, #17233f, #2e2311);
+    }
+
     .mode-card.featured {
       border-color: #10b981;
       background: linear-gradient(145deg, #17233f, #132e3b);
@@ -382,6 +420,12 @@ html_template = """<!DOCTYPE html>
       font-size: 0.8rem;
       font-weight: 700;
       white-space: nowrap;
+    }
+
+    .mode-card.mock-featured .mode-badge-count {
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
     }
 
     .mode-card.featured .mode-badge-count {
@@ -439,6 +483,20 @@ html_template = """<!DOCTYPE html>
     .results-pct {
       font-size: 1.25rem;
       color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    .time-stats-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--timer-bg);
+      border: 1px solid var(--timer-border);
+      color: #fbbf24;
+      padding: 0.5rem 1.25rem;
+      border-radius: 2rem;
+      font-size: 0.92rem;
       font-weight: 600;
       margin-bottom: 2rem;
     }
@@ -539,7 +597,7 @@ html_template = """<!DOCTYPE html>
 const masterQuestions = __INJECTED_MASTER_QUESTIONS__;
 
 // ── Application State ──────────────────────────────────────────
-let currentMode = "website_official"; 
+let currentMode = "mock"; 
 let currentTopic = "";
 let activeQuestions = [];
 let currentIndex = 0;
@@ -547,22 +605,78 @@ let score = 0;
 let answered = false;
 let userAnswers = [];
 
+// ── Stopwatch State ────────────────────────────────────────────
+let timerInterval = null;
+let timerStartTime = null;
+let elapsedSeconds = 0;
+
 const app = document.getElementById("quizCard");
 const letters = ["A", "B", "C", "D"];
 
+// ── Stopwatch Helper Functions ─────────────────────────────────
+function startStopwatch() {
+  stopStopwatch();
+  elapsedSeconds = 0;
+  timerStartTime = Date.now();
+  timerInterval = setInterval(() => {
+    elapsedSeconds = Math.floor((Date.now() - timerStartTime) / 1000);
+    updateStopwatchUI();
+  }, 1000);
+}
+
+function stopStopwatch() {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+  }
+}
+
+function formatStopwatch(sec) {
+  const m = Math.floor(sec / 60).toString().padStart(2, "0");
+  const s = (sec % 60).toString().padStart(2, "0");
+  return `${m}:${s}`;
+}
+
+function updateStopwatchUI() {
+  const el = document.getElementById("stopwatchDisplay");
+  if (el) {
+    el.textContent = formatStopwatch(elapsedSeconds);
+  }
+}
+
+// ── Helper: Random Array Sampling (Fisher-Yates) ───────────────
+function getRandomSample(array, count) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr.slice(0, Math.min(count, arr.length));
+}
+
 // ── Screen: Mode Selection ─────────────────────────────────────
 function renderStartScreen() {
+  stopStopwatch();
   const categories = [...new Set(masterQuestions.map(q => q.category))].sort();
 
   app.innerHTML = `
     <div class="start-screen">
-      <div style="font-size:2.5rem; margin-bottom: 0.5rem;">🌐 🌿 📝</div>
+      <div style="font-size:2.5rem; margin-bottom: 0.5rem;">⏱️ 🌐 🌿</div>
       <h1>EVS CAT-II Revision & Practice Bank</h1>
       <p class="start-subtitle">
         Powered by questions and syllabus topics from <strong style="color:var(--accent);">masterdooom.github.io/evs</strong> + High-Yield PDF exam pack.
       </p>
 
       <div class="mode-cards">
+        <!-- Mock Test Mode Card -->
+        <div class="mode-card mock-featured" onclick="startQuiz('mock')">
+          <div>
+            <h3>⏱️ Timed Mock Test (30 Random Questions)</h3>
+            <p>Generates 30 randomized questions sampled across the entire syllabus with live stopwatch tracking on top.</p>
+          </div>
+          <span class="mode-badge-count">⏱️ 30 Random · Timed</span>
+        </div>
+
         <div class="mode-card featured" onclick="startQuiz('website_official')">
           <div>
             <h3>🌐 Masterdooom Website Official Test</h3>
@@ -609,8 +723,8 @@ function renderStartScreen() {
         </div>
       </div>
 
-      <button class="btn" style="width:100%; justify-content:center; font-size:1.05rem;" onclick="startQuiz('website_official')">
-        🚀 Start Masterdooom 63 MCQs Test
+      <button class="btn" style="width:100%; justify-content:center; font-size:1.05rem;" onclick="startQuiz('mock')">
+        🚀 Launch Timed Mock Test (30 Questions)
       </button>
     </div>
   `;
@@ -627,7 +741,9 @@ function startTopicQuiz() {
 
 function startQuiz(mode) {
   currentMode = mode;
-  if (mode === "website_official") {
+  if (mode === "mock") {
+    activeQuestions = getRandomSample(masterQuestions, 30);
+  } else if (mode === "website_official") {
     activeQuestions = masterQuestions.filter(q => q.isWebsiteOfficial63);
   } else if (mode === "website_all") {
     activeQuestions = masterQuestions.filter(q => q.isWebsiteGenerated);
@@ -644,6 +760,7 @@ function initQuizState() {
   score = 0;
   userAnswers = [];
   answered = false;
+  startStopwatch();
   renderQuestion();
 }
 
@@ -653,8 +770,9 @@ function renderQuestion() {
   const q = activeQuestions[currentIndex];
   const progressPct = ((currentIndex) / activeQuestions.length) * 100;
   
-  let modeLabel = "Masterdooom 63";
-  if (currentMode === "website_all") modeLabel = "26 Topics Bank";
+  let modeLabel = "Timed Mock Test";
+  if (currentMode === "website_official") modeLabel = "Masterdooom 63";
+  else if (currentMode === "website_all") modeLabel = "26 Topics Bank";
   else if (currentMode === "top30") modeLabel = "Top 30 Pack";
   else if (currentMode === "all") modeLabel = "Mega Bank (259)";
   else if (currentMode === "topic") modeLabel = currentTopic;
@@ -662,6 +780,9 @@ function renderQuestion() {
   app.innerHTML = `
     <div class="quiz-nav-bar">
       <span class="mode-badge" title="${modeLabel}">🎯 ${modeLabel}</span>
+      <span class="stopwatch-badge running" title="Elapsed Time">
+        ⏱️ <span id="stopwatchDisplay">${formatStopwatch(elapsedSeconds)}</span>
+      </span>
       <span>Question ${currentIndex + 1} of ${activeQuestions.length}</span>
       <span class="live-score">Score: ${score} / ${currentIndex}</span>
     </div>
@@ -763,8 +884,11 @@ function handleSelection(btn) {
 
 // ── Screen: Results Breakdown ──────────────────────────────────
 function renderResults() {
+  stopStopwatch();
   const total = activeQuestions.length;
   const pct = Math.round((score / total) * 100);
+  const timeStr = formatStopwatch(elapsedSeconds);
+  const avgSecPerQ = total > 0 ? Math.round(elapsedSeconds / total) : 0;
 
   let emoji = "🏆";
   let verdict = "Outstanding Mastery!";
@@ -784,7 +908,8 @@ function renderResults() {
 
   app.innerHTML = `
     <div class="quiz-nav-bar">
-      <span>Session Complete</span>
+      <span>Mock Session Complete</span>
+      <span class="stopwatch-badge">⏱️ Time: ${timeStr}</span>
       <span class="live-score">${score} / ${total} Correct</span>
     </div>
     <div class="progress-track">
@@ -797,8 +922,14 @@ function renderResults() {
       <div class="results-score-big">${score} / ${total}</div>
       <div class="results-pct">${pct}% Accuracy</div>
 
+      <div class="time-stats-pill">
+        <span>⏱️ Total Time: <strong>${timeStr}</strong></span>
+        <span>•</span>
+        <span>⚡ Pace: <strong>${avgSecPerQ}s</strong> / question</span>
+      </div>
+
       <div style="display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap; margin-bottom: 2rem;">
-        <button class="btn" onclick="initQuizState()">🔄 Retake Session</button>
+        <button class="btn" onclick="startQuiz('mock')">🔄 Start Another 30-Q Mock Test</button>
         <button class="btn btn-secondary" onclick="renderStartScreen()">🏠 Switch Topic/Mode</button>
       </div>
 
@@ -851,4 +982,4 @@ html_final = html_template.replace("__INJECTED_MASTER_QUESTIONS__", json_str)
 with open("/Users/pran/devjams26/index.html", "w") as f:
     f.write(html_final)
 
-print("Updated /Users/pran/devjams26/index.html with all website and PDF questions.")
+print("Updated /Users/pran/devjams26/index.html with Mock Test Mode and Stopwatch.")

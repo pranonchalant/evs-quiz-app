@@ -16,6 +16,7 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built for 
   - Top header tracking `Question X of Y` with animated progress bar.
   - Real-time score counter (`Score: X / Y`).
 - **Flexible Exam Modes**:
+  - ⏱️ **Timed Mock Test (30 Random Questions)**: Generates 30 randomized questions sampled across the entire syllabus with a live stopwatch tracking time elapsed and pace per question.
   - 🌐 **Masterdooom Website Official Test**: The 63 official test questions directly from `masterdooom.github.io/evs`.
   - 📖 **Masterdooom 26 Topics Complete Bank**: 86 questions covering all 26 revision modules from the website.
   - ⭐ **Core Top 30 High-Yield Pack**: The essential top 30 questions to memorize for the exam.
