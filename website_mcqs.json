@@ -1,0 +1,1292 @@
+[
+  {
+    "id": 1,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Earth as a Life Support System",
+    "question": "Which atmospheric layer contains the ozone layer?",
+    "options": [
+      "Troposphere",
+      "Stratosphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "correctAnswer": "Stratosphere",
+    "explanation": "The stratosphere contains the ozone layer (ozonosphere), which absorbs lethal solar ultraviolet (UV-B and UV-C) radiation."
+  },
+  {
+    "id": 2,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Earth as a Life Support System",
+    "question": "Most weather phenomena occur in the:",
+    "options": [
+      "Stratosphere",
+      "Mesosphere",
+      "Troposphere",
+      "Exosphere"
+    ],
+    "correctAnswer": "Troposphere",
+    "explanation": "The troposphere is the lowest atmospheric layer containing ~75-80% of atmospheric mass and almost all water vapor, driving clouds and weather."
+  },
+  {
+    "id": 3,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecosystem & Energy Flow",
+    "question": "Correct ecological organization sequence:",
+    "options": [
+      "Community \u2192 Population \u2192 Organism \u2192 Ecosystem",
+      "Organism \u2192 Population \u2192 Community \u2192 Ecosystem \u2192 Biosphere",
+      "Population \u2192 Organism \u2192 Biosphere \u2192 Community",
+      "Ecosystem \u2192 Community \u2192 Population \u2192 Biosphere"
+    ],
+    "correctAnswer": "Organism \u2192 Population \u2192 Community \u2192 Ecosystem \u2192 Biosphere",
+    "explanation": "The hierarchical order of ecological organization proceeds from individual Organism \u2192 Population \u2192 Community \u2192 Ecosystem \u2192 Biosphere."
+  },
+  {
+    "id": 4,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecosystem & Energy Flow",
+    "question": "Which is an abiotic component?",
+    "options": [
+      "Fungus",
+      "Grass",
+      "Temperature",
+      "Deer"
+    ],
+    "correctAnswer": "Temperature",
+    "explanation": "Abiotic components are non-living physical or chemical factors such as temperature, sunlight, water, and soil minerals."
+  },
+  {
+    "id": 5,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecosystem & Energy Flow",
+    "question": "About what fraction of energy is transferred to the next trophic level?",
+    "options": [
+      "1%",
+      "10%",
+      "50%",
+      "90%"
+    ],
+    "correctAnswer": "10%",
+    "explanation": "According to Lindeman's 10% law, only about 10% of the energy at any trophic level is transferred into biomass at the next level."
+  },
+  {
+    "id": 6,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecosystem & Energy Flow",
+    "question": "NPP is equal to:",
+    "options": [
+      "GPP + respiration",
+      "GPP \u2212 respiration",
+      "Respiration \u2212 GPP",
+      "GPP \u00d7 respiration"
+    ],
+    "correctAnswer": "GPP \u2212 respiration",
+    "explanation": "Net Primary Productivity (NPP) is the energy fixed by producers that remains after subtracting their metabolic respiratory losses: NPP = GPP \u2212 Respiration."
+  },
+  {
+    "id": 7,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecosystem & Energy Flow",
+    "question": "A detritus food chain begins with:",
+    "options": [
+      "Green plants",
+      "Herbivores",
+      "Dead organic matter",
+      "Top carnivores"
+    ],
+    "correctAnswer": "Dead organic matter",
+    "explanation": "A detritus food chain starts with non-living dead organic matter (detritus), broken down by detritivores and saprotrophic decomposers."
+  },
+  {
+    "id": 8,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecosystem & Energy Flow",
+    "question": "Which ecological pyramid is always upright?",
+    "options": [
+      "Numbers",
+      "Biomass",
+      "Energy",
+      "All can be inverted"
+    ],
+    "correctAnswer": "Energy",
+    "explanation": "The pyramid of energy is always upright because energy is lost as heat at every successive trophic level according to the Second Law of Thermodynamics."
+  },
+  {
+    "id": 9,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecological Succession",
+    "question": "Primary succession begins on:",
+    "options": [
+      "A mature forest",
+      "Previously cultivated soil",
+      "Bare/lifeless substrate",
+      "A polluted river only"
+    ],
+    "correctAnswer": "Bare/lifeless substrate",
+    "explanation": "Primary succession initiates on barren, lifeless substrates where no soil or previous ecological community existed (e.g., bare rock, new lava flows)."
+  },
+  {
+    "id": 10,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecological Succession",
+    "question": "Pioneer species in primary succession include:",
+    "options": [
+      "Tigers",
+      "Lichens and mosses",
+      "Large trees",
+      "Top carnivores"
+    ],
+    "correctAnswer": "Lichens and mosses",
+    "explanation": "Pioneers in primary terrestrial succession are hardy organisms such as lichens and mosses capable of adhering to bare substrates and initiating pedogenesis (soil formation)."
+  },
+  {
+    "id": 11,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Biodiversity & Conservation",
+    "question": "Species diversity includes:",
+    "options": [
+      "Only species count",
+      "Species richness and evenness",
+      "Only genetic variation",
+      "Only ecosystem area"
+    ],
+    "correctAnswer": "Species richness and evenness",
+    "explanation": "Species diversity incorporates both species richness (the total number of different species) and species evenness (the relative abundance of each species)."
+  },
+  {
+    "id": 12,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Biodiversity & Conservation",
+    "question": "Genetic diversity refers to variation:",
+    "options": [
+      "Among ecosystems",
+      "Among continents",
+      "Within a species",
+      "Only among predators"
+    ],
+    "correctAnswer": "Within a species",
+    "explanation": "Genetic diversity represents the hereditary variations in genes and alleles present among individuals within a single biological species."
+  },
+  {
+    "id": 13,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Biodiversity & Conservation",
+    "question": "In-situ conservation means:",
+    "options": [
+      "Conservation outside habitat",
+      "Conservation in natural habitat",
+      "Only seed storage",
+      "Laboratory cloning"
+    ],
+    "correctAnswer": "Conservation in natural habitat",
+    "explanation": "In-situ ('on-site') conservation protects endangered plants and animals directly within their natural ecosystems and indigenous habitats."
+  },
+  {
+    "id": 14,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Biodiversity & Conservation",
+    "question": "Bees and flowering plants are a classic example of:",
+    "options": [
+      "Competition",
+      "Parasitism",
+      "Mutualism",
+      "Commensalism"
+    ],
+    "correctAnswer": "Mutualism",
+    "explanation": "Bees and flowering plants demonstrate mutualism (+/+), where pollinating insects obtain nectar while simultaneously enabling plant cross-pollination."
+  },
+  {
+    "id": 15,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Biodiversity & Conservation",
+    "question": "A species naturally restricted to a particular geographic area is:",
+    "options": [
+      "Extinct",
+      "Endemic",
+      "Invasive",
+      "Cosmopolitan"
+    ],
+    "correctAnswer": "Endemic",
+    "explanation": "An endemic species is naturally and exclusively confined to a particular geographic region or ecosystem."
+  },
+  {
+    "id": 16,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Air Pollution",
+    "question": "A pollutant emitted directly from a source is:",
+    "options": [
+      "Secondary pollutant",
+      "Primary pollutant",
+      "Tertiary pollutant",
+      "Residual pollutant"
+    ],
+    "correctAnswer": "Primary pollutant",
+    "explanation": "A primary pollutant is an air contaminant emitted directly in an active, harmful form from identifiable sources (e.g., CO, SO2 from exhausts)."
+  },
+  {
+    "id": 17,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Air Pollution",
+    "question": "Ground-level ozone is generally a:",
+    "options": [
+      "Primary pollutant",
+      "Secondary pollutant",
+      "Nutrient",
+      "Heavy metal"
+    ],
+    "correctAnswer": "Secondary pollutant",
+    "explanation": "Ground-level (tropospheric) ozone is a secondary pollutant synthesized photochemically when NOx reacts with volatile organic compounds (VOCs) under sunlight."
+  },
+  {
+    "id": 18,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Air Pollution",
+    "question": "AQI 401\u2013500 in the supplied notes is:",
+    "options": [
+      "Good",
+      "Moderate",
+      "Very unhealthy",
+      "Hazardous"
+    ],
+    "correctAnswer": "Hazardous",
+    "explanation": "On the Air Quality Index (AQI) scale, a reading of 401\u2013500 represents the most severe 'Hazardous' category, prompting health emergencies."
+  },
+  {
+    "id": 19,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Water Pollution & Management",
+    "question": "A factory pipe is an example of:",
+    "options": [
+      "Non-point source",
+      "Point source",
+      "Diffuse source",
+      "Biological source"
+    ],
+    "correctAnswer": "Point source",
+    "explanation": "A factory discharge pipe is a classic point-source pollution discharge because the wastewater originates from a single, discrete, localized conveyance."
+  },
+  {
+    "id": 20,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Water Pollution & Management",
+    "question": "Biomagnification means pollutants:",
+    "options": [
+      "Disappear at higher trophic levels",
+      "Become more concentrated at higher trophic levels",
+      "Only accumulate in soil",
+      "Are chemically neutralized"
+    ],
+    "correctAnswer": "Become more concentrated at higher trophic levels",
+    "explanation": "Biomagnification refers to the progressive increase in concentration of persistent, lipophilic toxins across ascending trophic levels in a food chain."
+  },
+  {
+    "id": 21,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Water Pollution & Management",
+    "question": "Primary wastewater treatment is mainly:",
+    "options": [
+      "Physical",
+      "Biological",
+      "Genetic",
+      "Radiological"
+    ],
+    "correctAnswer": "Physical",
+    "explanation": "Primary sewage treatment relies on physical separation processes (coarse screening, grit removal, sedimentation) to remove heavy settleable solids."
+  },
+  {
+    "id": 22,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Water Pollution & Management",
+    "question": "Thermal pollution generally causes dissolved oxygen to:",
+    "options": [
+      "Increase",
+      "Decrease",
+      "Stay exactly constant",
+      "Become irrelevant"
+    ],
+    "correctAnswer": "Decrease",
+    "explanation": "Thermal pollution introduces heated water into aquatic systems, which directly decreases dissolved oxygen solubility while increasing aquatic organisms' metabolic oxygen demand."
+  },
+  {
+    "id": 23,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Circular Economy & Solid Waste",
+    "question": "Correct 3R priority:",
+    "options": [
+      "Recycle \u2192 Reuse \u2192 Reduce",
+      "Reuse \u2192 Reduce \u2192 Recycle",
+      "Reduce \u2192 Reuse \u2192 Recycle",
+      "Reduce \u2192 Recycle \u2192 Reuse"
+    ],
+    "correctAnswer": "Reduce \u2192 Reuse \u2192 Recycle",
+    "explanation": "In the waste management hierarchy, the correct operational order is Reduce (source prevention) \u2192 Reuse (re-utilization) \u2192 Recycle (material processing)."
+  },
+  {
+    "id": 24,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Circular Economy & Solid Waste",
+    "question": "Anaerobic digestion occurs:",
+    "options": [
+      "Only in sunlight",
+      "Without oxygen",
+      "Only in seawater",
+      "At zero temperature"
+    ],
+    "correctAnswer": "Without oxygen",
+    "explanation": "Anaerobic digestion is the biological decomposition of organic waste by specialized bacterial consortia in the complete absence of gaseous oxygen, producing methane biogas."
+  },
+  {
+    "id": 25,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Circular Economy & Solid Waste",
+    "question": "Sanitary landfill is best described as:",
+    "options": [
+      "Open dumping",
+      "Engineered disposal with controls such as liners",
+      "Composting",
+      "Direct recycling"
+    ],
+    "correctAnswer": "Engineered disposal with controls such as liners",
+    "explanation": "A sanitary landfill is an engineered waste containment facility featuring impermeable clay/geomembrane liners, leachate collection, and daily soil cover."
+  },
+  {
+    "id": 26,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Hazards & Disaster Management",
+    "question": "Risk is best described in the notes as depending on:",
+    "options": [
+      "Hazard only",
+      "Vulnerability only",
+      "Hazard magnitude and vulnerability/exposure",
+      "Population size only"
+    ],
+    "correctAnswer": "Hazard magnitude and vulnerability/exposure",
+    "explanation": "In environmental hazard and disaster analysis, Risk is mathematically defined as a function of the Hazard's magnitude and the exposed system's Vulnerability/Exposure."
+  },
+  {
+    "id": 27,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Hazards & Disaster Management",
+    "question": "The disaster phase involving evacuation and rescue is:",
+    "options": [
+      "Recovery",
+      "Response",
+      "Preparedness",
+      "Prevention"
+    ],
+    "correctAnswer": "Response",
+    "explanation": "The disaster response phase focuses on immediate search and rescue, evacuation, first aid, and urgent humanitarian relief during and right after impact."
+  },
+  {
+    "id": 28,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Environmental Impact Assessment (EIA)",
+    "question": "EIA screening is used to:",
+    "options": [
+      "Write the final law",
+      "Determine whether/what level of EIA is required",
+      "Plant compensatory forests",
+      "Measure only noise"
+    ],
+    "correctAnswer": "Determine whether/what level of EIA is required",
+    "explanation": "EIA screening is the initial gatekeeping step that determines whether a proposed project requires a formal Environmental Impact Assessment and the extent of assessment needed."
+  },
+  {
+    "id": 29,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Indian Environmental Laws",
+    "question": "Under the Water Act, Section 25 is associated with:",
+    "options": [
+      "Wildlife schedules",
+      "Consent/restrictions for new outlets/discharges",
+      "Ozone protection",
+      "EIA public consultation"
+    ],
+    "correctAnswer": "Consent/restrictions for new outlets/discharges",
+    "explanation": "Section 25 of the Water Act 1974 requires obtaining prior consent from the State Pollution Control Board before setting up any new outlet or discharge into water bodies."
+  },
+  {
+    "id": 30,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Indian Environmental Laws",
+    "question": "The Forest Conservation Act\u2019s key Section 2 concerns:",
+    "options": [
+      "Air samples",
+      "Prior Central Government approval for forest diversion",
+      "Noise limits",
+      "Wildlife trade"
+    ],
+    "correctAnswer": "Prior Central Government approval for forest diversion",
+    "explanation": "Section 2 of the Forest (Conservation) Act 1980 strictly mandates prior approval of the Central Government before any classified forest land can be diverted for non-forest purposes."
+  },
+  {
+    "id": 31,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Kyoto, Paris & SDGs",
+    "question": "The Kyoto flexible mechanism involving projects in developing countries is:",
+    "options": [
+      "CDM",
+      "JI",
+      "Only domestic taxation",
+      "Global Stocktake"
+    ],
+    "correctAnswer": "CDM",
+    "explanation": "The Clean Development Mechanism (CDM) is the Kyoto Protocol flexible mechanism enabling industrialized nations to implement emission-reduction projects in developing nations in return for certified carbon credits."
+  },
+  {
+    "id": 32,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Kyoto, Paris & SDGs",
+    "question": "Paris NDCs are:",
+    "options": [
+      "Identical for every country",
+      "Nationally determined climate contributions",
+      "Only financial reports",
+      "Wildlife schedules"
+    ],
+    "correctAnswer": "Nationally determined climate contributions",
+    "explanation": "Nationally Determined Contributions (NDCs) represent the self-defined, bottom-up climate mitigation and adaptation commitments submitted by each signatory under the Paris Agreement."
+  },
+  {
+    "id": 33,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Kyoto, Paris & SDGs",
+    "question": "Global Stocktake occurs every:",
+    "options": [
+      "Year",
+      "2 years",
+      "5 years",
+      "10 years"
+    ],
+    "correctAnswer": "5 years",
+    "explanation": "Article 14 of the Paris Agreement establishes the Global Stocktake every 5 years to evaluate collective progress toward achieving the treaty's long-term temperature and mitigation goals."
+  },
+  {
+    "id": 34,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Kyoto, Paris & SDGs",
+    "question": "Net-zero means:",
+    "options": [
+      "No emissions anywhere",
+      "Emissions are balanced by removals",
+      "Only planting trees",
+      "Zero industrial activity"
+    ],
+    "correctAnswer": "Emissions are balanced by removals",
+    "explanation": "Net-zero greenhouse gas emissions describes the state where remaining anthropogenic greenhouse emissions released into the atmosphere are fully balanced by anthropogenic removals."
+  },
+  {
+    "id": 35,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Kyoto, Paris & SDGs",
+    "question": "Which SDG focuses on climate action?",
+    "options": [
+      "SDG 6",
+      "SDG 11",
+      "SDG 12",
+      "SDG 13"
+    ],
+    "correctAnswer": "SDG 13",
+    "explanation": "Sustainable Development Goal 13 explicitly calls for urgent action to combat climate change and its impacts."
+  },
+  {
+    "id": 36,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Kyoto, Paris & SDGs",
+    "question": "Which SDG focuses on responsible consumption and production?",
+    "options": [
+      "SDG 7",
+      "SDG 12",
+      "SDG 13",
+      "SDG 15"
+    ],
+    "correctAnswer": "SDG 12",
+    "explanation": "Sustainable Development Goal 12 focuses on ensuring sustainable and responsible consumption and production patterns."
+  },
+  {
+    "id": 37,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Indian Environmental Laws",
+    "question": "CPCB was established under the:",
+    "options": [
+      "Water Act 1974",
+      "Paris Agreement",
+      "Wildlife Protection Act",
+      "SDGs"
+    ],
+    "correctAnswer": "Water Act 1974",
+    "explanation": "The Central Pollution Control Board (CPCB) was legally established in 1974 under Section 3 of the Water (Prevention and Control of Pollution) Act."
+  },
+  {
+    "id": 38,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Chemical Hazards (BPA & Mercury)",
+    "question": "BPA is primarily discussed as a/an:",
+    "options": [
+      "Heavy metal",
+      "Endocrine-disrupting chemical",
+      "Microorganism",
+      "Radiation source"
+    ],
+    "correctAnswer": "Endocrine-disrupting chemical",
+    "explanation": "Bisphenol A (BPA) is an industrial synthetic compound used in polycarbonate plastics and epoxy resins that acts as a potent endocrine-disrupting xenoestrogen."
+  },
+  {
+    "id": 39,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Chemical Hazards (BPA & Mercury)",
+    "question": "Mercury can biomagnify through:",
+    "options": [
+      "Food chains",
+      "Only clouds",
+      "Only soil particles",
+      "The ozone layer"
+    ],
+    "correctAnswer": "Food chains",
+    "explanation": "Mercury, especially in the organic form methylmercury, bioaccumulates in fatty tissues and biomagnifies up aquatic food chains, reaching hazardous concentrations in apex predatory fish."
+  },
+  {
+    "id": 40,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Biodiversity & Conservation",
+    "question": "Which is ex-situ conservation?",
+    "options": [
+      "National park",
+      "Wildlife sanctuary",
+      "Seed bank",
+      "Biosphere reserve"
+    ],
+    "correctAnswer": "Seed bank",
+    "explanation": "Seed banks, zoos, aquaria, and botanical gardens are ex-situ conservation facilities because they preserve genetic resources outside natural ecological habitats."
+  },
+  {
+    "id": 41,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Biodiversity & Conservation",
+    "question": "A(+),B(0) interaction is:",
+    "options": [
+      "Mutualism",
+      "Commensalism",
+      "Parasitism",
+      "Competition"
+    ],
+    "correctAnswer": "Commensalism",
+    "explanation": "Commensalism is an ecological relationship (+/0) where one species benefits while the other species remains completely unaffected and unharmed."
+  },
+  {
+    "id": 42,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Indian Environmental Laws",
+    "question": "The first comprehensive water pollution law in independent India in the notes is:",
+    "options": [
+      "Water Act 1974",
+      "Air Act 1981",
+      "EPA 1986",
+      "Wildlife Act 1972"
+    ],
+    "correctAnswer": "Water Act 1974",
+    "explanation": "The Water (Prevention and Control of Pollution) Act 1974 was independent India's first comprehensive environmental pollution statute, creating pollution control boards."
+  },
+  {
+    "id": 43,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Indian Environmental Laws",
+    "question": "The Air Act was enacted in:",
+    "options": [
+      "1972",
+      "1974",
+      "1981",
+      "1986"
+    ],
+    "correctAnswer": "1981",
+    "explanation": "India's Air (Prevention and Control of Pollution) Act was enacted in 1981 following the 1972 Stockholm Conference mandate."
+  },
+  {
+    "id": 44,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Indian Environmental Laws",
+    "question": "EPA was enacted in:",
+    "options": [
+      "1974",
+      "1981",
+      "1986",
+      "1992"
+    ],
+    "correctAnswer": "1986",
+    "explanation": "The Environment (Protection) Act (EPA) was enacted in 1986 as an umbrella statute in the aftermath of the December 1984 Bhopal Gas Tragedy."
+  },
+  {
+    "id": 45,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Biodiversity & Conservation",
+    "question": "CITES deals primarily with:",
+    "options": [
+      "International trade in endangered species",
+      "Water treatment",
+      "Air quality index",
+      "Waste segregation"
+    ],
+    "correctAnswer": "International trade in endangered species",
+    "explanation": "CITES (Convention on International Trade in Endangered Species of Wild Fauna and Flora) legally regulates cross-border trade in endangered wild animals and plants."
+  },
+  {
+    "id": 46,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Kyoto, Paris & SDGs",
+    "question": "Paris Agreement was adopted in:",
+    "options": [
+      "1992",
+      "1997",
+      "2015",
+      "2020"
+    ],
+    "correctAnswer": "2015",
+    "explanation": "The Paris Agreement was adopted by consensus on 12 December 2015 at COP21 of the UNFCCC in Paris, France."
+  },
+  {
+    "id": 47,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Kyoto, Paris & SDGs",
+    "question": "Kyoto Protocol was adopted in:",
+    "options": [
+      "1987",
+      "1992",
+      "1997",
+      "2015"
+    ],
+    "correctAnswer": "1997",
+    "explanation": "The Kyoto Protocol was formally adopted on 11 December 1997 in Kyoto, Japan, under the UNFCCC framework."
+  },
+  {
+    "id": 48,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Kyoto, Paris & SDGs",
+    "question": "SDGs were agreed at the UN in:",
+    "options": [
+      "2000",
+      "2012",
+      "2015",
+      "2020"
+    ],
+    "correctAnswer": "2015",
+    "explanation": "The United Nations 2030 Agenda comprising the 17 Sustainable Development Goals (SDGs) was unanimously agreed upon by 193 member states in September 2015."
+  },
+  {
+    "id": 49,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Water Pollution & Management",
+    "question": "IWRM stands for:",
+    "options": [
+      "Integrated Water Resources Management",
+      "International Waste Recycling Model",
+      "Industrial Water Regulation Method",
+      "Integrated Wildlife Recovery Management"
+    ],
+    "correctAnswer": "Integrated Water Resources Management",
+    "explanation": "IWRM stands for Integrated Water Resources Management, a coordinated framework to balance social, economic, and environmental water needs."
+  },
+  {
+    "id": 50,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Circular Economy & Solid Waste",
+    "question": "Composting primarily produces:",
+    "options": [
+      "Compost/nutrient-rich material",
+      "Mercury",
+      "Ozone",
+      "Crude oil"
+    ],
+    "correctAnswer": "Compost/nutrient-rich material",
+    "explanation": "Composting is the aerobic biological decomposition of organic solid wastes into nutrient-rich humus (compost) suitable for soil conditioning."
+  },
+  {
+    "id": 51,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Earth as a Life Support System",
+    "question": "Which atmospheric layer is the coldest in the supplied notes?",
+    "options": [
+      "Troposphere",
+      "Stratosphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "correctAnswer": "Mesosphere",
+    "explanation": "The mesosphere is the coldest thermal layer of Earth's atmosphere, where temperatures plunge to approximately -90\u00b0C."
+  },
+  {
+    "id": 52,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Earth as a Life Support System",
+    "question": "Which layer has auroras?",
+    "options": [
+      "Troposphere",
+      "Stratosphere",
+      "Thermosphere",
+      "Exosphere"
+    ],
+    "correctAnswer": "Thermosphere",
+    "explanation": "The thermosphere contains the ionosphere, where solar high-energy radiation ionizes atmospheric gas molecules, creating atmospheric auroras (Borealis/Australis)."
+  },
+  {
+    "id": 53,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecosystem & Energy Flow",
+    "question": "Which process returns nutrients from dead matter?",
+    "options": [
+      "Decomposition",
+      "Photosynthesis only",
+      "Predation only",
+      "Evaporation"
+    ],
+    "correctAnswer": "Decomposition",
+    "explanation": "Decomposition by fungi and bacteria breaks down dead organic tissues, remineralizing locked nutrients and recycling them back into soil and biogeochemical cycles."
+  },
+  {
+    "id": 54,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecosystem & Energy Flow",
+    "question": "A food web is:",
+    "options": [
+      "One linear chain",
+      "A network of interconnected food chains",
+      "Only decomposers",
+      "Only aquatic organisms"
+    ],
+    "correctAnswer": "A network of interconnected food chains",
+    "explanation": "A food web represents an interconnected, realistic network of multiple feeding interactions and cross-linked food chains within an ecosystem."
+  },
+  {
+    "id": 55,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecological Succession",
+    "question": "The end stage of succession is called:",
+    "options": [
+      "Nudation",
+      "Invasion",
+      "Competition",
+      "Climax"
+    ],
+    "correctAnswer": "Climax",
+    "explanation": "The climax community represents the terminal, stabilized, self-perpetuating final stage of ecological succession in dynamic equilibrium with regional climate."
+  },
+  {
+    "id": 56,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecological Succession",
+    "question": "Xerosere begins in:",
+    "options": [
+      "Water",
+      "Saline habitat",
+      "Dry/waterless habitat",
+      "Deep ocean"
+    ],
+    "correctAnswer": "Dry/waterless habitat",
+    "explanation": "A xerosere is an ecological succession sequence that initiates on a dry, moisture-deficient, xeric substrate such as sand dunes or dry rocks."
+  },
+  {
+    "id": 57,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Ecological Succession",
+    "question": "Hydrosere begins in:",
+    "options": [
+      "Water",
+      "Rock",
+      "Desert",
+      "Saline soil"
+    ],
+    "correctAnswer": "Water",
+    "explanation": "A hydrosere is an ecological succession sequence that begins in an open body of freshwater such as a pond or shallow lake."
+  },
+  {
+    "id": 58,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Water Pollution & Management",
+    "question": "Which is a point-source example?",
+    "options": [
+      "Agricultural runoff",
+      "Urban stormwater spread",
+      "Factory discharge pipe",
+      "Atmospheric deposition"
+    ],
+    "correctAnswer": "Factory discharge pipe",
+    "explanation": "A factory discharge pipe directly discharging effluent into a river is an identifiable, localized point source of water pollution."
+  },
+  {
+    "id": 59,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Water Pollution & Management",
+    "question": "Which treatment stage is primarily biological?",
+    "options": [
+      "Primary",
+      "Secondary",
+      "Screening only",
+      "Tertiary only"
+    ],
+    "correctAnswer": "Secondary",
+    "explanation": "Secondary wastewater treatment utilizes biological aeration tanks and microorganisms (activated sludge) to decompose dissolved biodegradable organic waste."
+  },
+  {
+    "id": 60,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Circular Economy & Solid Waste",
+    "question": "The 3Rs are the operational heart of:",
+    "options": [
+      "Circular economy",
+      "Kyoto Protocol",
+      "EIA",
+      "Disaster response"
+    ],
+    "correctAnswer": "Circular economy",
+    "explanation": "The 3Rs (Reduce, Reuse, Recycle) represent the operational cornerstone of a circular economy, minimizing virgin extraction and preventing disposal."
+  },
+  {
+    "id": 61,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Circular Economy & Solid Waste",
+    "question": "The last-resort option in the ISWM hierarchy is:",
+    "options": [
+      "Reduce",
+      "Reuse",
+      "Recycle",
+      "Landfill"
+    ],
+    "correctAnswer": "Landfill",
+    "explanation": "In Integrated Solid Waste Management (ISWM), landfilling is the least preferred, last-resort disposal option after prevention, reuse, recycling, and recovery."
+  },
+  {
+    "id": 62,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Hazards & Disaster Management",
+    "question": "Preparedness includes:",
+    "options": [
+      "Disaster drills and early warning readiness",
+      "Only rebuilding after disaster",
+      "Only rescue after impact",
+      "Only compensation"
+    ],
+    "correctAnswer": "Disaster drills and early warning readiness",
+    "explanation": "Disaster preparedness involves pre-impact activities including contingency planning, emergency drills, stockpile reserves, and early warning dissemination."
+  },
+  {
+    "id": 63,
+    "source": "masterdooom.github.io/evs (Official 63)",
+    "isOfficial63": true,
+    "category": "Environmental Impact Assessment (EIA)",
+    "question": "Scoping in EIA identifies:",
+    "options": [
+      "Key issues and study boundaries",
+      "Only project cost",
+      "Only tax rate",
+      "Only construction materials"
+    ],
+    "correctAnswer": "Key issues and study boundaries",
+    "explanation": "EIA scoping defines the scope, priority environmental issues, assessment methodologies, and spatial/temporal boundaries of the Environmental Impact Assessment study."
+  },
+  {
+    "id": 64,
+    "source": "masterdooom.github.io/evs (Topic 1: Life Support)",
+    "isOfficial63": false,
+    "category": "Earth as a Life Support System",
+    "question": "Which boundary separates the troposphere from the stratosphere?",
+    "options": [
+      "Stratopause",
+      "Mesopause",
+      "Tropopause",
+      "Thermopause"
+    ],
+    "correctAnswer": "Tropopause",
+    "explanation": "The tropopause is the atmospheric boundary layer where the environmental lapse rate drops and temperature inversion begins in the stratosphere."
+  },
+  {
+    "id": 65,
+    "source": "masterdooom.github.io/evs (Topic 1: Life Support)",
+    "isOfficial63": false,
+    "category": "Earth as a Life Support System",
+    "question": "The lithosphere primarily comprises:",
+    "options": [
+      "Earth's crust and uppermost solid mantle",
+      "Only ocean sediments",
+      "The molten liquid outer core",
+      "The lower atmosphere gases"
+    ],
+    "correctAnswer": "Earth's crust and uppermost solid mantle",
+    "explanation": "The lithosphere constitutes the rigid outermost shell of rocky terrestrial planets, consisting of the crust and upper mantle."
+  },
+  {
+    "id": 66,
+    "source": "masterdooom.github.io/evs (Topic 2: Core Concepts)",
+    "isOfficial63": false,
+    "category": "Ecosystem \u2014 Core Concepts",
+    "question": "The term 'Ecology' was coined in 1866 by:",
+    "options": [
+      "Charles Elton",
+      "Ernst Haeckel",
+      "Eugene Odum",
+      "Arthur Tansley"
+    ],
+    "correctAnswer": "Ernst Haeckel",
+    "explanation": "German zoologist Ernst Haeckel coined the word 'Oecologie' from Greek oikos (house) and logos (study) to denote the study of organisms in their environment."
+  },
+  {
+    "id": 67,
+    "source": "masterdooom.github.io/evs (Topic 2: Core Concepts)",
+    "isOfficial63": false,
+    "category": "Ecosystem \u2014 Core Concepts",
+    "question": "Which of the following is an artificial (man-made) ecosystem?",
+    "options": [
+      "Tropical rainforest",
+      "Coral reef",
+      "Cultivated crop field",
+      "Natural freshwater lake"
+    ],
+    "correctAnswer": "Cultivated crop field",
+    "explanation": "Agricultural crop fields, managed aquaria, and botanical gardens are artificial ecosystems requiring continuous human inputs of energy and nutrients."
+  },
+  {
+    "id": 68,
+    "source": "masterdooom.github.io/evs (Topic 4: Energy Flow)",
+    "isOfficial63": false,
+    "category": "Ecosystem & Energy Flow",
+    "question": "Which biome exhibits the highest Net Primary Productivity (NPP) according to the notes?",
+    "options": [
+      "Temperate grassland",
+      "Tropical rainforest",
+      "Boreal taiga",
+      "Arctic tundra"
+    ],
+    "correctAnswer": "Tropical rainforest",
+    "explanation": "Tropical rainforests have optimal temperature, abundant rainfall, and year-round sunlight, generating high NPP of ~2,000 g/m\u00b2/year."
+  },
+  {
+    "id": 69,
+    "source": "masterdooom.github.io/evs (Topic 4: Energy Flow)",
+    "isOfficial63": false,
+    "category": "Ecosystem & Energy Flow",
+    "question": "Why does the Second Law of Thermodynamics explain unidirectional energy flow in ecosystems?",
+    "options": [
+      "Energy is destroyed at each trophic level",
+      "Energy transformation is never 100% efficient; heat is continuously lost",
+      "Energy increases as entropy decreases",
+      "Consumers produce their own solar radiation"
+    ],
+    "correctAnswer": "Energy transformation is never 100% efficient; heat is continuously lost",
+    "explanation": "Due to entropy and the 2nd law, energy degraded into metabolic heat cannot be recaptured by autotrophs, making energy flow strictly one-way."
+  },
+  {
+    "id": 70,
+    "source": "masterdooom.github.io/evs (Topic 5: Succession)",
+    "isOfficial63": false,
+    "category": "Ecological Succession",
+    "question": "According to the notes, secondary succession is roughly how much faster than primary succession?",
+    "options": [
+      "Equal speed",
+      "2\u00d7 faster",
+      "5\u201310\u00d7 faster",
+      "100\u00d7 faster"
+    ],
+    "correctAnswer": "5\u201310\u00d7 faster",
+    "explanation": "Secondary succession proceeds roughly 5\u201310 times faster than primary succession because fertile topsoil and seed propagules already exist."
+  },
+  {
+    "id": 71,
+    "source": "masterdooom.github.io/evs (Topic 5: Succession)",
+    "isOfficial63": false,
+    "category": "Ecological Succession",
+    "question": "The Polyclimax Theory of ecological succession was proposed by:",
+    "options": [
+      "F.E. Clements",
+      "A.G. Tansley",
+      "Charles Darwin",
+      "Raymond Lindeman"
+    ],
+    "correctAnswer": "A.G. Tansley",
+    "explanation": "Sir Arthur Tansley proposed the Polyclimax Theory, arguing that multiple stable climax types can persist in a region governed by moisture, soil, or topography."
+  },
+  {
+    "id": 72,
+    "source": "masterdooom.github.io/evs (Topic 7: Species Status)",
+    "isOfficial63": false,
+    "category": "Biodiversity & Conservation",
+    "question": "An amensal relationship is represented by:",
+    "options": [
+      "(+, +)",
+      "(+, 0)",
+      "(-, 0)",
+      "(-, -)"
+    ],
+    "correctAnswer": "(-, 0)",
+    "explanation": "In amensalism (-, 0), one organism is inhibited or destroyed while the other remains completely unaffected (e.g. Penicillium secreting penicillin)."
+  },
+  {
+    "id": 73,
+    "source": "masterdooom.github.io/evs (Topic 8: Conservation)",
+    "isOfficial63": false,
+    "category": "Biodiversity & Conservation",
+    "question": "In a Biosphere Reserve, human settlements and sustainable eco-friendly practices are permitted primarily in the:",
+    "options": [
+      "Core zone",
+      "Buffer zone only",
+      "Transition zone",
+      "National Park core"
+    ],
+    "correctAnswer": "Transition zone",
+    "explanation": "The outer Transition zone (Zone of Cooperation) contains human settlements, sustainable agriculture, and economic activities managed in harmony with nature."
+  },
+  {
+    "id": 74,
+    "source": "masterdooom.github.io/evs (Topic 9: GM Crops)",
+    "isOfficial63": false,
+    "category": "Genetically Modified Crops",
+    "question": "Bt toxins encoded by Cry genes are toxic to target insects because they:",
+    "options": [
+      "Freeze the insect's hemolymph",
+      "Bind to receptors in the alkaline insect midgut and form lethal pores",
+      "Paralyze insect wings",
+      "Prevent egg hatching"
+    ],
+    "correctAnswer": "Bind to receptors in the alkaline insect midgut and form lethal pores",
+    "explanation": "Under the alkaline pH of the insect midgut, Cry protoxins are cleaved into active toxins that bind epithelial cadherin receptors and lyse gut cells."
+  },
+  {
+    "id": 75,
+    "source": "masterdooom.github.io/evs (Topic 10: Air Pollution)",
+    "isOfficial63": false,
+    "category": "Air Pollution",
+    "question": "Which of the following is a primary ingredient and indicator of photochemical smog?",
+    "options": [
+      "Sulfur dioxide only",
+      "Peroxyacyl nitrate (PAN) and tropospheric ozone",
+      "Pure water vapor",
+      "Carbonic acid"
+    ],
+    "correctAnswer": "Peroxyacyl nitrate (PAN) and tropospheric ozone",
+    "explanation": "Photochemical smog is characterized by oxidants such as tropospheric ozone and peroxyacyl nitrates (PAN), which irritate human eyes and respiratory tracts."
+  },
+  {
+    "id": 76,
+    "source": "masterdooom.github.io/evs (Topic 11: Water Pollution)",
+    "isOfficial63": false,
+    "category": "Water Pollution & Management",
+    "question": "What is the relationship between Biochemical Oxygen Demand (BOD) and water quality?",
+    "options": [
+      "Higher BOD indicates purer water",
+      "Higher BOD indicates high organic pollution and low dissolved oxygen",
+      "BOD is unrelated to dissolved oxygen",
+      "BOD only measures salinity"
+    ],
+    "correctAnswer": "Higher BOD indicates high organic pollution and low dissolved oxygen",
+    "explanation": "High BOD means large amounts of organic waste are present; aerobic microbes consume dissolved oxygen to oxidize it, depleting oxygen for fish."
+  },
+  {
+    "id": 77,
+    "source": "masterdooom.github.io/evs (Topic 13: Noise)",
+    "isOfficial63": false,
+    "category": "Noise, Thermal & Soil",
+    "question": "Under the Noise Rules 2000 in India, ambient daytime noise standard for a Silent Zone is:",
+    "options": [
+      "50 dB(A)",
+      "75 dB(A)",
+      "85 dB(A)",
+      "100 dB(A)"
+    ],
+    "correctAnswer": "50 dB(A)",
+    "explanation": "In India, silent zones (areas within 100m of hospitals, courts, schools) have daytime limits of 50 dB(A) and nighttime limits of 40 dB(A)."
+  },
+  {
+    "id": 78,
+    "source": "masterdooom.github.io/evs (Topic 16: Circular Economy)",
+    "isOfficial63": false,
+    "category": "Circular Economy & Solid Waste",
+    "question": "The biogas produced during anaerobic digestion consists predominantly of:",
+    "options": [
+      "Nitrogen and oxygen",
+      "Methane (CH4) and Carbon dioxide (CO2)",
+      "Chlorine and hydrogen",
+      "Pure sulfur dioxide"
+    ],
+    "correctAnswer": "Methane (CH4) and Carbon dioxide (CO2)",
+    "explanation": "Anaerobic digesters produce biogas composed of 50\u201370% methane and 30\u201345% carbon dioxide, functioning as a clean renewable fuel."
+  },
+  {
+    "id": 79,
+    "source": "masterdooom.github.io/evs (Topic 18: BPA & Mercury)",
+    "isOfficial63": false,
+    "category": "Chemical Hazards (BPA & Mercury)",
+    "question": "Bisphenol A (BPA) poses human health risks primarily because it mimics which hormone?",
+    "options": [
+      "Insulin",
+      "Estrogen",
+      "Thyroxine",
+      "Adrenaline"
+    ],
+    "correctAnswer": "Estrogen",
+    "explanation": "BPA is a xenoestrogen that binds to estrogen receptors, interfering with endocrine regulation, fetal development, and reproductive systems."
+  },
+  {
+    "id": 80,
+    "source": "masterdooom.github.io/evs (Topic 18: BPA & Mercury)",
+    "isOfficial63": false,
+    "category": "Chemical Hazards (BPA & Mercury)",
+    "question": "The neurological disease resulting from methylmercury toxicity was first recognized around which Japanese bay?",
+    "options": [
+      "Tokyo Bay",
+      "Osaka Bay",
+      "Minamata Bay",
+      "Kyoto Bay"
+    ],
+    "correctAnswer": "Minamata Bay",
+    "explanation": "Industrial discharges of inorganic mercury into Minamata Bay were biologically converted by microbes to methylmercury, intoxicating consumers of coastal seafood."
+  },
+  {
+    "id": 81,
+    "source": "masterdooom.github.io/evs (Topic 20: EIA)",
+    "isOfficial63": false,
+    "category": "Environmental Impact Assessment (EIA)",
+    "question": "What is the primary role of the Environmental Management Plan (EMP) in an EIA report?",
+    "options": [
+      "Calculate tax rates",
+      "Detail mitigation measures, monitoring mechanisms, and emergency plans",
+      "Advertise the project",
+      "Select political representatives"
+    ],
+    "correctAnswer": "Detail mitigation measures, monitoring mechanisms, and emergency plans",
+    "explanation": "An EMP operationalizes the EIA by laying out specific, time-bound mitigation actions, monitoring schedules, and institutional responsibilities."
+  },
+  {
+    "id": 82,
+    "source": "masterdooom.github.io/evs (Topic 21: Water Act)",
+    "isOfficial63": false,
+    "category": "Indian Environmental Laws",
+    "question": "The Water Act 1974 consists of how many chapters and sections?",
+    "options": [
+      "5 chapters, 30 sections",
+      "8 chapters, 50 sections",
+      "10 chapters, 64 sections",
+      "12 chapters, 100 sections"
+    ],
+    "correctAnswer": "10 chapters, 64 sections",
+    "explanation": "The Water (Prevention and Control of Pollution) Act 1974 is structured into 10 comprehensive chapters spanning 64 statutory sections."
+  },
+  {
+    "id": 83,
+    "source": "masterdooom.github.io/evs (Topic 22: EPA 1986)",
+    "isOfficial63": false,
+    "category": "Indian Environmental Laws",
+    "question": "The Environment (Protection) Act, 1986 was enacted under which Article of the Constitution of India?",
+    "options": [
+      "Article 21",
+      "Article 48A",
+      "Article 253",
+      "Article 370"
+    ],
+    "correctAnswer": "Article 253",
+    "explanation": "Article 253 empowers Parliament to make laws implementing international agreements (specifically the 1972 UN Stockholm Conference resolutions)."
+  },
+  {
+    "id": 84,
+    "source": "masterdooom.github.io/evs (Topic 23: Forest & Wildlife)",
+    "isOfficial63": false,
+    "category": "Indian Environmental Laws",
+    "question": "The 1996 Supreme Court T.N. Godavarman judgment held that 'forest' must be understood according to its:",
+    "options": [
+      "Revenue department record only",
+      "Dictionary meaning regardless of ownership",
+      "Commercial timber yield",
+      "Area exceeding 1,000 hectares only"
+    ],
+    "correctAnswer": "Dictionary meaning regardless of ownership",
+    "explanation": "The Supreme Court ruled that the Forest (Conservation) Act applies to all tracts bearing natural tree cover according to the dictionary meaning, irrespective of ownership."
+  },
+  {
+    "id": 85,
+    "source": "masterdooom.github.io/evs (Topic 25: Paris Agreement)",
+    "isOfficial63": false,
+    "category": "Kyoto, Paris & SDGs",
+    "question": "Article 4 of the Paris Agreement commits nations to reach global peaking of emissions and achieve:",
+    "options": [
+      "A complete ban on coal by 2020",
+      "Net-zero greenhouse gas emissions in the second half of this century",
+      "Zero cars worldwide by 2030",
+      "Equal emissions for every citizen"
+    ],
+    "correctAnswer": "Net-zero greenhouse gas emissions in the second half of this century",
+    "explanation": "Article 4.1 aims to achieve a balance between anthropogenic emissions by sources and removals by sinks of greenhouse gases in the second half of this century."
+  },
+  {
+    "id": 86,
+    "source": "masterdooom.github.io/evs (Topic 26: SDGs)",
+    "isOfficial63": false,
+    "category": "Sustainable Development Goals",
+    "question": "Which SDG is dedicated to 'Life on Land' (conserving terrestrial ecosystems, combating desertification and stopping biodiversity loss)?",
+    "options": [
+      "SDG 6",
+      "SDG 13",
+      "SDG 14",
+      "SDG 15"
+    ],
+    "correctAnswer": "SDG 15",
+    "explanation": "SDG 15 focuses on protecting and restoring terrestrial ecosystems, managing forests sustainably, halting land degradation, and conserving biodiversity."
+  }
+]

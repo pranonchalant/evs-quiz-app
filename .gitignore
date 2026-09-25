@@ -10,6 +10,7 @@ __pycache__/
 # Old deliverease / external assets
 Lumina-main/
 coolvetica (1)/
+website_dump.json
 *.gif
 *.db
 scratch/

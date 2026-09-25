@@ -1,56 +1,67 @@
-# 🌿 EVS High-Yield Exam Prep Quiz App
+# 🌿 EVS CAT-II Revision & High-Yield Exam Quiz App
 
-An interactive, responsive multiple-choice quiz (MCQ) web application built for Environmental Studies (EVS) exam preparation. Features real-time, instant right/wrong feedback with 1–2 sentence rationale after every question.
+An interactive, responsive multiple-choice quiz (MCQ) web application built for Environmental Studies (EVS) CAT-II exam preparation, powered by content from [masterdooom.github.io/evs](https://masterdooom.github.io/evs/) and high-yield exam question banks.
 
 ---
 
 ## 🎯 Features
 
 - **Instant Right/Wrong Feedback**:
-  - Highlights correct option in green and incorrect in red the moment you click.
-  - Automatically reveals the correct answer if an incorrect option was chosen.
-  - Displays a concise 1–2 sentence explanation backed by high-yield exam facts.
-- **Answer Locking**: Options lock immediately upon selection to prevent second guesses.
-- **Controlled Advancement**: "Next Question" button ensures ample time to read the explanation.
-- **Progress & Running Score**:
-  - "Question X of Y" counter and animated progress bar.
-  - Live accuracy score tracking throughout the session.
-- **Multiple Exam Modes**:
-  - ⭐ **PART A — Core Top 30 MCQs**: The 30 highest-yield exam preparation questions with matching answers.
-  - 📚 **Full Practice Bank**: All 177 questions covering the complete syllabus.
-  - 🏷️ **Topic Practice**: Filter by individual exam modules.
-- **Comprehensive Results Breakdown**:
-  - Final score, percentage, and performance evaluation.
-  - Scrollable review of all questions with selected answers, correct answers, and explanations.
-  - One-click quiz restart.
-- **Zero Dependencies**: Pure HTML5, modern CSS, and vanilla JavaScript. Runs completely offline.
+  - Highlights the chosen option in green (correct) or red (incorrect) the instant you click.
+  - Automatically highlights the correct answer in green if you picked wrong.
+  - Provides a concise 1–2 sentence explanation explaining *why* the answer is correct based on syllabus facts.
+- **Answer Locking**: Options lock immediately upon answering to prevent changing answers.
+- **Manual Advancement**: "Next Question →" button ensures you have all the time needed to review the explanation.
+- **Live Progress & Scoring**:
+  - Top header tracking `Question X of Y` with animated progress bar.
+  - Real-time score counter (`Score: X / Y`).
+- **Flexible Exam Modes**:
+  - 🌐 **Masterdooom Website Official Test**: The 63 official test questions directly from `masterdooom.github.io/evs`.
+  - 📖 **Masterdooom 26 Topics Complete Bank**: 86 questions covering all 26 revision modules from the website.
+  - ⭐ **Core Top 30 High-Yield Pack**: The essential top 30 questions to memorize for the exam.
+  - 📚 **Master Mega Bank**: All 259 questions from all sources combined.
+  - 🏷️ **Module Practice**: Filter and practice any specific exam topic.
+- **Detailed Results Breakdown**:
+  - Score total, accuracy percentage, and performance evaluation.
+  - Full review list showing question text, your choice, correct answer, and explanation.
+- **Zero Dependencies**: Pure HTML5, modern CSS, and vanilla JavaScript. Runs 100% offline.
 
 ---
 
-## 📚 Topics & Question Bank Structure
+## 📚 26 Syllabus Topics Covered
 
-The app contains **177 verified MCQs** organized into key high-yield EVS exam topics:
-
-1. **Environmental Studies & Ecosystems** (Ecosystem structure, abiotic/biotic components, trophic levels)
-2. **Energy Flow & Food Chains** (10% law, Lindeman's rule, Eltonian pyramids, productivity)
-3. **Ecological Succession** (Primary vs. secondary, pioneer species, Clements' monoclimax theory, nudation)
-4. **Biodiversity & Species Status** (Levels of biodiversity, endemism, IUCN red list categories)
-5. **Species Interactions** (Mutualism, commensalism, predation, competition)
-6. **Conservation Strategies** (In-situ vs. ex-situ, Biosphere reserves, Project Tiger, Project Elephant, Ramsar, CBD)
-7. **Circular Economy & Solid Waste Management** (3Rs hierarchy, linear vs. circular, EPR, industrial symbiosis, urban mining, incineration)
-8. **Air Pollution & Control** (Primary vs. secondary pollutants, photochemical smog, acid rain, radon, BS-VI standards, ESP)
-9. **Water Pollution & Management** (TDS/pH limits, point vs. non-point, eutrophication, biomagnification, Minamata disease, wastewater treatment stages, drip irrigation)
-10. **Noise, Thermal & Soil Pollution** (Decibel thresholds, noise rules 2000, oxygen solubility, cooling towers)
-11. **Environmental Hazards & Disaster Management** (Anthropogenic vs. natural, earthquake epicenter, Kedarnath, Sendai Framework)
-12. **Genetically Modified Crops** (Bt cotton, Bt brinjal moratorium, GEAC regulations, refuge planting)
-13. **Indian Environmental Legislation** (Wildlife Protection Act 1972, Water Act 1974, Air Act 1981, EPA 1986, Forest Conservation Act 1980, Biological Diversity Act 2002, NGT 2010, Bhopal Gas Tragedy & MIC)
-14. **Global Treaties & SDGs** (Kyoto Protocol mechanisms & GHGs, Paris Agreement NDCs & Articles 2/4/7/9, 2030 Agenda & SDGs 6, 7, 13, 14, 15, 17)
+1. **Earth as a Life Support System** (Atmosphere layers, troposphere, stratosphere, ozonosphere, mesosphere, thermosphere, lithosphere)
+2. **Ecosystem — Core Concepts** (Ernst Haeckel, ecological organization: organism to biosphere, natural vs. artificial ecosystems)
+3. **Ecosystem Structure & Functions** (Producers, consumers, decomposers, abiotic/biotic components)
+4. **Energy Flow in an Ecosystem** (Photosynthesis, GPP/NPP, 10% law, Lindeman's rule, thermodynamics, Eltonian pyramids)
+5. **Ecological Succession** (Primary vs. secondary, pioneer lichens/mosses, sere types: hydrosere, xerosere, Clements' monoclimax, Tansley's polyclimax)
+6. **Biodiversity — Definition & Levels** (Genetic, species, and ecosystem diversity; species richness vs. evenness)
+7. **Species Interactions & Status** (Mutualism, commensalism, parasitism, amensalism, predation, competition, IUCN Red List)
+8. **Conservation Strategies** (In-situ vs. ex-situ, Biosphere reserve zones: core/buffer/transition, Project Tiger, Project Elephant, CITES, Ramsar)
+9. **Genetically Modified (GM) Crops** (Bacillus thuringiensis, Cry delta-endotoxins, Bt cotton, Bt brinjal moratorium, GEAC, refuge planting)
+10. **Air Pollution** (Primary vs. secondary pollutants, photochemical smog, PAN, tropospheric ozone, acid rain pH < 5.6, AQI scale, ESP)
+11. **Water Pollution** (Point vs. non-point sources, BOD/COD indicators, eutrophication, algal blooms, biomagnification)
+12. **Soil Pollution** (Agrochemicals, heavy metal leaching into aquifers)
+13. **Noise Pollution** (Decibel thresholds, hearing damage >85 dB, Noise Pollution Rules 2000, Silent Zone limits)
+14. **Thermal Pollution** (Hot water discharge, inverse temperature-DO relationship, cooling towers)
+15. **Water Management & Conservation** (IWRM, Jal Shakti Abhiyan, rainwater harvesting, drip irrigation)
+16. **Circular Economy & Solid Waste** (Take-make-dispose linear model, 3Rs hierarchy, EPR, industrial symbiosis, urban mining, incineration, sanitary landfill)
+17. **Environmental Hazards** (Natural vs. anthropogenic, hazard vs. risk formula)
+18. **Chemical Hazards — BPA & Mercury** (Bisphenol A endocrine disruption, Minamata disease, methylmercury)
+19. **Disaster Management** (Sendai Framework, pre-disaster preparedness/prevention vs. post-disaster response/recovery, earthquakes: epicenter vs. focus)
+20. **Environmental Impact Assessment (EIA)** (Screening, scoping, Leopold Matrix, Environmental Management Plan - EMP, public hearings)
+21. **Water Act, 1974** (First national pollution law, CPCB/SPCB creation, Section 24 prohibition, Section 25 consent)
+22. **Environment Protection Act, 1986 & Air Act, 1981** (EPA umbrella law post-Bhopal MIC disaster under Article 253; Air Act 1981 and 1987 noise amendment)
+23. **Forest Conservation Act, 1980 & Wildlife Protection Act, 1972** (Section 2 prior central approval, Godavarman 1996 judgment, protected area categories)
+24. **Kyoto Protocol, 1997** (Annex I binding targets 5% below 1990 levels, 6 GHGs, 3 flexible mechanisms: CDM, JI, emissions trading)
+25. **Paris Agreement, 2015** (Well below 2°C & pursue 1.5°C, Article 4 net-zero, bottom-up NDCs, Article 14 Global Stocktake every 5 years)
+26. **Sustainable Development Goals (SDGs)** (17 goals, 169 targets agreed at UN in Sept 2015: SDG 6, 7, 12, 13, 14, 15, 17)
 
 ---
 
 ## 🚀 How to Run
 
-Simply open `index.html` in any web browser:
+Simply open `index.html` in your browser:
 
 ```bash
 # macOS
@@ -63,16 +74,13 @@ xdg-open index.html
 start index.html
 ```
 
-No build step, Node.js, or web server required!
-
 ---
 
-## 📁 Repository Structure
+## 📁 Repository Files
 
-```
-├── index.html           # Standalone single-page quiz application
-├── questions.json       # Structured JSON dataset containing all 177 questions & explanations
-├── build_questions.py   # Python generator script compiling the verified question bank
-├── generate_html.py     # Script to compile and inject questions into index.html
-└── README.md            # Project documentation
-```
+- `index.html` — The standalone single-page quiz application
+- `master_questions.json` — Complete combined questions dataset (259 MCQs)
+- `website_mcqs.json` — Dedicated dataset from masterdooom.github.io/evs (86 MCQs)
+- `build_website_mcqs.py` — Generator script extracting and generating questions from the website
+- `merge_questions.py` — Merges all datasets
+- `generate_final_html.py` — Compiles and builds `index.html`

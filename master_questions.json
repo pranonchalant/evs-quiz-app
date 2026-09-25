@@ -1,0 +1,4146 @@
+[
+  {
+    "id": 1,
+    "question": "Which atmospheric layer contains the ozone layer?",
+    "options": [
+      "Troposphere",
+      "Stratosphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "correctAnswer": "Stratosphere",
+    "explanation": "The stratosphere contains the ozone layer (ozonosphere), which absorbs lethal solar ultraviolet (UV-B and UV-C) radiation.",
+    "category": "Earth as a Life Support System",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 2,
+    "question": "Most weather phenomena occur in the:",
+    "options": [
+      "Stratosphere",
+      "Mesosphere",
+      "Troposphere",
+      "Exosphere"
+    ],
+    "correctAnswer": "Troposphere",
+    "explanation": "The troposphere is the lowest atmospheric layer containing ~75-80% of atmospheric mass and almost all water vapor, driving clouds and weather.",
+    "category": "Earth as a Life Support System",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 3,
+    "question": "Correct ecological organization sequence:",
+    "options": [
+      "Community \u2192 Population \u2192 Organism \u2192 Ecosystem",
+      "Organism \u2192 Population \u2192 Community \u2192 Ecosystem \u2192 Biosphere",
+      "Population \u2192 Organism \u2192 Biosphere \u2192 Community",
+      "Ecosystem \u2192 Community \u2192 Population \u2192 Biosphere"
+    ],
+    "correctAnswer": "Organism \u2192 Population \u2192 Community \u2192 Ecosystem \u2192 Biosphere",
+    "explanation": "The hierarchical order of ecological organization proceeds from individual Organism \u2192 Population \u2192 Community \u2192 Ecosystem \u2192 Biosphere.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 4,
+    "question": "Which is an abiotic component?",
+    "options": [
+      "Fungus",
+      "Grass",
+      "Temperature",
+      "Deer"
+    ],
+    "correctAnswer": "Temperature",
+    "explanation": "Abiotic components are non-living physical or chemical factors such as temperature, sunlight, water, and soil minerals.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 5,
+    "question": "About what fraction of energy is transferred to the next trophic level?",
+    "options": [
+      "1%",
+      "10%",
+      "50%",
+      "90%"
+    ],
+    "correctAnswer": "10%",
+    "explanation": "According to Lindeman's 10% law, only about 10% of the energy at any trophic level is transferred into biomass at the next level.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 6,
+    "question": "NPP is equal to:",
+    "options": [
+      "GPP + respiration",
+      "GPP \u2212 respiration",
+      "Respiration \u2212 GPP",
+      "GPP \u00d7 respiration"
+    ],
+    "correctAnswer": "GPP \u2212 respiration",
+    "explanation": "Net Primary Productivity (NPP) is the energy fixed by producers that remains after subtracting their metabolic respiratory losses: NPP = GPP \u2212 Respiration.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 7,
+    "question": "A detritus food chain begins with:",
+    "options": [
+      "Green plants",
+      "Herbivores",
+      "Dead organic matter",
+      "Top carnivores"
+    ],
+    "correctAnswer": "Dead organic matter",
+    "explanation": "A detritus food chain starts with non-living dead organic matter (detritus), broken down by detritivores and saprotrophic decomposers.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 8,
+    "question": "Which ecological pyramid is always upright?",
+    "options": [
+      "Numbers",
+      "Biomass",
+      "Energy",
+      "All can be inverted"
+    ],
+    "correctAnswer": "Energy",
+    "explanation": "The pyramid of energy is always upright because energy is lost as heat at every successive trophic level according to the Second Law of Thermodynamics.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 9,
+    "question": "Primary succession begins on:",
+    "options": [
+      "A mature forest",
+      "Previously cultivated soil",
+      "Bare/lifeless substrate",
+      "A polluted river only"
+    ],
+    "correctAnswer": "Bare/lifeless substrate",
+    "explanation": "Primary succession initiates on barren, lifeless substrates where no soil or previous ecological community existed (e.g., bare rock, new lava flows).",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 10,
+    "question": "Pioneer species in primary succession include:",
+    "options": [
+      "Tigers",
+      "Lichens and mosses",
+      "Large trees",
+      "Top carnivores"
+    ],
+    "correctAnswer": "Lichens and mosses",
+    "explanation": "Pioneers in primary terrestrial succession are hardy organisms such as lichens and mosses capable of adhering to bare substrates and initiating pedogenesis (soil formation).",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 11,
+    "question": "Species diversity includes:",
+    "options": [
+      "Only species count",
+      "Species richness and evenness",
+      "Only genetic variation",
+      "Only ecosystem area"
+    ],
+    "correctAnswer": "Species richness and evenness",
+    "explanation": "Species diversity incorporates both species richness (the total number of different species) and species evenness (the relative abundance of each species).",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 12,
+    "question": "Genetic diversity refers to variation:",
+    "options": [
+      "Among ecosystems",
+      "Among continents",
+      "Within a species",
+      "Only among predators"
+    ],
+    "correctAnswer": "Within a species",
+    "explanation": "Genetic diversity represents the hereditary variations in genes and alleles present among individuals within a single biological species.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 13,
+    "question": "In-situ conservation means:",
+    "options": [
+      "Conservation outside habitat",
+      "Conservation in natural habitat",
+      "Only seed storage",
+      "Laboratory cloning"
+    ],
+    "correctAnswer": "Conservation in natural habitat",
+    "explanation": "In-situ ('on-site') conservation protects endangered plants and animals directly within their natural ecosystems and indigenous habitats.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 14,
+    "question": "Bees and flowering plants are a classic example of:",
+    "options": [
+      "Competition",
+      "Parasitism",
+      "Mutualism",
+      "Commensalism"
+    ],
+    "correctAnswer": "Mutualism",
+    "explanation": "Bees and flowering plants demonstrate mutualism (+/+), where pollinating insects obtain nectar while simultaneously enabling plant cross-pollination.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 15,
+    "question": "A species naturally restricted to a particular geographic area is:",
+    "options": [
+      "Extinct",
+      "Endemic",
+      "Invasive",
+      "Cosmopolitan"
+    ],
+    "correctAnswer": "Endemic",
+    "explanation": "An endemic species is naturally and exclusively confined to a particular geographic region or ecosystem.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 16,
+    "question": "A pollutant emitted directly from a source is:",
+    "options": [
+      "Secondary pollutant",
+      "Primary pollutant",
+      "Tertiary pollutant",
+      "Residual pollutant"
+    ],
+    "correctAnswer": "Primary pollutant",
+    "explanation": "A primary pollutant is an air contaminant emitted directly in an active, harmful form from identifiable sources (e.g., CO, SO2 from exhausts).",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 17,
+    "question": "Ground-level ozone is generally a:",
+    "options": [
+      "Primary pollutant",
+      "Secondary pollutant",
+      "Nutrient",
+      "Heavy metal"
+    ],
+    "correctAnswer": "Secondary pollutant",
+    "explanation": "Ground-level (tropospheric) ozone is a secondary pollutant synthesized photochemically when NOx reacts with volatile organic compounds (VOCs) under sunlight.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 18,
+    "question": "AQI 401\u2013500 in the supplied notes is:",
+    "options": [
+      "Good",
+      "Moderate",
+      "Very unhealthy",
+      "Hazardous"
+    ],
+    "correctAnswer": "Hazardous",
+    "explanation": "On the Air Quality Index (AQI) scale, a reading of 401\u2013500 represents the most severe 'Hazardous' category, prompting health emergencies.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 19,
+    "question": "A factory pipe is an example of:",
+    "options": [
+      "Non-point source",
+      "Point source",
+      "Diffuse source",
+      "Biological source"
+    ],
+    "correctAnswer": "Point source",
+    "explanation": "A factory discharge pipe is a classic point-source pollution discharge because the wastewater originates from a single, discrete, localized conveyance.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 20,
+    "question": "Biomagnification means pollutants:",
+    "options": [
+      "Disappear at higher trophic levels",
+      "Become more concentrated at higher trophic levels",
+      "Only accumulate in soil",
+      "Are chemically neutralized"
+    ],
+    "correctAnswer": "Become more concentrated at higher trophic levels",
+    "explanation": "Biomagnification refers to the progressive increase in concentration of persistent, lipophilic toxins across ascending trophic levels in a food chain.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 21,
+    "question": "Primary wastewater treatment is mainly:",
+    "options": [
+      "Physical",
+      "Biological",
+      "Genetic",
+      "Radiological"
+    ],
+    "correctAnswer": "Physical",
+    "explanation": "Primary sewage treatment relies on physical separation processes (coarse screening, grit removal, sedimentation) to remove heavy settleable solids.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 22,
+    "question": "Thermal pollution generally causes dissolved oxygen to:",
+    "options": [
+      "Increase",
+      "Decrease",
+      "Stay exactly constant",
+      "Become irrelevant"
+    ],
+    "correctAnswer": "Decrease",
+    "explanation": "Thermal pollution introduces heated water into aquatic systems, which directly decreases dissolved oxygen solubility while increasing aquatic organisms' metabolic oxygen demand.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 23,
+    "question": "Correct 3R priority:",
+    "options": [
+      "Recycle \u2192 Reuse \u2192 Reduce",
+      "Reuse \u2192 Reduce \u2192 Recycle",
+      "Reduce \u2192 Reuse \u2192 Recycle",
+      "Reduce \u2192 Recycle \u2192 Reuse"
+    ],
+    "correctAnswer": "Reduce \u2192 Reuse \u2192 Recycle",
+    "explanation": "In the waste management hierarchy, the correct operational order is Reduce (source prevention) \u2192 Reuse (re-utilization) \u2192 Recycle (material processing).",
+    "category": "Circular Economy & Solid Waste",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 24,
+    "question": "Anaerobic digestion occurs:",
+    "options": [
+      "Only in sunlight",
+      "Without oxygen",
+      "Only in seawater",
+      "At zero temperature"
+    ],
+    "correctAnswer": "Without oxygen",
+    "explanation": "Anaerobic digestion is the biological decomposition of organic waste by specialized bacterial consortia in the complete absence of gaseous oxygen, producing methane biogas.",
+    "category": "Circular Economy & Solid Waste",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 25,
+    "question": "Sanitary landfill is best described as:",
+    "options": [
+      "Open dumping",
+      "Engineered disposal with controls such as liners",
+      "Composting",
+      "Direct recycling"
+    ],
+    "correctAnswer": "Engineered disposal with controls such as liners",
+    "explanation": "A sanitary landfill is an engineered waste containment facility featuring impermeable clay/geomembrane liners, leachate collection, and daily soil cover.",
+    "category": "Circular Economy & Solid Waste",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 26,
+    "question": "Risk is best described in the notes as depending on:",
+    "options": [
+      "Hazard only",
+      "Vulnerability only",
+      "Hazard magnitude and vulnerability/exposure",
+      "Population size only"
+    ],
+    "correctAnswer": "Hazard magnitude and vulnerability/exposure",
+    "explanation": "In environmental hazard and disaster analysis, Risk is mathematically defined as a function of the Hazard's magnitude and the exposed system's Vulnerability/Exposure.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 27,
+    "question": "The disaster phase involving evacuation and rescue is:",
+    "options": [
+      "Recovery",
+      "Response",
+      "Preparedness",
+      "Prevention"
+    ],
+    "correctAnswer": "Response",
+    "explanation": "The disaster response phase focuses on immediate search and rescue, evacuation, first aid, and urgent humanitarian relief during and right after impact.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 28,
+    "question": "EIA screening is used to:",
+    "options": [
+      "Write the final law",
+      "Determine whether/what level of EIA is required",
+      "Plant compensatory forests",
+      "Measure only noise"
+    ],
+    "correctAnswer": "Determine whether/what level of EIA is required",
+    "explanation": "EIA screening is the initial gatekeeping step that determines whether a proposed project requires a formal Environmental Impact Assessment and the extent of assessment needed.",
+    "category": "Environmental Impact Assessment (EIA)",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 29,
+    "question": "Under the Water Act, Section 25 is associated with:",
+    "options": [
+      "Wildlife schedules",
+      "Consent/restrictions for new outlets/discharges",
+      "Ozone protection",
+      "EIA public consultation"
+    ],
+    "correctAnswer": "Consent/restrictions for new outlets/discharges",
+    "explanation": "Section 25 of the Water Act 1974 requires obtaining prior consent from the State Pollution Control Board before setting up any new outlet or discharge into water bodies.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 30,
+    "question": "The Forest Conservation Act\u2019s key Section 2 concerns:",
+    "options": [
+      "Air samples",
+      "Prior Central Government approval for forest diversion",
+      "Noise limits",
+      "Wildlife trade"
+    ],
+    "correctAnswer": "Prior Central Government approval for forest diversion",
+    "explanation": "Section 2 of the Forest (Conservation) Act 1980 strictly mandates prior approval of the Central Government before any classified forest land can be diverted for non-forest purposes.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 31,
+    "question": "The Kyoto flexible mechanism involving projects in developing countries is:",
+    "options": [
+      "CDM",
+      "JI",
+      "Only domestic taxation",
+      "Global Stocktake"
+    ],
+    "correctAnswer": "CDM",
+    "explanation": "The Clean Development Mechanism (CDM) is the Kyoto Protocol flexible mechanism enabling industrialized nations to implement emission-reduction projects in developing nations in return for certified carbon credits.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 32,
+    "question": "Paris NDCs are:",
+    "options": [
+      "Identical for every country",
+      "Nationally determined climate contributions",
+      "Only financial reports",
+      "Wildlife schedules"
+    ],
+    "correctAnswer": "Nationally determined climate contributions",
+    "explanation": "Nationally Determined Contributions (NDCs) represent the self-defined, bottom-up climate mitigation and adaptation commitments submitted by each signatory under the Paris Agreement.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 33,
+    "question": "Global Stocktake occurs every:",
+    "options": [
+      "Year",
+      "2 years",
+      "5 years",
+      "10 years"
+    ],
+    "correctAnswer": "5 years",
+    "explanation": "Article 14 of the Paris Agreement establishes the Global Stocktake every 5 years to evaluate collective progress toward achieving the treaty's long-term temperature and mitigation goals.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 34,
+    "question": "Net-zero means:",
+    "options": [
+      "No emissions anywhere",
+      "Emissions are balanced by removals",
+      "Only planting trees",
+      "Zero industrial activity"
+    ],
+    "correctAnswer": "Emissions are balanced by removals",
+    "explanation": "Net-zero greenhouse gas emissions describes the state where remaining anthropogenic greenhouse emissions released into the atmosphere are fully balanced by anthropogenic removals.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 35,
+    "question": "Which SDG focuses on climate action?",
+    "options": [
+      "SDG 6",
+      "SDG 11",
+      "SDG 12",
+      "SDG 13"
+    ],
+    "correctAnswer": "SDG 13",
+    "explanation": "Sustainable Development Goal 13 explicitly calls for urgent action to combat climate change and its impacts.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 36,
+    "question": "Which SDG focuses on responsible consumption and production?",
+    "options": [
+      "SDG 7",
+      "SDG 12",
+      "SDG 13",
+      "SDG 15"
+    ],
+    "correctAnswer": "SDG 12",
+    "explanation": "Sustainable Development Goal 12 focuses on ensuring sustainable and responsible consumption and production patterns.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 37,
+    "question": "CPCB was established under the:",
+    "options": [
+      "Water Act 1974",
+      "Paris Agreement",
+      "Wildlife Protection Act",
+      "SDGs"
+    ],
+    "correctAnswer": "Water Act 1974",
+    "explanation": "The Central Pollution Control Board (CPCB) was legally established in 1974 under Section 3 of the Water (Prevention and Control of Pollution) Act.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 38,
+    "question": "BPA is primarily discussed as a/an:",
+    "options": [
+      "Heavy metal",
+      "Endocrine-disrupting chemical",
+      "Microorganism",
+      "Radiation source"
+    ],
+    "correctAnswer": "Endocrine-disrupting chemical",
+    "explanation": "Bisphenol A (BPA) is an industrial synthetic compound used in polycarbonate plastics and epoxy resins that acts as a potent endocrine-disrupting xenoestrogen.",
+    "category": "Chemical Hazards (BPA & Mercury)",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 39,
+    "question": "Mercury can biomagnify through:",
+    "options": [
+      "Food chains",
+      "Only clouds",
+      "Only soil particles",
+      "The ozone layer"
+    ],
+    "correctAnswer": "Food chains",
+    "explanation": "Mercury, especially in the organic form methylmercury, bioaccumulates in fatty tissues and biomagnifies up aquatic food chains, reaching hazardous concentrations in apex predatory fish.",
+    "category": "Chemical Hazards (BPA & Mercury)",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 40,
+    "question": "Which is ex-situ conservation?",
+    "options": [
+      "National park",
+      "Wildlife sanctuary",
+      "Seed bank",
+      "Biosphere reserve"
+    ],
+    "correctAnswer": "Seed bank",
+    "explanation": "Seed banks, zoos, aquaria, and botanical gardens are ex-situ conservation facilities because they preserve genetic resources outside natural ecological habitats.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 41,
+    "question": "A(+),B(0) interaction is:",
+    "options": [
+      "Mutualism",
+      "Commensalism",
+      "Parasitism",
+      "Competition"
+    ],
+    "correctAnswer": "Commensalism",
+    "explanation": "Commensalism is an ecological relationship (+/0) where one species benefits while the other species remains completely unaffected and unharmed.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 42,
+    "question": "The first comprehensive water pollution law in independent India in the notes is:",
+    "options": [
+      "Water Act 1974",
+      "Air Act 1981",
+      "EPA 1986",
+      "Wildlife Act 1972"
+    ],
+    "correctAnswer": "Water Act 1974",
+    "explanation": "The Water (Prevention and Control of Pollution) Act 1974 was independent India's first comprehensive environmental pollution statute, creating pollution control boards.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 43,
+    "question": "The Air Act was enacted in:",
+    "options": [
+      "1972",
+      "1974",
+      "1981",
+      "1986"
+    ],
+    "correctAnswer": "1981",
+    "explanation": "India's Air (Prevention and Control of Pollution) Act was enacted in 1981 following the 1972 Stockholm Conference mandate.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 44,
+    "question": "EPA was enacted in:",
+    "options": [
+      "1974",
+      "1981",
+      "1986",
+      "1992"
+    ],
+    "correctAnswer": "1986",
+    "explanation": "The Environment (Protection) Act (EPA) was enacted in 1986 as an umbrella statute in the aftermath of the December 1984 Bhopal Gas Tragedy.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 45,
+    "question": "CITES deals primarily with:",
+    "options": [
+      "International trade in endangered species",
+      "Water treatment",
+      "Air quality index",
+      "Waste segregation"
+    ],
+    "correctAnswer": "International trade in endangered species",
+    "explanation": "CITES (Convention on International Trade in Endangered Species of Wild Fauna and Flora) legally regulates cross-border trade in endangered wild animals and plants.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 46,
+    "question": "Paris Agreement was adopted in:",
+    "options": [
+      "1992",
+      "1997",
+      "2015",
+      "2020"
+    ],
+    "correctAnswer": "2015",
+    "explanation": "The Paris Agreement was adopted by consensus on 12 December 2015 at COP21 of the UNFCCC in Paris, France.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 47,
+    "question": "Kyoto Protocol was adopted in:",
+    "options": [
+      "1987",
+      "1992",
+      "1997",
+      "2015"
+    ],
+    "correctAnswer": "1997",
+    "explanation": "The Kyoto Protocol was formally adopted on 11 December 1997 in Kyoto, Japan, under the UNFCCC framework.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 48,
+    "question": "SDGs were agreed at the UN in:",
+    "options": [
+      "2000",
+      "2012",
+      "2015",
+      "2020"
+    ],
+    "correctAnswer": "2015",
+    "explanation": "The United Nations 2030 Agenda comprising the 17 Sustainable Development Goals (SDGs) was unanimously agreed upon by 193 member states in September 2015.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 49,
+    "question": "IWRM stands for:",
+    "options": [
+      "Integrated Water Resources Management",
+      "International Waste Recycling Model",
+      "Industrial Water Regulation Method",
+      "Integrated Wildlife Recovery Management"
+    ],
+    "correctAnswer": "Integrated Water Resources Management",
+    "explanation": "IWRM stands for Integrated Water Resources Management, a coordinated framework to balance social, economic, and environmental water needs.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 50,
+    "question": "Composting primarily produces:",
+    "options": [
+      "Compost/nutrient-rich material",
+      "Mercury",
+      "Ozone",
+      "Crude oil"
+    ],
+    "correctAnswer": "Compost/nutrient-rich material",
+    "explanation": "Composting is the aerobic biological decomposition of organic solid wastes into nutrient-rich humus (compost) suitable for soil conditioning.",
+    "category": "Circular Economy & Solid Waste",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 51,
+    "question": "Which atmospheric layer is the coldest in the supplied notes?",
+    "options": [
+      "Troposphere",
+      "Stratosphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "correctAnswer": "Mesosphere",
+    "explanation": "The mesosphere is the coldest thermal layer of Earth's atmosphere, where temperatures plunge to approximately -90\u00b0C.",
+    "category": "Earth as a Life Support System",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 52,
+    "question": "Which layer has auroras?",
+    "options": [
+      "Troposphere",
+      "Stratosphere",
+      "Thermosphere",
+      "Exosphere"
+    ],
+    "correctAnswer": "Thermosphere",
+    "explanation": "The thermosphere contains the ionosphere, where solar high-energy radiation ionizes atmospheric gas molecules, creating atmospheric auroras (Borealis/Australis).",
+    "category": "Earth as a Life Support System",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 53,
+    "question": "Which process returns nutrients from dead matter?",
+    "options": [
+      "Decomposition",
+      "Photosynthesis only",
+      "Predation only",
+      "Evaporation"
+    ],
+    "correctAnswer": "Decomposition",
+    "explanation": "Decomposition by fungi and bacteria breaks down dead organic tissues, remineralizing locked nutrients and recycling them back into soil and biogeochemical cycles.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 54,
+    "question": "A food web is:",
+    "options": [
+      "One linear chain",
+      "A network of interconnected food chains",
+      "Only decomposers",
+      "Only aquatic organisms"
+    ],
+    "correctAnswer": "A network of interconnected food chains",
+    "explanation": "A food web represents an interconnected, realistic network of multiple feeding interactions and cross-linked food chains within an ecosystem.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 55,
+    "question": "The end stage of succession is called:",
+    "options": [
+      "Nudation",
+      "Invasion",
+      "Competition",
+      "Climax"
+    ],
+    "correctAnswer": "Climax",
+    "explanation": "The climax community represents the terminal, stabilized, self-perpetuating final stage of ecological succession in dynamic equilibrium with regional climate.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 56,
+    "question": "Xerosere begins in:",
+    "options": [
+      "Water",
+      "Saline habitat",
+      "Dry/waterless habitat",
+      "Deep ocean"
+    ],
+    "correctAnswer": "Dry/waterless habitat",
+    "explanation": "A xerosere is an ecological succession sequence that initiates on a dry, moisture-deficient, xeric substrate such as sand dunes or dry rocks.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 57,
+    "question": "Hydrosere begins in:",
+    "options": [
+      "Water",
+      "Rock",
+      "Desert",
+      "Saline soil"
+    ],
+    "correctAnswer": "Water",
+    "explanation": "A hydrosere is an ecological succession sequence that begins in an open body of freshwater such as a pond or shallow lake.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 58,
+    "question": "Which is a point-source example?",
+    "options": [
+      "Agricultural runoff",
+      "Urban stormwater spread",
+      "Factory discharge pipe",
+      "Atmospheric deposition"
+    ],
+    "correctAnswer": "Factory discharge pipe",
+    "explanation": "A factory discharge pipe directly discharging effluent into a river is an identifiable, localized point source of water pollution.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 59,
+    "question": "Which treatment stage is primarily biological?",
+    "options": [
+      "Primary",
+      "Secondary",
+      "Screening only",
+      "Tertiary only"
+    ],
+    "correctAnswer": "Secondary",
+    "explanation": "Secondary wastewater treatment utilizes biological aeration tanks and microorganisms (activated sludge) to decompose dissolved biodegradable organic waste.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 60,
+    "question": "The 3Rs are the operational heart of:",
+    "options": [
+      "Circular economy",
+      "Kyoto Protocol",
+      "EIA",
+      "Disaster response"
+    ],
+    "correctAnswer": "Circular economy",
+    "explanation": "The 3Rs (Reduce, Reuse, Recycle) represent the operational cornerstone of a circular economy, minimizing virgin extraction and preventing disposal.",
+    "category": "Circular Economy & Solid Waste",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 61,
+    "question": "The last-resort option in the ISWM hierarchy is:",
+    "options": [
+      "Reduce",
+      "Reuse",
+      "Recycle",
+      "Landfill"
+    ],
+    "correctAnswer": "Landfill",
+    "explanation": "In Integrated Solid Waste Management (ISWM), landfilling is the least preferred, last-resort disposal option after prevention, reuse, recycling, and recovery.",
+    "category": "Circular Economy & Solid Waste",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 62,
+    "question": "Preparedness includes:",
+    "options": [
+      "Disaster drills and early warning readiness",
+      "Only rebuilding after disaster",
+      "Only rescue after impact",
+      "Only compensation"
+    ],
+    "correctAnswer": "Disaster drills and early warning readiness",
+    "explanation": "Disaster preparedness involves pre-impact activities including contingency planning, emergency drills, stockpile reserves, and early warning dissemination.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 63,
+    "question": "Scoping in EIA identifies:",
+    "options": [
+      "Key issues and study boundaries",
+      "Only project cost",
+      "Only tax rate",
+      "Only construction materials"
+    ],
+    "correctAnswer": "Key issues and study boundaries",
+    "explanation": "EIA scoping defines the scope, priority environmental issues, assessment methodologies, and spatial/temporal boundaries of the Environmental Impact Assessment study.",
+    "category": "Environmental Impact Assessment (EIA)",
+    "isWebsiteOfficial63": true,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 64,
+    "question": "Which boundary separates the troposphere from the stratosphere?",
+    "options": [
+      "Stratopause",
+      "Mesopause",
+      "Tropopause",
+      "Thermopause"
+    ],
+    "correctAnswer": "Tropopause",
+    "explanation": "The tropopause is the atmospheric boundary layer where the environmental lapse rate drops and temperature inversion begins in the stratosphere.",
+    "category": "Earth as a Life Support System",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 65,
+    "question": "The lithosphere primarily comprises:",
+    "options": [
+      "Earth's crust and uppermost solid mantle",
+      "Only ocean sediments",
+      "The molten liquid outer core",
+      "The lower atmosphere gases"
+    ],
+    "correctAnswer": "Earth's crust and uppermost solid mantle",
+    "explanation": "The lithosphere constitutes the rigid outermost shell of rocky terrestrial planets, consisting of the crust and upper mantle.",
+    "category": "Earth as a Life Support System",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 66,
+    "question": "The term 'Ecology' was coined in 1866 by:",
+    "options": [
+      "Charles Elton",
+      "Ernst Haeckel",
+      "Eugene Odum",
+      "Arthur Tansley"
+    ],
+    "correctAnswer": "Ernst Haeckel",
+    "explanation": "German zoologist Ernst Haeckel coined the word 'Oecologie' from Greek oikos (house) and logos (study) to denote the study of organisms in their environment.",
+    "category": "Ecosystem \u2014 Core Concepts",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 67,
+    "question": "Which of the following is an artificial (man-made) ecosystem?",
+    "options": [
+      "Tropical rainforest",
+      "Coral reef",
+      "Cultivated crop field",
+      "Natural freshwater lake"
+    ],
+    "correctAnswer": "Cultivated crop field",
+    "explanation": "Agricultural crop fields, managed aquaria, and botanical gardens are artificial ecosystems requiring continuous human inputs of energy and nutrients.",
+    "category": "Ecosystem \u2014 Core Concepts",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 68,
+    "question": "Which biome exhibits the highest Net Primary Productivity (NPP) according to the notes?",
+    "options": [
+      "Temperate grassland",
+      "Tropical rainforest",
+      "Boreal taiga",
+      "Arctic tundra"
+    ],
+    "correctAnswer": "Tropical rainforest",
+    "explanation": "Tropical rainforests have optimal temperature, abundant rainfall, and year-round sunlight, generating high NPP of ~2,000 g/m\u00b2/year.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 69,
+    "question": "Why does the Second Law of Thermodynamics explain unidirectional energy flow in ecosystems?",
+    "options": [
+      "Energy is destroyed at each trophic level",
+      "Energy transformation is never 100% efficient; heat is continuously lost",
+      "Energy increases as entropy decreases",
+      "Consumers produce their own solar radiation"
+    ],
+    "correctAnswer": "Energy transformation is never 100% efficient; heat is continuously lost",
+    "explanation": "Due to entropy and the 2nd law, energy degraded into metabolic heat cannot be recaptured by autotrophs, making energy flow strictly one-way.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 70,
+    "question": "According to the notes, secondary succession is roughly how much faster than primary succession?",
+    "options": [
+      "Equal speed",
+      "2\u00d7 faster",
+      "5\u201310\u00d7 faster",
+      "100\u00d7 faster"
+    ],
+    "correctAnswer": "5\u201310\u00d7 faster",
+    "explanation": "Secondary succession proceeds roughly 5\u201310 times faster than primary succession because fertile topsoil and seed propagules already exist.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 71,
+    "question": "The Polyclimax Theory of ecological succession was proposed by:",
+    "options": [
+      "F.E. Clements",
+      "A.G. Tansley",
+      "Charles Darwin",
+      "Raymond Lindeman"
+    ],
+    "correctAnswer": "A.G. Tansley",
+    "explanation": "Sir Arthur Tansley proposed the Polyclimax Theory, arguing that multiple stable climax types can persist in a region governed by moisture, soil, or topography.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 72,
+    "question": "An amensal relationship is represented by:",
+    "options": [
+      "(+, +)",
+      "(+, 0)",
+      "(-, 0)",
+      "(-, -)"
+    ],
+    "correctAnswer": "(-, 0)",
+    "explanation": "In amensalism (-, 0), one organism is inhibited or destroyed while the other remains completely unaffected (e.g. Penicillium secreting penicillin).",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 73,
+    "question": "In a Biosphere Reserve, human settlements and sustainable eco-friendly practices are permitted primarily in the:",
+    "options": [
+      "Core zone",
+      "Buffer zone only",
+      "Transition zone",
+      "National Park core"
+    ],
+    "correctAnswer": "Transition zone",
+    "explanation": "The outer Transition zone (Zone of Cooperation) contains human settlements, sustainable agriculture, and economic activities managed in harmony with nature.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 74,
+    "question": "Bt toxins encoded by Cry genes are toxic to target insects because they:",
+    "options": [
+      "Freeze the insect's hemolymph",
+      "Bind to receptors in the alkaline insect midgut and form lethal pores",
+      "Paralyze insect wings",
+      "Prevent egg hatching"
+    ],
+    "correctAnswer": "Bind to receptors in the alkaline insect midgut and form lethal pores",
+    "explanation": "Under the alkaline pH of the insect midgut, Cry protoxins are cleaved into active toxins that bind epithelial cadherin receptors and lyse gut cells.",
+    "category": "Genetically Modified Crops",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 75,
+    "question": "Which of the following is a primary ingredient and indicator of photochemical smog?",
+    "options": [
+      "Sulfur dioxide only",
+      "Peroxyacyl nitrate (PAN) and tropospheric ozone",
+      "Pure water vapor",
+      "Carbonic acid"
+    ],
+    "correctAnswer": "Peroxyacyl nitrate (PAN) and tropospheric ozone",
+    "explanation": "Photochemical smog is characterized by oxidants such as tropospheric ozone and peroxyacyl nitrates (PAN), which irritate human eyes and respiratory tracts.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 76,
+    "question": "What is the relationship between Biochemical Oxygen Demand (BOD) and water quality?",
+    "options": [
+      "Higher BOD indicates purer water",
+      "Higher BOD indicates high organic pollution and low dissolved oxygen",
+      "BOD is unrelated to dissolved oxygen",
+      "BOD only measures salinity"
+    ],
+    "correctAnswer": "Higher BOD indicates high organic pollution and low dissolved oxygen",
+    "explanation": "High BOD means large amounts of organic waste are present; aerobic microbes consume dissolved oxygen to oxidize it, depleting oxygen for fish.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 77,
+    "question": "Under the Noise Rules 2000 in India, ambient daytime noise standard for a Silent Zone is:",
+    "options": [
+      "50 dB(A)",
+      "75 dB(A)",
+      "85 dB(A)",
+      "100 dB(A)"
+    ],
+    "correctAnswer": "50 dB(A)",
+    "explanation": "In India, silent zones (areas within 100m of hospitals, courts, schools) have daytime limits of 50 dB(A) and nighttime limits of 40 dB(A).",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 78,
+    "question": "The biogas produced during anaerobic digestion consists predominantly of:",
+    "options": [
+      "Nitrogen and oxygen",
+      "Methane (CH4) and Carbon dioxide (CO2)",
+      "Chlorine and hydrogen",
+      "Pure sulfur dioxide"
+    ],
+    "correctAnswer": "Methane (CH4) and Carbon dioxide (CO2)",
+    "explanation": "Anaerobic digesters produce biogas composed of 50\u201370% methane and 30\u201345% carbon dioxide, functioning as a clean renewable fuel.",
+    "category": "Circular Economy & Solid Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 79,
+    "question": "Bisphenol A (BPA) poses human health risks primarily because it mimics which hormone?",
+    "options": [
+      "Insulin",
+      "Estrogen",
+      "Thyroxine",
+      "Adrenaline"
+    ],
+    "correctAnswer": "Estrogen",
+    "explanation": "BPA is a xenoestrogen that binds to estrogen receptors, interfering with endocrine regulation, fetal development, and reproductive systems.",
+    "category": "Chemical Hazards (BPA & Mercury)",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 80,
+    "question": "The neurological disease resulting from methylmercury toxicity was first recognized around which Japanese bay?",
+    "options": [
+      "Tokyo Bay",
+      "Osaka Bay",
+      "Minamata Bay",
+      "Kyoto Bay"
+    ],
+    "correctAnswer": "Minamata Bay",
+    "explanation": "Industrial discharges of inorganic mercury into Minamata Bay were biologically converted by microbes to methylmercury, intoxicating consumers of coastal seafood.",
+    "category": "Chemical Hazards (BPA & Mercury)",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 81,
+    "question": "What is the primary role of the Environmental Management Plan (EMP) in an EIA report?",
+    "options": [
+      "Calculate tax rates",
+      "Detail mitigation measures, monitoring mechanisms, and emergency plans",
+      "Advertise the project",
+      "Select political representatives"
+    ],
+    "correctAnswer": "Detail mitigation measures, monitoring mechanisms, and emergency plans",
+    "explanation": "An EMP operationalizes the EIA by laying out specific, time-bound mitigation actions, monitoring schedules, and institutional responsibilities.",
+    "category": "Environmental Impact Assessment (EIA)",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 82,
+    "question": "The Water Act 1974 consists of how many chapters and sections?",
+    "options": [
+      "5 chapters, 30 sections",
+      "8 chapters, 50 sections",
+      "10 chapters, 64 sections",
+      "12 chapters, 100 sections"
+    ],
+    "correctAnswer": "10 chapters, 64 sections",
+    "explanation": "The Water (Prevention and Control of Pollution) Act 1974 is structured into 10 comprehensive chapters spanning 64 statutory sections.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 83,
+    "question": "The Environment (Protection) Act, 1986 was enacted under which Article of the Constitution of India?",
+    "options": [
+      "Article 21",
+      "Article 48A",
+      "Article 253",
+      "Article 370"
+    ],
+    "correctAnswer": "Article 253",
+    "explanation": "Article 253 empowers Parliament to make laws implementing international agreements (specifically the 1972 UN Stockholm Conference resolutions).",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 84,
+    "question": "The 1996 Supreme Court T.N. Godavarman judgment held that 'forest' must be understood according to its:",
+    "options": [
+      "Revenue department record only",
+      "Dictionary meaning regardless of ownership",
+      "Commercial timber yield",
+      "Area exceeding 1,000 hectares only"
+    ],
+    "correctAnswer": "Dictionary meaning regardless of ownership",
+    "explanation": "The Supreme Court ruled that the Forest (Conservation) Act applies to all tracts bearing natural tree cover according to the dictionary meaning, irrespective of ownership.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 85,
+    "question": "Article 4 of the Paris Agreement commits nations to reach global peaking of emissions and achieve:",
+    "options": [
+      "A complete ban on coal by 2020",
+      "Net-zero greenhouse gas emissions in the second half of this century",
+      "Zero cars worldwide by 2030",
+      "Equal emissions for every citizen"
+    ],
+    "correctAnswer": "Net-zero greenhouse gas emissions in the second half of this century",
+    "explanation": "Article 4.1 aims to achieve a balance between anthropogenic emissions by sources and removals by sinks of greenhouse gases in the second half of this century.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 86,
+    "question": "Which SDG is dedicated to 'Life on Land' (conserving terrestrial ecosystems, combating desertification and stopping biodiversity loss)?",
+    "options": [
+      "SDG 6",
+      "SDG 13",
+      "SDG 14",
+      "SDG 15"
+    ],
+    "correctAnswer": "SDG 15",
+    "explanation": "SDG 15 focuses on protecting and restoring terrestrial ecosystems, managing forests sustainably, halting land degradation, and conserving biodiversity.",
+    "category": "Sustainable Development Goals",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": true,
+    "isTop30": false
+  },
+  {
+    "id": 87,
+    "question": "Biodiversity exists at which three major levels?",
+    "options": [
+      "Organism, population, community",
+      "Genetic, species, ecosystem",
+      "Cellular, tissue, organ",
+      "Individual, population, biome"
+    ],
+    "correctAnswer": "Genetic, species, ecosystem",
+    "explanation": "Biodiversity is universally recognized and classified across three interconnected levels: genetic diversity, species diversity, and ecosystem diversity.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 88,
+    "question": "Genetic diversity refers to:",
+    "options": [
+      "Variety of ecosystems in a region",
+      "Number of species in an area",
+      "Variation in genes within a species",
+      "Number of organisms in an ecosystem"
+    ],
+    "correctAnswer": "Variation in genes within a species",
+    "explanation": "Genetic diversity represents the total variety of genetic information contained in the genes of individuals of a single species.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 89,
+    "question": "Species richness means:",
+    "options": [
+      "Even distribution of individuals",
+      "Number of species present",
+      "Genetic variation within species",
+      "Number of ecosystems present"
+    ],
+    "correctAnswer": "Number of species present",
+    "explanation": "Species richness is the count of different species represented in an ecological community or defined region.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 90,
+    "question": "Which is an example of endemic species?",
+    "options": [
+      "A species found throughout the world",
+      "A species found only in a particular geographical region",
+      "An extinct species",
+      "A species with a very large population"
+    ],
+    "correctAnswer": "A species found only in a particular geographical region",
+    "explanation": "Endemic species are plants or animals native and exclusively restricted to a specific geographical location.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 91,
+    "question": "Which is an example of ex-situ conservation?",
+    "options": [
+      "National park",
+      "Wildlife sanctuary",
+      "Botanical garden",
+      "Biosphere reserve"
+    ],
+    "correctAnswer": "Botanical garden",
+    "explanation": "Botanical gardens, zoos, and seed banks preserve species off-site outside their natural habitats (ex-situ), whereas parks and sanctuaries are in-situ.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 92,
+    "question": "Project Tiger was launched in:",
+    "options": [
+      "1972",
+      "1973",
+      "1980",
+      "1992"
+    ],
+    "correctAnswer": "1973",
+    "explanation": "Project Tiger was launched by the Government of India in April 1973 from Jim Corbett National Park to protect the Bengal tiger.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 93,
+    "question": "India's first national park mentioned in the notes is:",
+    "options": [
+      "Kaziranga National Park",
+      "Bandipur National Park",
+      "Jim Corbett National Park",
+      "Gir National Park"
+    ],
+    "correctAnswer": "Jim Corbett National Park",
+    "explanation": "Jim Corbett National Park in Uttarakhand was established in 1936 (originally as Hailey National Park), making it India's first national park.",
+    "category": "Biodiversity & Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 94,
+    "question": "Which is the correct order of the 3Rs?",
+    "options": [
+      "Recycle -> Reuse -> Reduce",
+      "Reuse -> Reduce -> Recycle",
+      "Reduce -> Reuse -> Recycle",
+      "Reduce -> Recycle -> Reuse"
+    ],
+    "correctAnswer": "Reduce -> Reuse -> Recycle",
+    "explanation": "The waste hierarchy prioritizes prevention (Reduce), followed by direct re-utilization (Reuse), and lastly material reprocessing (Recycle).",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 95,
+    "question": "The linear economy is commonly described as:",
+    "options": [
+      "Reduce, reuse, recycle",
+      "Take, make, dispose",
+      "Produce, conserve, restore",
+      "Extract, recycle, regenerate"
+    ],
+    "correctAnswer": "Take, make, dispose",
+    "explanation": "The traditional linear economic model follows a 'take-make-dispose' step, in contrast to the circular economy's regenerative closed loop.",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 96,
+    "question": "The most widely used matrix method in EIA mentioned in the notes is:",
+    "options": [
+      "Delphi Matrix",
+      "Leopold Matrix",
+      "SWOT Matrix",
+      "Risk Matrix"
+    ],
+    "correctAnswer": "Leopold Matrix",
+    "explanation": "The Leopold Matrix is a pioneering and widely adopted qualitative Environmental Impact Assessment (EIA) method.",
+    "category": "EIA & Environmental Tools",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 97,
+    "question": "The Leopold Matrix was developed in:",
+    "options": [
+      "1965",
+      "1971",
+      "1981",
+      "1992"
+    ],
+    "correctAnswer": "1971",
+    "explanation": "Luna Leopold and colleagues developed the Leopold Matrix in 1971 for the US Geological Survey to evaluate environmental impacts.",
+    "category": "EIA & Environmental Tools",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 98,
+    "question": "Which is the first major stage of EIA?",
+    "options": [
+      "Monitoring",
+      "Screening",
+      "Public consultation",
+      "Mitigation"
+    ],
+    "correctAnswer": "Screening",
+    "explanation": "Screening is the initial stage of EIA to decide whether a proposed project requires an environmental assessment and at what level of detail.",
+    "category": "EIA & Environmental Tools",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 99,
+    "question": "Which EIA methodology maps cause-and-effect chains?",
+    "options": [
+      "Checklist",
+      "Matrix",
+      "Network analysis",
+      "Questionnaire"
+    ],
+    "correctAnswer": "Network analysis",
+    "explanation": "Network analysis diagrams trace primary, secondary, and tertiary cause-and-effect pathways connecting activities to environmental consequences.",
+    "category": "EIA & Environmental Tools",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 100,
+    "question": "The Kyoto Protocol was adopted in:",
+    "options": [
+      "1992",
+      "1995",
+      "1997",
+      "2005"
+    ],
+    "correctAnswer": "1997",
+    "explanation": "The Kyoto Protocol was adopted on 11 December 1997 in Kyoto, Japan, under the UNFCCC.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 101,
+    "question": "Kyoto's first commitment period was:",
+    "options": [
+      "1997-2002",
+      "2005-2010",
+      "2008-2012",
+      "2015-2020"
+    ],
+    "correctAnswer": "2008-2012",
+    "explanation": "The Kyoto Protocol's first commitment period ran from 2008 to 2012, setting binding emission reduction targets for Annex I countries.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 102,
+    "question": "Under the Kyoto Protocol, Annex I countries were required to reduce emissions by at least:",
+    "options": [
+      "2% below 1990 levels",
+      "5% below 1990 levels",
+      "10% below 2000 levels",
+      "15% below 1990 levels"
+    ],
+    "correctAnswer": "5% below 1990 levels",
+    "explanation": "Annex I parties committed to reduce aggregate greenhouse gas emissions by an average of 5% below their 1990 baseline levels.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 103,
+    "question": "Which country signed but never ratified the Kyoto Protocol?",
+    "options": [
+      "India",
+      "China",
+      "United States",
+      "Japan"
+    ],
+    "correctAnswer": "United States",
+    "explanation": "The United States signed the Kyoto Protocol in 1998 under President Clinton, but the US Senate never ratified it and the US later withdrew.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 104,
+    "question": "Which is NOT one of Kyoto's three flexible mechanisms?",
+    "options": [
+      "Emissions Trading",
+      "Joint Implementation",
+      "Clean Development Mechanism",
+      "Global Stocktake"
+    ],
+    "correctAnswer": "Global Stocktake",
+    "explanation": "The three Kyoto mechanisms are Emissions Trading, Joint Implementation (JI), and Clean Development Mechanism (CDM). Global Stocktake belongs to the Paris Agreement.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 105,
+    "question": "The central temperature goal of the Paris Agreement is to:",
+    "options": [
+      "Keep warming below 4 C",
+      "Keep warming well below 2 C and pursue 1.5 C",
+      "Maintain exactly 1 C warming",
+      "Eliminate all greenhouse gases immediately"
+    ],
+    "correctAnswer": "Keep warming well below 2 C and pursue 1.5 C",
+    "explanation": "Article 2 of the Paris Agreement aims to hold global average temperature increase to well below 2 C above pre-industrial levels and pursue efforts to limit it to 1.5 C.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 106,
+    "question": "Nationally Determined Contributions are associated primarily with:",
+    "options": [
+      "Kyoto Protocol",
+      "Montreal Protocol",
+      "Paris Agreement",
+      "Ramsar Convention"
+    ],
+    "correctAnswer": "Paris Agreement",
+    "explanation": "Nationally Determined Contributions (NDCs) form the core bottom-up pledge mechanism of the 2015 Paris Agreement.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 107,
+    "question": "India's Paris NDC includes a target of ____ of installed power capacity from non-fossil sources by 2030.",
+    "options": [
+      "30%",
+      "40%",
+      "50%",
+      "75%"
+    ],
+    "correctAnswer": "50%",
+    "explanation": "India updated its NDC commitment to achieve 50% cumulative electric power installed capacity from non-fossil fuel-based energy resources by 2030.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 108,
+    "question": "The Water (Prevention and Control of Pollution) Act was enacted in:",
+    "options": [
+      "1972",
+      "1974",
+      "1981",
+      "1986"
+    ],
+    "correctAnswer": "1974",
+    "explanation": "India enacted the Water (Prevention and Control of Pollution) Act in 1974, providing for CPCB and SPCB regulatory frameworks.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 109,
+    "question": "Section 24 of the Water Act deals with:",
+    "options": [
+      "Air pollution control areas",
+      "Prohibition on discharge of polluting matter into streams/wells",
+      "Environmental laboratories",
+      "Wildlife protection"
+    ],
+    "correctAnswer": "Prohibition on discharge of polluting matter into streams/wells",
+    "explanation": "Section 24 of the Water Act 1974 explicitly prohibits knowingly causing or permitting any poisonous, noxious, or polluting matter into streams or wells.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 110,
+    "question": "Under the Water Act, consent for new outlets/new discharges is primarily associated with:",
+    "options": [
+      "Section 19",
+      "Section 21",
+      "Section 25",
+      "Section 31A"
+    ],
+    "correctAnswer": "Section 25",
+    "explanation": "Section 25 of the Water Act requires obtaining prior consent from the State Pollution Control Board to establish new outlets or discharges.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 111,
+    "question": "The Environment (Protection) Act is commonly known as:",
+    "options": [
+      "Water Act",
+      "Umbrella legislation",
+      "Wildlife Act",
+      "Forest Act"
+    ],
+    "correctAnswer": "Umbrella legislation",
+    "explanation": "The Environment (Protection) Act 1986 acts as 'umbrella legislation', coordinating regulatory activities across multiple environmental authorities.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 112,
+    "question": "Noise was officially added as an air pollutant through the:",
+    "options": [
+      "1974 amendment",
+      "1980 amendment",
+      "1987 amendment",
+      "1992 amendment"
+    ],
+    "correctAnswer": "1987 amendment",
+    "explanation": "The Air (Prevention and Control of Pollution) Act 1981 was amended in 1987 to expand the definition of air pollutants to include noise.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 113,
+    "question": "The Forest (Conservation) Act was enacted in:",
+    "options": [
+      "1972",
+      "1974",
+      "1980",
+      "1986"
+    ],
+    "correctAnswer": "1980",
+    "explanation": "The Forest (Conservation) Act was enacted in 1980 to strictly regulate and restrict the de-reservation and diversion of forest land for non-forest purposes.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 114,
+    "question": "Only about what percentage of energy is transferred from one trophic level to the next according to Lindemann's law?",
+    "options": [
+      "1%",
+      "5%",
+      "10%",
+      "25%"
+    ],
+    "correctAnswer": "10%",
+    "explanation": "Raymond Lindeman (1942) formulated the 10% law: only about 10% of energy transferred to a trophic level is stored as biomass for the next level.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 115,
+    "question": "Bt in Bt cotton refers to:",
+    "options": [
+      "Biotechnology",
+      "Bacillus thuringiensis",
+      "Biological toxin",
+      "Botanical technology"
+    ],
+    "correctAnswer": "Bacillus thuringiensis",
+    "explanation": "Bt stands for Bacillus thuringiensis, a naturally occurring soil bacterium that produces proteins toxic to specific insect pests.",
+    "category": "Genetically Modified Crops",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": true
+  },
+  {
+    "id": 116,
+    "question": "Environmental science primarily studies:",
+    "options": [
+      "Only pollution",
+      "Interactions between humans and natural systems",
+      "Only biodiversity",
+      "Only climate"
+    ],
+    "correctAnswer": "Interactions between humans and natural systems",
+    "explanation": "Environmental science is the systematic study of our environment and human interactions with both living and non-living systems.",
+    "category": "Environmental Studies & Ecosystem",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 117,
+    "question": "Environmental studies is:",
+    "options": [
+      "A single-discipline subject",
+      "An interdisciplinary field",
+      "Purely an engineering subject",
+      "Purely a biological subject"
+    ],
+    "correctAnswer": "An interdisciplinary field",
+    "explanation": "Environmental studies integrates ecology, chemistry, physics, economics, law, sociology, and engineering.",
+    "category": "Environmental Studies & Ecosystem",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 118,
+    "question": "Which discipline can contribute to environmental studies?",
+    "options": [
+      "Ecology",
+      "Geology",
+      "Engineering",
+      "All of the above"
+    ],
+    "correctAnswer": "All of the above",
+    "explanation": "Environmental studies draws insights and tools from physical sciences, life sciences, and applied engineering fields.",
+    "category": "Environmental Studies & Ecosystem",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 119,
+    "question": "An ecosystem is best described as:",
+    "options": [
+      "Only a group of animals",
+      "Only physical surroundings",
+      "A functional unit involving biotic and abiotic components",
+      "A collection of plants only"
+    ],
+    "correctAnswer": "A functional unit involving biotic and abiotic components",
+    "explanation": "An ecosystem is a biological community of interacting organisms (biotic) and their physical environment (abiotic) functioning as a unit.",
+    "category": "Environmental Studies & Ecosystem",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 120,
+    "question": "Functional aspects of an ecosystem primarily include:",
+    "options": [
+      "Species colour and size",
+      "Energy flow and nutrient cycling",
+      "Population naming",
+      "Taxonomy"
+    ],
+    "correctAnswer": "Energy flow and nutrient cycling",
+    "explanation": "The core functional processes of any ecosystem are the unidirectional flow of energy and the biogeochemical cycling of nutrients.",
+    "category": "Environmental Studies & Ecosystem",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 121,
+    "question": "Which is a terrestrial ecosystem?",
+    "options": [
+      "Ocean",
+      "Lake",
+      "Forest",
+      "Sea"
+    ],
+    "correctAnswer": "Forest",
+    "explanation": "Terrestrial ecosystems are land-based communities, including forests, grasslands, deserts, and tundras.",
+    "category": "Environmental Studies & Ecosystem",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 122,
+    "question": "Which is a freshwater ecosystem?",
+    "options": [
+      "Ocean",
+      "Lake",
+      "Coral reef",
+      "Estuary"
+    ],
+    "correctAnswer": "Lake",
+    "explanation": "Lakes, ponds, rivers, and streams are freshwater ecosystems with low dissolved salt concentrations (<0.5 ppt).",
+    "category": "Environmental Studies & Ecosystem",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 123,
+    "question": "Marine ecosystems are characterized by:",
+    "options": [
+      "No salt",
+      "High salt content",
+      "Only freshwater species",
+      "Absence of biodiversity"
+    ],
+    "correctAnswer": "High salt content",
+    "explanation": "Marine ecosystems (oceans, coral reefs) have high salt concentrations, typically averaging around 35 parts per thousand.",
+    "category": "Environmental Studies & Ecosystem",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 124,
+    "question": "Energy flow in an ecosystem is:",
+    "options": [
+      "Cyclic",
+      "Bidirectional",
+      "Unidirectional",
+      "Random"
+    ],
+    "correctAnswer": "Unidirectional",
+    "explanation": "Energy flows in one direction: from the sun to autotrophs, then to successive heterotrophic levels, dissipating as heat.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 125,
+    "question": "Matter in an ecosystem is:",
+    "options": [
+      "Destroyed permanently",
+      "Continuously recycled",
+      "Converted entirely into energy",
+      "Never transferred"
+    ],
+    "correctAnswer": "Continuously recycled",
+    "explanation": "Unlike energy which flows unidirectionally, matter and essential nutrients (carbon, nitrogen, phosphorus) circulate cyclically.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 126,
+    "question": "The Detritus Food Chain begins with:",
+    "options": [
+      "Producers",
+      "Herbivores",
+      "Dead organic matter",
+      "Carnivores"
+    ],
+    "correctAnswer": "Dead organic matter",
+    "explanation": "The detritus food chain starts with non-living dead organic matter (detritus), which is broken down by decomposers and detritivores.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 127,
+    "question": "Photosynthesis converts:",
+    "options": [
+      "Chemical energy into heat",
+      "Light energy into chemical energy",
+      "Heat into light",
+      "Mechanical energy into chemical energy"
+    ],
+    "correctAnswer": "Light energy into chemical energy",
+    "explanation": "Plants capture solar light energy and convert it into chemical energy stored in the chemical bonds of glucose.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 128,
+    "question": "Lindemann's 10% law states that:",
+    "options": [
+      "10% of organisms survive",
+      "10% of energy is transferred to the next trophic level",
+      "10% of biomass becomes soil",
+      "10% of sunlight reaches Earth"
+    ],
+    "correctAnswer": "10% of energy is transferred to the next trophic level",
+    "explanation": "Only about 10% of available energy at any given trophic level is passed onto organisms at the next trophic level.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 129,
+    "question": "The pyramid of energy is:",
+    "options": [
+      "Always inverted",
+      "Always upright",
+      "Sometimes absent",
+      "Always horizontal"
+    ],
+    "correctAnswer": "Always upright",
+    "explanation": "Because energy is lost as heat at every step pursuant to the second law of thermodynamics, energy pyramids are always upright.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 130,
+    "question": "The ecological pyramid is associated with:",
+    "options": [
+      "Charles Elton",
+      "Charles Darwin only",
+      "Mendel",
+      "Louis Pasteur"
+    ],
+    "correctAnswer": "Charles Elton",
+    "explanation": "British ecologist Charles Elton introduced the concept of ecological pyramids (Eltonian pyramids) in 1927.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 131,
+    "question": "Charles Elton proposed the ecological pyramid in:",
+    "options": [
+      "1890",
+      "1927",
+      "1942",
+      "1972"
+    ],
+    "correctAnswer": "1927",
+    "explanation": "Charles Elton published 'Animal Ecology' in 1927, in which he conceptualized ecological pyramids of numbers, biomass, and energy.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 132,
+    "question": "Tropical rainforests have approximately:",
+    "options": [
+      "100 g/m2/year NPP",
+      "500 g/m2/year",
+      "2,000 g/m2/year",
+      "10,000 g/m2/year"
+    ],
+    "correctAnswer": "2,000 g/m2/year",
+    "explanation": "Tropical rainforests are among the most productive terrestrial biomes, boasting a net primary productivity around 2,000 g/m\u00b2/year.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 133,
+    "question": "Nitrogen fixation in legumes is associated with:",
+    "options": [
+      "Lactobacillus",
+      "Rhizobium",
+      "Vibrio",
+      "Plasmodium"
+    ],
+    "correctAnswer": "Rhizobium",
+    "explanation": "Rhizobium bacteria form symbiotic nodules on legume roots, converting atmospheric nitrogen (N2) into bioavailable ammonia.",
+    "category": "Ecosystem & Energy Flow",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 134,
+    "question": "Ecological succession refers to:",
+    "options": [
+      "Sudden extinction",
+      "Gradual change in community composition over time",
+      "Migration of animals only",
+      "Pollution of an ecosystem"
+    ],
+    "correctAnswer": "Gradual change in community composition over time",
+    "explanation": "Ecological succession is the orderly, predictable process of gradual change in species structure of an ecological community over time.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 135,
+    "question": "Secondary succession occurs where:",
+    "options": [
+      "Life never existed",
+      "The previous ecosystem has been disturbed or destroyed",
+      "There is no soil",
+      "There are no microorganisms"
+    ],
+    "correctAnswer": "The previous ecosystem has been disturbed or destroyed",
+    "explanation": "Secondary succession occurs following a disturbance (e.g., fire, flood, logging) in an area where soil and seed banks already exist.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 136,
+    "question": "Pioneer species are:",
+    "options": [
+      "Final climax species",
+      "First colonizing species",
+      "Largest predators",
+      "Extinct species"
+    ],
+    "correctAnswer": "First colonizing species",
+    "explanation": "Pioneer species (such as lichens and mosses) are the hardy first colonizers of newly created or disturbed environments.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 137,
+    "question": "Which generally occurs faster?",
+    "options": [
+      "Primary succession",
+      "Secondary succession",
+      "Both always take equal time",
+      "Neither"
+    ],
+    "correctAnswer": "Secondary succession",
+    "explanation": "Secondary succession is significantly faster because fertile soil, organic matter, and dormant propagules are already present.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 138,
+    "question": "The final stabilized stage of succession is called:",
+    "options": [
+      "Pioneer stage",
+      "Seral stage",
+      "Climax community",
+      "Nudation"
+    ],
+    "correctAnswer": "Climax community",
+    "explanation": "The climax community represents the stable, self-perpetuating end-point of ecological succession in dynamic equilibrium with climate.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 139,
+    "question": "According to the notes, the theory of monoclimax was given by:",
+    "options": [
+      "F.E. Clements",
+      "Charles Elton",
+      "Lindemann",
+      "Tansley"
+    ],
+    "correctAnswer": "F.E. Clements",
+    "explanation": "Frederic Clements proposed the Monoclimax Theory, postulating that a region's vegetation culminates in a single climatic climax community.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 140,
+    "question": "Nudation refers to:",
+    "options": [
+      "Formation of a bare area",
+      "Formation of a climax community",
+      "Pollination",
+      "Nutrient recycling"
+    ],
+    "correctAnswer": "Formation of a bare area",
+    "explanation": "Nudation is the initial stage of succession involving the development of a bare, uninhabited substrate.",
+    "category": "Ecological Succession",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 141,
+    "question": "Which biodiversity component concerns variation between ecosystems?",
+    "options": [
+      "Genetic diversity",
+      "Species diversity",
+      "Ecosystem diversity",
+      "Population density"
+    ],
+    "correctAnswer": "Ecosystem diversity",
+    "explanation": "Ecosystem diversity encompasses the variety of habitats, natural communities, and ecological processes across biomes.",
+    "category": "Biodiversity & Species Status",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 142,
+    "question": "Species evenness indicates:",
+    "options": [
+      "Total number of species",
+      "How evenly individuals are distributed among species",
+      "Genetic mutation",
+      "Number of habitats"
+    ],
+    "correctAnswer": "How evenly individuals are distributed among species",
+    "explanation": "Species evenness measures the relative abundance of the different species making up the richness of an area.",
+    "category": "Biodiversity & Species Status",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 143,
+    "question": "High species diversity generally increases:",
+    "options": [
+      "Ecosystem instability",
+      "Ecosystem stability and resilience",
+      "Pollution",
+      "Extinction rate"
+    ],
+    "correctAnswer": "Ecosystem stability and resilience",
+    "explanation": "Diverse communities tend to have more functional redundancy and buffering capacity against environmental shocks.",
+    "category": "Biodiversity & Species Status",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 144,
+    "question": "Which is an economic value of biodiversity?",
+    "options": [
+      "Pharmaceutical resources",
+      "Ecotourism",
+      "Agricultural genetic resources",
+      "All of the above"
+    ],
+    "correctAnswer": "All of the above",
+    "explanation": "Biodiversity underpins medicine, nature-based tourism, and crop breeding programs essential for food security.",
+    "category": "Biodiversity & Species Status",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 145,
+    "question": "A species facing a very high risk of extinction in the near future is:",
+    "options": [
+      "Rare",
+      "Endemic",
+      "Endangered",
+      "Common"
+    ],
+    "correctAnswer": "Endangered",
+    "explanation": "IUCN defines endangered species as those confronting an extremely elevated probability of extinction in the wild.",
+    "category": "Biodiversity & Species Status",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 146,
+    "question": "A rare species differs from an endangered species because a rare species:",
+    "options": [
+      "Is necessarily extinct",
+      "Is not currently at high risk of extinction according to the notes",
+      "Has no ecological value",
+      "Exists everywhere"
+    ],
+    "correctAnswer": "Is not currently at high risk of extinction according to the notes",
+    "explanation": "Rare species have small or localized populations, but are not necessarily facing immediate extinction unlike endangered species.",
+    "category": "Biodiversity & Species Status",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 147,
+    "question": "The Nilgiri tahr is endemic to:",
+    "options": [
+      "Eastern Himalayas",
+      "Western Ghats",
+      "Andaman Islands",
+      "Thar Desert"
+    ],
+    "correctAnswer": "Western Ghats",
+    "explanation": "The Nilgiri tahr (an endangered mountain ungulate) is endemic to the high-altitude shola grasslands of the Western Ghats.",
+    "category": "Biodiversity & Species Status",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 148,
+    "question": "The Ganges river dolphin is threatened particularly by:",
+    "options": [
+      "Desertification",
+      "Water pollution and dam construction",
+      "Forest fires only",
+      "Noise from airports only"
+    ],
+    "correctAnswer": "Water pollution and dam construction",
+    "explanation": "Dams and barrages fragment dolphin habitats and disrupt migration, exacerbated by heavy industrial and municipal river pollution.",
+    "category": "Biodiversity & Species Status",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 149,
+    "question": "Which is an example of commensalism?",
+    "options": [
+      "Predator and prey",
+      "Barnacles and whales",
+      "Bee and flower",
+      "Parasite and host"
+    ],
+    "correctAnswer": "Barnacles and whales",
+    "explanation": "In commensalism (+/0), barnacles benefit by hitching a ride to feed in plankton-rich waters while causing no substantial harm or benefit to whales.",
+    "category": "Species Interactions",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 150,
+    "question": "In mutualism:",
+    "options": [
+      "Both species benefit",
+      "One benefits and one is harmed",
+      "One benefits and the other is unaffected",
+      "Both are harmed"
+    ],
+    "correctAnswer": "Both species benefit",
+    "explanation": "Mutualism (+/+) is an ecological interaction in which each participating species derives a fitness benefit.",
+    "category": "Species Interactions",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 151,
+    "question": "Predation involves:",
+    "options": [
+      "Both organisms benefiting",
+      "One organism killing and eating another",
+      "One organism remaining unaffected",
+      "Resource sharing"
+    ],
+    "correctAnswer": "One organism killing and eating another",
+    "explanation": "Predation (+/-) is a biological interaction where one organism (predator) captures, kills, and feeds on another (prey).",
+    "category": "Species Interactions",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 152,
+    "question": "Competition occurs when organisms:",
+    "options": [
+      "Depend on the same limited resources",
+      "Always help one another",
+      "Never interact",
+      "Are all parasites"
+    ],
+    "correctAnswer": "Depend on the same limited resources",
+    "explanation": "Competition (-/-) arises when organisms exploit the same restricted supply of vital resources like food, water, or territory.",
+    "category": "Species Interactions",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 153,
+    "question": "In-situ conservation maintains:",
+    "options": [
+      "Natural evolutionary processes",
+      "Only laboratory populations",
+      "Only seeds",
+      "Only captive animals"
+    ],
+    "correctAnswer": "Natural evolutionary processes",
+    "explanation": "In-situ conservation protects organisms within their evolving ecosystems, allowing natural selection and evolutionary processes to continue uninterrupted.",
+    "category": "Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 154,
+    "question": "Cryopreservation commonly uses:",
+    "options": [
+      "Boiling water",
+      "Liquid nitrogen",
+      "Sunlight",
+      "Dry heat"
+    ],
+    "correctAnswer": "Liquid nitrogen",
+    "explanation": "Cryopreservation preserves cells, tissues, and germplasm at ultra-low temperatures using liquid nitrogen.",
+    "category": "Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 155,
+    "question": "Cryopreservation may involve storage at approximately:",
+    "options": [
+      "0 C",
+      "-20 C",
+      "-196 C",
+      "+100 C"
+    ],
+    "correctAnswer": "-196 C",
+    "explanation": "Liquid nitrogen cools samples down to -196 \u00b0C, suspending all biochemical activity and degradation.",
+    "category": "Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 156,
+    "question": "The National Bureau of Plant Genetic Resources is located in:",
+    "options": [
+      "Mumbai",
+      "New Delhi",
+      "Chennai",
+      "Bengaluru"
+    ],
+    "correctAnswer": "New Delhi",
+    "explanation": "The NBPGR is headquartered in New Delhi and manages India's national gene bank for plant genetic resources.",
+    "category": "Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 157,
+    "question": "The Indian Botanical Garden mentioned in the notes was established in:",
+    "options": [
+      "1787",
+      "1857",
+      "1936",
+      "1972"
+    ],
+    "correctAnswer": "1787",
+    "explanation": "The Indian Botanic Garden at Shibpur, Howrah (near Kolkata), was founded in 1787 by Colonel Robert Kyd.",
+    "category": "Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 158,
+    "question": "Biosphere reserves aim to combine:",
+    "options": [
+      "Conservation and sustainable development",
+      "Mining and conservation",
+      "Industrialization and deforestation",
+      "Urbanization and pollution"
+    ],
+    "correctAnswer": "Conservation and sustainable development",
+    "explanation": "Under UNESCO's MAB program, biosphere reserves harmonize ecological conservation with socio-economic sustainable development.",
+    "category": "Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 159,
+    "question": "The Convention on Biological Diversity was established in:",
+    "options": [
+      "1972",
+      "1980",
+      "1992",
+      "2002"
+    ],
+    "correctAnswer": "1992",
+    "explanation": "The CBD was opened for signature at the Rio Earth Summit in 1992 to protect biological diversity globally.",
+    "category": "Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 160,
+    "question": "Project Elephant was launched in:",
+    "options": [
+      "1973",
+      "1980",
+      "1992",
+      "2002"
+    ],
+    "correctAnswer": "1992",
+    "explanation": "Project Elephant was launched by India's Ministry of Environment and Forests in 1992 to protect Asian elephants and elephant corridors.",
+    "category": "Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 161,
+    "question": "The Ramsar Convention is associated with:",
+    "options": [
+      "Forests",
+      "Wetlands",
+      "Noise pollution",
+      "Nuclear energy"
+    ],
+    "correctAnswer": "Wetlands",
+    "explanation": "Signed in Ramsar, Iran in 1971, this intergovernmental treaty provides the framework for national action and international cooperation on wetlands.",
+    "category": "Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 162,
+    "question": "Which protected area generally has the strictest protection?",
+    "options": [
+      "National Park",
+      "Wildlife Sanctuary",
+      "Community Reserve",
+      "Agricultural land"
+    ],
+    "correctAnswer": "National Park",
+    "explanation": "National Parks have the highest legal protection status in India where no human settlement or private biotic interference (like grazing) is allowed.",
+    "category": "Conservation",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 163,
+    "question": "The circular economy attempts to:",
+    "options": [
+      "Maximize disposal",
+      "Keep materials and products in use",
+      "Increase landfill use",
+      "Promote single-use products"
+    ],
+    "correctAnswer": "Keep materials and products in use",
+    "explanation": "The circular economy designs out waste and pollution, ensuring products and materials circulate at their highest utility and value.",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 164,
+    "question": "Reduce is first in the 3R hierarchy because:",
+    "options": [
+      "Recycling is impossible",
+      "It prevents waste from being generated in the first place",
+      "Reuse is illegal",
+      "Landfills are free"
+    ],
+    "correctAnswer": "It prevents waste from being generated in the first place",
+    "explanation": "Source reduction avoids resource extraction, energy expenditures, and waste handling altogether.",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 165,
+    "question": "Reuse means:",
+    "options": [
+      "Destroying a product",
+      "Using something again without significant reprocessing",
+      "Burning waste",
+      "Converting waste into energy"
+    ],
+    "correctAnswer": "Using something again without significant reprocessing",
+    "explanation": "Reuse repurposes items in their existing form without consuming substantial energy to dismantle or re-melt them.",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 166,
+    "question": "Recycling means:",
+    "options": [
+      "Disposing of waste",
+      "Processing material into something new",
+      "Storing waste underground",
+      "Producing virgin raw material"
+    ],
+    "correctAnswer": "Processing material into something new",
+    "explanation": "Recycling transforms waste materials into new substances or manufactured products.",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 167,
+    "question": "Extended Producer Responsibility means:",
+    "options": [
+      "Consumers are legally responsible for everything",
+      "Producers bear responsibility for products at end-of-life",
+      "Government owns every product",
+      "Recycling is prohibited"
+    ],
+    "correctAnswer": "Producers bear responsibility for products at end-of-life",
+    "explanation": "EPR is an environmental policy approach assigning manufacturers financial and physical responsibility for end-of-life treatment of their goods.",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 168,
+    "question": "Industrial symbiosis involves:",
+    "options": [
+      "Industries independently discarding all waste",
+      "Industries exchanging by-products/resources",
+      "Closing industries",
+      "Only household recycling"
+    ],
+    "correctAnswer": "Industries exchanging by-products/resources",
+    "explanation": "In industrial symbiosis, the waste output or byproduct of one industrial process serves directly as the input feedstock for another.",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 169,
+    "question": "Urban mining involves recovering:",
+    "options": [
+      "Soil from forests",
+      "Valuable materials from discarded electronics",
+      "Water from oceans",
+      "Coal from mountains"
+    ],
+    "correctAnswer": "Valuable materials from discarded electronics",
+    "explanation": "Urban mining is the reclaim of precious and critical raw materials (gold, copper, rare earths) from electronic waste and discarded infrastructure.",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 170,
+    "question": "Controlled incineration generally occurs at approximately:",
+    "options": [
+      "100-200 C",
+      "300-400 C",
+      "800-1000 C",
+      "2000-3000 C"
+    ],
+    "correctAnswer": "800-1000 C",
+    "explanation": "Modern controlled waste incinerators operate between 850\u00b0C and 1000\u00b0C to guarantee complete thermal breakdown of dioxins and hazardous volatiles.",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 171,
+    "question": "The circular economy differs from the linear economy because it emphasizes:",
+    "options": [
+      "Take-make-dispose",
+      "Continuous resource use and regeneration",
+      "Landfill dependency",
+      "Resource depletion"
+    ],
+    "correctAnswer": "Continuous resource use and regeneration",
+    "explanation": "Circular systems decouple economic activity from the consumption of finite resources through continuous regeneration.",
+    "category": "Circular Economy & Waste",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 172,
+    "question": "The two major categories based on formation are:",
+    "options": [
+      "Indoor and outdoor",
+      "Primary and secondary",
+      "Natural and biological",
+      "Local and global"
+    ],
+    "correctAnswer": "Primary and secondary",
+    "explanation": "Based on their mode of formation, air pollutants are classified into primary (emitted directly) and secondary (formed via reactions).",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 173,
+    "question": "A primary pollutant is:",
+    "options": [
+      "Formed only after atmospheric reactions",
+      "Directly emitted from a source",
+      "Always harmless",
+      "Always a solid"
+    ],
+    "correctAnswer": "Directly emitted from a source",
+    "explanation": "Primary pollutants enter the atmosphere directly from identifiable point or mobile sources (e.g., CO, SO2 from smokestacks).",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 174,
+    "question": "Ground-level ozone is primarily a:",
+    "options": [
+      "Primary pollutant",
+      "Secondary pollutant",
+      "Heavy metal",
+      "Particulate"
+    ],
+    "correctAnswer": "Secondary pollutant",
+    "explanation": "Tropospheric ozone is not emitted directly; it is synthesized through photochemical reactions between NOx and VOCs under solar radiation.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 175,
+    "question": "Photochemical smog formation involves:",
+    "options": [
+      "NOx + VOCs + sunlight",
+      "CO2 + nitrogen",
+      "SO2 + methane only",
+      "Oxygen + water only"
+    ],
+    "correctAnswer": "NOx + VOCs + sunlight",
+    "explanation": "Photochemical smog forms when nitrogen oxides and volatile organic compounds react in the presence of ultraviolet sunlight.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 176,
+    "question": "Acid rain commonly has a pH:",
+    "options": [
+      "Above 8",
+      "Exactly 7",
+      "Below 5.6",
+      "Above 10"
+    ],
+    "correctAnswer": "Below 5.6",
+    "explanation": "Normal unpolluted rain has a pH around 5.6 due to dissolved atmospheric CO2 forming mild carbonic acid; precipitation with pH < 5.6 is acid rain.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 177,
+    "question": "The major natural source of SO2 in the notes is:",
+    "options": [
+      "Volcanic eruptions",
+      "Earthquakes",
+      "Rain",
+      "Ocean waves"
+    ],
+    "correctAnswer": "Volcanic eruptions",
+    "explanation": "Volcanoes vent massive volumes of sulfur dioxide naturally into the atmosphere during eruptive and outgassing phases.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 178,
+    "question": "Radon is:",
+    "options": [
+      "A radioactive gas",
+      "A greenhouse particle",
+      "A heavy metal",
+      "A biological pollutant"
+    ],
+    "correctAnswer": "A radioactive gas",
+    "explanation": "Radon is a colorless, odorless, naturally occurring radioactive noble gas produced from the decay of uranium in soils and rocks.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 179,
+    "question": "Radon is described as the second leading cause of lung cancer after:",
+    "options": [
+      "Air pollution",
+      "Smoking",
+      "Alcohol",
+      "Noise"
+    ],
+    "correctAnswer": "Smoking",
+    "explanation": "Radon gas decay products lodge in lung tissues and emit alpha radiation, making radon the #1 cause of lung cancer in non-smokers and #2 overall after smoking.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 180,
+    "question": "Which device is designed to remove particulate matter from industrial exhaust?",
+    "options": [
+      "Electrostatic precipitator",
+      "Refrigerator",
+      "Condenser only",
+      "Chlorinator"
+    ],
+    "correctAnswer": "Electrostatic precipitator",
+    "explanation": "Electrostatic precipitators (ESPs) charge suspended dust particles and collect them on oppositely charged plates with over 99% efficiency.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 181,
+    "question": "India adopted BS-VI emission standards in:",
+    "options": [
+      "2015",
+      "2018",
+      "2020",
+      "2024"
+    ],
+    "correctAnswer": "2020",
+    "explanation": "India leapfrogged directly from Bharat Stage IV to BS-VI vehicular emission norms nationwide starting April 1, 2020.",
+    "category": "Air Pollution",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 182,
+    "question": "The safe drinking-water pH range given in the notes is:",
+    "options": [
+      "2-4",
+      "4-6",
+      "6.5-8.5",
+      "9-12"
+    ],
+    "correctAnswer": "6.5-8.5",
+    "explanation": "WHO and BIS drinking water specifications dictate an acceptable potable pH range between 6.5 and 8.5.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 183,
+    "question": "The WHO water-quality value for TDS given in the notes is:",
+    "options": [
+      "<50 mg/L",
+      "<100 mg/L",
+      "<500 mg/L",
+      "<5000 mg/L"
+    ],
+    "correctAnswer": "<500 mg/L",
+    "explanation": "Total Dissolved Solids (TDS) under 500 mg/L is generally classified by WHO as good to excellent for drinking purposes.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 184,
+    "question": "A factory pipe discharging wastewater is an example of:",
+    "options": [
+      "Non-point source pollution",
+      "Point source pollution",
+      "Natural pollution",
+      "Diffuse pollution"
+    ],
+    "correctAnswer": "Point source pollution",
+    "explanation": "Point-source pollution originates from an identifiable, single, and stationary localized discharge outlet such as an industrial conduit.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 185,
+    "question": "Agricultural runoff is generally:",
+    "options": [
+      "Point-source pollution",
+      "Non-point-source pollution",
+      "Thermal pollution only",
+      "Noise pollution"
+    ],
+    "correctAnswer": "Non-point-source pollution",
+    "explanation": "Agricultural runoff containing pesticides and fertilizers flows diffusely over vast catchment areas, representing non-point-source pollution.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 186,
+    "question": "Excess nitrogen and phosphorus can cause:",
+    "options": [
+      "Desertification",
+      "Eutrophication",
+      "Earthquakes",
+      "Ozone depletion"
+    ],
+    "correctAnswer": "Eutrophication",
+    "explanation": "Nutrient enrichment (eutrophication) of water bodies by nitrates and phosphates triggers excessive algal blooms.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 187,
+    "question": "In eutrophication, decomposition of algal biomass leads to:",
+    "options": [
+      "Increased dissolved oxygen",
+      "Oxygen depletion",
+      "Reduced nutrients",
+      "Reduced bacterial activity"
+    ],
+    "correctAnswer": "Oxygen depletion",
+    "explanation": "Aerobic bacteria consume large quantities of dissolved oxygen while breaking down dead algal blooms, suffocating fish and aquatic life.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 188,
+    "question": "Biomagnification generally causes greater pollutant concentration at:",
+    "options": [
+      "Lower trophic levels",
+      "Top trophic levels",
+      "Producers only",
+      "Decomposers only"
+    ],
+    "correctAnswer": "Top trophic levels",
+    "explanation": "Persistent lipophilic contaminants (like DDT and mercury) multiply in concentration at each ascending step of the food chain, peaking at apex predators.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 189,
+    "question": "Minamata disease is associated with:",
+    "options": [
+      "Lead",
+      "Mercury",
+      "Arsenic",
+      "Cadmium"
+    ],
+    "correctAnswer": "Mercury",
+    "explanation": "Minamata disease is a severe neurological syndrome caused by bioaccumulated methylmercury poisoning.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 190,
+    "question": "Minamata disease occurred in:",
+    "options": [
+      "India",
+      "Japan",
+      "USA",
+      "France"
+    ],
+    "correctAnswer": "Japan",
+    "explanation": "The outbreak occurred around Minamata Bay in Kumamoto Prefecture, Japan, starting in the mid-1950s due to industrial effluent.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 191,
+    "question": "Secondary wastewater treatment is primarily:",
+    "options": [
+      "Physical",
+      "Biological",
+      "Geological",
+      "Thermal"
+    ],
+    "correctAnswer": "Biological",
+    "explanation": "Secondary treatment utilizes aerobic or anaerobic microorganisms (e.g., activated sludge, trickling filters) to degrade dissolved organic matter.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 192,
+    "question": "Tertiary treatment is:",
+    "options": [
+      "Advanced treatment",
+      "Preliminary screening only",
+      "Primary sedimentation only",
+      "Open dumping"
+    ],
+    "correctAnswer": "Advanced treatment",
+    "explanation": "Tertiary treatment is the advanced polishing step removing residual phosphorus, nitrogen, heavy metals, and pathogens before reuse.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 193,
+    "question": "Drip irrigation conserves water mainly by:",
+    "options": [
+      "Flooding the entire field",
+      "Delivering water directly to the root zone",
+      "Increasing evaporation",
+      "Increasing runoff"
+    ],
+    "correctAnswer": "Delivering water directly to the root zone",
+    "explanation": "Micro-irrigation drippers supply metered moisture straight to root zones, drastically cutting evaporation and surface runoff losses.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 194,
+    "question": "Integrated Water Resources Management is abbreviated:",
+    "options": [
+      "IWRM",
+      "IWPM",
+      "IRWM",
+      "WRIM"
+    ],
+    "correctAnswer": "IWRM",
+    "explanation": "IWRM stands for Integrated Water Resources Management, a coordinated development process for water, land, and related resources.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 195,
+    "question": "Jal Shakti Abhiyan was launched in:",
+    "options": [
+      "1992",
+      "2002",
+      "2012",
+      "2019"
+    ],
+    "correctAnswer": "2019",
+    "explanation": "The Government of India inaugurated the Jal Shakti Abhiyan campaign in 2019 for water conservation and rainwater harvesting.",
+    "category": "Water Pollution & Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 196,
+    "question": "Sound is measured in:",
+    "options": [
+      "Pascal",
+      "Decibel",
+      "Joule",
+      "Watt"
+    ],
+    "correctAnswer": "Decibel",
+    "explanation": "Sound intensity and sound pressure levels are measured on a logarithmic scale in units of decibels (dB).",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 197,
+    "question": "A typical conversation is approximately:",
+    "options": [
+      "5 dB",
+      "30 dB",
+      "50 dB",
+      "120 dB"
+    ],
+    "correctAnswer": "50 dB",
+    "explanation": "Standard normal human speech creates an ambient sound intensity of roughly 50 to 60 dB.",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 198,
+    "question": "Prolonged exposure above approximately ____ can damage hearing.",
+    "options": [
+      "25 dB",
+      "50 dB",
+      "65 dB",
+      "85 dB"
+    ],
+    "correctAnswer": "85 dB",
+    "explanation": "Occupational safety standards (like OSHA/NIOSH) warn that continuous occupational noise exceeding 85 dB induces permanent hearing impairment.",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 199,
+    "question": "Noise pollution is particularly dangerous to marine animals because:",
+    "options": [
+      "They depend on sound for communication and finding food",
+      "They cannot swim",
+      "They cannot reproduce",
+      "They require sunlight"
+    ],
+    "correctAnswer": "They depend on sound for communication and finding food",
+    "explanation": "Cetaceans and marine species rely on echolocation and acoustic channels for navigation, foraging, and social communication.",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 200,
+    "question": "India's Noise Pollution Regulation & Control Rules were introduced in:",
+    "options": [
+      "1981",
+      "1992",
+      "2000",
+      "2010"
+    ],
+    "correctAnswer": "2000",
+    "explanation": "India framed the Noise Pollution (Regulation and Control) Rules in 2000 under the Environment (Protection) Act, 1986.",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 201,
+    "question": "Thermal pollution is primarily caused by:",
+    "options": [
+      "Discharge of abnormally hot/cold water",
+      "Noise",
+      "Solid waste alone",
+      "Radiation only"
+    ],
+    "correctAnswer": "Discharge of abnormally hot/cold water",
+    "explanation": "Thermal pollution occurs when power plants or factories draw water for cooling and return heated water into aquatic bodies.",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 202,
+    "question": "Increasing water temperature generally:",
+    "options": [
+      "Increases oxygen solubility",
+      "Reduces oxygen solubility",
+      "Has no effect on oxygen",
+      "Eliminates thermal stress"
+    ],
+    "correctAnswer": "Reduces oxygen solubility",
+    "explanation": "Gas solubility exhibits an inverse relationship with temperature: warmer water can hold significantly less dissolved oxygen.",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 203,
+    "question": "A 1-1.5 C increase in water temperature can:",
+    "options": [
+      "Improve biodiversity everywhere",
+      "Reduce oxygen solubility and stress aquatic life",
+      "Stop all biological activity",
+      "Freeze water"
+    ],
+    "correctAnswer": "Reduce oxygen solubility and stress aquatic life",
+    "explanation": "Even slight temperature increases reduce dissolved oxygen and alter metabolic rates of fish and benthic organisms.",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 204,
+    "question": "Cooling towers are used to:",
+    "options": [
+      "Increase wastewater temperature",
+      "Dissipate heat",
+      "Increase dissolved pollutants",
+      "Produce noise"
+    ],
+    "correctAnswer": "Dissipate heat",
+    "explanation": "Cooling towers extract and dissipate heat from industrial process water to the atmosphere before water is discharged or recirculated.",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 205,
+    "question": "Soil pollution can contaminate:",
+    "options": [
+      "Groundwater",
+      "Air only",
+      "Clouds only",
+      "Sunlight"
+    ],
+    "correctAnswer": "Groundwater",
+    "explanation": "Water-soluble chemicals, heavy metals, and agrochemical toxins leach down through soil horizons into underlying groundwater aquifers.",
+    "category": "Noise, Thermal & Soil",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 206,
+    "question": "Environmental hazards can be classified into:",
+    "options": [
+      "Physical, chemical, biological and sociological",
+      "Only natural and artificial",
+      "Only physical and chemical",
+      "Only biological"
+    ],
+    "correctAnswer": "Physical, chemical, biological and sociological",
+    "explanation": "Environmental hazards encompass physical (radiation, earthquakes), chemical (toxins), biological (pathogens), and socio-cultural stressors.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 207,
+    "question": "Risk refers to:",
+    "options": [
+      "Presence of a hazard only",
+      "Probability of a hazard causing harm",
+      "Elimination of a hazard",
+      "Recovery after a disaster"
+    ],
+    "correctAnswer": "Probability of a hazard causing harm",
+    "explanation": "Risk is quantitatively evaluated as the probability of a hazard causing injury, damage, or adverse effects multiplied by consequence.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 208,
+    "question": "Anthropogenic hazards arise from:",
+    "options": [
+      "Natural tectonic processes",
+      "Human activities",
+      "Solar radiation only",
+      "Ocean tides only"
+    ],
+    "correctAnswer": "Human activities",
+    "explanation": "Anthropogenic hazards are threats originating from human action, inaction, negligence, or engineering failures.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 209,
+    "question": "A technological hazard includes:",
+    "options": [
+      "Oil spills",
+      "Industrial accidents",
+      "Chemical leaks",
+      "All of the above"
+    ],
+    "correctAnswer": "All of the above",
+    "explanation": "Industrial catastrophes, petrochemical discharges, and hazardous chemical releases are prototypical technological disasters.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 210,
+    "question": "Disaster management includes:",
+    "options": [
+      "Prevention",
+      "Preparedness",
+      "Response and recovery",
+      "All of the above"
+    ],
+    "correctAnswer": "All of the above",
+    "explanation": "Comprehensive disaster risk management operates as an integrated cycle: prevention, mitigation, preparedness, response, and recovery.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 211,
+    "question": "A tsunami can be triggered by:",
+    "options": [
+      "Underwater earthquake",
+      "Noise pollution",
+      "Deforestation only",
+      "Acid rain"
+    ],
+    "correctAnswer": "Underwater earthquake",
+    "explanation": "Submarine megathrust earthquakes displace vast water columns, sending high-energy tsunami wave trains across ocean basins.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 212,
+    "question": "The epicenter of an earthquake is:",
+    "options": [
+      "The point underground where the earthquake begins",
+      "The point on the Earth's surface directly above the focus",
+      "The plate boundary only",
+      "The damaged region"
+    ],
+    "correctAnswer": "The point on the Earth's surface directly above the focus",
+    "explanation": "The hypocenter (focus) is the subsurface rupture point; the epicenter is the point on the ground surface vertically above the focus.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 213,
+    "question": "The 2013 Kedarnath disaster mentioned in the notes was associated with:",
+    "options": [
+      "Intense rainfall and landslides",
+      "Volcanic eruption",
+      "Nuclear accident",
+      "Tsunami"
+    ],
+    "correctAnswer": "Intense rainfall and landslides",
+    "explanation": "In June 2013, unprecedented multi-day cloudbursts in Uttarakhand triggered catastrophic flash floods and debris-flow landslides.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 214,
+    "question": "The Oso landslide in 2014 was associated with:",
+    "options": [
+      "Persistent rainfall and soil saturation",
+      "Earthquake only",
+      "Volcanic eruption",
+      "Drought"
+    ],
+    "correctAnswer": "Persistent rainfall and soil saturation",
+    "explanation": "The 2014 Oso landslide in Washington State followed weeks of intense precipitation that hyper-saturated glaciomarine silt layers.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 215,
+    "question": "The Sendai Framework is associated with:",
+    "options": [
+      "Disaster risk reduction",
+      "Wildlife trade",
+      "Water pollution",
+      "Noise control"
+    ],
+    "correctAnswer": "Disaster risk reduction",
+    "explanation": "The Sendai Framework for Disaster Risk Reduction (2015\u20132030) was adopted at the UN World Conference in Sendai, Japan.",
+    "category": "Hazards & Disaster Management",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 216,
+    "question": "Bt crops contain a gene from:",
+    "options": [
+      "Bacillus thuringiensis",
+      "Rhizobium",
+      "Vibrio cholerae",
+      "Plasmodium"
+    ],
+    "correctAnswer": "Bacillus thuringiensis",
+    "explanation": "Cry genes encoding insecticidal crystal delta-endotoxins are cloned from the bacterium Bacillus thuringiensis.",
+    "category": "Genetically Modified Crops",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 217,
+    "question": "Bt cotton was approved for commercial cultivation in India in:",
+    "options": [
+      "1992",
+      "2000",
+      "2002",
+      "2009"
+    ],
+    "correctAnswer": "2002",
+    "explanation": "The Genetic Engineering Appraisal Committee (GEAC) granted clearance for commercial farming of Bt cotton in India in 2002.",
+    "category": "Genetically Modified Crops",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 218,
+    "question": "Bt cotton primarily targets:",
+    "options": [
+      "Bollworms",
+      "Earthworms",
+      "Bacteria",
+      "Fungi"
+    ],
+    "correctAnswer": "Bollworms",
+    "explanation": "Bt cotton expresses Cry1Ac toxins engineered primarily to eliminate destructive lepidopteran bollworms (Helicoverpa armigera).",
+    "category": "Genetically Modified Crops",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 219,
+    "question": "Bt brinjal was cleared for release in:",
+    "options": [
+      "2002",
+      "2005",
+      "2009",
+      "2015"
+    ],
+    "correctAnswer": "2009",
+    "explanation": "In 2009, GEAC gave regulatory clearance for commercialization of transgenic Bt brinjal.",
+    "category": "Genetically Modified Crops",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 220,
+    "question": "Bt brinjal was subsequently:",
+    "options": [
+      "Widely commercialized",
+      "Put on hold/moratorium",
+      "Banned worldwide",
+      "Converted into conventional crops"
+    ],
+    "correctAnswer": "Put on hold/moratorium",
+    "explanation": "Following public stakeholder consultations in early 2010, the Ministry of Environment imposed an indefinite moratorium on its release.",
+    "category": "Genetically Modified Crops",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 221,
+    "question": "The main Indian authority mentioned for GM crop approval is:",
+    "options": [
+      "WHO",
+      "GEAC",
+      "UNESCO",
+      "CPCB"
+    ],
+    "correctAnswer": "GEAC",
+    "explanation": "The Genetic Engineering Appraisal Committee (GEAC) under the MoEFCC evaluates proposals involving GMO releases in India.",
+    "category": "Genetically Modified Crops",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 222,
+    "question": "One concern with prolonged Bt use is:",
+    "options": [
+      "Pest resistance",
+      "Elimination of all insects",
+      "Soil freezing",
+      "Increased rainfall"
+    ],
+    "correctAnswer": "Pest resistance",
+    "explanation": "Continuous exposure creates selective pressure, allowing mutant insects possessing resistance alleles to flourish.",
+    "category": "Genetically Modified Crops",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 223,
+    "question": "Refuge planting is used to:",
+    "options": [
+      "Increase pest resistance",
+      "Help delay development of pest resistance",
+      "Increase soil erosion",
+      "Eliminate crop rotation"
+    ],
+    "correctAnswer": "Help delay development of pest resistance",
+    "explanation": "Refuge strips of non-Bt plants allow susceptible pests to survive and intermate with resistant bugs, delaying resistance emergence.",
+    "category": "Genetically Modified Crops",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 224,
+    "question": "The Wildlife Protection Act was enacted in:",
+    "options": [
+      "1972",
+      "1974",
+      "1980",
+      "1981"
+    ],
+    "correctAnswer": "1972",
+    "explanation": "India enacted the Wildlife (Protection) Act in 1972, creating strict schedules protecting flora and fauna and establishing sanctuaries.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 225,
+    "question": "The Forest (Conservation) Act mainly regulates:",
+    "options": [
+      "Air pollution",
+      "Diversion of forest land for non-forest purposes",
+      "Noise",
+      "Water quality"
+    ],
+    "correctAnswer": "Diversion of forest land for non-forest purposes",
+    "explanation": "The Forest (Conservation) Act, 1980 mandates central government approval prior to diverting classified forest areas.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 226,
+    "question": "The Supreme Court Godavarman judgment mentioned in the notes was in:",
+    "options": [
+      "1972",
+      "1986",
+      "1992",
+      "1996"
+    ],
+    "correctAnswer": "1996",
+    "explanation": "The landmark 1996 T.N. Godavarman Thirumulpad v. Union of India verdict expanded the legal definition of 'forest' under Indian jurisprudence.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 227,
+    "question": "The Biological Diversity Act was enacted in:",
+    "options": [
+      "1980",
+      "1986",
+      "1992",
+      "2002"
+    ],
+    "correctAnswer": "2002",
+    "explanation": "India enacted the Biological Diversity Act in 2002 to fulfill commitments under the UN Convention on Biological Diversity (CBD).",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 228,
+    "question": "The Environment Protection Act was enacted on:",
+    "options": [
+      "March 23, 1974",
+      "November 19, 1986",
+      "December 2, 1984",
+      "January 26, 1992"
+    ],
+    "correctAnswer": "November 19, 1986",
+    "explanation": "The EPA came into force on November 19, 1986, following the wake of the 1984 Bhopal disaster.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 229,
+    "question": "The Bhopal Gas Tragedy occurred on:",
+    "options": [
+      "December 2-3, 1984",
+      "March 23, 1974",
+      "November 19, 1986",
+      "December 11, 1997"
+    ],
+    "correctAnswer": "December 2-3, 1984",
+    "explanation": "The Union Carbide India Limited pesticide plant leaked toxic gas in Bhopal on the night of December 2\u20133, 1984.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 230,
+    "question": "The gas involved in the Bhopal disaster was:",
+    "options": [
+      "Chlorine",
+      "Methyl isocyanate",
+      "Methane",
+      "Sulphur dioxide"
+    ],
+    "correctAnswer": "Methyl isocyanate",
+    "explanation": "Over 40 tonnes of volatile Methyl Isocyanate (MIC) gas vented from tank E610 into Bhopal.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 231,
+    "question": "Section 3 of the EPA gives broad powers to:",
+    "options": [
+      "State governments only",
+      "Central Government",
+      "Municipal corporations",
+      "Wildlife departments only"
+    ],
+    "correctAnswer": "Central Government",
+    "explanation": "Section 3 empowers the Central Government of India to take all such measures deemed necessary for protecting and improving the environment.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 232,
+    "question": "Section 8 of the EPA concerns:",
+    "options": [
+      "Hazardous substances",
+      "Wildlife schedules",
+      "Forest diversion",
+      "Air pollution areas"
+    ],
+    "correctAnswer": "Hazardous substances",
+    "explanation": "Section 8 specifies that no person shall handle or cause to be handled any hazardous substance except in accordance with prescribed safety procedures.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 233,
+    "question": "Section 19 of the Air Act concerns:",
+    "options": [
+      "Air pollution control areas",
+      "Wildlife protection",
+      "Water consent",
+      "Hazardous waste disposal"
+    ],
+    "correctAnswer": "Air pollution control areas",
+    "explanation": "Section 19 of the Air Act empowers state governments, in consultation with SPCBs, to declare designated air pollution control areas.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 234,
+    "question": "Section 21 of the Air Act establishes:",
+    "options": [
+      "Consent mechanism",
+      "Wildlife schedules",
+      "Environmental laboratories",
+      "National parks"
+    ],
+    "correctAnswer": "Consent mechanism",
+    "explanation": "Section 21 mandates that no person shall operate any industrial plant in an air pollution control area without previous consent of the State Board.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 235,
+    "question": "Section 31A of the Air Act provides:",
+    "options": [
+      "Emergency powers including closure/suspension",
+      "Wildlife trade licences",
+      "Forest permits",
+      "Water testing"
+    ],
+    "correctAnswer": "Emergency powers including closure/suspension",
+    "explanation": "Section 31A grants regulatory boards authority to issue directions including closure, prohibition, or regulation of industry, and stoppage of electricity/water.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 236,
+    "question": "CPCB stands for:",
+    "options": [
+      "Central Climate Protection Board",
+      "Central Pollution Control Board",
+      "Central Public Conservation Board",
+      "Central Planning Control Bureau"
+    ],
+    "correctAnswer": "Central Pollution Control Board",
+    "explanation": "The CPCB is India's statutory organization constituted under the Water (Prevention and Control of Pollution) Act, 1974.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 237,
+    "question": "SPCB stands for:",
+    "options": [
+      "State Pollution Control Board",
+      "State Public Conservation Bureau",
+      "Sustainable Pollution Control Bureau",
+      "State Planning and Climate Board"
+    ],
+    "correctAnswer": "State Pollution Control Board",
+    "explanation": "SPCB stands for State Pollution Control Board, enforcing environmental laws and discharge standards at state jurisdiction.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 238,
+    "question": "NGT was established in:",
+    "options": [
+      "1986",
+      "1992",
+      "2002",
+      "2010"
+    ],
+    "correctAnswer": "2010",
+    "explanation": "The National Green Tribunal (NGT) was established in 2010 under the NGT Act for expeditious disposal of civil environmental cases.",
+    "category": "Indian Environmental Laws",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 239,
+    "question": "The Kyoto Protocol entered into force on:",
+    "options": [
+      "December 11, 1997",
+      "February 16, 2005",
+      "November 4, 2016",
+      "August 2002"
+    ],
+    "correctAnswer": "February 16, 2005",
+    "explanation": "Following Russia's decisive ratification meeting the 55% emissions threshold, Kyoto entered legally into force on 16 February 2005.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 240,
+    "question": "India ratified Kyoto in:",
+    "options": [
+      "1997",
+      "2000",
+      "August 2002",
+      "2015"
+    ],
+    "correctAnswer": "August 2002",
+    "explanation": "India formally deposited its instrument of accession/ratification to the Kyoto Protocol in August 2002 as a Non-Annex I party.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 241,
+    "question": "Which of the following is a Kyoto greenhouse gas?",
+    "options": [
+      "CO2",
+      "CH4",
+      "SF6",
+      "All of the above"
+    ],
+    "correctAnswer": "All of the above",
+    "explanation": "Annex A of the Kyoto Protocol explicitly covers 6 greenhouse gases: CO2, CH4, N2O, HFCs, PFCs, and SF6.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 242,
+    "question": "Which is NOT one of Kyoto's six covered greenhouse gases?",
+    "options": [
+      "CO2",
+      "CH4",
+      "O2",
+      "SF6"
+    ],
+    "correctAnswer": "O2",
+    "explanation": "Atmospheric oxygen (O2) is not a greenhouse gas and is not targeted by the Kyoto Protocol.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 243,
+    "question": "Kyoto's Clean Development Mechanism is abbreviated:",
+    "options": [
+      "CBD",
+      "CDM",
+      "CDR",
+      "CFC"
+    ],
+    "correctAnswer": "CDM",
+    "explanation": "CDM stands for Clean Development Mechanism, allowing emission-reduction projects in developing nations to earn certified emission reduction (CER) credits.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 244,
+    "question": "The Paris Agreement was adopted at:",
+    "options": [
+      "COP3",
+      "COP15",
+      "COP21",
+      "COP28"
+    ],
+    "correctAnswer": "COP21",
+    "explanation": "The landmark Paris Agreement was reached during COP21 of the UNFCCC in Paris, December 2015.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 245,
+    "question": "The Paris Agreement entered into force on:",
+    "options": [
+      "November 4, 2016",
+      "December 11, 1997",
+      "February 16, 2005",
+      "September 2015"
+    ],
+    "correctAnswer": "November 4, 2016",
+    "explanation": "The Paris Agreement crossed its 55-party and 55% emissions threshold rapidly, entering into force on November 4, 2016.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 246,
+    "question": "Paris uses which approach to national climate targets?",
+    "options": [
+      "Completely assigned targets",
+      "Bottom-up nationally determined targets",
+      "No national targets",
+      "Targets only for developed nations"
+    ],
+    "correctAnswer": "Bottom-up nationally determined targets",
+    "explanation": "Unlike Kyoto's top-down mandated quotas, Paris utilizes bottom-up pledges formulated domestically by each country (NDCs).",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 247,
+    "question": "NDCs are updated:",
+    "options": [
+      "Every year",
+      "Every two years",
+      "Every five years",
+      "Every ten years"
+    ],
+    "correctAnswer": "Every five years",
+    "explanation": "Under the Paris ratchet mechanism, nations must submit updated, progressively more ambitious NDCs every five years.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 248,
+    "question": "Article 2 of the Paris Agreement concerns:",
+    "options": [
+      "Climate finance",
+      "Temperature goal",
+      "Adaptation",
+      "Trade"
+    ],
+    "correctAnswer": "Temperature goal",
+    "explanation": "Article 2 establishes the core temperature objective: holding warming well below 2\u00b0C and pursuing 1.5\u00b0C above pre-industrial levels.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 249,
+    "question": "Article 4 concerns:",
+    "options": [
+      "Net-zero/long-term emission trajectory",
+      "Wildlife",
+      "Water pollution",
+      "EIA"
+    ],
+    "correctAnswer": "Net-zero/long-term emission trajectory",
+    "explanation": "Article 4 outlines long-term global emissions mitigation aimed at achieving a balance between anthropogenic emissions and greenhouse gas removals (net zero).",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 250,
+    "question": "Article 7 concerns:",
+    "options": [
+      "Adaptation",
+      "Finance",
+      "Biodiversity",
+      "Trade"
+    ],
+    "correctAnswer": "Adaptation",
+    "explanation": "Article 7 establishes the global goal on adaptation to enhance adaptive capacity, strengthen resilience, and reduce vulnerability.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 251,
+    "question": "Article 9 concerns:",
+    "options": [
+      "Climate finance",
+      "Ecosystem diversity",
+      "Air pollution",
+      "Waste management"
+    ],
+    "correctAnswer": "Climate finance",
+    "explanation": "Article 9 obligates developed country parties to provide financial resources to assist developing country parties with mitigation and adaptation.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 252,
+    "question": "The annual climate finance figure in the notes is:",
+    "options": [
+      "USD 10 billion",
+      "USD 50 billion",
+      "USD 100 billion",
+      "USD 1 trillion"
+    ],
+    "correctAnswer": "USD 100 billion",
+    "explanation": "Developed nations pledged to collectively mobilize USD 100 billion per year by 2020 to support developing nations.",
+    "category": "Kyoto, Paris & SDGs",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 253,
+    "question": "SDG 6 concerns:",
+    "options": [
+      "Quality education",
+      "Clean water and sanitation",
+      "Climate action",
+      "Life below water"
+    ],
+    "correctAnswer": "Clean water and sanitation",
+    "explanation": "Sustainable Development Goal 6 aims to ensure availability and sustainable management of water and sanitation for all.",
+    "category": "Sustainable Development Goals",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 254,
+    "question": "SDG 7 concerns:",
+    "options": [
+      "Affordable and clean energy",
+      "Gender equality",
+      "Life on land",
+      "Zero hunger"
+    ],
+    "correctAnswer": "Affordable and clean energy",
+    "explanation": "SDG 7 aims to ensure access to affordable, reliable, sustainable and modern energy for all.",
+    "category": "Sustainable Development Goals",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 255,
+    "question": "SDG 13 concerns:",
+    "options": [
+      "Climate action",
+      "Peace and justice",
+      "Education",
+      "Industry"
+    ],
+    "correctAnswer": "Climate action",
+    "explanation": "SDG 13 urges urgent action to combat climate change and its impacts.",
+    "category": "Sustainable Development Goals",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 256,
+    "question": "SDG 14 concerns:",
+    "options": [
+      "Terrestrial ecosystems",
+      "Oceans, seas and marine resources",
+      "Sustainable cities",
+      "Poverty"
+    ],
+    "correctAnswer": "Oceans, seas and marine resources",
+    "explanation": "SDG 14 commits to conserve and sustainably use the oceans, seas, and marine resources for sustainable development ('Life Below Water').",
+    "category": "Sustainable Development Goals",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 257,
+    "question": "SDG 15 concerns:",
+    "options": [
+      "Life on land/terrestrial ecosystems",
+      "Clean energy",
+      "Education",
+      "Reduced inequality"
+    ],
+    "correctAnswer": "Life on land/terrestrial ecosystems",
+    "explanation": "SDG 15 focuses on protecting, restoring, and promoting sustainable use of terrestrial ecosystems, forests, and preventing biodiversity loss ('Life on Land').",
+    "category": "Sustainable Development Goals",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 258,
+    "question": "SDG 17 concerns:",
+    "options": [
+      "Climate action",
+      "Global partnership for sustainable development",
+      "Clean water",
+      "Life below water"
+    ],
+    "correctAnswer": "Global partnership for sustainable development",
+    "explanation": "SDG 17 emphasizes strengthening the means of implementation and revitalizing the Global Partnership for Sustainable Development.",
+    "category": "Sustainable Development Goals",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  },
+  {
+    "id": 259,
+    "question": "The SDGs were agreed upon at the UN in:",
+    "options": [
+      "2000",
+      "2010",
+      "September 2015",
+      "2020"
+    ],
+    "correctAnswer": "September 2015",
+    "explanation": "All 193 UN Member States adopted the 17 Sustainable Development Goals as part of the 2030 Agenda for Sustainable Development in September 2015.",
+    "category": "Sustainable Development Goals",
+    "isWebsiteOfficial63": false,
+    "isWebsiteGenerated": false,
+    "isTop30": false
+  }
+]
