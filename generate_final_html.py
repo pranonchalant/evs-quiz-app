@@ -145,6 +145,15 @@ html_template = """<!DOCTYPE html>
       padding: 2.25rem 2rem;
     }
 
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
     .source-tag {
       display: inline-block;
       font-size: 0.75rem;
@@ -152,10 +161,21 @@ html_template = """<!DOCTYPE html>
       letter-spacing: 0.08em;
       color: var(--accent);
       background: rgba(56, 189, 248, 0.1);
-      padding: 0.2rem 0.6rem;
+      padding: 0.25rem 0.65rem;
       border-radius: 0.4rem;
-      margin-bottom: 0.6rem;
       font-weight: 700;
+    }
+
+    .random-tag {
+      font-size: 0.72rem;
+      color: #94a3b8;
+      background: #17233f;
+      border: 1px solid #283a63;
+      padding: 0.2rem 0.55rem;
+      border-radius: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
     }
 
     .question-title {
@@ -352,6 +372,24 @@ html_template = """<!DOCTYPE html>
       font-size: 0.98rem;
       margin-bottom: 2rem;
       line-height: 1.5;
+    }
+
+    .features-pill-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .feature-pill {
+      font-size: 0.78rem;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 0.25rem 0.75rem;
+      border-radius: 1rem;
+      font-weight: 600;
     }
 
     .mode-cards {
@@ -613,6 +651,34 @@ let elapsedSeconds = 0;
 const app = document.getElementById("quizCard");
 const letters = ["A", "B", "C", "D"];
 
+// ── Randomization Helpers (Fisher-Yates) ────────────────────────
+function shuffleArray(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Shuffles both the question sequence AND each question's 4 options
+function prepareQuizQuestions(rawQuestionList) {
+  const shuffledList = shuffleArray(rawQuestionList);
+  return shuffledList.map(q => ({
+    ...q,
+    options: shuffleArray(q.options)
+  }));
+}
+
+// Samples random count and shuffles options
+function getRandomSample(array, count) {
+  const sampled = shuffleArray(array).slice(0, Math.min(count, array.length));
+  return sampled.map(q => ({
+    ...q,
+    options: shuffleArray(q.options)
+  }));
+}
+
 // ── Stopwatch Helper Functions ─────────────────────────────────
 function startStopwatch() {
   stopStopwatch();
@@ -644,16 +710,6 @@ function updateStopwatchUI() {
   }
 }
 
-// ── Helper: Random Array Sampling (Fisher-Yates) ───────────────
-function getRandomSample(array, count) {
-  const arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr.slice(0, Math.min(count, arr.length));
-}
-
 // ── Screen: Mode Selection ─────────────────────────────────────
 function renderStartScreen() {
   stopStopwatch();
@@ -661,18 +717,25 @@ function renderStartScreen() {
 
   app.innerHTML = `
     <div class="start-screen">
-      <div style="font-size:2.5rem; margin-bottom: 0.5rem;">⏱️ 🌐 🌿</div>
+      <div style="font-size:2.5rem; margin-bottom: 0.5rem;">⏱️ 🔀 🌿</div>
       <h1>EVS CAT-II Revision & Practice Bank</h1>
       <p class="start-subtitle">
         Powered by questions and syllabus topics from <strong style="color:var(--accent);">masterdooom.github.io/evs</strong> + High-Yield PDF exam pack.
       </p>
+
+      <div class="features-pill-row">
+        <span class="feature-pill">🔀 Randomized Question Order</span>
+        <span class="feature-pill">🎲 Shuffled Option Positions</span>
+        <span class="feature-pill">⏱️ Live Stopwatch</span>
+        <span class="feature-pill">💡 Instant Explanation</span>
+      </div>
 
       <div class="mode-cards">
         <!-- Mock Test Mode Card -->
         <div class="mode-card mock-featured" onclick="startQuiz('mock')">
           <div>
             <h3>⏱️ Timed Mock Test (30 Random Questions)</h3>
-            <p>Generates 30 randomized questions sampled across the entire syllabus with live stopwatch tracking on top.</p>
+            <p>Pulls 30 randomized questions across the entire syllabus with both question order and answer options dynamically shuffled on every attempt.</p>
           </div>
           <span class="mode-badge-count">⏱️ 30 Random · Timed</span>
         </div>
@@ -680,7 +743,7 @@ function renderStartScreen() {
         <div class="mode-card featured" onclick="startQuiz('website_official')">
           <div>
             <h3>🌐 Masterdooom Website Official Test</h3>
-            <p>The exact 63 multiple choice questions from the masterdooom.github.io/evs exam workspace with instant feedback.</p>
+            <p>The 63 multiple choice questions from masterdooom.github.io/evs with randomized order and shuffled options.</p>
           </div>
           <span class="mode-badge-count">63 Questions</span>
         </div>
@@ -688,7 +751,7 @@ function renderStartScreen() {
         <div class="mode-card featured-blue" onclick="startQuiz('website_all')">
           <div>
             <h3>📖 Masterdooom 26 Topics Complete Bank</h3>
-            <p>All official questions + comprehensive MCQs generated across all 26 revision modules from the website.</p>
+            <p>Comprehensive MCQs generated across all 26 revision modules from the website with randomized options.</p>
           </div>
           <span class="mode-badge-count">86 Questions</span>
         </div>
@@ -696,7 +759,7 @@ function renderStartScreen() {
         <div class="mode-card" onclick="startQuiz('top30')">
           <div>
             <h3>⭐ Core Top 30 High-Yield Pack</h3>
-            <p>The 30 essential questions to memorize for high-yield exam preparation.</p>
+            <p>The 30 essential questions to memorize for high-yield exam preparation with randomized answer choices.</p>
           </div>
           <span class="mode-badge-count">30 Questions</span>
         </div>
@@ -704,7 +767,7 @@ function renderStartScreen() {
         <div class="mode-card" onclick="startQuiz('all')">
           <div>
             <h3>📚 Master Mega Bank (All Sources)</h3>
-            <p>Complete combined collection covering every single topic and question from all sources.</p>
+            <p>Complete combined collection covering all 259 questions in randomized practice order.</p>
           </div>
           <span class="mode-badge-count">${masterQuestions.length} Questions</span>
         </div>
@@ -735,7 +798,8 @@ function startTopicQuiz() {
   const topic = select.value;
   currentMode = "topic";
   currentTopic = topic;
-  activeQuestions = masterQuestions.filter(q => q.category === topic);
+  const filtered = masterQuestions.filter(q => q.category === topic);
+  activeQuestions = prepareQuizQuestions(filtered);
   initQuizState();
 }
 
@@ -744,13 +808,16 @@ function startQuiz(mode) {
   if (mode === "mock") {
     activeQuestions = getRandomSample(masterQuestions, 30);
   } else if (mode === "website_official") {
-    activeQuestions = masterQuestions.filter(q => q.isWebsiteOfficial63);
+    const pool = masterQuestions.filter(q => q.isWebsiteOfficial63);
+    activeQuestions = prepareQuizQuestions(pool);
   } else if (mode === "website_all") {
-    activeQuestions = masterQuestions.filter(q => q.isWebsiteGenerated);
+    const pool = masterQuestions.filter(q => q.isWebsiteGenerated);
+    activeQuestions = prepareQuizQuestions(pool);
   } else if (mode === "top30") {
-    activeQuestions = masterQuestions.filter(q => q.isTop30);
+    const pool = masterQuestions.filter(q => q.isTop30);
+    activeQuestions = prepareQuizQuestions(pool);
   } else {
-    activeQuestions = [...masterQuestions];
+    activeQuestions = prepareQuizQuestions(masterQuestions);
   }
   initQuizState();
 }
@@ -792,7 +859,10 @@ function renderQuestion() {
     </div>
 
     <div class="quiz-body">
-      <span class="source-tag">${escapeHtml(q.category)}</span>
+      <div class="meta-row">
+        <span class="source-tag">${escapeHtml(q.category)}</span>
+        <span class="random-tag">🔀 Shuffled Options</span>
+      </div>
       <h2 class="question-title">${escapeHtml(q.question)}</h2>
 
       <ul class="options-grid" id="optionsList">
@@ -846,7 +916,7 @@ function handleSelection(btn) {
   // Update score badge
   app.querySelector(".live-score").textContent = `Score: ${score} / ${currentIndex + 1}`;
 
-  // Highlight and lock
+  // Highlight and lock (correct answer highlighted regardless of slot)
   document.querySelectorAll(".option-btn").forEach(b => {
     b.classList.add("locked");
     if (b.dataset.value === q.correctAnswer) {
@@ -908,7 +978,7 @@ function renderResults() {
 
   app.innerHTML = `
     <div class="quiz-nav-bar">
-      <span>Mock Session Complete</span>
+      <span>Session Complete</span>
       <span class="stopwatch-badge">⏱️ Time: ${timeStr}</span>
       <span class="live-score">${score} / ${total} Correct</span>
     </div>
@@ -929,7 +999,7 @@ function renderResults() {
       </div>
 
       <div style="display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap; margin-bottom: 2rem;">
-        <button class="btn" onclick="startQuiz('mock')">🔄 Start Another 30-Q Mock Test</button>
+        <button class="btn" onclick="startQuiz(currentMode)">🔄 Retake with Fresh Reshuffle</button>
         <button class="btn btn-secondary" onclick="renderStartScreen()">🏠 Switch Topic/Mode</button>
       </div>
 
@@ -982,4 +1052,4 @@ html_final = html_template.replace("__INJECTED_MASTER_QUESTIONS__", json_str)
 with open("/Users/pran/devjams26/index.html", "w") as f:
     f.write(html_final)
 
-print("Updated /Users/pran/devjams26/index.html with Mock Test Mode and Stopwatch.")
+print("Updated /Users/pran/devjams26/index.html with full question & option randomization.")
