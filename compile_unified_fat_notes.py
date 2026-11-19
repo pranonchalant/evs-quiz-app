@@ -1,0 +1,498 @@
+import json
+import re
+
+# ── 1. Compile all notes into unified FAT revision modules ──────────────────
+
+unified_modules = [
+    # ── Module 1: Numbers & Formulas Cheat Sheet ──
+    {
+        "id": "mod-1",
+        "num": 1,
+        "category": "Cheat Sheet & Numbers",
+        "title": "Module 1: Numbers, Targets & Values to Memorise",
+        "badge": "Cheat Sheet",
+        "summary": "Essential numerical statistics, temperature limits, atmospheric concentrations, capacity factors, and Indian government targets frequently tested in FAT MCQs.",
+        "type": "table",
+        "tableHeaders": ["Exam Topic / Parameter", "Exact Value / Exam Fact"],
+        "tableRows": [
+            ["Earth surface temp without greenhouse effect", "-18 °C (natural greenhouse keeps it at ~15 °C)"],
+            ["Global mean warming to date", "~1.1 °C above pre-industrial baseline (before 1850)"],
+            ["Atmospheric CO2 concentration", "280 ppm pre-industrial -> >420 ppm currently (highest in 800,000+ yrs)"],
+            ["Methane (CH4) warming potency", "~80–84x CO2 over 20-year horizon; GWP100 = 28–34"],
+            ["Nitrous oxide (N2O) potency", "~265x CO2 over 100-year horizon (GWP100 = 265–298)"],
+            ["Sea level rise since 1900", "~20 cm rise; IPCC projects 0.3 to 1.0 m rise by 2100"],
+            ["Arctic summer sea ice loss rate", "Declining ~13% per decade since satellite telemetry began in 1979"],
+            ["Global ocean heat absorption", ">90% of excess heat trapped; ~25–30% of anthropogenic CO2"],
+            ["Ocean pH drop & acidity surge", "Dropped ~0.1 units since industrialization = ~26% increase in acidity"],
+            ["Tropical coral reef loss", "Support ~25% marine life; bleach at +1 °C; >99% severely degraded at +2 °C"],
+            ["Atmospheric moisture per degree warming", "~7% more water vapor per 1 °C warming (Clausius-Clapeyron relation)"],
+            ["Global anthropogenic emissions by source", "Fossil fuels ~75%; Deforestation 10–15%; Agriculture 10–12%; Cement ~8%"],
+            ["Sectoral GHG shares", "Electricity & heat ~34%; Industry ~24%; Agri & land use ~22%; Transport ~16%; Buildings 17–19% (incl. Scope 2)"],
+            ["Cement manufacturing footprint", "~0.8 t CO2 per tonne cement; ~50% from calcination of limestone (CaCO3 -> CaO + CO2)"],
+            ["Per capita annual carbon footprints", "Global average ~4 t CO2e; USA 14–16 t; India ~2 t CO2e/year"],
+            ["Peak clear-day solar irradiance", "~1000 W/m² at solar noon (Standard Test Conditions)"],
+            ["Solar PV module efficiencies", "Monocrystalline: 20–22%; Polycrystalline: 15–17%; Thin-film: 10–13%; Perovskite tandem: >30%"],
+            ["Solar degradation & tracking gains", "~0.5%/year degradation (80–85% after 25 yrs); tracking systems add 15–35% yield"],
+            ["Betz limit for wind turbines", "59.3% (16/27) maximum theoretical aerodynamic kinetic energy extraction"],
+            ["Wind capacity factors", "Onshore: 35–50%; Offshore: 50–60%; Solar: 20–25%; Geothermal: 80–95% (baseload)"],
+            ["India renewable & climate targets", "500 GW non-fossil by 2030; 50% electric power from non-fossil by 2030; Net-Zero by 2070"],
+            ["Hydropower global share & efficiency", "15–16% of global electricity; efficiency >90%; dam lifespan 50–100+ years"],
+            ["Geothermal global benchmarks", "Kenya generates 47% electricity from geothermal; Iceland over 20% (nearly 100% building heat)"],
+            ["Geothermal thermodynamic temps", "Flash steam plants: >180 °C; Binary cycle plants: 100–180 °C (uses isobutane/pentane)"],
+            ["Prominent Indian hydro plants", "Tehri Dam (1000 MW, Uttarakhand - Storage); Srinagar (330 MW - Run-of-river); Kadamparai (400 MW, TN - Pumped storage)"],
+            ["Recycled aluminium energy savings", "~95% less energy needed compared to primary smelting of bauxite ore"],
+            ["Global food waste proportion", "~1/3 of all food produced globally for human consumption is lost or wasted"],
+            ["Sound thresholds (Noise pollution)", "Whisper ~30 dB; Normal speech ~50–60 dB; Traffic ~85 dB (damage threshold); >120 dB (immediate pain/harm)"],
+            ["Acid rain pH threshold", "Rainwater precipitation with pH < 5.6 (driven by SO2 and NOx converting to sulfuric and nitric acids)"]
+        ]
+    },
+
+    # ── Module 2: Climate Change Science & Global Warming ──
+    {
+        "id": "mod-2",
+        "num": 2,
+        "category": "Climate & Carbon",
+        "title": "Module 2: Climate Change Science & Global Warming",
+        "badge": "Core Theory",
+        "summary": "Atmospheric radiation balance, greenhouse gas properties, empirical evidence pillars, anthropogenic causes, and climate policy.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Radiation Physics of the Greenhouse Effect",
+                "content": "• Solar incoming radiation: Arrives primarily as short-wave radiation (visible light and UV). The atmosphere is largely transparent to this short-wave energy, which strikes and warms Earth's surface.<br>• Terrestrial re-emission: The warmed planetary surface re-radiates energy as long-wave thermal infrared.<br>• Radiative forcing: Greenhouse gases in the troposphere absorb this outgoing long-wave infrared and re-radiate it in all directions, creating a natural thermal blanket keeping Earth at ~15 °C rather than -18 °C.<br>• Enhanced greenhouse effect: Excess accumulation of anthropogenic greenhouse gases thickens this radiative blanket, trapping surplus thermal energy in the troposphere."
+            },
+            {
+                "heading": "2. Greenhouse Gases Comparison Table",
+                "tableHeaders": ["Gas", "Anthropogenic Sources", "Atmospheric Lifespan & Relative Warming Power"],
+                "tableRows": [
+                    ["Carbon Dioxide (CO2)", "Fossil fuel combustion (coal, oil, gas), cement production, deforestation", "Centuries to millennia; baseline reference (GWP = 1); accounts for ~75% of warming"],
+                    ["Methane (CH4)", "Ruminant livestock (enteric fermentation), flooded rice paddies, anaerobic landfills, natural gas leakage", "Short-lived (~12 yrs) but 80–84x more potent than CO2 over 20 yrs (GWP100 = 28–34)"],
+                    ["Nitrous Oxide (N2O)", "Synthetic nitrogen fertilisers, livestock manure, chemical industry", "~114 years; ~265x more potent than CO2 over 100 yrs (GWP100 = 265–298)"],
+                    ["Water Vapour (H2O)", "Natural evaporation amplified by warming atmosphere", "Most abundant GHG by volume; acts as a powerful positive feedback amplifier (not direct driver)"],
+                    ["Fluorinated Gases (HFCs, PFCs, SF6)", "Refrigeration, air conditioning, electrical switchgear, semiconductor etching", "Thousands to tens of thousands of times more potent than CO2; survive centuries"]
+                ]
+            },
+            {
+                "heading": "3. Four Independent Pillars of Evidence",
+                "content": "1. Rising Surface Temperatures: Global mean temperatures have risen ~1.1 °C above pre-industrial levels; 19 of the 20 warmest years have occurred since 2000.<br>2. Atmospheric CO2 Surge: Risen from 280 ppm pre-industrial to over 420 ppm today; validated by Antarctic ice cores spanning 800,000 years.<br>3. Melting Cryosphere & Sea Level Rise: Arctic summer sea ice shrinking ~13% per decade; global mean sea level has risen ~20 cm since 1900.<br>4. Ocean Heat & Acidification: Global oceans have absorbed >90% of excess heat and ~25–30% of anthropogenic CO2; dissolving CO2 forms carbonic acid (H2CO3), lowering ocean pH by 0.1 units (~26% acidity surge)."
+            },
+            {
+                "heading": "4. Mitigation vs Adaptation",
+                "content": "• Mitigation (Treating the Root Cause): Human interventions to reduce or prevent GHG emissions and enhance carbon sinks (e.g., solar/wind buildout, energy efficiency, reforestation, CCS, electric mobility).<br>• Adaptation (Managing the Symptoms): Adjustments in ecological, social, or economic systems to minimize damage from unavoidable climate impacts (e.g., sea walls, flood defences, drought-resistant crops, early warning systems, rainwater harvesting)."
+            }
+        ]
+    },
+
+    # ── Module 3: Carbon Footprint & Mitigation Strategies ──
+    {
+        "id": "mod-3",
+        "num": 3,
+        "category": "Climate & Carbon",
+        "title": "Module 3: Carbon Footprint & Mitigation Strategies",
+        "badge": "Accounting & Standards",
+        "summary": "Carbon accounting scopes (1, 2, 3), Life Cycle Assessment (LCA), corporate standards (GHG Protocol, ISO 14064, PAS 2050), and carbon capture technologies.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Greenhouse Gas Protocol Emission Scopes",
+                "tableHeaders": ["Scope Classification", "Boundary & Definition", "Industrial Examples"],
+                "tableRows": [
+                    ["Scope 1: Direct Emissions", "Direct GHG emissions from sources owned or controlled by the reporting organization.", "Combustion in company-owned boilers, furnaces, manufacturing chemical processes, fleet delivery trucks."],
+                    ["Scope 2: Indirect Energy Emissions", "Emissions from the generation of purchased electricity, steam, heating, or cooling consumed on-site.", "Grid electricity consumed to power manufacturing machinery, office HVAC, data center servers."],
+                    ["Scope 3: Value Chain Emissions", "All other indirect upstream and downstream supply-chain emissions outside direct operational control.", "Raw materials extraction, supplier transport, business travel, customer product use, end-of-life disposal (>70% of footprint)."]
+                ]
+            },
+            {
+                "heading": "2. Life Cycle Assessment & Standards",
+                "content": "• Life Cycle Assessment (LCA): Primary engineering methodology evaluating cumulative environmental burdens from raw material extraction ('cradle') through manufacture and use to final disposal ('grave').<br>• Cradle to Cradle: Closed-loop regenerative framework where post-consumer materials are recovered, repaired, remanufactured, or recycled back into production cycles.<br>• Standards to Memorise for FAT:<br>  - GHG Protocol: Global multi-stakeholder standard for corporate greenhouse accounting.<br>  - ISO 14064: International standard for organizational greenhouse gas inventories and verification.<br>  - PAS 2050: Standard specifically assessing the life-cycle carbon footprint of products and services."
+            },
+            {
+                "heading": "3. Carbon Capture, Utilisation & Storage (CCS / CCU / DAC)",
+                "content": "• Carbon Capture and Storage (CCS): Capturing industrial flue gas CO2 at point source (power plants, cement kilns) and injecting it thousands of metres underground into deep saline aquifers or depleted oil fields.<br>• Carbon Capture and Utilisation (CCU): Transforming captured CO2 into commercial synthetic fuels, building aggregates, or carbonates.<br>• Direct Air Capture (DAC): Using specialized chemical contactors to scrub dilute carbon dioxide directly from the ambient free atmosphere.<br>• Carbon Offsetting Criteria: High-integrity carbon credits must satisfy 4 non-negotiable criteria: Additional (would not happen without finance), Measurable, Permanent (non-reversal), and Independently Verified."
+            }
+        ]
+    },
+
+    # ── Module 4: Solar Energy & Photovoltaics ──
+    {
+        "id": "mod-4",
+        "num": 4,
+        "category": "Renewable Energy",
+        "title": "Module 4: Solar Energy & Photovoltaic Engineering",
+        "badge": "Renewables",
+        "summary": "Photovoltaic physics, semiconductor p-n junctions, module architectures, Concentrated Solar Power (CSP), and Indian solar deployment schemes.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Photovoltaic (PV) Working Principle",
+                "content": "• Photovoltaic Effect: Incident sunlight photons collide with valence electrons in a semiconductor (crystalline silicon), promoting them to the conduction band. The built-in electrostatic field at the semiconductor p-n junction directs free electrons toward electrical contacts, generating direct current (DC).<br>• Core Balance of System (BOS) Components: PV module array, Inverter (converts DC into grid-frequency AC), Charge controller, Battery bank (optional for off-grid), Mounting structures and solar trackers.<br>• Power Output Formula: Power (W) = Solar Irradiance (W/m²) × Panel Area (m²) × Module Efficiency (η).<br>• Temperature Coefficient: Solar PV efficiency decreases as cell temperature rises (negative coefficient, typically -0.35% to -0.45% per °C rise above 25 °C STC)."
+            },
+            {
+                "heading": "2. Photovoltaic Cell Architectures",
+                "tableHeaders": ["Cell Type", "Commercial Efficiency", "Manufacturing & Performance Characteristics"],
+                "tableRows": [
+                    ["Monocrystalline Silicon", "20–22%", "Sawn from single cylindrical silicon ingots (Czochralski process); highest commercial efficiency; uniform dark black appearance; higher cost."],
+                    ["Polycrystalline Silicon", "15–17%", "Multiple silicon crystal fragments melted together into square ingots; blue speckled pattern; lower cost; internal grain boundaries slightly reduce efficiency."],
+                    ["Thin-Film (CdTe, a-Si)", "10–13%", "Semiconductor materials vapor-deposited in microscopic layers on glass or metal substrates; flexible, lightweight; lower efficiency requires greater land area."],
+                    ["Perovskite Tandem (Emerging)", ">30% (lab)", "Tandem layers stacked on silicon tuning solar absorption bands; low production costs; current engineering hurdle is moisture/UV durability."]
+                ]
+            },
+            {
+                "heading": "3. Concentrated Solar Power (CSP) & Key Indian Schemes",
+                "content": "• Concentrated Solar Power (CSP): Utilizes tracking heliostat mirror fields to concentrate solar radiation onto a central receiver tower, heating molten salt to >550 °C to power steam turbines with dispatchable thermal energy storage.<br>• Key Indian Solar Initiatives:<br>  - PM Surya Ghar: Muft Bijli Yojana: Rooftop solar for 1 crore households with subsidies up to ₹78,000.<br>  - PM-KUSUM: Solarization of agricultural pump sets with up to 60% subsidy to eliminate diesel irrigation pumps.<br>  - Bhadla Solar Park (Rajasthan): World's largest operational solar park with a capacity of ~2,245 MW.<br>  - International Solar Alliance (ISA): Headquartered in Gurugram, India; mobilising over $1 trillion in solar financing."
+            }
+        ]
+    },
+
+    # ── Module 5: Wind Energy & Betz Limit ──
+    {
+        "id": "mod-5",
+        "num": 5,
+        "category": "Renewable Energy",
+        "title": "Module 5: Wind Energy & Betz Limit",
+        "badge": "Renewables",
+        "summary": "Aerodynamic lift, cubic wind power physics, Betz ceiling, HAWT vs VAWT, capacity factors, and Indian coastal wind development.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Aerodynamics & Power Equation",
+                "content": "• Wind Formation: Atmospheric pressure differences driven by uneven solar heating of Earth's surface.<br>• Cubic Power Relation: Wind power output is proportional to the cube of wind speed: Power = 0.5 × ρ × A × v³ (where ρ = air density ~1.225 kg/m³, A = rotor swept area = π·r², v = wind speed). Doubling wind speed increases power by 2³ = 8 times.<br>• Betz Limit: German physicist Albert Betz proved in 1919 that no wind turbine can convert more than 16/27 (59.3%) of kinetic energy from wind into mechanical work.<br>• Operational Wind Speeds: Cut-in speed (3–4 m/s, turbine begins turning); Rated speed (12–15 m/s, generator reaches full capacity); Cut-out speed (~25 m/s, blades feather and brakes apply to prevent catastrophic mechanical failure)."
+            },
+            {
+                "heading": "2. Turbine Architectures & Indian Wind Development",
+                "content": "• Horizontal Axis Wind Turbines (HAWT): Dominant commercial design; blades rotate perpendicularly to wind direction; superior aerodynamic lift efficiency; requires yaw control to face wind.<br>• Vertical Axis Wind Turbines (VAWT): Accepts wind from any omni-directional angle without yaw adjustment; lower installation height; ideal for turbulent urban building rooftops.<br>• Onshore vs Offshore: Onshore wind has capacity factor of 35–50%; Offshore wind reaches 50–60% due to steady, stronger ocean winds without topographic roughness.<br>• Indian Geography: India's coastline is ~7,516.6 km. Western coast (Gujarat, Maharashtra, Tamil Nadu) is preferred for wind development because the eastern coast is cyclone-prone. The National Institute of Wind Energy (NIWE) is based in Chennai. Muppandal Wind Farm (Tamil Nadu) is one of the world's largest operational wind farms."
+            }
+        ]
+    },
+
+    # ── Module 6: Hydroelectric Energy ──
+    {
+        "id": "mod-6",
+        "num": 6,
+        "category": "Renewable Energy",
+        "title": "Module 6: Hydroelectric Power Engineering",
+        "badge": "Renewables",
+        "summary": "Hydraulic head, potential-to-kinetic-to-electrical energy chain, impoundment vs run-of-river vs pumped storage, and environmental impacts.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Working Principle & Power Formula",
+                "content": "• Energy Conversion Chain: Potential Energy (water stored in reservoir at hydraulic head H) -> Kinetic Energy (rushing through pressurized penstocks) -> Mechanical Energy (rotating turbine runner) -> Electrical Energy (generator spinning in magnetic field).<br>• Power Equation: P = ρ × g × Q × H × η (where ρ = water density ~1000 kg/m³, g = 9.81 m/s², Q = volumetric discharge in m³/s, H = effective hydraulic head in metres, η = turbine-generator efficiency >90%).<br>• Core Components: Reservoir (storage), Dam structure, Penstock (high-pressure conduit pipe carrying water to turbine), Hydraulic turbine (Francis, Kaplan, Pelton), Generator, Tailrace (discharge channel)."
+            },
+            {
+                "heading": "2. Hydropower Plant Classifications",
+                "tableHeaders": ["Type", "Operational Mechanism", "Indian Benchmark"],
+                "tableRows": [
+                    ["Storage / Impoundment", "Large dam creating artificial reservoir storing seasonal river runoff for dispatchable power on demand.", "Tehri Dam, Uttarakhand (1000 MW storage, highest dam in India)"],
+                    ["Run-of-the-River", "Diverts natural river discharge through tunnels with little or no reservoir flooding; output varies with river flow.", "Srinagar Hydroelectric Project, Alaknanda River (330 MW)"],
+                    ["Pumped Storage Hydro (PSH)", "Operates as a giant grid-scale rechargeable battery; pumps water uphill to upper reservoir using cheap off-peak power, releases downhill during peak demand.", "Kadamparai Pumped Storage Hydro, Tamil Nadu (400 MW)"]
+                ]
+            },
+            {
+                "heading": "3. Environmental Trade-Offs of Hydropower",
+                "content": "• Benefits: Clean baseload power, dispatchable peak shaving, black-start grid capability, co-benefits of flood control and agricultural irrigation.<br>• Ecological Challenges: Large dams submerge fertile agricultural valleys and virgin forests; displace communities (Sardar Sarovar Dam displaced ~320,000 people); obstruct fish migration pathways; trap river silt; decaying submerged organic matter in tropical reservoirs generates biogenic methane (CH4)."
+            }
+        ]
+    },
+
+    # ── Module 7: Geothermal Energy ──
+    {
+        "id": "mod-7",
+        "num": 7,
+        "category": "Renewable Energy",
+        "title": "Module 7: Geothermal Energy & Thermodynamic Cycles",
+        "badge": "Renewables",
+        "summary": "Geothermal gradients, dry steam, flash steam, and binary cycle thermodynamic plants, global baseload leaders, and Indian geothermal fields.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Geothermal Science & Gradient",
+                "content": "• Origin: Thermal energy generated from the radioactive decay of deep isotopes (uranium, thorium, potassium) and primordial heat trapped during planetary accretion.<br>• Geothermal Gradient: Normal continental temperature increases by 25–30 °C per kilometre of depth into Earth's crust.<br>• Baseload Reliability: Weather-independent power available 24 hours a day, 365 days a year with an exceptionally high capacity factor of 80–95%."
+            },
+            {
+                "heading": "2. Geothermal Plant Architectures",
+                "tableHeaders": ["Plant Cycle", "Resource Temperature", "Thermodynamic Mechanism"],
+                "tableRows": [
+                    ["Dry Steam Plants", ">200 °C (natural dry steam)", "Oldest and rarest design; natural underground steam is tapped directly from production wells to spin turbines (e.g., The Geysers, California)."],
+                    ["Flash Steam Plants", ">180 °C (high-pressure liquid)", "Most common worldwide; superheated high-pressure water is sprayed into low-pressure flash tanks, instantaneously boiling into steam. Remaining liquid is re-injected."],
+                    ["Binary Cycle Plants", "100–180 °C (moderate enthalpy)", "Hot geothermal fluid is pumped through a heat exchanger to boil a secondary organic working fluid with a lower boiling point (isobutane or pentane). Geothermal fluid never touches turbine."]
+                ]
+            },
+            {
+                "heading": "3. Global Benchmarks & Indian Geothermal Fields",
+                "content": "• Global Leaders: Kenya generates ~47% of its national electricity from geothermal; Iceland generates >20% of its electricity and heats nearly 100% of buildings geothermally.<br>• Indian Geothermal Prospects:<br>  - Puga Valley (Ladakh): Highest enthalpy geothermal field in India; active exploratory drilling.<br>  - Tattapani (Chhattisgarh): Hot springs field in central India.<br>  - Manikaran (Himachal Pradesh): Geothermal field in the Parbati valley.<br>  - Cambay Basin (Gujarat): Deep sedimentary basin geothermal potential."
+            }
+        ]
+    },
+
+    # ── Module 8: AI & IoT in Environmental Monitoring ──
+    {
+        "id": "mod-8",
+        "num": 8,
+        "category": "AI & IoT",
+        "title": "Module 8: AI & IoT in Environmental Monitoring",
+        "badge": "Emerging Tech",
+        "summary": "Environmental sensor matrices, real-time telemetry protocols, LSTM air quality forecasting, digital twins, and Indian case studies.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Environmental IoT Sensor Matrix",
+                "tableHeaders": ["Domain", "Sensors & Detectors", "Monitored Parameters"],
+                "tableRows": [
+                    ["Air Quality Telemetry", "Optical dust scattering sensors, MQ-135 electrochemical arrays", "PM2.5, PM10, carbon monoxide (CO), sulfur dioxide (SO2), nitrogen oxides (NOx), ground-level ozone (O3)"],
+                    ["Water Quality Monitoring", "Ion-selective glass electrodes, optical dissolved oxygen probes", "pH, Dissolved Oxygen (DO), Electrical Conductivity (EC), Biochemical Oxygen Demand (BOD), turbidity"],
+                    ["Soil & Precision Farming", "Capacitive moisture sensors, optical NPK spectrophotometers", "Volumetric soil moisture percentage, soil temperature, Nitrogen (N), Phosphorus (P), Potassium (K)"],
+                    ["Wildlife & Forest Conservation", "Bioacoustic microphones, PIR passive infrared camera traps", "Ultrasonic bat frequencies, detection of illegal logging chainsaw sounds and poaching gunshots"],
+                    ["Municipal Smart Waste", "Ultrasonic level sensors mounted on dumpster lids", "Real-time trash bin fill levels; automated dynamic route optimization for municipal waste collection fleets"]
+                ]
+            },
+            {
+                "heading": "2. Artificial Intelligence in Environmental Engineering",
+                "content": "• Long Short-Term Memory (LSTM) Networks: Recurrent deep learning models specifically designed to model non-linear temporal atmospheric time-series data to forecast air quality indices (AQI) 24–72 hours in advance.<br>• Digital Twins: Real-time physics-grounded 3D computational replicas of physical systems (e.g., wastewater treatment plants, municipal water grids) continuously updated by IoT sensor streams to simulate failure scenarios.<br>• Computer Vision & Remote Sensing: Convolutional Neural Networks (CNNs) analyzing multi-spectral drone and satellite imagery to calculate Normalized Difference Vegetation Index (NDVI) and detect illegal deforestation.<br>• Landmark Indian AI Case Study: Researchers from IIT Kharagpur developed an AI machine learning geospatial framework predicting groundwater arsenic contamination across the Ganga delta, identifying safe drinking water aquifers."
+            }
+        ]
+    },
+
+    # ── Module 9: Earth as a Life Support System ──
+    {
+        "id": "mod-9",
+        "num": 9,
+        "category": "Earth & Ecosystems",
+        "title": "Module 9: Earth as a Life Support System & Atmospheric Spheres",
+        "badge": "Foundations",
+        "summary": "The four planetary spheres, vertical atmospheric stratification (Troposphere to Exosphere), and biogeochemical life support.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Earth's Four Interactive Spheres",
+                "content": "• Lithosphere: The solid outer crust and upper mantle containing mineral nutrients and soil.<br>• Hydrosphere: All aqueous bodies (oceans, freshwater lakes, glaciers, groundwater, water vapour).<br>• Atmosphere: The protective gaseous envelope composed of 78% Nitrogen (N2), 21% Oxygen (O2), 0.93% Argon, and trace gases.<br>• Biosphere: The global ecological sum of all living organisms interacting with the physical spheres."
+            },
+            {
+                "heading": "2. Atmospheric Stratification from Surface Upward",
+                "tableHeaders": ["Layer", "Altitude Range", "Key Characteristics & Phenomena"],
+                "tableRows": [
+                    ["Troposphere", "0 to 12 km", "Contains ~75–80% of atmospheric mass and virtually all weather; temperature decreases with altitude (-6.5 °C/km lapse rate)."],
+                    ["Stratosphere", "12 to 50 km", "Contains the protective Ozone Layer (O3); temperature rises with altitude due to UV absorption; calm flight corridor for jets."],
+                    ["Mesosphere", "50 to 85 km", "Coldest atmospheric layer (temperatures fall to -90 °C); meteors burn up upon atmospheric entry."],
+                    ["Thermosphere", "85 to 600 km", "Absorbs energetic solar X-rays and extreme UV; temperatures exceed 1,500 °C; site of auroras and the International Space Station."],
+                    ["Exosphere", ">600 km", "Outermost atmospheric boundary gradually thinning and transitioning into interplanetary vacuum; satellites orbit here."]
+                ]
+            }
+        ]
+    },
+
+    # ── Module 10: Ecosystem Structure & Energy Flow ──
+    {
+        "id": "mod-10",
+        "num": 10,
+        "category": "Earth & Ecosystems",
+        "title": "Module 10: Ecosystem Structure, Energy Flow & Succession",
+        "badge": "Foundations",
+        "summary": "Biotic/abiotic components, food chains, ecological pyramids, Lindeman's 10% law, and primary vs secondary ecological succession.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Ecosystem Components & Energy Flow",
+                "content": "• Biotic Components: Autotrophs (primary producers), Heterotrophs (herbivores, carnivores, omnivores), and Saprotrophs (decomposers: bacteria, fungi).<br>• Unidirectional Energy Flow: Solar radiant energy enters ecosystems through photosynthesis and flows unidirectionally through trophic levels. Energy is progressively lost as metabolic heat (Thermodynamics Law II).<br>• Lindeman's 10% Law: On average, only approximately 10% of energy transferred from one trophic level is incorporated into biomass at the subsequent trophic level (90% is lost to respiration, locomotion, and heat).<br>• Ecological Pyramids: Pyramids of energy are always upright; pyramids of numbers and biomass can be inverted (e.g., inverted biomass pyramid in marine ecosystems where phytoplankton turn over rapidly)."
+            },
+            {
+                "heading": "2. Ecological Succession",
+                "content": "• Primary Succession: Occurs on barren substrates where no soil or organic matter previously existed (e.g., cooled volcanic lava flows, retreating glaciers). Pioneer species = lichens and mosses that weather rock into soil.<br>• Secondary Succession: Occurs in areas where an existing biological community was destroyed by disturbance but soil remains intact (e.g., abandoned farmland, post-wildfire forest). Pioneer species = fast-growing grasses and weeds.<br>• Climax Community: The stable, self-perpetuating terminal ecosystem reached at the end of ecological succession (e.g., mature temperate deciduous forest)."
+            }
+        ]
+    },
+
+    # ── Module 11: Biodiversity, Conservation & GM Crops ──
+    {
+        "id": "mod-11",
+        "num": 11,
+        "category": "Biodiversity",
+        "title": "Module 11: Biodiversity, Conservation Strategies & GM Crops",
+        "badge": "Biodiversity",
+        "summary": "Three levels of biodiversity, biodiversity hotspots, in-situ vs ex-situ conservation, Project Tiger, and Genetically Modified crops.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Three Levels of Biodiversity & Hotspots",
+                "content": "• Genetic Diversity: Variation of genetic information within a single species (e.g., thousands of rice varieties).<br>• Species Diversity: Variety and abundance of different species within a specific region (Species Richness).<br>• Ecosystem Diversity: Diversity of habitats, biological communities, and ecological processes across biomes.<br>• Biodiversity Hotspots (Norman Myers Criteria): Must satisfy two strict criteria: (1) Contain at least 1,500 endemic vascular plant species (>0.5% of world total); (2) Have lost at least 70% of its primary native habitat.<br>• India's 4 Biodiversity Hotspots: Western Ghats, Eastern Himalayas, Indo-Burma, and Sundaland (Nicobar Islands)."
+            },
+            {
+                "heading": "2. In-Situ vs Ex-Situ Conservation",
+                "tableHeaders": ["Strategy", "Definition", "Institutional Examples"],
+                "tableRows": [
+                    ["In-Situ Conservation", "Protecting endangered species within their natural native ecosystems and wild habitats.", "National Parks (Jim Corbett - 1st in India), Wildlife Sanctuaries, Biosphere Reserves, Sacred Groves, Project Tiger (launched 1973)."],
+                    ["Ex-Situ Conservation", "Protecting endangered flora/fauna outside their natural habitat in controlled artificial environments.", "Botanical Gardens, Zoological Parks, Seed Banks, Gene Banks, Cryopreservation of gametes/embryos in liquid nitrogen (-196 °C)."]
+                ]
+            },
+            {
+                "heading": "3. Genetically Modified (GM) Crops",
+                "content": "• Bt Cotton: India's only commercially cultivated GM crop; genetically engineered with the Cry gene from soil bacterium Bacillus thuringiensis to produce endotoxins targeting bollworm pests.<br>• Advantages: Pest resistance, reduced chemical insecticide spraying, enhanced nutritional content (e.g., Golden Rice with beta-carotene).<br>• Ecological Concerns: Gene escape to wild weedy relatives (superweeds), potential allergenicity, evolution of pest resistance, corporate seed monopolies."
+            }
+        ]
+    },
+
+    # ── Module 12: Air, Water & Soil Pollution ──
+    {
+        "id": "mod-12",
+        "num": 12,
+        "category": "Pollution & Waste",
+        "title": "Module 12: Air, Water & Soil Pollution Dynamics",
+        "badge": "Pollution",
+        "summary": "Primary vs secondary air pollutants, photochemical smog, acid rain chemistry, aquatic dissolved oxygen, BOD/COD, and soil salinization.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Atmospheric Pollution Chemistry",
+                "content": "• Primary Pollutants: Emitted directly from source into air (e.g., CO, SO2, NO, unburnt hydrocarbons, PM2.5, PM10).<br>• Secondary Pollutants: Formed in atmosphere via chemical reactions between primary pollutants and atmospheric reagents (e.g., Ground-level Ozone O3, Peroxyacetyl Nitrate PAN, Sulfuric Acid H2SO4).<br>• Photochemical Smog: Brown haze formed when NOx and volatile organic compounds (VOCs) react under solar UV radiation to generate ozone and PAN; requires sunlight and thermal inversion.<br>• Acid Precipitation: Rainwater with pH < 5.6 driven by sulfur dioxide (SO2) and nitrogen oxides (NOx) oxidized to sulfuric and nitric acids. Damages marble stone monuments ('Stone Cancer' on Taj Mahal), acidifies lakes, leaches toxic aluminium from soils."
+            },
+            {
+                "heading": "2. Water Quality Indicators (BOD, COD, DO)",
+                "content": "• Dissolved Oxygen (DO): Amount of free, non-compound oxygen in water essential for aquatic life. Normal healthy clean water has DO > 8 mg/L; below 4 mg/L causes fish asphyxiation.<br>• Biochemical Oxygen Demand (BOD): Amount of dissolved oxygen required by aerobic microbes to biologically decompose organic matter in a water sample over 5 days at 20 °C (BOD5). Clean water BOD < 1–2 mg/L; raw domestic sewage BOD > 200–400 mg/L.<br>• Chemical Oxygen Demand (COD): Amount of oxygen required to chemically oxidize all organic compounds (both biodegradable and non-biodegradable) using a strong chemical oxidant (potassium dichromate). COD is always higher than BOD.<br>• Cultural Eutrophication: Excessive nutrient loading (nitrates and phosphates from fertilizer runoff and untreated sewage) stimulating explosive algae blooms that block sunlight; dying algae consume all DO upon decomposition, creating hypoxic 'dead zones'."
+            }
+        ]
+    },
+
+    # ── Module 13: Noise, Thermal & Water Management ──
+    {
+        "id": "mod-13",
+        "num": 13,
+        "category": "Pollution & Waste",
+        "title": "Module 13: Noise, Thermal Pollution & Water Conservation",
+        "badge": "Pollution & Water",
+        "summary": "Acoustic decibel scales, damage thresholds, thermal power plant cooling discharges, and rainwater harvesting techniques.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Noise Pollution Standards & Health Impacts",
+                "content": "• Decibel Scale: Sound intensity is measured logarithmically in decibels (dB).<br>• Standards: Normal whispering ~30 dB; Conversational speech ~50–60 dB; Busy road traffic ~85 dB; Concerts and firecrackers >120 dB.<br>• Health Thresholds: Prolonged exposure to ambient noise above 85 dB induces permanent sensorineural hearing loss; noise exceeding 120 dB causes acute acoustic trauma.<br>• Regulatory Control: CPCB demarcates 4 ambient noise zones: Industrial (75/70 dB day/night), Commercial (65/55 dB), Residential (55/45 dB), and Silence Zones (within 100 m around hospitals, schools, courts: 50/40 dB)."
+            },
+            {
+                "heading": "2. Thermal Pollution & Water Conservation",
+                "content": "• Thermal Pollution: Discharge of heated cooling water from thermal power plants, nuclear reactors, and refineries directly into natural rivers or lakes.<br>• Ecological Consequence: Thermal shock; higher water temperatures physically decrease the solubility of dissolved oxygen while accelerating aquatic organisms' metabolic rate, causing acute hypoxia.<br>• Water Conservation Techniques: Rainwater Harvesting (recharging groundwater aquifers via percolation pits and rooftop catchments), Watershed Management, and Drip Irrigation (delivers water directly to plant root zones with 90%+ efficiency vs flood irrigation)."
+            }
+        ]
+    },
+
+    # ── Module 14: Circular Economy & Solid Waste ──
+    {
+        "id": "mod-14",
+        "num": 14,
+        "category": "Waste & Circular",
+        "title": "Module 14: Circular Economy & Solid Waste Management",
+        "badge": "Waste Management",
+        "summary": "The 3Rs hierarchy, linear vs circular economy, sanitary landfills, incineration, hazardous waste, and Extended Producer Responsibility (EPR).",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Circular Economy vs Linear Economy",
+                "content": "• Linear Economy: The traditional resource extraction paradigm characterized as 'Take -> Make -> Dispose', driving rapid depletion of virgin resources and unsustainable landfill dumping.<br>• Circular Economy: A closed-loop regenerative industrial system decoupling economic growth from finite resource extraction by designing out waste, keeping products/materials in use at highest utility, and regenerating natural capital.<br>• Waste Management Hierarchy: Reduce (most preferred) -> Reuse -> Recycle -> Energy Recovery (Incineration) -> Landfill Disposal (least preferred)."
+            },
+            {
+                "heading": "2. Municipal & Hazardous Solid Waste Technologies",
+                "content": "• Sanitary Landfills: Engineered waste containment sites lined with impermeable HDPE geomembranes and clay layers to prevent toxic leachate from percolating into underlying groundwater aquifers; equipped with methane gas collection pipes.<br>• Waste-to-Energy (Incineration): High-temperature controlled combustion (>850–1000 °C) reducing municipal solid waste volume by 80–90% while generating electricity; requires scrubbers to remove toxic dioxins and furans.<br>• Extended Producer Responsibility (EPR): Policy mechanism placing environmental and financial responsibility on brand manufacturers to collect, recycle, and safely process post-consumer plastic packaging and electronic e-waste."
+            }
+        ]
+    },
+
+    # ── Module 15: Environmental Hazards & Disasters ──
+    {
+        "id": "mod-15",
+        "num": 15,
+        "category": "Hazards & Disasters",
+        "title": "Module 15: Environmental Hazards, Chemical Toxicity & Disasters",
+        "badge": "Hazards & Safety",
+        "summary": "Chemical toxicology (BPA, Methylmercury), landmark disaster case studies (Bhopal, Minamata), and the 4 phases of disaster management.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Chemical Toxicity: BPA & Heavy Metals",
+                "content": "• Bisphenol A (BPA): Synthetic industrial chemical used in polycarbonate plastics and epoxy resin can linings; acts as a potent xenoestrogen (endocrine disruptor) that leaches into food/drinks, mimicking human estrogen.<br>• Minamata Disease: Caused by bioaccumulation of toxic Methylmercury in fish discharged by the Chisso chemical factory into Minamata Bay, Japan (1950s). Neurological poisoning causing ataxia, numbness, blindness, and congenital birth defects.<br>• Itai-Itai Disease: Chronic cadmium poisoning in Toyama Prefecture, Japan, causing osteomalacia, severe bone softening, and renal failure."
+            },
+            {
+                "heading": "2. Bhopal Gas Tragedy & Disaster Management Cycle",
+                "content": "• Bhopal Gas Tragedy (December 2–3, 1984): World's worst industrial disaster; accidental water ingress into storage tank 610 at the Union Carbide pesticide plant triggered a runaway exothermic reaction releasing ~40 tonnes of toxic Methyl Isocyanate (MIC) gas, killing thousands.<br>• Four Phases of Disaster Management:<br>  1. Prevention & Mitigation: Structural and non-structural actions taken in advance to prevent disasters or reduce vulnerability (e.g., building codes, seawalls).<br>  2. Preparedness: Pre-disaster contingency planning, early warning alert systems, evacuation drills.<br>  3. Response: Immediate post-disaster search, rescue, emergency triage, medical care.<br>  4. Recovery & Rehabilitation: Rebuilding resilient infrastructure, economic livelihood restoration, psychological support."
+            }
+        ]
+    },
+
+    # ── Module 16: Environmental Laws & EIA ──
+    {
+        "id": "mod-16",
+        "num": 16,
+        "category": "Environmental Laws",
+        "title": "Module 16: Indian Environmental Legislation & EIA Process",
+        "badge": "Legal Framework",
+        "summary": "Water Act 1974 & CPCB, Air Act 1981, Environment (Protection) Act 1986, Wildlife Protection Act 1972, and EIA stages with the Leopold matrix.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. Landmark Indian Environmental Acts",
+                "tableHeaders": ["Legislation", "Enactment Year & Purpose", "Key Regulatory Provisions & Sections"],
+                "tableRows": [
+                    ["Water Act", "1974 (Prevention & Control of Water Pollution)", "Comprises 10 chapters, 64 sections. Established the Central Pollution Control Board (CPCB) and State Pollution Control Boards (SPCBs). Section 24 prohibits polluting discharges into water bodies; Section 25 mandates prior board consent for new outlets."],
+                    ["Air Act", "1981 (Prevention & Control of Air Pollution)", "Empowered CPCB/SPCBs to monitor air emissions and declare air pollution control areas. In 1987, the Act was amended to include Noise pollution under the definition of air pollutants."],
+                    ["Environment (Protection) Act", "1986 (Enacted under Article 253)", "Umbrella landmark legislation enacted following the Bhopal Gas Tragedy to provide a comprehensive administrative framework. Empowers the Central Government to set emission standards, inspect industrial facilities, and close polluting units."],
+                    ["Wildlife Protection Act", "1972", "Provides legal protection to wild animals and flora; established National Parks and Sanctuaries; contains 6 schedules classifying species protection degrees (Schedule I gives absolute protection with highest penalties)."]
+                ]
+            },
+            {
+                "heading": "2. Environmental Impact Assessment (EIA) Process",
+                "content": "• EIA Purpose: Proactive planning and environmental decision-making tool identifying, predicting, and mitigating potential biophysical and socio-economic impacts of proposed industrial infrastructure projects prior to government clearance.<br>• Sequential Stages of EIA:<br>  1. Screening (determines whether a project requires comprehensive EIA or is exempt based on investment and threshold).<br>  2. Scoping (identifies the key environmental issues and establishes Terms of Reference - ToR).<br>  3. Impact Analysis & Baseline Data Collection.<br>  4. Mitigation Planning & Environmental Management Plan (EMP).<br>  5. Public Hearing (statutory stakeholder consultation).<br>  6. Environmental Appraisal & Decision Making.<br>• Leopold Matrix: Pioneering qualitative matrix developed in 1971 evaluating 100 specified project actions against 88 environmental characteristics, scoring both Magnitude and Importance on scales from 1 to 10."
+            }
+        ]
+    },
+
+    # ── Module 17: International Treaties & SDGs ──
+    {
+        "id": "mod-17",
+        "num": 17,
+        "category": "International Treaties",
+        "title": "Module 17: International Climate Treaties & Sustainable Development Goals",
+        "badge": "Treaties & SDGs",
+        "summary": "Montreal Protocol, Kyoto Protocol flexibility mechanisms, Paris Agreement 1.5°C/2°C targets, and the 17 UN Sustainable Development Goals.",
+        "type": "sections",
+        "sections": [
+            {
+                "heading": "1. International Environmental Treaties",
+                "content": "• Montreal Protocol (1987): Universally ratified treaty phasing out Ozone Depleting Substances (ODSs) such as Chlorofluorocarbons (CFCs) and Halons to heal the stratospheric ozone hole. Highly successful international environmental agreement.<br>• Kyoto Protocol (1997): Adopted under UNFCCC; legally bound industrialized Annex I nations to reduce GHG emissions by ~5.2% below 1990 levels during 2008–2012. Introduced 3 market-based flexibility mechanisms: Clean Development Mechanism (CDM), Joint Implementation (JI), and International Emissions Trading.<br>• Paris Agreement (2015): Replaced Kyoto framework; entered into force November 2016. Core temperature goal: hold global warming well below 2.0 °C and pursue efforts to limit it strictly to 1.5 °C above pre-industrial levels. Established nationally determined contributions (NDCs) with mandatory 5-year global stocktakes."
+            },
+            {
+                "heading": "2. UN Sustainable Development Goals (SDGs) by 2030",
+                "tableHeaders": ["SDG Number", "Title & Objective", "Environmental Relevance"],
+                "tableRows": [
+                    ["SDG 6", "Clean Water & Sanitation", "Ensure availability and sustainable management of clean water and sanitation for all."],
+                    ["SDG 7", "Affordable & Clean Energy", "Ensure access to affordable, reliable, sustainable, and modern renewable energy for all."],
+                    ["SDG 11", "Sustainable Cities & Communities", "Make cities and human settlements inclusive, safe, resilient, and sustainable."],
+                    ["SDG 12", "Responsible Consumption & Production", "Ensure sustainable consumption patterns; halve global food waste; sound chemical management."],
+                    ["SDG 13", "Climate Action", "Take urgent action to combat climate change, reduce GHG emissions, and strengthen climate resilience."],
+                    ["SDG 14", "Life Below Water", "Conserve and sustainably use the oceans, seas, and marine resources; curb plastic pollution."],
+                    ["SDG 15", "Life on Land", "Protect, restore, and promote sustainable use of terrestrial ecosystems; halt deforestation and biodiversity loss."]
+                ]
+            }
+        ]
+    },
+
+    # ── Module 18: Exam Tips & VIT Marking Guide ──
+    {
+        "id": "mod-18",
+        "num": 18,
+        "category": "Cheat Sheet & Numbers",
+        "title": "Module 18: Last-Minute Exam Tips & VIT Examiner Marking Guide",
+        "badge": "Exam Strategy",
+        "summary": "High-yield 2-mark definitions, 5/10-mark structured answering techniques, and technical keywords that earn maximum marks in VIT EVS FAT exams.",
+        "type": "bullets",
+        "bullets": [
+            "Frequent 2-Mark Question Definitions to Memorise verbatim: Carbon footprint (CO2e), Global Warming Potential (GWP100), Scope 1 vs 2 vs 3, Betz limit (59.3%), Photovoltaic effect (p-n junction), Flash vs Binary geothermal cycles, Run-of-river vs Pumped storage hydro, Digital Twin, Leopold Matrix.",
+            "Frequent 5/10-Mark Question Frameworks: When asked to explain the working of Solar PV / Wind Turbine / Hydro Plant / Geothermal Plant, ALWAYS begin by writing the overall energy conversion chain and drawing a clear block diagram.",
+            "Highlight Indian Commitments: VIT examiners strongly award marks for grounding answers in Indian policies: 500 GW non-fossil capacity by 2030, Net-Zero by 2070, PM Surya Ghar Muft Bijli Yojana, Bhadla Solar Park (Rajasthan), NIWE Chennai, Muppandal Wind Farm (Tamil Nadu), Tehri Dam (Uttarakhand), Puga Valley (Ladakh).",
+            "Technical Terminology Checklist: Include core scientific concepts where relevant: Clausius-Clapeyron relation (7% moisture/°C), calcination of limestone (50% cement CO2), CPCB established under Section 3 of Water Act 1974, BOD vs COD, secondary organic fluid (isobutane/pentane), LSTM for air quality time-series forecasting."
+        ]
+    }
+]
+
+print(f"Compiled {len(unified_modules)} unified FAT revision modules.")
+
+with open("/Users/pran/devjams26/unified_fat_notes.json", "w", encoding="utf-8") as f:
+    json.dump(unified_modules, f, indent=2, ensure_ascii=False)
+
+print("Saved /Users/pran/devjams26/unified_fat_notes.json successfully!")

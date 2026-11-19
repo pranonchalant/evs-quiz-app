@@ -3,18 +3,18 @@ import json
 with open("/Users/pran/devjams26/master_questions.json", "r", encoding="utf-8") as f:
     master_data = json.load(f)
 
-with open("/Users/pran/devjams26/notes_data.json", "r", encoding="utf-8") as f:
-    notes_data = json.load(f)
+with open("/Users/pran/devjams26/unified_fat_notes.json", "r", encoding="utf-8") as f:
+    fat_notes_data = json.load(f)
 
 questions_json_str = json.dumps(master_data, ensure_ascii=False)
-notes_json_str = json.dumps(notes_data, ensure_ascii=False)
+notes_json_str = json.dumps(fat_notes_data, ensure_ascii=False)
 
 html_template = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EVS FAT Quiz & Revision Notes — VIT Vellore Exam Bank</title>
+  <title>EVS FAT Quiz & Revision Notes — VIT Vellore Exam Revision Bank</title>
   <style>
     /* ── Reset & Color Scheme ─────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,7 +39,6 @@ html_template = """<!DOCTYPE html>
       --timer-bg: rgba(245, 158, 11, 0.12);
       --timer-border: rgba(245, 158, 11, 0.35);
       --notes-purple: #8b5cf6;
-      --notes-gradient: linear-gradient(135deg, #8b5cf6, #3b82f6);
     }
 
     body {
@@ -619,7 +618,7 @@ html_template = """<!DOCTYPE html>
       cursor: pointer;
     }
 
-    /* ── Notes Viewer Screen ──────────────────────────────── */
+    /* ── Single Unified FAT Notes Viewer Screen ───────────── */
     .notes-screen {
       padding: 2.25rem 2rem;
       text-align: left;
@@ -650,45 +649,9 @@ html_template = """<!DOCTYPE html>
     }
 
     .notes-header p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-
-    /* Source Switcher Tabs */
-    .notes-source-tabs {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1.25rem;
-      background: #17233f;
-      padding: 0.35rem;
-      border-radius: 0.75rem;
-      border: 1px solid var(--border-color);
-    }
-
-    .notes-source-tab {
-      flex: 1;
-      padding: 0.7rem 1rem;
-      text-align: center;
-      font-weight: 700;
       font-size: 0.92rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      border: none;
-      background: transparent;
       color: var(--text-muted);
-    }
-
-    .notes-source-tab.active {
-      background: var(--accent-gradient);
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25);
-    }
-    .notes-source-tab.fat-active {
-      background: var(--fat-gradient);
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+      line-height: 1.45;
     }
 
     /* Search Box */
@@ -745,11 +708,6 @@ html_template = """<!DOCTYPE html>
     }
 
     .notes-pill:hover, .notes-pill.active {
-      background: rgba(56, 189, 248, 0.15);
-      color: var(--accent);
-      border-color: rgba(56, 189, 248, 0.4);
-    }
-    .notes-pill.active.fat-pill-active {
       background: rgba(245, 158, 11, 0.18);
       color: #fbbf24;
       border-color: rgba(245, 158, 11, 0.4);
@@ -775,7 +733,7 @@ html_template = """<!DOCTYPE html>
     }
 
     .note-item-title {
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       font-weight: 700;
       color: #ffffff;
     }
@@ -794,18 +752,6 @@ html_template = """<!DOCTYPE html>
       border-radius: 0.35rem;
       text-transform: uppercase;
       letter-spacing: 0.03em;
-    }
-    .note-tag.high {
-      background: rgba(239, 68, 68, 0.18);
-      color: #f87171;
-      border: 1px solid rgba(239, 68, 68, 0.35);
-    }
-    .note-tag.med {
-      background: rgba(56, 189, 248, 0.15);
-      color: #38bdf8;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-    }
-    .note-tag.fat {
       background: rgba(245, 158, 11, 0.18);
       color: #fbbf24;
       border: 1px solid rgba(245, 158, 11, 0.35);
@@ -856,7 +802,7 @@ html_template = """<!DOCTYPE html>
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.55rem;
       margin-top: 0.75rem;
     }
 
@@ -872,7 +818,7 @@ html_template = """<!DOCTYPE html>
       content: "•";
       position: absolute;
       left: 0.4rem;
-      color: #38bdf8;
+      color: #f59e0b;
       font-weight: 900;
     }
 
@@ -1038,8 +984,8 @@ html_template = """<!DOCTYPE html>
 // ── Master Question Bank (All 420 Questions Combined) ──────────
 const masterQuestions = __QUESTIONS_JSON__;
 
-// ── Complete EVS Revision Notes Data ───────────────────────────
-const notesData = __NOTES_JSON__;
+// ── Unified FAT Revision Notes Data ────────────────────────────
+const fatNotesData = __NOTES_JSON__;
 
 // ── Application State ──────────────────────────────────────────
 let activeQuestions = [];
@@ -1050,8 +996,7 @@ let userAnswers = [];
 let currentMode = "fat_all";
 let currentTopic = "";
 
-// Notes viewer state
-let notesCurrentSource = "fat"; // "fat" or "masterdooom"
+// Notes viewer state (One unified FAT Notes section)
 let notesActivePill = "all";
 let notesSearchTerm = "";
 
@@ -1136,14 +1081,14 @@ function renderStartScreen() {
         <span class="fat-pill">FAT 2026</span>
       </div>
       <p class="start-subtitle">
-        Comprehensive EVS FAT Exam Bank combining all 420 questions with high-yield focus revision, 40-Q timed mock tests, and dual-source revision notes.
+        Comprehensive EVS FAT Exam Bank combining all 420 questions with high-yield focus revision, 40-Q timed mock tests, and a dedicated FAT revision notes section.
       </p>
 
       <div class="features-pill-row">
         <span class="feature-pill">🎓 420 Total MCQs</span>
         <span class="feature-pill">⭐ 65 High-Yield Focus</span>
         <span class="feature-pill">⏱️ 40-Q Timed Mock</span>
-        <span class="feature-pill notes-pill-top" onclick="renderNotesScreen()" style="cursor:pointer;">📖 Complete Notes</span>
+        <span class="feature-pill notes-pill-top" onclick="renderNotesScreen()" style="cursor:pointer;">📖 FAT Notes (18 Modules)</span>
         <span class="feature-pill">🔀 Shuffled Options</span>
       </div>
 
@@ -1175,13 +1120,13 @@ function renderStartScreen() {
           <span class="mode-badge-count">⭐ 65 Important MCQs</span>
         </div>
 
-        <!-- 4. Notes Section Card -->
+        <!-- 4. Single Unified FAT Notes Section -->
         <div class="mode-card notes-card" onclick="renderNotesScreen()">
           <div>
-            <h3>📖 Complete EVS Revision Notes & Cheat Sheets</h3>
-            <p>Comprehensive notes from both sources: FAT Lecture Revision Notes (Parts A–G: Numbers Cheat Sheet, Climate Science, Carbon Accounting, Solar, Wind, Hydro, Geothermal, AI & IoT) and all 26 Masterdooom modules (Ecosystems, Biodiversity, Pollution, Laws, Hazards, SDGs).</p>
+            <h3>📖 EVS FAT Revision Notes (All 18 Modules & Cheat Sheets)</h3>
+            <p>Comprehensive FAT revision notes covering all 18 modules: Numbers Cheat Sheet, Climate Science, Carbon Accounting, Renewables (Solar, Wind, Hydro, Geothermal), AI & IoT, Ecosystems, Biodiversity, Pollution, Environmental Laws, and Exam Tips.</p>
           </div>
-          <span class="mode-badge-count">📖 Complete Notes</span>
+          <span class="mode-badge-count">📖 FAT Notes</span>
         </div>
       </div>
 
@@ -1209,7 +1154,7 @@ function renderStartScreen() {
           ⭐ Launch 65-Q FAT Focus Bank
         </button>
         <button class="btn btn-secondary" style="flex:1; min-width:220px; justify-content:center; font-size:1.02rem; background:rgba(139,92,246,0.2); border-color:#8b5cf6; color:#c4b5fd;" onclick="renderNotesScreen()">
-          📖 Read Full Revision Notes
+          📖 Read FAT Revision Notes
         </button>
       </div>
     </div>
@@ -1273,7 +1218,7 @@ function renderQuestion() {
         <span class="badge">FAT</span>
       </div>
       <div class="nav-actions">
-        <button class="nav-notes-btn" onclick="renderNotesScreen()" title="Open Revision Notes">📖 Notes</button>
+        <button class="nav-notes-btn" onclick="renderNotesScreen()" title="Open FAT Revision Notes">📖 FAT Notes</button>
         <span class="mode-badge" title="${modeLabel}">🎯 ${modeLabel}</span>
         <span class="stopwatch-badge running" title="Elapsed Time">
           ⏱️ <span id="stopwatchDisplay">${formatStopwatch(elapsedSeconds)}</span>
@@ -1417,7 +1362,7 @@ function renderResults() {
         <span class="badge">FAT</span>
       </div>
       <div class="nav-actions">
-        <button class="nav-notes-btn" onclick="renderNotesScreen()">📖 Revision Notes</button>
+        <button class="nav-notes-btn" onclick="renderNotesScreen()">📖 FAT Notes</button>
         <span class="stopwatch-badge">⏱️ Time: ${timeStr}</span>
         <span class="live-score">${score} / ${total} Correct</span>
       </div>
@@ -1442,7 +1387,7 @@ function renderResults() {
         <button class="btn" onclick="startQuiz(currentMode)">🔄 Retake with Fresh Reshuffle</button>
         <button class="btn btn-fat" onclick="startQuiz('mock')">⏱️ Start Another 40-Q Mock Test</button>
         <button class="btn btn-secondary" onclick="startQuiz('fat_focus')">⭐ Practice FAT Focus Bank</button>
-        <button class="btn btn-secondary" style="border-color:#8b5cf6; color:#c4b5fd;" onclick="renderNotesScreen()">📖 Read Revision Notes</button>
+        <button class="btn btn-secondary" style="border-color:#8b5cf6; color:#c4b5fd;" onclick="renderNotesScreen()">📖 Read FAT Revision Notes</button>
         <button class="btn btn-secondary" onclick="renderStartScreen()">🏠 Switch Topic/Mode</button>
       </div>
 
@@ -1474,7 +1419,7 @@ function renderResults() {
   `;
 }
 
-// ── Screen: Complete Revision Notes Viewer ─────────────────────
+// ── Screen: Single Unified EVS FAT Revision Notes Viewer ───────
 function renderNotesScreen() {
   stopStopwatch();
   app.classList.add("wide-mode");
@@ -1493,22 +1438,12 @@ function renderNotesScreen() {
     <div class="notes-screen">
       <div class="notes-header">
         <div class="notes-header-top">
-          <h2>📖 EVS Comprehensive Revision Notes</h2>
+          <h2>📖 EVS FAT Revision Notes & Cheat Sheets</h2>
           <button class="btn btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.9rem;" onclick="renderStartScreen()">← Return to Quiz Modes</button>
         </div>
         <p>
-          Dual-source notes covering the entire syllabus: <strong>VIT Vellore FAT Lecture Notes & Cheat Sheets (Parts A–G)</strong> and <strong>Masterdooom's 26 Complete Syllabus Modules</strong>.
+          Complete, unified revision notes covering all 18 exam modules: Numbers Cheat Sheet, Climate Science, Carbon Accounting, Renewables (Solar, Wind, Hydro, Geothermal), AI & IoT, Ecosystems, Biodiversity, Pollution, Environmental Laws, and Exam Tips.
         </p>
-      </div>
-
-      <!-- Source Toggle Tabs -->
-      <div class="notes-source-tabs">
-        <button class="notes-source-tab ${notesCurrentSource === 'fat' ? 'active fat-active' : ''}" onclick="switchNotesSource('fat')">
-          🎓 VIT Vellore FAT Notes (Parts A–G Cheat Sheet)
-        </button>
-        <button class="notes-source-tab ${notesCurrentSource === 'masterdooom' ? 'active' : ''}" onclick="switchNotesSource('masterdooom')">
-          🌐 Masterdooom Syllabus Modules (26 Topics)
-        </button>
       </div>
 
       <!-- Real-time Search Box -->
@@ -1518,13 +1453,13 @@ function renderNotesScreen() {
           type="text" 
           id="notesSearchInput" 
           class="notes-search-input" 
-          placeholder="Search any keyword, formula, standard, or law (e.g. 'Paris', 'Scope 3', 'Betz', 'Bhopal', 'Inverter', 'Tehri', 'Minamata', '10%')..." 
+          placeholder="Search any keyword, formula, standard, or law (e.g. 'Paris', 'Scope 3', 'Betz', 'Bhopal', 'Inverter', 'Tehri', 'Minamata', '10%', 'pH')..." 
           value="${escapeHtml(notesSearchTerm)}"
           oninput="handleNotesSearch(this.value)"
         />
       </div>
 
-      <!-- Filter Pills -->
+      <!-- Category Filter Pills -->
       <div class="notes-pills" id="notesPillsContainer">
         <!-- Rendered dynamically -->
       </div>
@@ -1540,51 +1475,30 @@ function renderNotesScreen() {
   renderNotesContent();
 }
 
-function switchNotesSource(source) {
-  notesCurrentSource = source;
-  notesActivePill = "all";
-  renderNotesScreen();
-}
-
 function renderNotesPills() {
   const container = document.getElementById("notesPillsContainer");
   if (!container) return;
 
-  if (notesCurrentSource === "fat") {
-    const pills = [
-      { id: "all", label: "All Parts (A–G)" },
-      { id: "part-a", label: "📌 Part A: Numbers Cheat Sheet" },
-      { id: "part-b", label: "🌡️ Part B: Climate Science" },
-      { id: "part-c", label: "👣 Part C: Carbon Footprint" },
-      { id: "part-d", label: "☀️ Part D: Solar & Wind" },
-      { id: "part-e", label: "💧 Part E: Hydro & Geothermal" },
-      { id: "part-f", label: "🤖 Part F: AI & IoT" },
-      { id: "part-g", label: "💡 Part G: Exam Tips" }
-    ];
-    container.innerHTML = pills.map(p => `
-      <button class="notes-pill ${notesActivePill === p.id ? 'active fat-pill-active' : ''}" onclick="selectNotesPill('${p.id}')">
-        ${p.label}
-      </button>
-    `).join("");
-  } else {
-    const groups = ["all", "FOUNDATIONS", "BIODIVERSITY", "POLLUTION", "WASTE", "HAZARDS & DISASTERS", "INDIAN ENVIRONMENTAL LAWS", "INTERNATIONAL ENVIRONMENTAL LAW", "SUSTAINABILITY"];
-    const labels = {
-      "all": "All Modules (26)",
-      "FOUNDATIONS": "Earth & Ecosystems",
-      "BIODIVERSITY": "Biodiversity & GM",
-      "POLLUTION": "Pollution Types",
-      "WASTE": "Circular & Waste",
-      "HAZARDS & DISASTERS": "Hazards & Disaster",
-      "INDIAN ENVIRONMENTAL LAWS": "Indian Laws & EIA",
-      "INTERNATIONAL ENVIRONMENTAL LAW": "Kyoto & Paris",
-      "SUSTAINABILITY": "SDGs"
-    };
-    container.innerHTML = groups.map(g => `
-      <button class="notes-pill ${notesActivePill === g ? 'active' : ''}" onclick="selectNotesPill('${g}')">
-        ${labels[g] || g}
-      </button>
-    `).join("");
-  }
+  const categories = [
+    { id: "all", label: "All Modules (18)" },
+    { id: "Cheat Sheet & Numbers", label: "📌 Numbers & Cheat Sheet" },
+    { id: "Climate & Carbon", label: "🌡️ Climate & Carbon" },
+    { id: "Renewable Energy", label: "☀️ Renewable Energy" },
+    { id: "AI & IoT", label: "🤖 AI & IoT Monitoring" },
+    { id: "Earth & Ecosystems", label: "🌿 Earth & Ecosystems" },
+    { id: "Biodiversity", label: "🦋 Biodiversity" },
+    { id: "Pollution & Waste", label: "🏭 Pollution & Waste" },
+    { id: "Waste & Circular", label: "🔄 Circular Economy" },
+    { id: "Hazards & Disasters", label: "⚠️ Hazards & Disasters" },
+    { id: "Environmental Laws", label: "⚖️ Environmental Laws" },
+    { id: "International Treaties", label: "🌐 Treaties & SDGs" }
+  ];
+
+  container.innerHTML = categories.map(c => `
+    <button class="notes-pill ${notesActivePill === c.id ? 'active' : ''}" onclick="selectNotesPill('${c.id}')">
+      ${c.label}
+    </button>
+  `).join("");
 }
 
 function selectNotesPill(pillId) {
@@ -1602,65 +1516,39 @@ function renderNotesContent() {
   const container = document.getElementById("notesCardsContainer");
   if (!container) return;
 
-  const term = notesSearchTerm;
-
-  if (notesCurrentSource === "fat") {
-    let items = notesData.fatNotes;
-    if (notesActivePill !== "all") {
-      items = items.filter(n => n.id === notesActivePill);
-    }
-    if (term) {
-      items = items.filter(n => {
-        const textToSearch = (
-          n.title + " " + n.intro + " " +
-          JSON.stringify(n.tableRows || []) + " " +
-          JSON.stringify(n.sections || []) + " " +
-          JSON.stringify(n.bullets || [])
-        ).toLowerCase();
-        return textToSearch.includes(term);
-      });
-    }
-
-    if (items.length === 0) {
-      container.innerHTML = `
-        <div style="text-align:center; padding:3rem 1rem; color:var(--text-muted);">
-          <div style="font-size:2.5rem; margin-bottom:0.75rem;">🔍</div>
-          <h3>No matching notes found for "${escapeHtml(notesSearchTerm)}"</h3>
-          <p style="margin-top:0.5rem; font-size:0.9rem;">Try searching for another term or switch to Masterdooom notes tab.</p>
-        </div>
-      `;
-      return;
-    }
-
-    container.innerHTML = items.map(n => renderFatNoteCard(n)).join("");
-  } else {
-    let items = notesData.masterdooomTopics;
-    if (notesActivePill !== "all") {
-      items = items.filter(t => t.group === notesActivePill);
-    }
-    if (term) {
-      items = items.filter(t => {
-        const textToSearch = (t.title + " " + t.sub + " " + t.group + " " + t.must.join(" ")).toLowerCase();
-        return textToSearch.includes(term);
-      });
-    }
-
-    if (items.length === 0) {
-      container.innerHTML = `
-        <div style="text-align:center; padding:3rem 1rem; color:var(--text-muted);">
-          <div style="font-size:2.5rem; margin-bottom:0.75rem;">🔍</div>
-          <h3>No matching Masterdooom topics found for "${escapeHtml(notesSearchTerm)}"</h3>
-          <p style="margin-top:0.5rem; font-size:0.9rem;">Try a broader keyword or search across FAT notes.</p>
-        </div>
-      `;
-      return;
-    }
-
-    container.innerHTML = items.map(t => renderMasterdooomTopicCard(t)).join("");
+  let items = fatNotesData;
+  if (notesActivePill !== "all") {
+    items = items.filter(n => n.category === notesActivePill);
   }
+
+  const term = notesSearchTerm;
+  if (term) {
+    items = items.filter(n => {
+      const textToSearch = (
+        n.title + " " + n.category + " " + n.summary + " " +
+        JSON.stringify(n.tableRows || []) + " " +
+        JSON.stringify(n.sections || []) + " " +
+        JSON.stringify(n.bullets || [])
+      ).toLowerCase();
+      return textToSearch.includes(term);
+    });
+  }
+
+  if (items.length === 0) {
+    container.innerHTML = `
+      <div style="text-align:center; padding:3rem 1rem; color:var(--text-muted);">
+        <div style="font-size:2.5rem; margin-bottom:0.75rem;">🔍</div>
+        <h3>No matching FAT notes found for "${escapeHtml(notesSearchTerm)}"</h3>
+        <p style="margin-top:0.5rem; font-size:0.9rem;">Try a broader keyword or select 'All Modules' above.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = items.map(n => renderUnifiedNoteCard(n)).join("");
 }
 
-function renderFatNoteCard(n) {
+function renderUnifiedNoteCard(n) {
   let innerHtml = "";
 
   if (n.type === "table") {
@@ -1675,7 +1563,7 @@ function renderFatNoteCard(n) {
           <tbody>
             ${n.tableRows.map(row => `
               <tr>
-                <td style="font-weight:600; color:#38bdf8; min-width:220px;">${escapeHtml(row[0])}</td>
+                <td style="font-weight:600; color:#38bdf8; min-width:240px;">${escapeHtml(row[0])}</td>
                 <td>${escapeHtml(row[1])}</td>
               </tr>
             `).join("")}
@@ -1722,34 +1610,13 @@ function renderFatNoteCard(n) {
     <div class="note-item">
       <div class="note-item-header">
         <div>
-          <span class="note-tag fat">${escapeHtml(n.part)}</span>
+          <span class="note-tag">${escapeHtml(n.category)}</span>
           <h3 class="note-item-title" style="margin-top:0.4rem;">${escapeHtml(n.title)}</h3>
         </div>
         <span class="note-tag" style="background:#24355a; color:#cbd5e1;">${escapeHtml(n.badge)}</span>
       </div>
-      <p class="note-item-sub">${escapeHtml(n.intro)}</p>
+      <p class="note-item-sub">${escapeHtml(n.summary)}</p>
       ${innerHtml}
-    </div>
-  `;
-}
-
-function renderMasterdooomTopicCard(t) {
-  const isHigh = (t.priority === "high");
-  return `
-    <div class="note-item">
-      <div class="note-item-header">
-        <div>
-          <span class="note-tag" style="background:#1e293b; color:#38bdf8; border:1px solid #334155;">${escapeHtml(t.group)}</span>
-          <h3 class="note-item-title" style="margin-top:0.4rem;">${escapeHtml(t.title)}</h3>
-        </div>
-        <span class="note-tag ${isHigh ? 'high' : 'med'}">${isHigh ? 'HIGH PRIORITY' : 'MEDIUM PRIORITY'}</span>
-      </div>
-      <p class="note-item-sub">${escapeHtml(t.sub)}</p>
-
-      <div style="font-weight:700; color:#38bdf8; font-size:0.88rem; margin-top:0.75rem;">⭐ Must-Know Exam Facts:</div>
-      <ul class="note-bullets">
-        ${t.must.map(m => `<li>${escapeHtml(m)}</li>`).join("")}
-      </ul>
     </div>
   `;
 }
