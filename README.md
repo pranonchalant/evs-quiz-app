@@ -27,6 +27,18 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built for 
   - Options lock immediately upon answering to prevent changing answers.
   - "Next Question →" button ensures ample time to read the rationale.
   - Scrollable results breakdown with right/wrong indicators and explanations.
+- **Dual-Source Comprehensive Revision Notes**:
+  - **VIT Vellore FAT Cheat Sheets & Lecture Notes (Parts A–G)**:
+    - *Part A*: 30-statistic "Numbers to Memorise" cheat sheet.
+    - *Part B*: Climate Change Science & Global Warming (greenhouse physics, 4 evidence pillars, mitigation vs adaptation).
+    - *Part C*: Carbon Footprint & Mitigation (Scopes 1/2/3, LCA, standards, sectoral shares, CCS/CCU/DAC).
+    - *Part D*: Solar & Wind Energy (PV types, CSP, Indian schemes, wind cubic power law, Betz limit, HAWT vs VAWT).
+    - *Part E*: Hydro & Geothermal Energy (energy chains, Tehri/Kadamparai, geothermal flash/binary cycles, Puga Valley).
+    - *Part F*: AI & IoT in Environmental Monitoring (sensor matrix, LSTM, digital twins, IIT Kharagpur Ganga case study).
+    - *Part G*: Last-Minute Exam Tips & VIT marking criteria.
+  - **Masterdooom Syllabus Modules (26 Topics)**:
+    - Complete, structured revision cards for Earth & Ecosystems, Biodiversity, Pollution, Waste, Hazards & Disasters, Indian Environmental Laws, and International Agreements (Kyoto, Paris, SDGs).
+  - **Live Search & Category Filtering**: Instant real-time keyword search across all notes, formulas, and laws.
 - **Zero Dependencies**: Pure HTML5, modern CSS, and vanilla JavaScript. Runs 100% offline.
 
 ---
@@ -39,7 +51,9 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built for 
    - 40 randomly sampled questions from the full 420 question pool with live stopwatch tracking on top and average pace analytics.
 3. ⭐ **FAT Focus Bank (65 Important Questions)**:
    - Curated collection of **ONLY the most critical, high-frequency questions** across all FAT modules and core environmental laws — 0% filler, 100% exam-critical.
-4. 🏷️ **Practice by Section**:
+4. 📖 **Complete EVS Revision Notes & Cheat Sheets**:
+   - Integrated revision viewer with live search and dual-tab access for FAT Lecture Notes and all 26 Masterdooom modules.
+5. 🏷️ **Practice by Section**:
    - Filter and focus on individual syllabus sections (Climate Change, Carbon Footprint, Solar Energy, Wind Energy, Hydro & Geothermal, AI & IoT, etc.).
 
 ---

@@ -1,16 +1,20 @@
 import json
 
-with open("/Users/pran/devjams26/master_questions.json") as f:
+with open("/Users/pran/devjams26/master_questions.json", "r", encoding="utf-8") as f:
     master_data = json.load(f)
 
-json_str = json.dumps(master_data, ensure_ascii=False)
+with open("/Users/pran/devjams26/notes_data.json", "r", encoding="utf-8") as f:
+    notes_data = json.load(f)
+
+questions_json_str = json.dumps(master_data, ensure_ascii=False)
+notes_json_str = json.dumps(notes_data, ensure_ascii=False)
 
 html_template = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EVS FAT Quiz — Complete Exam Revision & 40-Q Mock Test</title>
+  <title>EVS FAT Quiz & Revision Notes — VIT Vellore Exam Bank</title>
   <style>
     /* ── Reset & Color Scheme ─────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,6 +38,8 @@ html_template = """<!DOCTYPE html>
       --timer-color: #f59e0b;
       --timer-bg: rgba(245, 158, 11, 0.12);
       --timer-border: rgba(245, 158, 11, 0.35);
+      --notes-purple: #8b5cf6;
+      --notes-gradient: linear-gradient(135deg, #8b5cf6, #3b82f6);
     }
 
     body {
@@ -53,13 +59,18 @@ html_template = """<!DOCTYPE html>
     /* ── Card Container ───────────────────────────────────── */
     .quiz-card {
       width: 100%;
-      max-width: 780px;
+      max-width: 820px;
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 1.25rem;
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.05);
       overflow: hidden;
       margin-top: 1rem;
+      transition: max-width 0.25s ease;
+    }
+
+    .quiz-card.wide-mode {
+      max-width: 960px;
     }
 
     /* ── Top Navigation Bar ───────────────────────────────── */
@@ -93,6 +104,34 @@ html_template = """<!DOCTYPE html>
       padding: 0.15rem 0.45rem;
       border-radius: 0.4rem;
       font-weight: 700;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-notes-btn {
+      background: rgba(139, 92, 246, 0.18);
+      color: #c4b5fd;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      padding: 0.35rem 0.85rem;
+      border-radius: 2rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      text-decoration: none;
+    }
+    .nav-notes-btn:hover {
+      background: rgba(139, 92, 246, 0.32);
+      color: #ffffff;
+      transform: translateY(-1px);
     }
 
     .mode-badge {
@@ -178,205 +217,208 @@ html_template = """<!DOCTYPE html>
     .source-tag {
       display: inline-block;
       font-size: 0.75rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
+      letter-spacing: 0.04em;
+      color: #38bdf8;
       background: rgba(56, 189, 248, 0.1);
       padding: 0.25rem 0.65rem;
-      border-radius: 0.4rem;
-      font-weight: 700;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(56, 189, 248, 0.2);
     }
-
     .source-tag.fat-tag {
       color: #fbbf24;
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.3);
+      background: rgba(245, 158, 11, 0.12);
+      border-color: rgba(245, 158, 11, 0.3);
     }
 
     .random-tag {
-      font-size: 0.72rem;
-      color: #94a3b8;
-      background: #17233f;
-      border: 1px solid #283a63;
-      padding: 0.2rem 0.55rem;
-      border-radius: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
     }
 
     .question-title {
       font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.55;
+      font-weight: 700;
+      line-height: 1.5;
       margin-bottom: 1.75rem;
       color: #ffffff;
     }
 
-    /* ── Option Buttons ───────────────────────────────────── */
+    /* ── Options List ─────────────────────────────────────── */
     .options-grid {
-      list-style: none;
       display: flex;
       flex-direction: column;
       gap: 0.85rem;
+      list-style: none;
     }
 
     .option-btn {
       width: 100%;
       text-align: left;
-      padding: 1.1rem 1.35rem;
-      font-size: 1rem;
-      font-family: inherit;
-      color: var(--text-main);
+      padding: 1.05rem 1.25rem;
       background: #17233f;
       border: 1.5px solid #283a63;
       border-radius: 0.85rem;
+      color: var(--text-main);
+      font-size: 0.98rem;
+      font-family: inherit;
       cursor: pointer;
-      transition: all 0.18s ease;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       display: flex;
-      align-items: center;
-      gap: 1rem;
+      align-items: flex-start;
+      gap: 0.85rem;
       line-height: 1.4;
+      user-select: none;
     }
 
-    .option-btn:hover:not(.locked) {
-      background: #203157;
-      border-color: #6366f1;
+    .option-btn:hover:not(:disabled) {
+      background: #1e2c4f;
+      border-color: #38bdf8;
       transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.2);
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
     }
 
     .option-badge {
-      flex-shrink: 0;
-      width: 2.1rem;
-      height: 2.1rem;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: 0.55rem;
+      min-width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 0.45rem;
       background: #253966;
+      color: #cbd5e1;
+      font-size: 0.85rem;
       font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      transition: all 0.18s ease;
+      flex-shrink: 0;
+      margin-top: -0.1rem;
     }
 
-    /* Highlight feedback states */
-    .option-btn.correct {
+    .option-btn:disabled {
+      cursor: not-allowed;
+    }
+
+    /* Correct / Incorrect states */
+    .option-btn.selected-correct {
       background: var(--correct-bg) !important;
       border-color: var(--correct-border) !important;
-      color: #ffffff !important;
-      box-shadow: 0 0 16px rgba(16, 185, 129, 0.3);
+      color: #ecfdf5 !important;
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.3) !important;
     }
-    .option-btn.correct .option-badge {
+    .option-btn.selected-correct .option-badge {
       background: #10b981;
-      color: #064e3b;
+      color: #ffffff;
     }
 
-    .option-btn.incorrect {
+    .option-btn.selected-wrong {
       background: var(--wrong-bg) !important;
       border-color: var(--wrong-border) !important;
-      color: #ffffff !important;
-      box-shadow: 0 0 16px rgba(239, 68, 68, 0.3);
+      color: #fef2f2 !important;
+      box-shadow: 0 0 15px rgba(239, 68, 68, 0.3) !important;
     }
-    .option-btn.incorrect .option-badge {
+    .option-btn.selected-wrong .option-badge {
       background: #ef4444;
-      color: #451010;
+      color: #ffffff;
     }
 
-    .option-btn.locked {
-      cursor: default;
+    .option-btn.highlight-correct {
+      background: rgba(16, 185, 129, 0.18) !important;
+      border-color: #10b981 !important;
+      color: #a7f3d0 !important;
     }
-    .option-btn.locked:not(.correct):not(.incorrect) {
+    .option-btn.highlight-correct .option-badge {
+      background: #10b981;
+      color: #ffffff;
+    }
+
+    .option-btn.faded {
       opacity: 0.45;
     }
 
-    /* ── Explanation Box ──────────────────────────────────── */
+    /* ── Instant Feedback Box ─────────────────────────────── */
     .feedback-box {
-      margin-top: 1.75rem;
-      padding: 1.25rem 1.5rem;
+      margin-top: 1.5rem;
+      padding: 1.25rem 1.35rem;
       border-radius: 0.85rem;
-      animation: slideUp 0.25s ease forwards;
-      background: #17233f;
-      border: 1px solid #283a63;
-      border-left: 5px solid #6366f1;
-    }
-
-    .feedback-box.is-correct {
-      border-left-color: #10b981;
-      background: rgba(16, 185, 129, 0.08);
-    }
-
-    .feedback-box.is-wrong {
-      border-left-color: #ef4444;
-      background: rgba(239, 68, 68, 0.08);
-    }
-
-    .feedback-status {
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .feedback-status.correct { color: #34d399; }
-    .feedback-status.wrong { color: #f87171; }
-
-    .explanation-text {
       font-size: 0.95rem;
-      line-height: 1.6;
-      color: #cbd5e1;
+      line-height: 1.55;
+      animation: fadeIn 0.25s ease-out;
+      border-left: 4px solid;
     }
 
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(10px); }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── Action Rows & Buttons ────────────────────────────── */
+    .feedback-box.is-correct {
+      background: rgba(6, 78, 59, 0.35);
+      border-left-color: #10b981;
+      color: #d1fae5;
+    }
+
+    .feedback-box.is-wrong {
+      background: rgba(69, 16, 16, 0.4);
+      border-left-color: #ef4444;
+      color: #fee2e2;
+    }
+
+    .feedback-status {
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .feedback-explanation {
+      color: #cbd5e1;
+      font-size: 0.92rem;
+    }
+
+    /* ── Action Buttons ───────────────────────────────────── */
     .action-row {
+      margin-top: 1.75rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 1.75rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid var(--border-color);
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.85rem 1.75rem;
-      font-size: 0.98rem;
-      font-family: inherit;
-      font-weight: 600;
-      color: #ffffff;
-      background: var(--accent-gradient);
-      border: none;
+      padding: 0.85rem 1.6rem;
       border-radius: 0.75rem;
+      font-size: 0.98rem;
+      font-weight: 700;
+      font-family: inherit;
       cursor: pointer;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+      border: none;
+      background: var(--accent-gradient);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
     .btn:hover {
-      opacity: 0.92;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(6, 182, 212, 0.45);
     }
 
     .btn-fat {
       background: var(--fat-gradient);
-      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
     }
     .btn-fat:hover {
-      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
     }
 
     .btn-secondary {
-      background: #203157;
+      background: #17233f;
       color: #cbd5e1;
       border: 1px solid var(--border-color);
       box-shadow: none;
@@ -442,6 +484,11 @@ html_template = """<!DOCTYPE html>
       border-radius: 1rem;
       font-weight: 600;
     }
+    .feature-pill.notes-pill-top {
+      color: #c4b5fd;
+      background: rgba(139, 92, 246, 0.12);
+      border-color: rgba(139, 92, 246, 0.35);
+    }
 
     .mode-cards {
       display: grid;
@@ -485,6 +532,16 @@ html_template = """<!DOCTYPE html>
     .mode-card.featured {
       border-color: #10b981;
       background: linear-gradient(145deg, #17233f, #132e3b);
+    }
+
+    /* Notes Card */
+    .mode-card.notes-card {
+      border-color: #8b5cf6;
+      background: linear-gradient(145deg, #17233f, #231942);
+    }
+    .mode-card.notes-card:hover {
+      border-color: #a78bfa;
+      background: #241d4c;
     }
 
     .mode-card h3 {
@@ -531,6 +588,12 @@ html_template = """<!DOCTYPE html>
       border: 1px solid rgba(16, 185, 129, 0.3);
     }
 
+    .mode-card.notes-card .mode-badge-count {
+      color: #c4b5fd;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+    }
+
     .topic-select-row {
       margin: 1.5rem 0 2rem;
       text-align: left;
@@ -554,6 +617,285 @@ html_template = """<!DOCTYPE html>
       font-size: 0.95rem;
       font-family: inherit;
       cursor: pointer;
+    }
+
+    /* ── Notes Viewer Screen ──────────────────────────────── */
+    .notes-screen {
+      padding: 2.25rem 2rem;
+      text-align: left;
+    }
+
+    .notes-header {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.25rem;
+    }
+
+    .notes-header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .notes-header h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .notes-header p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Source Switcher Tabs */
+    .notes-source-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      background: #17233f;
+      padding: 0.35rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .notes-source-tab {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+    }
+
+    .notes-source-tab.active {
+      background: var(--accent-gradient);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25);
+    }
+    .notes-source-tab.fat-active {
+      background: var(--fat-gradient);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+    }
+
+    /* Search Box */
+    .notes-search-container {
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+
+    .notes-search-input {
+      width: 100%;
+      padding: 0.85rem 1.2rem 0.85rem 2.6rem;
+      background: #17233f;
+      border: 1.5px solid #283a63;
+      border-radius: 0.75rem;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .notes-search-input:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+    }
+
+    .notes-search-icon {
+      position: absolute;
+      left: 0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    /* Category Pill Filters */
+    .notes-pills {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .notes-pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.35rem 0.8rem;
+      border-radius: 2rem;
+      border: 1px solid #283a63;
+      background: #17233f;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .notes-pill:hover, .notes-pill.active {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+    .notes-pill.active.fat-pill-active {
+      background: rgba(245, 158, 11, 0.18);
+      color: #fbbf24;
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+
+    /* Note Card & Section Layout */
+    .note-item {
+      background: #17233f;
+      border: 1px solid #283a63;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      transition: all 0.2s ease;
+    }
+
+    .note-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .note-item-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .note-item-sub {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.45;
+    }
+
+    .note-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .note-tag.high {
+      background: rgba(239, 68, 68, 0.18);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.35);
+    }
+    .note-tag.med {
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .note-tag.fat {
+      background: rgba(245, 158, 11, 0.18);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+
+    /* Tables in Notes */
+    .notes-table-wrap {
+      overflow-x: auto;
+      margin: 1rem 0;
+      border-radius: 0.65rem;
+      border: 1px solid #283a63;
+    }
+
+    .notes-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+      text-align: left;
+    }
+
+    .notes-table th {
+      background: #1e2e50;
+      color: #cbd5e1;
+      padding: 0.75rem 1rem;
+      font-weight: 700;
+      border-bottom: 1px solid #283a63;
+      white-space: nowrap;
+    }
+
+    .notes-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #203155;
+      color: #e2e8f0;
+      vertical-align: top;
+      line-height: 1.45;
+    }
+
+    .notes-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .notes-table tr:hover td {
+      background: rgba(56, 189, 248, 0.04);
+    }
+
+    /* Bullet List in Notes */
+    .note-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .note-bullets li {
+      position: relative;
+      padding-left: 1.4rem;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .note-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 0.4rem;
+      color: #38bdf8;
+      font-weight: 900;
+    }
+
+    .note-section-block {
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px dashed #283a63;
+    }
+    .note-section-block:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    .note-section-heading {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+    }
+    .note-section-content {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      line-height: 1.55;
     }
 
     /* ── Results Screen ───────────────────────────────────── */
@@ -606,11 +948,13 @@ html_template = """<!DOCTYPE html>
     }
 
     .review-section h3 {
-      font-size: 1.15rem;
-      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: #ffffff;
     }
 
     .review-list {
@@ -677,6 +1021,7 @@ html_template = """<!DOCTYPE html>
       body { padding: 0.75rem 0.5rem 2rem; }
       .quiz-body { padding: 1.5rem 1.25rem; }
       .quiz-nav-bar { padding: 1rem 1.25rem; }
+      .notes-screen { padding: 1.5rem 1rem; }
       .question-title { font-size: 1.1rem; }
       .option-btn { font-size: 0.93rem; padding: 0.9rem 1.1rem; }
       .results-score-big { font-size: 3rem; }
@@ -691,28 +1036,36 @@ html_template = """<!DOCTYPE html>
 
 <script>
 // ── Master Question Bank (All 420 Questions Combined) ──────────
-const masterQuestions = __INJECTED_MASTER_QUESTIONS__;
+const masterQuestions = __QUESTIONS_JSON__;
+
+// ── Complete EVS Revision Notes Data ───────────────────────────
+const notesData = __NOTES_JSON__;
 
 // ── Application State ──────────────────────────────────────────
-let currentMode = "fat_all"; 
-let currentTopic = "";
 let activeQuestions = [];
 let currentIndex = 0;
 let score = 0;
 let answered = false;
 let userAnswers = [];
+let currentMode = "fat_all";
+let currentTopic = "";
 
-// ── Stopwatch State ────────────────────────────────────────────
+// Notes viewer state
+let notesCurrentSource = "fat"; // "fat" or "masterdooom"
+let notesActivePill = "all";
+let notesSearchTerm = "";
+
+// Stopwatch State
+let elapsedSeconds = 0;
 let timerInterval = null;
 let timerStartTime = null;
-let elapsedSeconds = 0;
 
 const app = document.getElementById("quizCard");
 const letters = ["A", "B", "C", "D"];
 
-// ── Randomization Helpers (Fisher-Yates) ────────────────────────
-function shuffleArray(array) {
-  const arr = [...array];
+// ── Fisher-Yates Array Shuffle ─────────────────────────────────
+function shuffleArray(origArray) {
+  const arr = [...origArray];
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -772,6 +1125,7 @@ function updateStopwatchUI() {
 // ── Screen: Mode Selection ─────────────────────────────────────
 function renderStartScreen() {
   stopStopwatch();
+  app.classList.remove("wide-mode");
   const categories = [...new Set(masterQuestions.map(q => q.category))].sort();
 
   app.innerHTML = `
@@ -782,15 +1136,15 @@ function renderStartScreen() {
         <span class="fat-pill">FAT 2026</span>
       </div>
       <p class="start-subtitle">
-        Comprehensive EVS FAT Exam Bank combining all 420 questions with high-yield focus revision and 40-question timed mock tests.
+        Comprehensive EVS FAT Exam Bank combining all 420 questions with high-yield focus revision, 40-Q timed mock tests, and dual-source revision notes.
       </p>
 
       <div class="features-pill-row">
         <span class="feature-pill">🎓 420 Total MCQs</span>
         <span class="feature-pill">⭐ 65 High-Yield Focus</span>
         <span class="feature-pill">⏱️ 40-Q Timed Mock</span>
+        <span class="feature-pill notes-pill-top" onclick="renderNotesScreen()" style="cursor:pointer;">📖 Complete Notes</span>
         <span class="feature-pill">🔀 Shuffled Options</span>
-        <span class="feature-pill">💡 Instant Explanation</span>
       </div>
 
       <div class="mode-cards">
@@ -820,6 +1174,15 @@ function renderStartScreen() {
           </div>
           <span class="mode-badge-count">⭐ 65 Important MCQs</span>
         </div>
+
+        <!-- 4. Notes Section Card -->
+        <div class="mode-card notes-card" onclick="renderNotesScreen()">
+          <div>
+            <h3>📖 Complete EVS Revision Notes & Cheat Sheets</h3>
+            <p>Comprehensive notes from both sources: FAT Lecture Revision Notes (Parts A–G: Numbers Cheat Sheet, Climate Science, Carbon Accounting, Solar, Wind, Hydro, Geothermal, AI & IoT) and all 26 Masterdooom modules (Ecosystems, Biodiversity, Pollution, Laws, Hazards, SDGs).</p>
+          </div>
+          <span class="mode-badge-count">📖 Complete Notes</span>
+        </div>
       </div>
 
       <div class="topic-select-row">
@@ -844,6 +1207,9 @@ function renderStartScreen() {
         </button>
         <button class="btn btn-secondary" style="flex:1; min-width:220px; justify-content:center; font-size:1.02rem;" onclick="startQuiz('fat_focus')">
           ⭐ Launch 65-Q FAT Focus Bank
+        </button>
+        <button class="btn btn-secondary" style="flex:1; min-width:220px; justify-content:center; font-size:1.02rem; background:rgba(139,92,246,0.2); border-color:#8b5cf6; color:#c4b5fd;" onclick="renderNotesScreen()">
+          📖 Read Full Revision Notes
         </button>
       </div>
     </div>
@@ -877,6 +1243,7 @@ function startQuiz(mode) {
 }
 
 function initQuizState() {
+  app.classList.remove("wide-mode");
   currentIndex = 0;
   score = 0;
   userAnswers = [];
@@ -905,12 +1272,15 @@ function renderQuestion() {
         <span>EVS FAT Quiz</span>
         <span class="badge">FAT</span>
       </div>
-      <span class="mode-badge" title="${modeLabel}">🎯 ${modeLabel}</span>
-      <span class="stopwatch-badge running" title="Elapsed Time">
-        ⏱️ <span id="stopwatchDisplay">${formatStopwatch(elapsedSeconds)}</span>
-      </span>
-      <span>Question ${currentIndex + 1} of ${activeQuestions.length}</span>
-      <span class="live-score">Score: ${score} / ${currentIndex}</span>
+      <div class="nav-actions">
+        <button class="nav-notes-btn" onclick="renderNotesScreen()" title="Open Revision Notes">📖 Notes</button>
+        <span class="mode-badge" title="${modeLabel}">🎯 ${modeLabel}</span>
+        <span class="stopwatch-badge running" title="Elapsed Time">
+          ⏱️ <span id="stopwatchDisplay">${formatStopwatch(elapsedSeconds)}</span>
+        </span>
+        <span>Q${currentIndex + 1}/${activeQuestions.length}</span>
+        <span class="live-score">Score: ${score}</span>
+      </div>
     </div>
 
     <div class="progress-track">
@@ -946,54 +1316,58 @@ function renderQuestion() {
     </div>
   `;
 
-  document.querySelectorAll(".option-btn").forEach(btn => {
-    btn.addEventListener("click", () => handleSelection(btn));
+  // Attach option click listeners
+  const optionButtons = document.querySelectorAll(".option-btn");
+  optionButtons.forEach(btn => {
+    btn.addEventListener("click", () => handleSelectOption(btn, q));
   });
 }
 
-function handleSelection(btn) {
+function handleSelectOption(selectedBtn, q) {
   if (answered) return;
   answered = true;
 
-  const selected = btn.dataset.value;
-  const q = activeQuestions[currentIndex];
-  const isCorrect = (selected === q.correctAnswer);
+  const selectedValue = selectedBtn.getAttribute("data-value");
+  const isCorrect = (selectedValue === q.correctAnswer);
 
-  if (isCorrect) {
-    score++;
-  }
+  if (isCorrect) score++;
 
   userAnswers.push({
     question: q.question,
-    selected: selected,
+    selected: selectedValue,
     correct: q.correctAnswer,
     isCorrect: isCorrect,
-    explanation: q.explanation,
-    category: q.category
+    explanation: q.explanation
   });
 
-  // Update score badge
-  app.querySelector(".live-score").textContent = `Score: ${score} / ${currentIndex + 1}`;
+  const buttons = document.querySelectorAll(".option-btn");
+  buttons.forEach(btn => {
+    btn.disabled = true;
+    const val = btn.getAttribute("data-value");
 
-  // Highlight and lock
-  document.querySelectorAll(".option-btn").forEach(b => {
-    b.classList.add("locked");
-    if (b.dataset.value === q.correctAnswer) {
-      b.classList.add("correct");
-    }
-    if (b === btn && !isCorrect) {
-      b.classList.add("incorrect");
+    if (val === q.correctAnswer) {
+      if (isCorrect) {
+        btn.classList.add("selected-correct");
+      } else {
+        btn.classList.add("highlight-correct");
+      }
+    } else if (val === selectedValue && !isCorrect) {
+      btn.classList.add("selected-wrong");
+    } else {
+      btn.classList.add("faded");
     }
   });
 
-  // Instant explanation
-  const feedbackContainer = document.getElementById("feedbackContainer");
-  feedbackContainer.innerHTML = `
-    <div class="feedback-box ${isCorrect ? "is-correct" : "is-wrong"}">
-      <div class="feedback-status ${isCorrect ? "correct" : "wrong"}">
-        ${isCorrect ? "✅ Correct!" : "❌ Incorrect. The correct answer is: " + escapeHtml(q.correctAnswer)}
+  // Render Instant Feedback Box
+  const feedbackBox = document.getElementById("feedbackContainer");
+  feedbackBox.innerHTML = `
+    <div class="feedback-box ${isCorrect ? 'is-correct' : 'is-wrong'}">
+      <div class="feedback-status">
+        ${isCorrect ? "✔ Correct!" : "✘ Incorrect"}
       </div>
-      <div class="explanation-text">${escapeHtml(q.explanation)}</div>
+      <div class="feedback-explanation">
+        ${escapeHtml(q.explanation)}
+      </div>
     </div>
   `;
 
@@ -1014,6 +1388,7 @@ function handleSelection(btn) {
 // ── Screen: Results Breakdown ──────────────────────────────────
 function renderResults() {
   stopStopwatch();
+  app.classList.remove("wide-mode");
   const total = activeQuestions.length;
   const pct = Math.round((score / total) * 100);
   const timeStr = formatStopwatch(elapsedSeconds);
@@ -1041,8 +1416,11 @@ function renderResults() {
         <span>EVS FAT Quiz</span>
         <span class="badge">FAT</span>
       </div>
-      <span class="stopwatch-badge">⏱️ Time: ${timeStr}</span>
-      <span class="live-score">${score} / ${total} Correct</span>
+      <div class="nav-actions">
+        <button class="nav-notes-btn" onclick="renderNotesScreen()">📖 Revision Notes</button>
+        <span class="stopwatch-badge">⏱️ Time: ${timeStr}</span>
+        <span class="live-score">${score} / ${total} Correct</span>
+      </div>
     </div>
     <div class="progress-track">
       <div class="progress-fill" style="width:100%"></div>
@@ -1064,6 +1442,7 @@ function renderResults() {
         <button class="btn" onclick="startQuiz(currentMode)">🔄 Retake with Fresh Reshuffle</button>
         <button class="btn btn-fat" onclick="startQuiz('mock')">⏱️ Start Another 40-Q Mock Test</button>
         <button class="btn btn-secondary" onclick="startQuiz('fat_focus')">⭐ Practice FAT Focus Bank</button>
+        <button class="btn btn-secondary" style="border-color:#8b5cf6; color:#c4b5fd;" onclick="renderNotesScreen()">📖 Read Revision Notes</button>
         <button class="btn btn-secondary" onclick="renderStartScreen()">🏠 Switch Topic/Mode</button>
       </div>
 
@@ -1095,6 +1474,286 @@ function renderResults() {
   `;
 }
 
+// ── Screen: Complete Revision Notes Viewer ─────────────────────
+function renderNotesScreen() {
+  stopStopwatch();
+  app.classList.add("wide-mode");
+
+  app.innerHTML = `
+    <div class="quiz-nav-bar">
+      <div class="brand-title" onclick="renderStartScreen()">
+        <span>EVS FAT Quiz</span>
+        <span class="badge">FAT</span>
+      </div>
+      <div class="nav-actions">
+        <button class="btn btn-secondary" style="padding:0.35rem 0.85rem; font-size:0.82rem;" onclick="renderStartScreen()">← Back to Quiz</button>
+      </div>
+    </div>
+
+    <div class="notes-screen">
+      <div class="notes-header">
+        <div class="notes-header-top">
+          <h2>📖 EVS Comprehensive Revision Notes</h2>
+          <button class="btn btn-secondary" style="font-size:0.85rem; padding:0.4rem 0.9rem;" onclick="renderStartScreen()">← Return to Quiz Modes</button>
+        </div>
+        <p>
+          Dual-source notes covering the entire syllabus: <strong>VIT Vellore FAT Lecture Notes & Cheat Sheets (Parts A–G)</strong> and <strong>Masterdooom's 26 Complete Syllabus Modules</strong>.
+        </p>
+      </div>
+
+      <!-- Source Toggle Tabs -->
+      <div class="notes-source-tabs">
+        <button class="notes-source-tab ${notesCurrentSource === 'fat' ? 'active fat-active' : ''}" onclick="switchNotesSource('fat')">
+          🎓 VIT Vellore FAT Notes (Parts A–G Cheat Sheet)
+        </button>
+        <button class="notes-source-tab ${notesCurrentSource === 'masterdooom' ? 'active' : ''}" onclick="switchNotesSource('masterdooom')">
+          🌐 Masterdooom Syllabus Modules (26 Topics)
+        </button>
+      </div>
+
+      <!-- Real-time Search Box -->
+      <div class="notes-search-container">
+        <span class="notes-search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="notesSearchInput" 
+          class="notes-search-input" 
+          placeholder="Search any keyword, formula, standard, or law (e.g. 'Paris', 'Scope 3', 'Betz', 'Bhopal', 'Inverter', 'Tehri', 'Minamata', '10%')..." 
+          value="${escapeHtml(notesSearchTerm)}"
+          oninput="handleNotesSearch(this.value)"
+        />
+      </div>
+
+      <!-- Filter Pills -->
+      <div class="notes-pills" id="notesPillsContainer">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Notes Content Container -->
+      <div id="notesCardsContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  `;
+
+  renderNotesPills();
+  renderNotesContent();
+}
+
+function switchNotesSource(source) {
+  notesCurrentSource = source;
+  notesActivePill = "all";
+  renderNotesScreen();
+}
+
+function renderNotesPills() {
+  const container = document.getElementById("notesPillsContainer");
+  if (!container) return;
+
+  if (notesCurrentSource === "fat") {
+    const pills = [
+      { id: "all", label: "All Parts (A–G)" },
+      { id: "part-a", label: "📌 Part A: Numbers Cheat Sheet" },
+      { id: "part-b", label: "🌡️ Part B: Climate Science" },
+      { id: "part-c", label: "👣 Part C: Carbon Footprint" },
+      { id: "part-d", label: "☀️ Part D: Solar & Wind" },
+      { id: "part-e", label: "💧 Part E: Hydro & Geothermal" },
+      { id: "part-f", label: "🤖 Part F: AI & IoT" },
+      { id: "part-g", label: "💡 Part G: Exam Tips" }
+    ];
+    container.innerHTML = pills.map(p => `
+      <button class="notes-pill ${notesActivePill === p.id ? 'active fat-pill-active' : ''}" onclick="selectNotesPill('${p.id}')">
+        ${p.label}
+      </button>
+    `).join("");
+  } else {
+    const groups = ["all", "FOUNDATIONS", "BIODIVERSITY", "POLLUTION", "WASTE", "HAZARDS & DISASTERS", "INDIAN ENVIRONMENTAL LAWS", "INTERNATIONAL ENVIRONMENTAL LAW", "SUSTAINABILITY"];
+    const labels = {
+      "all": "All Modules (26)",
+      "FOUNDATIONS": "Earth & Ecosystems",
+      "BIODIVERSITY": "Biodiversity & GM",
+      "POLLUTION": "Pollution Types",
+      "WASTE": "Circular & Waste",
+      "HAZARDS & DISASTERS": "Hazards & Disaster",
+      "INDIAN ENVIRONMENTAL LAWS": "Indian Laws & EIA",
+      "INTERNATIONAL ENVIRONMENTAL LAW": "Kyoto & Paris",
+      "SUSTAINABILITY": "SDGs"
+    };
+    container.innerHTML = groups.map(g => `
+      <button class="notes-pill ${notesActivePill === g ? 'active' : ''}" onclick="selectNotesPill('${g}')">
+        ${labels[g] || g}
+      </button>
+    `).join("");
+  }
+}
+
+function selectNotesPill(pillId) {
+  notesActivePill = pillId;
+  renderNotesPills();
+  renderNotesContent();
+}
+
+function handleNotesSearch(term) {
+  notesSearchTerm = term.trim().toLowerCase();
+  renderNotesContent();
+}
+
+function renderNotesContent() {
+  const container = document.getElementById("notesCardsContainer");
+  if (!container) return;
+
+  const term = notesSearchTerm;
+
+  if (notesCurrentSource === "fat") {
+    let items = notesData.fatNotes;
+    if (notesActivePill !== "all") {
+      items = items.filter(n => n.id === notesActivePill);
+    }
+    if (term) {
+      items = items.filter(n => {
+        const textToSearch = (
+          n.title + " " + n.intro + " " +
+          JSON.stringify(n.tableRows || []) + " " +
+          JSON.stringify(n.sections || []) + " " +
+          JSON.stringify(n.bullets || [])
+        ).toLowerCase();
+        return textToSearch.includes(term);
+      });
+    }
+
+    if (items.length === 0) {
+      container.innerHTML = `
+        <div style="text-align:center; padding:3rem 1rem; color:var(--text-muted);">
+          <div style="font-size:2.5rem; margin-bottom:0.75rem;">🔍</div>
+          <h3>No matching notes found for "${escapeHtml(notesSearchTerm)}"</h3>
+          <p style="margin-top:0.5rem; font-size:0.9rem;">Try searching for another term or switch to Masterdooom notes tab.</p>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = items.map(n => renderFatNoteCard(n)).join("");
+  } else {
+    let items = notesData.masterdooomTopics;
+    if (notesActivePill !== "all") {
+      items = items.filter(t => t.group === notesActivePill);
+    }
+    if (term) {
+      items = items.filter(t => {
+        const textToSearch = (t.title + " " + t.sub + " " + t.group + " " + t.must.join(" ")).toLowerCase();
+        return textToSearch.includes(term);
+      });
+    }
+
+    if (items.length === 0) {
+      container.innerHTML = `
+        <div style="text-align:center; padding:3rem 1rem; color:var(--text-muted);">
+          <div style="font-size:2.5rem; margin-bottom:0.75rem;">🔍</div>
+          <h3>No matching Masterdooom topics found for "${escapeHtml(notesSearchTerm)}"</h3>
+          <p style="margin-top:0.5rem; font-size:0.9rem;">Try a broader keyword or search across FAT notes.</p>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = items.map(t => renderMasterdooomTopicCard(t)).join("");
+  }
+}
+
+function renderFatNoteCard(n) {
+  let innerHtml = "";
+
+  if (n.type === "table") {
+    innerHtml = `
+      <div class="notes-table-wrap">
+        <table class="notes-table">
+          <thead>
+            <tr>
+              ${n.tableHeaders.map(h => `<th>${escapeHtml(h)}</th>`).join("")}
+            </tr>
+          </thead>
+          <tbody>
+            ${n.tableRows.map(row => `
+              <tr>
+                <td style="font-weight:600; color:#38bdf8; min-width:220px;">${escapeHtml(row[0])}</td>
+                <td>${escapeHtml(row[1])}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  } else if (n.type === "sections") {
+    innerHtml = n.sections.map(sec => `
+      <div class="note-section-block">
+        <div class="note-section-heading">${escapeHtml(sec.heading)}</div>
+        ${sec.content ? `<div class="note-section-content">${sec.content}</div>` : ""}
+        ${sec.tableHeaders ? `
+          <div class="notes-table-wrap">
+            <table class="notes-table">
+              <thead>
+                <tr>
+                  ${sec.tableHeaders.map(h => `<th>${escapeHtml(h)}</th>`).join("")}
+                </tr>
+              </thead>
+              <tbody>
+                ${sec.tableRows.map(row => `
+                  <tr>
+                    <td style="font-weight:600; color:#38bdf8; min-width:180px;">${escapeHtml(row[0])}</td>
+                    <td>${escapeHtml(row[1])}</td>
+                    ${row[2] ? `<td>${escapeHtml(row[2])}</td>` : ""}
+                  </tr>
+                `).join("")}
+              </tbody>
+            </table>
+          </div>
+        ` : ""}
+      </div>
+    `).join("");
+  } else if (n.type === "bullets") {
+    innerHtml = `
+      <ul class="note-bullets">
+        ${n.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join("")}
+      </ul>
+    `;
+  }
+
+  return `
+    <div class="note-item">
+      <div class="note-item-header">
+        <div>
+          <span class="note-tag fat">${escapeHtml(n.part)}</span>
+          <h3 class="note-item-title" style="margin-top:0.4rem;">${escapeHtml(n.title)}</h3>
+        </div>
+        <span class="note-tag" style="background:#24355a; color:#cbd5e1;">${escapeHtml(n.badge)}</span>
+      </div>
+      <p class="note-item-sub">${escapeHtml(n.intro)}</p>
+      ${innerHtml}
+    </div>
+  `;
+}
+
+function renderMasterdooomTopicCard(t) {
+  const isHigh = (t.priority === "high");
+  return `
+    <div class="note-item">
+      <div class="note-item-header">
+        <div>
+          <span class="note-tag" style="background:#1e293b; color:#38bdf8; border:1px solid #334155;">${escapeHtml(t.group)}</span>
+          <h3 class="note-item-title" style="margin-top:0.4rem;">${escapeHtml(t.title)}</h3>
+        </div>
+        <span class="note-tag ${isHigh ? 'high' : 'med'}">${isHigh ? 'HIGH PRIORITY' : 'MEDIUM PRIORITY'}</span>
+      </div>
+      <p class="note-item-sub">${escapeHtml(t.sub)}</p>
+
+      <div style="font-weight:700; color:#38bdf8; font-size:0.88rem; margin-top:0.75rem;">⭐ Must-Know Exam Facts:</div>
+      <ul class="note-bullets">
+        ${t.must.map(m => `<li>${escapeHtml(m)}</li>`).join("")}
+      </ul>
+    </div>
+  `;
+}
+
 function escapeHtml(str) {
   if (!str) return "";
   return String(str).replace(/&/g, "&amp;")
@@ -1111,9 +1770,10 @@ renderStartScreen();
 </html>
 """
 
-html_final = html_template.replace("__INJECTED_MASTER_QUESTIONS__", json_str)
+final_html = html_template.replace("__QUESTIONS_JSON__", questions_json_str).replace("__NOTES_JSON__", notes_json_str)
 
-with open("/Users/pran/devjams26/index.html", "w") as f:
-    f.write(html_final)
+output_path = "/Users/pran/devjams26/index.html"
+with open(output_path, "w", encoding="utf-8") as f:
+    f.write(final_html)
 
-print("Updated /Users/pran/devjams26/index.html with EVS FAT Quiz: FAT All 420 questions + 40-Q Mock Test.")
+print(f"Generated {output_path} successfully ({len(final_html)} bytes).")
