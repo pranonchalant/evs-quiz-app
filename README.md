@@ -1,6 +1,6 @@
 # 🌿 EVS FAT Quiz — VIT Vellore Exam Revision & Practice Bank
 
-An interactive, responsive multiple-choice quiz (MCQ) web application built for Environmental Sciences (EVS) FAT exam preparation at VIT Vellore, powered by the official FAT 161 Question Bank (W5S1, W5S2, W5S3, W6S1, AI & IoT), [masterdooom.github.io/evs](https://masterdooom.github.io/evs/), and high-yield notes.
+An interactive, responsive multiple-choice quiz (MCQ) web application built for Environmental Sciences (EVS) FAT exam preparation at VIT Vellore, powered by the official FAT Question Bank (W5S1, W5S2, W5S3, W6S1, AI & IoT), core high-yield exam notes, and comprehensive topic revision.
 
 ---
 
@@ -34,23 +34,13 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built for 
 ## 📚 Exam Modes & Question Banks (420 MCQs Total)
 
 1. 📚 **EVS FAT Master Bank (All 420 Questions)**:
-   - Includes all old and new questions combined into one mega FAT preparation bank.
+   - Includes all old and new questions combined into one mega FAT preparation bank across Climate Change, Carbon Footprint, Renewables (Solar, Wind, Hydro, Geothermal), AI & IoT, Ecosystems, Biodiversity, and Environmental Laws.
 2. ⏱️ **Timed Mock Test (40 Random Questions)**:
-   - 40 randomly sampled questions from the entire 420 question pool with live stopwatch and pace analysis.
-3. 🎓 **VIT Vellore FAT Bank (161 Questions)**:
-   - **Section 1: Greenhouse Effect, Climate Change Science & Global Warming** (Q1–Q38)
-   - **Section 2: Carbon Footprint & Mitigation Strategies** (Q39–Q74)
-   - **Section 3: Solar Energy** (Q75–Q96)
-   - **Section 4: Wind Energy** (Q97–Q113)
-   - **Section 5: Hydroelectric Energy** (Q114–Q128)
-   - **Section 6: Geothermal Energy** (Q129–Q144)
-   - **Section 7: AI & IoT in Environmental Monitoring** (Q145–Q161)
-4. 🌐 **Masterdooom Website Official Test (63 Questions)**:
-   - Complete 63 MCQs directly from `masterdooom.github.io/evs`.
-5. ⭐ **Core Top 30 High-Yield Pack**:
-   - Essential high-yield questions for rapid revision.
-6. 🏷️ **Practice by Section**:
-   - Filter and focus on individual syllabus sections.
+   - 40 randomly sampled questions from the full 420 question pool with live stopwatch tracking on top and average pace analytics.
+3. ⭐ **FAT Focus Bank (65 Important Questions)**:
+   - Curated collection of **ONLY the most critical, high-frequency questions** across all FAT modules and core environmental laws — 0% filler, 100% exam-critical.
+4. 🏷️ **Practice by Section**:
+   - Filter and focus on individual syllabus sections (Climate Change, Carbon Footprint, Solar Energy, Wind Energy, Hydro & Geothermal, AI & IoT, etc.).
 
 ---
 

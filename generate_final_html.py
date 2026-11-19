@@ -782,11 +782,12 @@ function renderStartScreen() {
         <span class="fat-pill">FAT 2026</span>
       </div>
       <p class="start-subtitle">
-        Comprehensive EVS FAT Exam Bank combining all 420 questions (VIT Vellore FAT 161 + Masterdooom 86 + High-Yield Pack).
+        Comprehensive EVS FAT Exam Bank combining all 420 questions with high-yield focus revision and 40-question timed mock tests.
       </p>
 
       <div class="features-pill-row">
         <span class="feature-pill">🎓 420 Total MCQs</span>
+        <span class="feature-pill">⭐ 65 High-Yield Focus</span>
         <span class="feature-pill">⏱️ 40-Q Timed Mock</span>
         <span class="feature-pill">🔀 Shuffled Options</span>
         <span class="feature-pill">💡 Instant Explanation</span>
@@ -811,22 +812,13 @@ function renderStartScreen() {
           <span class="mode-badge-count">⏱️ 40 Random · Timed</span>
         </div>
 
-        <!-- 3. VIT Vellore FAT 161 Focus Pack -->
-        <div class="mode-card" onclick="startQuiz('vit_fat')">
+        <!-- 3. FAT Focus Bank (Only Important Questions) -->
+        <div class="mode-card featured" onclick="startQuiz('fat_focus')">
           <div>
-            <h3>📖 VIT Vellore FAT Focus Pack (161 Questions)</h3>
-            <p>The 161 dedicated MCQs based directly on lecture notes: W5S1, W5S2, W5S3, W6S1 (Solar & Wind; Hydro & Geothermal), and AI & IoT.</p>
+            <h3>⭐ FAT Focus Bank (Important Questions Only)</h3>
+            <p>Curated bank of ONLY the 65 most critical, frequently tested questions across Climate Change, Carbon Accounting, Renewables (Solar, Wind, Hydro, Geothermal), AI/IoT, and Core Environmental Laws.</p>
           </div>
-          <span class="mode-badge-count">161 MCQs</span>
-        </div>
-
-        <!-- 4. Website Official 63 Test -->
-        <div class="mode-card featured" onclick="startQuiz('website_official')">
-          <div>
-            <h3>🌐 Masterdooom Website Official Test</h3>
-            <p>The 63 multiple choice questions from masterdooom.github.io/evs with randomized order and shuffled options.</p>
-          </div>
-          <span class="mode-badge-count">63 Questions</span>
+          <span class="mode-badge-count">⭐ 65 Important MCQs</span>
         </div>
       </div>
 
@@ -844,11 +836,14 @@ function renderStartScreen() {
       </div>
 
       <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
-        <button class="btn btn-fat" style="flex:1; min-width:240px; justify-content:center; font-size:1.05rem;" onclick="startQuiz('fat_all')">
+        <button class="btn btn-fat" style="flex:1; min-width:220px; justify-content:center; font-size:1.02rem;" onclick="startQuiz('fat_all')">
           🚀 Start EVS FAT All 420 Questions
         </button>
-        <button class="btn" style="flex:1; min-width:240px; justify-content:center; font-size:1.05rem;" onclick="startQuiz('mock')">
+        <button class="btn" style="flex:1; min-width:220px; justify-content:center; font-size:1.02rem;" onclick="startQuiz('mock')">
           ⏱️ Launch 40-Q Mock Test
+        </button>
+        <button class="btn btn-secondary" style="flex:1; min-width:220px; justify-content:center; font-size:1.02rem;" onclick="startQuiz('fat_focus')">
+          ⭐ Launch 65-Q FAT Focus Bank
         </button>
       </div>
     </div>
@@ -870,16 +865,12 @@ function startQuiz(mode) {
   if (mode === "mock") {
     // Exactly 40 random questions sampled across entire bank
     activeQuestions = getRandomSample(masterQuestions, 40);
-  } else if (mode === "fat_all") {
-    // All old + new questions combined together (420 questions)
-    activeQuestions = prepareQuizQuestions(masterQuestions);
-  } else if (mode === "vit_fat") {
-    const pool = masterQuestions.filter(q => q.isFatExam);
-    activeQuestions = prepareQuizQuestions(pool);
-  } else if (mode === "website_official") {
-    const pool = masterQuestions.filter(q => q.isWebsiteOfficial63);
+  } else if (mode === "fat_focus") {
+    // Only the curated 65 important questions
+    const pool = masterQuestions.filter(q => q.isFatFocus);
     activeQuestions = prepareQuizQuestions(pool);
   } else {
+    // All old + new questions combined together (420 questions)
     activeQuestions = prepareQuizQuestions(masterQuestions);
   }
   initQuizState();
@@ -903,8 +894,7 @@ function renderQuestion() {
   let modeLabel = "EVS FAT Quiz";
   if (currentMode === "fat_all") modeLabel = "FAT All 420 MCQs";
   else if (currentMode === "mock") modeLabel = "40-Q Timed Mock";
-  else if (currentMode === "vit_fat") modeLabel = "VIT FAT 161";
-  else if (currentMode === "website_official") modeLabel = "Masterdooom 63";
+  else if (currentMode === "fat_focus") modeLabel = "FAT Focus (65 Qs)";
   else if (currentMode === "topic") modeLabel = currentTopic;
 
   const isFat = q.isFatExam;
@@ -1073,6 +1063,7 @@ function renderResults() {
       <div style="display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap; margin-bottom: 2rem;">
         <button class="btn" onclick="startQuiz(currentMode)">🔄 Retake with Fresh Reshuffle</button>
         <button class="btn btn-fat" onclick="startQuiz('mock')">⏱️ Start Another 40-Q Mock Test</button>
+        <button class="btn btn-secondary" onclick="startQuiz('fat_focus')">⭐ Practice FAT Focus Bank</button>
         <button class="btn btn-secondary" onclick="renderStartScreen()">🏠 Switch Topic/Mode</button>
       </div>
 
