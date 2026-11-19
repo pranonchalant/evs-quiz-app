@@ -1,0 +1,1472 @@
+import json
+
+# All 161 questions from EVS MCQ Practice Bank - VIT Vellore FAT
+fat_questions_data = [
+    # ── Section 1: Greenhouse Effect, Climate Change Science and Global Warming (Q1 to Q38) ──
+    {
+        "id": 1,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Without the natural greenhouse effect, Earth's average temperature would be about:",
+        "options": ["-40 °C", "0 °C", "+15 °C", "-18 °C"],
+        "correctAnswer": "-18 °C",
+        "explanation": "Without the natural greenhouse effect, Earth's mean surface temperature would be approximately -18 °C instead of the hospitable ~15 °C."
+    },
+    {
+        "id": 2,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "The natural greenhouse effect keeps Earth's average temperature at approximately:",
+        "options": ["30 °C", "5 °C", "-18 °C", "15 °C"],
+        "correctAnswer": "15 °C",
+        "explanation": "The natural greenhouse effect traps heat, raising Earth's average surface temperature by ~33 °C to maintain an average of about 15 °C."
+    },
+    {
+        "id": 3,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "The sun's energy reaches Earth mainly as ______ radiation, and Earth re-emits it as ______ radiation.",
+        "options": ["short-wave; long-wave infrared", "long-wave; short-wave", "microwave; visible", "gamma; X-ray"],
+        "correctAnswer": "short-wave; long-wave infrared",
+        "explanation": "Solar energy arrives primarily as short-wave visible and UV radiation; the warmed Earth re-emits thermal energy as long-wave infrared radiation."
+    },
+    {
+        "id": 4,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "The 'enhanced greenhouse effect' is caused by:",
+        "options": ["Earth's orbital cycles", "Human emissions of GHGs", "Volcanic eruptions", "Changes in solar output"],
+        "correctAnswer": "Human emissions of GHGs",
+        "explanation": "The enhanced greenhouse effect is caused by anthropogenic emissions of greenhouse gases from burning fossil fuels, deforestation, and industry."
+    },
+    {
+        "id": 5,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Which greenhouse gas is the most abundant by volume but acts mainly as a feedback amplifier?",
+        "options": ["Methane", "Carbon dioxide", "Water vapour", "Nitrous oxide"],
+        "correctAnswer": "Water vapour",
+        "explanation": "Water vapour is the most abundant greenhouse gas by volume; as temperature rises, more water evaporates, amplifying the greenhouse effect as a positive feedback."
+    },
+    {
+        "id": 6,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Methane is roughly how many times more powerful than CO2 over a 20-year period (as per lecture notes)?",
+        "options": ["80-84 times", "265 times", "2-3 times", "10 times"],
+        "correctAnswer": "80-84 times",
+        "explanation": "Over a short-term 20-year time horizon, methane has a warming potency roughly 80–84 times higher than carbon dioxide."
+    },
+    {
+        "id": 7,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Nitrous oxide is approximately ______ times more potent than CO2 over 100 years.",
+        "options": ["84", "1000", "265", "28"],
+        "correctAnswer": "265",
+        "explanation": "Nitrous oxide (N2O) has a 100-year Global Warming Potential (GWP100) of approximately 265 (ranges 265–298) relative to CO2."
+    },
+    {
+        "id": 8,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Which gases are used in refrigeration/AC and are thousands of times more potent than CO2?",
+        "options": ["Nitrogen", "Fluorinated gases", "Argon", "Ozone"],
+        "correctAnswer": "Fluorinated gases",
+        "explanation": "Fluorinated gases (HFCs, PFCs, SF6) used in cooling, refrigeration, and electronics have GWPs in the thousands to tens of thousands."
+    },
+    {
+        "id": 9,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Global average surface temperature has risen by about ______ above pre-industrial levels.",
+        "options": ["1.1 °C", "3 °C", "0.1 °C", "5 °C"],
+        "correctAnswer": "1.1 °C",
+        "explanation": "Global average surface temperatures have already risen by ~1.1 °C above pre-industrial baselines (before 1850)."
+    },
+    {
+        "id": 10,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Pre-industrial atmospheric CO2 concentration was approximately:",
+        "options": ["280 ppm", "420 ppm", "380 ppm", "180 ppm"],
+        "correctAnswer": "280 ppm",
+        "explanation": "Prior to the industrial revolution, atmospheric CO2 was stable around 280 ppm, as proven by Antarctic ice core records."
+    },
+    {
+        "id": 11,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Current atmospheric CO2 concentration exceeds about:",
+        "options": ["600 ppm", "320 ppm", "350 ppm", "420 ppm"],
+        "correctAnswer": "420 ppm",
+        "explanation": "Current atmospheric CO2 levels now surpass 420 ppm, the highest level recorded in over 800,000 to 3 million years."
+    },
+    {
+        "id": 12,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Ice cores from Antarctica provide a record of past atmospheric composition going back about:",
+        "options": ["80 million years", "8,000 years", "800,000 years", "800 years"],
+        "correctAnswer": "800,000 years",
+        "explanation": "Antarctic ice cores (such as EPICA Dome C) preserve fossil atmospheric air bubbles spanning 800,000 years of Earth's climate history."
+    },
+    {
+        "id": 13,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Arctic sea ice area has declined by roughly ______ per decade since 1979.",
+        "options": ["60%", "40%", "1%", "13%"],
+        "correctAnswer": "13%",
+        "explanation": "Satellite telemetry indicates that Arctic summer sea ice extent has shrunk at a rate of roughly 13% per decade since 1979."
+    },
+    {
+        "id": 14,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Global mean sea level has risen approximately ______ since 1900.",
+        "options": ["20 cm", "5 m", "2 cm", "2 m"],
+        "correctAnswer": "20 cm",
+        "explanation": "Tide gauges and altimetry show global mean sea level has risen by approximately 20 cm since 1900 due to thermal expansion and ice melt."
+    },
+    {
+        "id": 15,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "The oceans have absorbed about ______ of the excess heat trapped by the enhanced greenhouse effect.",
+        "options": ["30%", "90%", "50%", "10%"],
+        "correctAnswer": "90%",
+        "explanation": "The global ocean has absorbed over 90% of the excess heat trapped in the climate system by anthropogenic greenhouse emissions."
+    },
+    {
+        "id": 16,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "When CO2 dissolves in seawater it forms:",
+        "options": ["Carbonic acid", "Sulphuric acid", "Nitric acid", "Hydrochloric acid"],
+        "correctAnswer": "Carbonic acid",
+        "explanation": "CO2 reacts with seawater to form weak carbonic acid (H2CO3), releasing hydrogen ions that lower ocean pH and cause ocean acidification."
+    },
+    {
+        "id": 17,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Ocean pH has dropped by about 0.1 units since the industrial era, which is roughly ______ increase in acidity.",
+        "options": ["2%", "90%", "10%", "26%"],
+        "correctAnswer": "26%",
+        "explanation": "Because pH is logarithmic, a drop of 0.1 pH units represents an increase in hydrogen ion concentration (acidity) of roughly 26%."
+    },
+    {
+        "id": 18,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Fossil fuel combustion accounts for about ______ of global GHG emissions (W5S1).",
+        "options": ["75%", "10%", "25%", "50%"],
+        "correctAnswer": "75%",
+        "explanation": "Fossil fuel combustion for energy, heat, and transport is by far the largest driver, accounting for roughly 75% of global greenhouse emissions."
+    },
+    {
+        "id": 19,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Deforestation accounts for roughly ______ of global emissions.",
+        "options": ["70%", "1-2%", "40-50%", "10-15%"],
+        "correctAnswer": "10-15%",
+        "explanation": "Deforestation and land-use changes account for roughly 10–15% of total global greenhouse emissions."
+    },
+    {
+        "id": 20,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Agriculture accounts for approximately ______ of global GHG emissions (W5S2).",
+        "options": ["1%", "30-35%", "50%", "10-12%"],
+        "correctAnswer": "10-12%",
+        "explanation": "Direct agricultural emissions (enteric fermentation in livestock, rice paddy methane, synthetic fertilizers) account for roughly 10–12% of global GHGs."
+    },
+    {
+        "id": 21,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Cement production alone accounts for about ______ of global emissions (W5S1).",
+        "options": ["1%", "25%", "8%", "40%"],
+        "correctAnswer": "8%",
+        "explanation": "Cement manufacturing accounts for approximately 8% of all global CO2 emissions worldwide."
+    },
+    {
+        "id": 22,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "According to the notes, which natural factor causes only short-term cooling, not long-term warming?",
+        "options": ["Volcanic eruptions", "Milankovitch cycles", "Ocean currents", "Solar output"],
+        "correctAnswer": "Volcanic eruptions",
+        "explanation": "Major volcanic eruptions eject sulfur dioxide aerosols into the stratosphere that reflect sunlight, causing temporary global cooling for 1–3 years."
+    },
+    {
+        "id": 23,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Since the 1980s, solar output has:",
+        "options": ["Doubled", "Slightly decreased", "Remained exactly constant", "Increased sharply"],
+        "correctAnswer": "Slightly decreased",
+        "explanation": "Direct satellite measurements confirm that solar irradiance has slightly decreased since the 1980s while Earth's temperatures surged."
+    },
+    {
+        "id": 24,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "A warmer atmosphere holds about ______ more moisture per degree of warming.",
+        "options": ["25%", "1%", "50%", "7%"],
+        "correctAnswer": "7%",
+        "explanation": "Under the Clausius-Clapeyron relation, every 1 °C of atmospheric warming increases atmospheric water-holding capacity by about 7%."
+    },
+    {
+        "id": 25,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Coral reefs support roughly ______ of all marine species.",
+        "options": ["25%", "5%", "10%", "75%"],
+        "correctAnswer": "25%",
+        "explanation": "Coral reefs occupy less than 0.1% of the ocean floor yet provide habitat for roughly 25% of all marine species."
+    },
+    {
+        "id": 26,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "At 2 °C of warming, over ______ of tropical reefs are projected to be severely degraded.",
+        "options": ["99%", "50%", "75%", "10%"],
+        "correctAnswer": "99%",
+        "explanation": "The IPCC reports that under 2 °C of global warming, more than 99% of tropical coral reefs are projected to suffer severe bleaching and mortality."
+    },
+    {
+        "id": 27,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "The IPCC projects sea level could rise by ______ by the end of this century.",
+        "options": ["0.3 to 1 metre", "5 to 10 metres", "20 metres", "1 to 2 cm"],
+        "correctAnswer": "0.3 to 1 metre",
+        "explanation": "By 2100, global mean sea level is projected by IPCC models to rise roughly 0.3 to 1.0 metre depending on emission pathways."
+    },
+    {
+        "id": 28,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Which Indian cities are named as facing sea level rise risk?",
+        "options": ["Delhi and Jaipur", "Mumbai, Kolkata, Chennai, Kochi", "Bhopal and Nagpur", "Shimla and Dehradun"],
+        "correctAnswer": "Mumbai, Kolkata, Chennai, Kochi",
+        "explanation": "Major low-lying Indian coastal metropolises facing imminent sea level rise and storm surge inundation risks include Mumbai, Kolkata, Chennai, and Kochi."
+    },
+    {
+        "id": 29,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "WHO projects about ______ additional deaths per year (2030-2050) from climate change.",
+        "options": ["250,000", "25,000", "25 million", "2,500"],
+        "correctAnswer": "250,000",
+        "explanation": "The World Health Organization (WHO) projects approximately 250,000 additional deaths annually between 2030 and 2050 from malnutrition, malaria, diarrhea, and heat stress."
+    },
+    {
+        "id": 30,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Heatwaves with 45-48 °C in India are mentioned for:",
+        "options": ["Rajasthan, Odisha, Andhra Pradesh", "Kerala and Goa", "Assam and Sikkim", "Ladakh"],
+        "correctAnswer": "Rajasthan, Odisha, Andhra Pradesh",
+        "explanation": "Extreme summer heatwaves reaching 45–48 °C are explicitly highlighted for Rajasthan, Odisha, and Andhra Pradesh in the lecture notes."
+    },
+    {
+        "id": 31,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Mitigation means:",
+        "options": ["Planting drought-tolerant crops", "Reducing or preventing GHG emissions", "Building sea walls", "Adjusting to climate change impacts"],
+        "correctAnswer": "Reducing or preventing GHG emissions",
+        "explanation": "Climate mitigation refers to human interventions to reduce GHG emissions at the source or enhance greenhouse gas sinks."
+    },
+    {
+        "id": 32,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Which of the following is an adaptation measure?",
+        "options": ["Solar power plants", "Flood defences and sea walls", "Energy-efficient LEDs", "Carbon tax"],
+        "correctAnswer": "Flood defences and sea walls",
+        "explanation": "Building sea walls and flood barriers is an adaptation strategy designed to cope with sea level rise and storm surges."
+    },
+    {
+        "id": 33,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "The Paris Agreement aims to limit warming to:",
+        "options": ["0.5 °C", "Below 5 °C", "Well below 2 °C, pursuing 1.5 °C", "Exactly 3 °C"],
+        "correctAnswer": "Well below 2 °C, pursuing 1.5 °C",
+        "explanation": "Article 2 of the 2015 Paris Agreement legally commits signatories to hold global warming well below 2 °C and pursue efforts to limit it to 1.5 °C."
+    },
+    {
+        "id": 34,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "India's NDC target for net-zero emissions is the year:",
+        "options": ["2040", "2070", "2030", "2050"],
+        "correctAnswer": "2070",
+        "explanation": "At COP26 in Glasgow, India announced its long-term low-emission target to reach net-zero greenhouse gas emissions by the year 2070."
+    },
+    {
+        "id": 35,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "NAPCC was launched in ______ and has ______ national missions.",
+        "options": ["2015; 5", "1992; 10", "2008; 8", "2020; 3"],
+        "correctAnswer": "2008; 8",
+        "explanation": "India's National Action Plan on Climate Change (NAPCC) was launched in 2008 with 8 dedicated National Missions."
+    },
+    {
+        "id": 36,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Which is a mission under NAPCC?",
+        "options": ["Make in India Mission", "Swachh Mission", "Green India Mission", "Digital India Mission"],
+        "correctAnswer": "Green India Mission",
+        "explanation": "The National Mission for a Green India (GIM) is one of the 8 missions under the NAPCC, focused on enhancing forest and tree cover."
+    },
+    {
+        "id": 37,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "Landfills emit methane mainly because organic waste decomposes:",
+        "options": ["In the presence of oxygen", "Only in sunlight", "In the absence of oxygen (anaerobic)", "Only at high pressure"],
+        "correctAnswer": "In the absence of oxygen (anaerobic)",
+        "explanation": "Deep within municipal landfills, compacted organic waste is digested by methanogenic microbes in anaerobic (oxygen-free) conditions, releasing CH4."
+    },
+    {
+        "id": 38,
+        "section": "Section 1: Greenhouse Effect & Global Warming",
+        "category": "FAT: Climate Change & Global Warming",
+        "question": "The four independent pillars of evidence for climate change do NOT include:",
+        "options": ["Melting ice and sea level rise", "Rising CO2", "Increasing number of sunspots", "Rising temperatures"],
+        "correctAnswer": "Increasing number of sunspots",
+        "explanation": "The 4 empirical pillars of evidence cited are: rising surface temperatures, rising atmospheric CO2, melting cryosphere/sea level rise, and ocean warming/acidification."
+    },
+
+    # ── Section 2: Carbon Footprint and Mitigation Strategies (Q39 to Q74) ──
+    {
+        "id": 39,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Carbon footprint is expressed in units of:",
+        "options": ["kWh", "CO2 equivalent (CO2e)", "ppm", "Watts"],
+        "correctAnswer": "CO2 equivalent (CO2e)",
+        "explanation": "A carbon footprint aggregates all greenhouse gas emissions normalized to their Global Warming Potential in units of carbon dioxide equivalent (CO2e)."
+    },
+    {
+        "id": 40,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "GWP is typically calculated over a time horizon of:",
+        "options": ["1 year", "100 years", "1000 years", "10 years"],
+        "correctAnswer": "100 years",
+        "explanation": "Under the Greenhouse Gas Protocol and UNFCCC frameworks, Global Warming Potential (GWP) is standardly computed over a 100-year time horizon."
+    },
+    {
+        "id": 41,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "The GWP100 of methane is approximately:",
+        "options": ["1", "265-298", "28-34", "10,000"],
+        "correctAnswer": "28-34",
+        "explanation": "The IPCC 5th Assessment Report quotes the 100-year GWP of biogenic methane between 28 and 34 times that of carbon dioxide."
+    },
+    {
+        "id": 42,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Scope 1 emissions are:",
+        "options": ["Emissions from disposal only", "Value-chain emissions", "Indirect emissions from purchased electricity", "Direct emissions from owned/controlled sources"],
+        "correctAnswer": "Direct emissions from owned/controlled sources",
+        "explanation": "Scope 1 covers direct GHG emissions from operations owned or controlled by the reporting organization (e.g., combustion in boilers, furnaces, fleet vehicles)."
+    },
+    {
+        "id": 43,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Emissions from purchased electricity are classified as:",
+        "options": ["Scope 0", "Scope 3", "Scope 1", "Scope 2"],
+        "correctAnswer": "Scope 2",
+        "explanation": "Scope 2 encompasses indirect GHG emissions associated with the generation of purchased electricity, steam, heating, or cooling consumed by the organization."
+    },
+    {
+        "id": 44,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Which scope often accounts for the largest share of a product's carbon footprint?",
+        "options": ["Scope 1", "Scope 2", "Scope 3", "All equal"],
+        "correctAnswer": "Scope 3",
+        "explanation": "Scope 3 encompasses the entire value chain (raw materials extraction, transport, customer use, and disposal), frequently exceeding 70–80% of a product's total footprint."
+    },
+    {
+        "id": 45,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "The most widely used international standard for measuring GHG emissions is the:",
+        "options": ["Montreal Protocol", "Basel Convention", "ISO 9001", "Greenhouse Gas Protocol"],
+        "correctAnswer": "Greenhouse Gas Protocol",
+        "explanation": "The Greenhouse Gas Protocol (GHG Protocol), developed by WRI and WBCSD, is the premier global standard for corporate and product carbon accounting."
+    },
+    {
+        "id": 46,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Which standard specifically addresses product carbon footprint?",
+        "options": ["PAS 2050", "ISO 45001", "ISO 27001", "ISO 14001"],
+        "correctAnswer": "PAS 2050",
+        "explanation": "PAS 2050 (Publicly Available Specification 2050) is the dedicated British/international standard assessing life cycle greenhouse emissions of goods and services."
+    },
+    {
+        "id": 47,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "ISO 14064 is a standard for:",
+        "options": ["Food safety", "GHG inventories", "Energy audit of buildings", "Quality management"],
+        "correctAnswer": "GHG inventories",
+        "explanation": "ISO 14064 provides international guidelines for quantifying, monitoring, and reporting organizational greenhouse gas inventories and verification."
+    },
+    {
+        "id": 48,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Global average carbon footprint is about ______ t CO2e per person per year.",
+        "options": ["0.4", "4", "400", "40"],
+        "correctAnswer": "4",
+        "explanation": "The global mean per capita carbon footprint is roughly 4.0 tonnes of CO2e per year."
+    },
+    {
+        "id": 49,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "The average Indian's footprint is approximately ______ t CO2e per year.",
+        "options": ["50", "2", "30", "15"],
+        "correctAnswer": "2",
+        "explanation": "An average person in India emits approximately 2 tonnes of CO2e per year, well below the global average (~4 t) and the US average (~14–16 t)."
+    },
+    {
+        "id": 50,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Life Cycle Assessment (LCA) covers:",
+        "options": ["Only manufacturing", "Only use phase", "Cradle to grave", "Only disposal"],
+        "correctAnswer": "Cradle to grave",
+        "explanation": "A full LCA evaluates comprehensive environmental impacts across the complete lifespan from raw material extraction ('cradle') to end-of-life disposal ('grave')."
+    },
+    {
+        "id": 51,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "'Cradle to cradle' LCA ideally ends with:",
+        "options": ["Landfill", "Reuse and recycling", "Incineration", "Export"],
+        "correctAnswer": "Reuse and recycling",
+        "explanation": "In a regenerative 'cradle to cradle' framework, post-consumer end-of-life goods feed directly back into manufacturing loops via reuse, repair, or recycling."
+    },
+    {
+        "id": 52,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Emission factors convert ______ into CO2e.",
+        "options": ["Population", "Wind speed", "Temperature", "Activity data"],
+        "correctAnswer": "Activity data",
+        "explanation": "Emission factors are coefficients that mathematically convert quantifiable activity data (litres of diesel, kWh of grid electricity, tonne-km) into CO2e."
+    },
+    {
+        "id": 53,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Electricity and heat generation account for about ______ of global CO2 emissions.",
+        "options": ["16%", "34%", "80%", "5%"],
+        "correctAnswer": "34%",
+        "explanation": "Power and heat generation represent the largest single sector, accounting for roughly 34% of global CO2 emissions."
+    },
+    {
+        "id": 54,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Industry accounts for about ______ of global GHG emissions.",
+        "options": ["24%", "6%", "60%", "16%"],
+        "correctAnswer": "24%",
+        "explanation": "Heavy manufacturing and industrial processing (iron & steel, chemicals, cement, aluminium) produce approximately 24% of global greenhouse emissions."
+    },
+    {
+        "id": 55,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Transportation accounts for about ______ of global GHG emissions.",
+        "options": ["34%", "50%", "16%", "6%"],
+        "correctAnswer": "16%",
+        "explanation": "The global transport sector (road, aviation, maritime, rail) generates roughly 16% of direct greenhouse gas emissions."
+    },
+    {
+        "id": 56,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Buildings contribute about 6% direct emissions but ______ when Scope 2 is included.",
+        "options": ["17-19%", "40%", "60%", "10%"],
+        "correctAnswer": "17-19%",
+        "explanation": "While direct on-site combustion in buildings accounts for ~6%, factoring in indirect Scope 2 electricity consumption raises their impact to 17–19%."
+    },
+    {
+        "id": 57,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Producing one tonne of cement releases about ______ of CO2.",
+        "options": ["8 t", "80 t", "0.8 t", "0.08 t"],
+        "correctAnswer": "0.8 t",
+        "explanation": "Manufacturing one tonne of ordinary Portland cement emits approximately 0.8 tonnes of CO2."
+    },
+    {
+        "id": 58,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Roughly half of cement CO2 comes from:",
+        "options": ["Packaging", "Calcination of limestone", "Water use", "Transport"],
+        "correctAnswer": "Calcination of limestone",
+        "explanation": "Chemical decomposition (calcination of limestone: CaCO3 -> CaO + CO2) accounts for roughly 50% of cement emissions; the rest is fuel combustion."
+    },
+    {
+        "id": 59,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Coal-fired power produces roughly ______ the CO2 per unit energy compared with natural gas.",
+        "options": ["Half", "One-tenth", "Twice", "Equal"],
+        "correctAnswer": "Twice",
+        "explanation": "Combusting coal releases approximately double the mass of CO2 per megawatt-hour of electrical output compared to modern natural gas turbines."
+    },
+    {
+        "id": 60,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "The IEA calls energy efficiency the:",
+        "options": ["Last resort", "First fuel", "Slow fuel", "Hidden tax"],
+        "correctAnswer": "First fuel",
+        "explanation": "The International Energy Agency (IEA) designates energy efficiency as the 'first fuel' because avoided waste is the cleanest and cheapest resource."
+    },
+    {
+        "id": 61,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "CCS stands for:",
+        "options": ["Carbon Capture and Storage", "Clean Carbon Source", "Carbon Cycle System", "Controlled Combustion Standard"],
+        "correctAnswer": "Carbon Capture and Storage",
+        "explanation": "CCS stands for Carbon Capture and Storage: capturing industrial flue gas CO2 and sequestering it securely deep underground in geological formations."
+    },
+    {
+        "id": 62,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "CCU converts captured CO2 into:",
+        "options": ["Useful products like fuels or building materials", "Radioactive waste", "Nitrogen", "Ozone"],
+        "correctAnswer": "Useful products like fuels or building materials",
+        "explanation": "Carbon Capture and Utilisation (CCU) recycles captured CO2 into commercially valuable commodities such as synthetic fuels, carbonates, and chemicals."
+    },
+    {
+        "id": 63,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "DAC (Direct Air Capture) removes CO2:",
+        "options": ["Only from oceans", "Only from power plant stacks", "Directly from ambient air", "Only from vehicles"],
+        "correctAnswer": "Directly from ambient air",
+        "explanation": "Direct Air Capture (DAC) uses chemical contactors to scrub dilute carbon dioxide directly out of the ambient free atmosphere."
+    },
+    {
+        "id": 64,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Planting trees on previously non-forested land is called:",
+        "options": ["Deforestation", "Silviculture only", "Reforestation", "Afforestation"],
+        "correctAnswer": "Afforestation",
+        "explanation": "Afforestation is establishing a forest on lands that historically have not contained forest cover (reforestation restores recently cleared lands)."
+    },
+    {
+        "id": 65,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Recycled aluminium needs about ______ less energy than primary aluminium.",
+        "options": ["95%", "5%", "25%", "50%"],
+        "correctAnswer": "95%",
+        "explanation": "Recycling secondary scrap aluminium saves roughly 95% of the massive electrical energy required to smelt virgin bauxite ore via the Hall-Héroult process."
+    },
+    {
+        "id": 66,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "The circular economy contrasts with the linear model of:",
+        "options": ["Repair, reuse", "Reduce, reuse, recycle", "Design for disassembly", "Take, make, dispose"],
+        "correctAnswer": "Take, make, dispose",
+        "explanation": "A circular economy decouples growth from resource extraction, directly rejecting the linear 'take-make-dispose' throwaway paradigm."
+    },
+    {
+        "id": 67,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "'Modal shift' in transport means:",
+        "options": ["Using bigger vehicles", "Changing vehicle colour", "Increasing flight speed", "Moving from higher-carbon to lower-carbon transport modes"],
+        "correctAnswer": "Moving from higher-carbon to lower-carbon transport modes",
+        "explanation": "Modal shift describes transitioning commuter and freight traffic from energy-intensive modes (aviation, private ICE cars) to low-carbon alternatives (rail, transit)."
+    },
+    {
+        "id": 68,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Carbon tax and cap-and-trade are examples of:",
+        "options": ["Adaptation measures", "Carbon pricing policies", "Remote sensing", "Natural sinks"],
+        "correctAnswer": "Carbon pricing policies",
+        "explanation": "Carbon taxes and cap-and-trade Emissions Trading Schemes (ETS) are market-based carbon pricing instruments that internalize the environmental cost of emissions."
+    },
+    {
+        "id": 69,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "About ______ of all food produced globally is wasted.",
+        "options": ["One-tenth", "One-third", "Nine-tenths", "Two-thirds"],
+        "correctAnswer": "One-third",
+        "explanation": "Roughly one-third (~1.3 billion tonnes annually) of all agricultural food produced for human consumption is lost or wasted globally."
+    },
+    {
+        "id": 70,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "REDD+ is associated with:",
+        "options": ["Wind policy", "Avoided deforestation offsets", "Plastic recycling", "Solar tariffs"],
+        "correctAnswer": "Avoided deforestation offsets",
+        "explanation": "REDD+ (Reducing Emissions from Deforestation and forest Degradation) financially incentivizes developing countries to conserve forests."
+    },
+    {
+        "id": 71,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Credible carbon offsets must be:",
+        "options": ["Additional, measurable, permanent, verified", "Cheap and quick", "Only government-owned", "Only domestic"],
+        "correctAnswer": "Additional, measurable, permanent, verified",
+        "explanation": "High-integrity carbon credits must satisfy 4 criteria: additionality, accurate measurability, permanence (non-reversal), and independent verification."
+    },
+    {
+        "id": 72,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "Carbon offsetting should be treated as:",
+        "options": ["Illegal", "Replacement for renewables", "A substitute for reductions", "A complement to direct reductions"],
+        "correctAnswer": "A complement to direct reductions",
+        "explanation": "Carbon offsetting is a complement to direct emissions reductions, used to balance residual unavoidable emissions after maximizing energy efficiency and renewables."
+    },
+    {
+        "id": 73,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "The Clean Development Mechanism (CDM) falls under the:",
+        "options": ["Basel Convention", "Ramsar Convention", "Kyoto Protocol", "Montreal Protocol"],
+        "correctAnswer": "Kyoto Protocol",
+        "explanation": "Article 12 of the Kyoto Protocol established the Clean Development Mechanism (CDM) allowing Annex I countries to earn CER credits in developing nations."
+    },
+    {
+        "id": 74,
+        "section": "Section 2: Carbon Footprint & Mitigation",
+        "category": "FAT: Carbon Footprint & Mitigation",
+        "question": "SMRs stand for:",
+        "options": ["Small Modular Reactors", "Solar Module Reactors", "Sustainable Material Recycling", "Standard Metering Receivers"],
+        "correctAnswer": "Small Modular Reactors",
+        "explanation": "SMRs are Small Modular Reactors: advanced nuclear fission units generating up to 300 MWe that offer scalable zero-carbon baseload power."
+    },
+
+    # ── Section 3: Solar Energy (Q75 to Q96) ──
+    {
+        "id": 75,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Approximate solar irradiance at Earth's surface at solar noon on a clear day:",
+        "options": ["5000 W/m2", "1000 W/m2", "500 W/m2", "100 W/m2"],
+        "correctAnswer": "1000 W/m2",
+        "explanation": "Under standard clear-sky conditions at solar noon, peak solar irradiance reaching Earth's surface is approximately 1,000 W/m² (1 kW/m²)."
+    },
+    {
+        "id": 76,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Solar output is calculated as:",
+        "options": ["Irradiance x time only", "Irradiance / area", "Irradiance x area x efficiency", "Area + efficiency"],
+        "correctAnswer": "Irradiance x area x efficiency",
+        "explanation": "Solar electrical power output equals incident Irradiance (W/m²) multiplied by panel Area (m²) multiplied by the conversion Efficiency factor (η)."
+    },
+    {
+        "id": 77,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Which component converts DC from panels to AC?",
+        "options": ["Charge controller", "Inverter", "Battery", "Transformer"],
+        "correctAnswer": "Inverter",
+        "explanation": "A solar inverter converts direct current (DC) generated by photovoltaic arrays into alternating current (AC) matching grid power."
+    },
+    {
+        "id": 78,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "The photovoltaic effect occurs at a:",
+        "options": ["Metal-metal contact", "Steam chamber", "p-n junction in a semiconductor", "Gearbox"],
+        "correctAnswer": "p-n junction in a semiconductor",
+        "explanation": "The photovoltaic effect takes place at a semiconductor p-n junction, where an internal electric field separates photo-generated electron-hole pairs."
+    },
+    {
+        "id": 79,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "PV cells directly generate:",
+        "options": ["Steam", "Direct current", "Heat only", "Alternating current"],
+        "correctAnswer": "Direct current",
+        "explanation": "Solar PV cells produce direct current (DC) directly without requiring mechanical motion, steam turbines, or combustive fluids."
+    },
+    {
+        "id": 80,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Concentrated Solar Power typically uses ______ for thermal storage.",
+        "options": ["Sand only", "Molten salt", "Mercury", "Lithium"],
+        "correctAnswer": "Molten salt",
+        "explanation": "Concentrated Solar Power (CSP) facilities use molten salt eutectic mixtures to store high-temperature heat for nighttime power generation."
+    },
+    {
+        "id": 81,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "The Czochralski process is used to make:",
+        "options": ["Thin-film cells", "Polycrystalline cells", "Monocrystalline cells", "Perovskite cells"],
+        "correctAnswer": "Monocrystalline cells",
+        "explanation": "The Czochralski growth method pulls a single continuous crystal ingot of high-purity silicon used to slice monocrystalline PV wafers."
+    },
+    {
+        "id": 82,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Typical efficiency of monocrystalline cells:",
+        "options": ["5-8%", "10-13%", "15-17%", "20-22%"],
+        "correctAnswer": "20-22%",
+        "explanation": "Commercial monocrystalline silicon panels achieve the highest standard commercial efficiency, typically 20% to 22%."
+    },
+    {
+        "id": 83,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Polycrystalline cells have lower efficiency than mono because of:",
+        "options": ["Higher purity", "Larger size", "Absence of silicon", "Grain boundaries impeding electron flow"],
+        "correctAnswer": "Grain boundaries impeding electron flow",
+        "explanation": "Polycrystalline silicon is formed from multiple crystal fragments; the microscopic grain boundaries trap charge carriers and impede electron flow."
+    },
+    {
+        "id": 84,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Thin-film (10-13%) is best suited for:",
+        "options": ["Highest efficiency needs", "Building-integrated PV where weight/flexibility matter", "Wind farms", "Nuclear plants"],
+        "correctAnswer": "Building-integrated PV where weight/flexibility matter",
+        "explanation": "Thin-film modules (CdTe, a-Si) are lightweight and flexible, making them ideal for Building-Integrated Photovoltaics (BIPV) and curved surfaces."
+    },
+    {
+        "id": 85,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Perovskite cells are limited mainly by:",
+        "options": ["Zero efficiency", "Very high cost", "Durability and stability", "Heavy weight"],
+        "correctAnswer": "Durability and stability",
+        "explanation": "Emerging perovskite photovoltaic crystals have high efficiency but degrade rapidly when exposed to moisture, oxygen, heat, and ultraviolet light."
+    },
+    {
+        "id": 86,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Tandem perovskite-silicon cells can push efficiency above:",
+        "options": ["90%", "20%", "10%", "30%"],
+        "correctAnswer": "30%",
+        "explanation": "Stacking perovskite onto traditional silicon cells (tandem structure) absorbs complementary spectral wavelengths, pushing laboratory efficiency beyond 30%."
+    },
+    {
+        "id": 87,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Solar panels typically degrade by about ______ per year.",
+        "options": ["10%", "0.5%", "5%", "20%"],
+        "correctAnswer": "0.5%",
+        "explanation": "High-quality commercial solar photovoltaic panels degrade at an average rate of roughly 0.5% per year, retaining ~80–85% output after 25 years."
+    },
+    {
+        "id": 88,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Single/dual-axis tracking can increase solar yield by:",
+        "options": ["200%", "80-90%", "1-2%", "15-35%"],
+        "correctAnswer": "15-35%",
+        "explanation": "Single or dual-axis tracking mounts keep panels oriented normal to the sun's rays throughout the day, increasing generation yield by 15% to 35%."
+    },
+    {
+        "id": 89,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "India gets about ______ sunny days annually.",
+        "options": ["300", "200", "365", "100"],
+        "correctAnswer": "300",
+        "explanation": "India receives abundant tropical solar insolation, enjoying approximately 300 clear sunny days per calendar year."
+    },
+    {
+        "id": 90,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "PM Surya Ghar: Muft Bijli Yojana targets ______ households.",
+        "options": ["1 lakh", "10 crore", "1 crore", "10 lakh"],
+        "correctAnswer": "1 crore",
+        "explanation": "Launched in 2024, PM Surya Ghar: Muft Bijli Yojana aims to install rooftop solar panels across 1 crore (10 million) Indian households."
+    },
+    {
+        "id": 91,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "PM-KUSUM offers up to ______ subsidy for solar irrigation pumps.",
+        "options": ["30%", "100%", "10%", "60%"],
+        "correctAnswer": "60%",
+        "explanation": "Under PM-KUSUM, the central and state governments collectively provide up to 60% capital subsidy for installing solar-powered agricultural pumps."
+    },
+    {
+        "id": 92,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "The Bhadla Solar Park is described as:",
+        "options": ["A wind farm", "A geothermal site", "A hydro dam", "Largest solar park in the world"],
+        "correctAnswer": "Largest solar park in the world",
+        "explanation": "The Bhadla Solar Park in Jodhpur, Rajasthan, spans over 14,000 acres with ~2,245 MW capacity, cited as the world's largest operational solar park."
+    },
+    {
+        "id": 93,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "The International Solar Alliance was co-founded by India and:",
+        "options": ["Germany", "USA", "Japan", "France"],
+        "correctAnswer": "France",
+        "explanation": "The International Solar Alliance (ISA) was jointly launched by Prime Minister Narendra Modi and French President François Hollande at COP21 in Paris."
+    },
+    {
+        "id": 94,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "OSOWOG aims to:",
+        "options": ["Build nuclear plants", "Subsidise EVs", "Interconnect global grids across time zones", "Ban fossil fuels"],
+        "correctAnswer": "Interconnect global grids across time zones",
+        "explanation": "OSOWOG ('One Sun One World One Grid') is an international initiative to link regional power grids across time zones so solar energy can be shared continuously."
+    },
+    {
+        "id": 95,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "Which scheme trains youth in solar installation and maintenance?",
+        "options": ["RPO", "Suryamitra Skill Development Programme", "GEC", "PLI"],
+        "correctAnswer": "Suryamitra Skill Development Programme",
+        "explanation": "The Suryamitra Skill Development Programme, sponsored by MNRE and NISE, trains qualified youth as specialized solar technicians."
+    },
+    {
+        "id": 96,
+        "section": "Section 3: Solar Energy",
+        "category": "FAT: Solar Energy",
+        "question": "The Green Energy Corridor is for:",
+        "options": ["Dedicated transmission lines for renewables", "Biogas", "Reforestation", "Solar pumps"],
+        "correctAnswer": "Dedicated transmission lines for renewables",
+        "explanation": "The Green Energy Corridor (GEC) project constructs dedicated, synchronized high-voltage transmission lines to evacuate clean renewable power into the national grid."
+    },
+
+    # ── Section 4: Wind Energy (Q97 to Q113) ──
+    {
+        "id": 97,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "Wind is caused by:",
+        "options": ["Moon's gravity", "Ocean salinity", "Earth's rotation only", "Uneven heating of Earth's surface by the sun"],
+        "correctAnswer": "Uneven heating of Earth's surface by the sun",
+        "explanation": "Differential solar heating across latitudes, land, and water creates atmospheric pressure gradients that drive macroscopic air circulation (wind)."
+    },
+    {
+        "id": 98,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "In a wind turbine, the gearbox:",
+        "options": ["Reduces voltage", "Increases rotational speed to the generator", "Stores energy", "Controls pitch only"],
+        "correctAnswer": "Increases rotational speed to the generator",
+        "explanation": "The gearbox steps up slow rotor shaft revolutions (~10–20 rpm) to high speeds (~1500–1800 rpm) needed by conventional generators to produce power."
+    },
+    {
+        "id": 99,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "Which is NOT a major component of a wind turbine?",
+        "options": ["Gearbox", "Nacelle", "Rotor blades", "Penstock"],
+        "correctAnswer": "Penstock",
+        "explanation": "A penstock is a pressurized pipe that channels water to a hydroelectric turbine; it is not a component of a wind turbine."
+    },
+    {
+        "id": 100,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "The most common wind turbine worldwide is:",
+        "options": ["Savonius only", "Darrieus only", "HAWT", "VAWT"],
+        "correctAnswer": "HAWT",
+        "explanation": "Horizontal Axis Wind Turbines (HAWT), typically featuring three aerodynamically pitched blades, dominate over 95% of commercial wind energy installations."
+    },
+    {
+        "id": 101,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "Which turbine is suitable for urban areas and any wind direction?",
+        "options": ["VAWT", "Offshore HAWT", "Pelton", "HAWT"],
+        "correctAnswer": "VAWT",
+        "explanation": "Vertical Axis Wind Turbines (VAWT) are omnidirectional, operating effectively without yaw mechanisms in turbulent, multidirectional urban winds."
+    },
+    {
+        "id": 102,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "A major drawback of offshore wind is:",
+        "options": ["No grid connection possible", "Weaker wind", "Lower capacity factor than solar", "Higher installation and maintenance cost"],
+        "correctAnswer": "Higher installation and maintenance cost",
+        "explanation": "Harsh marine environments, submarine cabling, specialized installation vessels, and saltwater corrosion make offshore wind capital and maintenance costs much higher."
+    },
+    {
+        "id": 103,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "Floating offshore turbines enable:",
+        "options": ["Use in deserts", "Zero maintenance", "Use only on land", "Use in deeper waters"],
+        "correctAnswer": "Use in deeper waters",
+        "explanation": "Floating foundations moored with tethers allow wind turbines to tap strong oceanic winds in deep waters (>60 m) where fixed bottom pilings are unfeasible."
+    },
+    {
+        "id": 104,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "Onshore wind capacity factor is typically:",
+        "options": ["35-50%", "100%", "80-95%", "5-10%"],
+        "correctAnswer": "35-50%",
+        "explanation": "Modern onshore wind farms achieve average annual capacity factors typically ranging from 35% to 50%."
+    },
+    {
+        "id": 105,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "Offshore wind capacity factor can reach:",
+        "options": ["50-60%", "95-99%", "10-15%", "20-25%"],
+        "correctAnswer": "50-60%",
+        "explanation": "Because sea winds are stronger, smoother, and more persistent, modern offshore wind turbines can achieve capacity factors between 50% and 60%."
+    },
+    {
+        "id": 106,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "India's coastline is about:",
+        "options": ["7,516.6 km", "3,000 km", "15,000 km", "1,000 km"],
+        "correctAnswer": "7,516.6 km",
+        "explanation": "India has a peninsular coastline spanning approximately 7,516.6 km, offering substantial potential for coastal and offshore wind projects."
+    },
+    {
+        "id": 107,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "Western coast is preferred for wind because the eastern coast is:",
+        "options": ["Landlocked", "Cyclone-prone", "Too narrow", "Too cold"],
+        "correctAnswer": "Cyclone-prone",
+        "explanation": "India's eastern coast facing the Bay of Bengal suffers frequent severe tropical cyclones; the western coast (Gujarat, Maharashtra) offers safer wind profiles."
+    },
+    {
+        "id": 108,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "NIWE (National Institute of Wind Energy) is based in:",
+        "options": ["Mumbai", "Delhi", "Kolkata", "Chennai"],
+        "correctAnswer": "Chennai",
+        "explanation": "The National Institute of Wind Energy (NIWE), an autonomous R&D institution under MNRE, is headquartered in Chennai, Tamil Nadu."
+    },
+    {
+        "id": 109,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "The National Offshore Wind Energy Policy was released in:",
+        "options": ["2005", "2022", "2015", "2018"],
+        "correctAnswer": "2015",
+        "explanation": "The Government of India notified the National Offshore Wind Energy Policy in 2015 to exploit offshore wind off the coasts of Gujarat and Tamil Nadu."
+    },
+    {
+        "id": 110,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "The National Wind-Solar Hybrid Policy was released in:",
+        "options": ["2008", "2024", "2018", "2015"],
+        "correctAnswer": "2018",
+        "explanation": "India issued the National Wind-Solar Hybrid Policy in 2018 to optimize transmission infrastructure and manage variability."
+    },
+    {
+        "id": 111,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "RPO stands for:",
+        "options": ["Regional Power Order", "Renewable Power Option", "Rural Power Outlay", "Renewable Purchase Obligation"],
+        "correctAnswer": "Renewable Purchase Obligation",
+        "explanation": "RPO stands for Renewable Purchase Obligation, a statutory mandate under the Electricity Act 2003 obligating DISCOMs to procure a set share of green power."
+    },
+    {
+        "id": 112,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "Solar and wind are called complementary because:",
+        "options": ["Both work only at night", "Solar peaks at midday while wind is often stronger at night", "Both peak at midday", "Neither is variable"],
+        "correctAnswer": "Solar peaks at midday while wind is often stronger at night",
+        "explanation": "Solar energy peaks during peak daylight hours while wind speeds frequently increase during late afternoons, nights, and monsoons, evening out grid supply."
+    },
+    {
+        "id": 113,
+        "section": "Section 4: Wind Energy",
+        "category": "FAT: Wind Energy",
+        "question": "Which is a challenge of wind energy?",
+        "options": ["Reservoir sedimentation", "Bird and bat collisions", "Hazardous PV waste", "H2S emissions"],
+        "correctAnswer": "Bird and bat collisions",
+        "explanation": "Rotating turbine blades pose collision and barotrauma hazards to migratory birds and bats, requiring radar detection and curtailment systems."
+    },
+
+    # ── Section 5: Hydroelectric Energy (Q114 to Q128) ──
+    {
+        "id": 114,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Energy conversion sequence in a hydro plant:",
+        "options": ["Chemical -> Thermal -> Electrical", "Kinetic -> Potential -> Electrical -> Mechanical", "Electrical -> Mechanical -> Kinetic", "Potential -> Kinetic -> Mechanical -> Electrical"],
+        "correctAnswer": "Potential -> Kinetic -> Mechanical -> Electrical",
+        "explanation": "Elevated reservoir water stores Gravitational Potential energy -> channels into Kinetic energy -> rotates turbine into Mechanical energy -> converted by generator to Electrical energy."
+    },
+    {
+        "id": 115,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "The large pipe carrying water from reservoir to turbine is the:",
+        "options": ["Penstock", "Heat exchanger", "Inverter", "Nacelle"],
+        "correctAnswer": "Penstock",
+        "explanation": "The penstock is the heavy-duty pressurized conduit or tunnel leading water down from the dam/intake forebay directly to the hydraulic turbine."
+    },
+    {
+        "id": 116,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Hydropower supplies roughly ______ of global electricity.",
+        "options": ["50%", "15-16%", "80%", "1%"],
+        "correctAnswer": "15-16%",
+        "explanation": "Hydropower is the world's largest renewable electricity source, contributing roughly 15% to 16% of total global electricity supply."
+    },
+    {
+        "id": 117,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Hydropower efficiency is often:",
+        "options": ["Above 90%", "Below 20%", "Exactly 100%", "Around 40%"],
+        "correctAnswer": "Above 90%",
+        "explanation": "Hydroelectric turbines (such as modern Francis or Pelton designs) achieve conversion efficiencies exceeding 90%, far higher than thermal plants."
+    },
+    {
+        "id": 118,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Tehri Dam (Uttarakhand) capacity:",
+        "options": ["330 MW", "400 MW", "100 MW", "1,000 MW"],
+        "correctAnswer": "1,000 MW",
+        "explanation": "The Tehri Dam storage hydro project on the Bhagirathi River in Uttarakhand has a primary generation capacity of 1,000 MW."
+    },
+    {
+        "id": 119,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Srinagar Hydro on the Alaknanda is an example of:",
+        "options": ["Pumped storage", "Storage hydro", "Run-of-the-river", "Tidal"],
+        "correctAnswer": "Run-of-the-river",
+        "explanation": "The 330 MW Srinagar Hydroelectric Project on the Alaknanda River operates as a run-of-the-river facility without a massive inundation reservoir."
+    },
+    {
+        "id": 120,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Kadamparai (Tamil Nadu) is a:",
+        "options": ["Geothermal plant", "Wind farm", "Pumped storage plant", "Run-of-river plant"],
+        "correctAnswer": "Pumped storage plant",
+        "explanation": "The Kadamparai project (400 MW) in the Coimbatore district of Tamil Nadu is a prominent Indian pumped-storage hydroelectric facility."
+    },
+    {
+        "id": 121,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Pumped storage works like:",
+        "options": ["A giant rechargeable battery", "A diesel generator", "A solar panel", "A nuclear reactor"],
+        "correctAnswer": "A giant rechargeable battery",
+        "explanation": "Pumped storage acts as a giant clean battery: pumping water uphill using cheap off-peak power and releasing it downhill to generate electricity during peak demand."
+    },
+    {
+        "id": 122,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Micro/pico hydro systems are below:",
+        "options": ["100 kW", "100 MW", "1 GW", "10 MW"],
+        "correctAnswer": "100 kW",
+        "explanation": "Micro-hydro generates up to 100 kW (and pico-hydro under 5 kW), providing decentralized off-grid electricity for remote mountain villages."
+    },
+    {
+        "id": 123,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Hydropower is called dispatchable baseload because it:",
+        "options": ["Cannot be controlled", "Can generate on demand at any time", "Depends on wind", "Generates only at noon"],
+        "correctAnswer": "Can generate on demand at any time",
+        "explanation": "Storage hydropower can be ramped up or down in minutes on demand, providing fast-dispatch load balancing and reliable baseload power."
+    },
+    {
+        "id": 124,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Which is NOT an environmental challenge of large dams?",
+        "options": ["Hydrogen sulphide emission to air as main issue", "Fish migration blocked", "Displacement of communities", "Sedimentation"],
+        "correctAnswer": "Hydrogen sulphide emission to air as main issue",
+        "explanation": "Large dams cause fish habitat fragmentation, human displacement, and reservoir silting, but H2S emissions are characteristic of geothermal energy, not dams."
+    },
+    {
+        "id": 125,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Sardar Sarovar Dam displaced about:",
+        "options": ["32,000 people", "3,200 people", "320,000 people", "32 million people"],
+        "correctAnswer": "320,000 people",
+        "explanation": "The construction and reservoir filling of the Sardar Sarovar Dam on the Narmada River displaced approximately 320,000 people."
+    },
+    {
+        "id": 126,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Reservoir decomposition in tropical regions can emit:",
+        "options": ["Methane", "Helium", "Argon", "Ozone"],
+        "correctAnswer": "Methane",
+        "explanation": "Flooded vegetation submerged in warm tropical reservoirs decomposes anaerobically at the bottom, producing and venting potent methane (CH4) gas."
+    },
+    {
+        "id": 127,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "The transformer in a hydro plant:",
+        "options": ["Stores water", "Rotates the turbine", "Cools the generator", "Raises voltage for long-distance transmission"],
+        "correctAnswer": "Raises voltage for long-distance transmission",
+        "explanation": "The step-up transformer increases generator voltage to high transmission levels (e.g. 220 kV or 400 kV) to minimize I²R line resistance losses."
+    },
+    {
+        "id": 128,
+        "section": "Section 5: Hydroelectric Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Which is a future trend in hydropower?",
+        "options": ["Bigger dams only", "Coal blending", "Diesel back-up", "Fish-friendly turbines"],
+        "correctAnswer": "Fish-friendly turbines",
+        "explanation": "Key technological trends in sustainable hydropower include fish-friendly Alden turbines, environmental flow management, and floating solar hybridization."
+    },
+
+    # ── Section 6: Geothermal Energy (Q129 to Q144) ──
+    {
+        "id": 129,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "'Geothermal' comes from Greek words meaning:",
+        "options": ["Earth and heat", "Air and steam", "Water and power", "Sun and wind"],
+        "correctAnswer": "Earth and heat",
+        "explanation": "Geothermal originates from the Greek roots 'Geo' (Earth) and 'Therme' (heat)."
+    },
+    {
+        "id": 130,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Temperature increase with depth is called the:",
+        "options": ["Albedo", "Lapse rate", "Geothermal gradient", "Thermocline"],
+        "correctAnswer": "Geothermal gradient",
+        "explanation": "The geothermal gradient describes the rate of temperature increase with increasing depth into Earth's subsurface (typically ~25–30 °C per km of crust)."
+    },
+    {
+        "id": 131,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "The Geysers in California is a ______ plant complex.",
+        "options": ["Pumped storage", "Flash steam", "Binary cycle", "Dry steam"],
+        "correctAnswer": "Dry steam",
+        "explanation": "The Geysers in Northern California is the world's largest geothermal complex, operating on rare, natural pressurized dry steam reservoirs."
+    },
+    {
+        "id": 132,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "The most common geothermal technology globally:",
+        "options": ["Dry steam", "Flash steam", "Binary cycle", "Solar thermal"],
+        "correctAnswer": "Flash steam",
+        "explanation": "Flash steam plants are the most prevalent worldwide, drawing high-temperature water into reduced-pressure flash tanks to produce steam."
+    },
+    {
+        "id": 133,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Flash steam plants use hot water above:",
+        "options": ["180 °C", "1000 °C", "100 °C", "50 °C"],
+        "correctAnswer": "180 °C",
+        "explanation": "Flash steam systems require pressurized hydrothermal reservoirs exceeding 180 °C to generate sufficient flash steam."
+    },
+    {
+        "id": 134,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Binary cycle plants work with resources of:",
+        "options": ["Below 0 °C", "100-180 °C", "Exactly 1000 °C", "Above 500 °C"],
+        "correctAnswer": "100-180 °C",
+        "explanation": "Binary cycle power plants operate on moderate-temperature geothermal water between 100 °C and 180 °C via an Organic Rankine Cycle."
+    },
+    {
+        "id": 135,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Which secondary fluid is used in binary plants?",
+        "options": ["Mercury", "Ethanol only", "Isobutane or pentane", "Liquid nitrogen"],
+        "correctAnswer": "Isobutane or pentane",
+        "explanation": "Binary plants transfer heat to an organic working fluid (such as isobutane or isopentane) with a much lower boiling point than water."
+    },
+    {
+        "id": 136,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Geothermal capacity factor is typically:",
+        "options": ["20-25%", "100% always", "5-10%", "80-95%"],
+        "correctAnswer": "80-95%",
+        "explanation": "Geothermal energy operates 24/7 unaffected by weather conditions, yielding high baseload capacity factors of 80% to 95%."
+    },
+    {
+        "id": 137,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Water is returned to the reservoir through:",
+        "options": ["Penstocks", "Spillways", "Injection wells", "Production wells"],
+        "correctAnswer": "Injection wells",
+        "explanation": "Cooled geothermal brine is continuously pumped back into subterranean reservoirs via injection wells to sustain pressure and prevent surface contamination."
+    },
+    {
+        "id": 138,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "The EGS project abandoned after felt earthquakes was in:",
+        "options": ["Nairobi, Kenya", "Reykjavik, Iceland", "Basel, Switzerland", "Manila, Philippines"],
+        "correctAnswer": "Basel, Switzerland",
+        "explanation": "The Enhanced Geothermal System (EGS) deep drilling project in Basel, Switzerland, was permanently canceled after hydraulic stimulation induced felt earthquakes."
+    },
+    {
+        "id": 139,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "A gas needing treatment at some geothermal sites is:",
+        "options": ["Oxygen", "Hydrogen sulphide", "Helium", "Neon"],
+        "correctAnswer": "Hydrogen sulphide",
+        "explanation": "Hydrogen sulphide (H2S), a toxic gas with a characteristic rotten egg odor, often emerges with geothermal steam and requires chemical scrubbing."
+    },
+    {
+        "id": 140,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Which Indian geothermal site is in Chhattisgarh?",
+        "options": ["Tattapani", "Cambay", "Manikaran", "Puga Valley"],
+        "correctAnswer": "Tattapani",
+        "explanation": "Tattapani in the Balrampur district of Chhattisgarh is one of India's major geothermal hot spring fields."
+    },
+    {
+        "id": 141,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Puga Valley is located in:",
+        "options": ["Kerala", "Gujarat", "Assam", "Ladakh"],
+        "correctAnswer": "Ladakh",
+        "explanation": "Puga Valley in eastern Ladakh is India's most promising geothermal energy site, where ONGC is executing pilot geothermal drilling."
+    },
+    {
+        "id": 142,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Kenya generates about ______ of its electricity from geothermal.",
+        "options": ["20%", "47%", "100%", "4.7%"],
+        "correctAnswer": "47%",
+        "explanation": "Harnessing the Olkaria steam fields along the East African Rift, Kenya generates approximately 47% of its total national electricity from geothermal."
+    },
+    {
+        "id": 143,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "Which SDG is 'Climate Action'?",
+        "options": ["SDG 7", "SDG 9", "SDG 13", "SDG 11"],
+        "correctAnswer": "SDG 13",
+        "explanation": "Sustainable Development Goal 13 is explicitly dedicated to 'Climate Action'."
+    },
+    {
+        "id": 144,
+        "section": "Section 6: Geothermal Energy",
+        "category": "FAT: Hydro & Geothermal Energy",
+        "question": "SDG 7 is:",
+        "options": ["Affordable and Clean Energy", "Quality Education", "Clean Water", "Zero Hunger"],
+        "correctAnswer": "Affordable and Clean Energy",
+        "explanation": "Sustainable Development Goal 7 is 'Affordable and Clean Energy' for all by 2030."
+    },
+
+    # ── Section 7: AI and IoT in Environmental Monitoring (Q145 to Q161) ──
+    {
+        "id": 145,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "Environmental monitoring involves systematic collection of data on:",
+        "options": ["Air, water and soil", "Social media", "Sports", "Stock prices"],
+        "correctAnswer": "Air, water and soil",
+        "explanation": "Environmental monitoring involves the continuous or periodic sampling and measurement of air, water, soil quality, and biodiversity."
+    },
+    {
+        "id": 146,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "IoT sensors enable:",
+        "options": ["Only satellite images", "No data transfer", "Only manual sampling", "Real-time remote monitoring"],
+        "correctAnswer": "Real-time remote monitoring",
+        "explanation": "Internet of Things (IoT) sensor nodes transmit environmental parameters wirelessly in real time, eliminating the delays and costs of manual grab sampling."
+    },
+    {
+        "id": 147,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "Soil sensors commonly measure NPK, which stands for:",
+        "options": ["Neon, Platinum, Krypton", "Nickel, Phosphate, Calcium", "Nitrate, Peroxide, Kaolin", "Nitrogen, Phosphorus, Potassium"],
+        "correctAnswer": "Nitrogen, Phosphorus, Potassium",
+        "explanation": "NPK represents the 3 primary soil macronutrients: Nitrogen (N), Phosphorus (P), and Potassium (K)."
+    },
+    {
+        "id": 148,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "Which sensor tracks pH, dissolved oxygen and turbidity?",
+        "options": ["Acoustic sensor", "Water quality sensor", "Air quality sensor", "Wearable"],
+        "correctAnswer": "Water quality sensor",
+        "explanation": "Multiparameter water quality probes measure pH, dissolved oxygen (DO), electrical conductivity, and turbidity (suspended particles)."
+    },
+    {
+        "id": 149,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "PM2.5 and PM10 are:",
+        "options": ["Greenhouse gases only", "Water pollutants", "Soil nutrients", "Particulate matter pollutants"],
+        "correctAnswer": "Particulate matter pollutants",
+        "explanation": "PM2.5 and PM10 designate inhalable particulate matter with aerodynamic diameters below 2.5 and 10 micrometers respectively."
+    },
+    {
+        "id": 150,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "Which ML model is cited for predicting future air quality?",
+        "options": ["LSTM", "K-means only", "Apriori", "A* search"],
+        "correctAnswer": "LSTM",
+        "explanation": "Long Short-Term Memory (LSTM) recurrent neural networks are specifically suited for temporal time-series forecasting of air pollutant trends."
+    },
+    {
+        "id": 151,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "A digital twin is:",
+        "options": ["Two identical sensors", "A virtual replica of a physical system", "A drone", "A backup battery"],
+        "correctAnswer": "A virtual replica of a physical system",
+        "explanation": "A digital twin is a dynamic, synchronized virtual simulation model of a real-world asset (such as an effluent treatment plant or water distribution network)."
+    },
+    {
+        "id": 152,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "E-noses are used to:",
+        "options": ["Measure soil pH", "Detect gases by chemical signature", "Count fish", "Listen to birds"],
+        "correctAnswer": "Detect gases by chemical signature",
+        "explanation": "Electronic noses (e-noses) utilize chemical sensor arrays and pattern recognition algorithms to identify volatile compounds and odorous industrial gases."
+    },
+    {
+        "id": 153,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "Acoustic sensors in forests help detect:",
+        "options": ["Illegal logging and poaching", "Sea level rise", "Plastic", "Arsenic"],
+        "correctAnswer": "Illegal logging and poaching",
+        "explanation": "Bioacoustic sensor networks deployed in canopies detect chainsaw noises, vehicle engines, and gunshots, pinpointing illegal logging and poaching in real time."
+    },
+    {
+        "id": 154,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "EMS (Environmental Management Systems) follow:",
+        "options": ["ISO 9001", "ISO 22000", "ISO 26000", "ISO 14001"],
+        "correctAnswer": "ISO 14001",
+        "explanation": "ISO 14001 is the international standard specifying requirements for an organization's Environmental Management System (EMS)."
+    },
+    {
+        "id": 155,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "IIT Kharagpur's AI case study predicted:",
+        "options": ["Flood in Kerala", "Air quality in Delhi", "Plastic in oceans", "Arsenic contamination in Ganga delta"],
+        "correctAnswer": "Arsenic contamination in Ganga delta",
+        "explanation": "Researchers at IIT Kharagpur engineered machine learning models predicting high-resolution geospatial arsenic contamination across the Ganga-Brahmaputra delta."
+    },
+    {
+        "id": 156,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "The Ocean Cleanup uses AI to:",
+        "options": ["Predict arsenic", "Detect poaching", "Map plastic pollution in oceans", "Forecast monsoon"],
+        "correctAnswer": "Map plastic pollution in oceans",
+        "explanation": "The Ocean Cleanup deploys computer vision object detection on drones and vessels to map floating plastic debris concentrations across oceanic gyres."
+    },
+    {
+        "id": 157,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "Remote sensing means gathering information:",
+        "options": ["Only in laboratories", "Only with direct sampling", "Only underwater", "Without physical contact with the object"],
+        "correctAnswer": "Without physical contact with the object",
+        "explanation": "Remote sensing is the technique of acquiring geospatial information about targets or areas from a distance using satellites or aircraft without physical contact."
+    },
+    {
+        "id": 158,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "ENVIS stands for:",
+        "options": ["Environmental Index Survey", "Environmental Information System", "Ecological Network Index System", "Energy and Nature Information Service"],
+        "correctAnswer": "Environmental Information System",
+        "explanation": "ENVIS stands for Environmental Information System, established in 1982 by India's Ministry of Environment, Forest and Climate Change (MoEFCC)."
+    },
+    {
+        "id": 159,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "NMIS is the:",
+        "options": ["National Meteorological Index System", "National Marine Information Survey", "National Management Information System", "Nuclear Monitoring and Inspection Service"],
+        "correctAnswer": "National Management Information System",
+        "explanation": "NMIS is the National Management Information System, tracking environmental R&D projects, ongoing research, and scientific experts under the Ministry."
+    },
+    {
+        "id": 160,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "Smart waste management uses sensors to monitor:",
+        "options": ["Soil nutrients", "Ocean pH", "Bin fill levels and optimise routes", "Wind speed"],
+        "correctAnswer": "Bin fill levels and optimise routes",
+        "explanation": "Ultrasonic and optical bin fill-level sensors alert waste operators when containers approach capacity, optimizing collection truck routing to cut fuel emissions."
+    },
+    {
+        "id": 161,
+        "section": "Section 7: AI & IoT Monitoring",
+        "category": "FAT: AI & IoT in Environmental Monitoring",
+        "question": "An automated response in IoT could be:",
+        "options": ["Stopping all monitoring", "Deleting sensor data", "Activating a water treatment plant above threshold", "Raising pollution levels"],
+        "correctAnswer": "Activating a water treatment plant above threshold",
+        "explanation": "In an automated IoT feedback loop, sensor readings surpassing statutory contamination thresholds automatically trigger corrective actuators (e.g., dosing or filtration)."
+    }
+]
+
+with open("/Users/pran/devjams26/vit_fat_questions.json", "w") as f:
+    json.dump(fat_questions_data, f, indent=2)
+
+print(f"Successfully generated vit_fat_questions.json with {len(fat_questions_data)} questions.")

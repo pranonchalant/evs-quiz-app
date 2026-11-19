@@ -10,7 +10,7 @@ html_template = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EVS CAT-II & High-Yield Exam Quiz</title>
+  <title>EVS FAT Quiz — Complete Exam Revision & 40-Q Mock Test</title>
   <style>
     /* ── Reset & Color Scheme ─────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,6 +24,8 @@ html_template = """<!DOCTYPE html>
       --text-muted: #94a3b8;
       --accent: #38bdf8;
       --accent-gradient: linear-gradient(135deg, #6366f1, #06b6d4);
+      --fat-gold: #f59e0b;
+      --fat-gradient: linear-gradient(135deg, #f59e0b, #ef4444);
       --site-badge: #10b981;
       --correct-bg: #064e3b;
       --correct-border: #10b981;
@@ -72,6 +74,25 @@ html_template = """<!DOCTYPE html>
       font-weight: 600;
       gap: 0.5rem;
       flex-wrap: wrap;
+    }
+
+    .brand-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .brand-title span.badge {
+      background: var(--fat-gradient);
+      color: #ffffff;
+      font-size: 0.72rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 0.4rem;
+      font-weight: 700;
     }
 
     .mode-badge {
@@ -164,6 +185,12 @@ html_template = """<!DOCTYPE html>
       padding: 0.25rem 0.65rem;
       border-radius: 0.4rem;
       font-weight: 700;
+    }
+
+    .source-tag.fat-tag {
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
     }
 
     .random-tag {
@@ -340,6 +367,14 @@ html_template = """<!DOCTYPE html>
       box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
     }
 
+    .btn-fat {
+      background: var(--fat-gradient);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+    .btn-fat:hover {
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+    }
+
     .btn-secondary {
       background: #203157;
       color: #cbd5e1;
@@ -358,19 +393,35 @@ html_template = """<!DOCTYPE html>
       text-align: center;
     }
 
-    .start-screen h1 {
-      font-size: 1.85rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, #ffffff, #94a3b8);
+    .brand-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .brand-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #ffffff, #cbd5e1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    .brand-hero .fat-pill {
+      background: var(--fat-gradient);
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 800;
+      padding: 0.25rem 0.65rem;
+      border-radius: 0.5rem;
+      text-transform: uppercase;
+      box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3);
     }
 
     .start-subtitle {
       color: var(--text-muted);
       font-size: 0.98rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       line-height: 1.5;
     }
 
@@ -419,19 +470,21 @@ html_template = """<!DOCTYPE html>
       transform: translateY(-2px);
     }
 
-    .mode-card.mock-featured {
+    /* FAT Featured All 420 Questions */
+    .mode-card.fat-featured {
       border-color: #f59e0b;
       background: linear-gradient(145deg, #17233f, #2e2311);
+    }
+
+    /* Timed Mock 40 Questions */
+    .mode-card.mock-featured {
+      border-color: #6366f1;
+      background: linear-gradient(145deg, #17233f, #1e2448);
     }
 
     .mode-card.featured {
       border-color: #10b981;
       background: linear-gradient(145deg, #17233f, #132e3b);
-    }
-
-    .mode-card.featured-blue {
-      border-color: #6366f1;
-      background: linear-gradient(145deg, #17233f, #1e2448);
     }
 
     .mode-card h3 {
@@ -460,10 +513,16 @@ html_template = """<!DOCTYPE html>
       white-space: nowrap;
     }
 
-    .mode-card.mock-featured .mode-badge-count {
+    .mode-card.fat-featured .mode-badge-count {
       color: #fbbf24;
       background: rgba(245, 158, 11, 0.15);
       border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+
+    .mode-card.mock-featured .mode-badge-count {
+      color: #38bdf8;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.35);
     }
 
     .mode-card.featured .mode-badge-count {
@@ -631,11 +690,11 @@ html_template = """<!DOCTYPE html>
 </div>
 
 <script>
-// ── Master Question Bank (Website + PDF Sources) ───────────────
+// ── Master Question Bank (All 420 Questions Combined) ──────────
 const masterQuestions = __INJECTED_MASTER_QUESTIONS__;
 
 // ── Application State ──────────────────────────────────────────
-let currentMode = "mock"; 
+let currentMode = "fat_all"; 
 let currentTopic = "";
 let activeQuestions = [];
 let currentIndex = 0;
@@ -661,7 +720,7 @@ function shuffleArray(array) {
   return arr;
 }
 
-// Shuffles both the question sequence AND each question's 4 options
+// Shuffles both question sequence and each question's 4 options
 function prepareQuizQuestions(rawQuestionList) {
   const shuffledList = shuffleArray(rawQuestionList);
   return shuffledList.map(q => ({
@@ -717,29 +776,51 @@ function renderStartScreen() {
 
   app.innerHTML = `
     <div class="start-screen">
-      <div style="font-size:2.5rem; margin-bottom: 0.5rem;">⏱️ 🔀 🌿</div>
-      <h1>EVS CAT-II Revision & Practice Bank</h1>
+      <div class="brand-hero">
+        <div style="font-size:2.2rem;">🌿</div>
+        <h1>EVS FAT Quiz</h1>
+        <span class="fat-pill">FAT 2026</span>
+      </div>
       <p class="start-subtitle">
-        Powered by questions and syllabus topics from <strong style="color:var(--accent);">masterdooom.github.io/evs</strong> + High-Yield PDF exam pack.
+        Comprehensive EVS FAT Exam Bank combining all 420 questions (VIT Vellore FAT 161 + Masterdooom 86 + High-Yield Pack).
       </p>
 
       <div class="features-pill-row">
-        <span class="feature-pill">🔀 Randomized Question Order</span>
-        <span class="feature-pill">🎲 Shuffled Option Positions</span>
-        <span class="feature-pill">⏱️ Live Stopwatch</span>
+        <span class="feature-pill">🎓 420 Total MCQs</span>
+        <span class="feature-pill">⏱️ 40-Q Timed Mock</span>
+        <span class="feature-pill">🔀 Shuffled Options</span>
         <span class="feature-pill">💡 Instant Explanation</span>
       </div>
 
       <div class="mode-cards">
-        <!-- Mock Test Mode Card -->
-        <div class="mode-card mock-featured" onclick="startQuiz('mock')">
+        <!-- 1. FAT All Questions Combined (Old + New) -->
+        <div class="mode-card fat-featured" onclick="startQuiz('fat_all')">
           <div>
-            <h3>⏱️ Timed Mock Test (30 Random Questions)</h3>
-            <p>Pulls 30 randomized questions across the entire syllabus with both question order and answer options dynamically shuffled on every attempt.</p>
+            <h3>🎓 EVS FAT Master Bank (All 420 Questions)</h3>
+            <p>Includes all old and new questions combined: Climate Change, Carbon Footprint, Solar & Wind, Hydro, Geothermal, AI & IoT, Ecosystems, Biodiversity, and Environmental Laws.</p>
           </div>
-          <span class="mode-badge-count">⏱️ 30 Random · Timed</span>
+          <span class="mode-badge-count">420 Questions</span>
         </div>
 
+        <!-- 2. Timed Mock Test (40 Questions) -->
+        <div class="mode-card mock-featured" onclick="startQuiz('mock')">
+          <div>
+            <h3>⏱️ Timed Mock Test (40 Random Questions)</h3>
+            <p>Generates 40 randomized questions sampled across the entire syllabus with live stopwatch tracking on top and average pace analytics.</p>
+          </div>
+          <span class="mode-badge-count">⏱️ 40 Random · Timed</span>
+        </div>
+
+        <!-- 3. VIT Vellore FAT 161 Focus Pack -->
+        <div class="mode-card" onclick="startQuiz('vit_fat')">
+          <div>
+            <h3>📖 VIT Vellore FAT Focus Pack (161 Questions)</h3>
+            <p>The 161 dedicated MCQs based directly on lecture notes: W5S1, W5S2, W5S3, W6S1 (Solar & Wind; Hydro & Geothermal), and AI & IoT.</p>
+          </div>
+          <span class="mode-badge-count">161 MCQs</span>
+        </div>
+
+        <!-- 4. Website Official 63 Test -->
         <div class="mode-card featured" onclick="startQuiz('website_official')">
           <div>
             <h3>🌐 Masterdooom Website Official Test</h3>
@@ -747,34 +828,10 @@ function renderStartScreen() {
           </div>
           <span class="mode-badge-count">63 Questions</span>
         </div>
-
-        <div class="mode-card featured-blue" onclick="startQuiz('website_all')">
-          <div>
-            <h3>📖 Masterdooom 26 Topics Complete Bank</h3>
-            <p>Comprehensive MCQs generated across all 26 revision modules from the website with randomized options.</p>
-          </div>
-          <span class="mode-badge-count">86 Questions</span>
-        </div>
-
-        <div class="mode-card" onclick="startQuiz('top30')">
-          <div>
-            <h3>⭐ Core Top 30 High-Yield Pack</h3>
-            <p>The 30 essential questions to memorize for high-yield exam preparation with randomized answer choices.</p>
-          </div>
-          <span class="mode-badge-count">30 Questions</span>
-        </div>
-
-        <div class="mode-card" onclick="startQuiz('all')">
-          <div>
-            <h3>📚 Master Mega Bank (All Sources)</h3>
-            <p>Complete combined collection covering all 259 questions in randomized practice order.</p>
-          </div>
-          <span class="mode-badge-count">${masterQuestions.length} Questions</span>
-        </div>
       </div>
 
       <div class="topic-select-row">
-        <label for="topicSelect">Or Practice by Specific Syllabus Module:</label>
+        <label for="topicSelect">Or Practice by Specific Exam Section:</label>
         <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
           <select id="topicSelect" class="topic-dropdown">
             ${categories.map(c => {
@@ -782,13 +839,18 @@ function renderStartScreen() {
               return `<option value="${c}">${c} (${count} questions)</option>`;
             }).join("")}
           </select>
-          <button class="btn btn-secondary" onclick="startTopicQuiz()">Practice Module</button>
+          <button class="btn btn-secondary" onclick="startTopicQuiz()">Practice Section</button>
         </div>
       </div>
 
-      <button class="btn" style="width:100%; justify-content:center; font-size:1.05rem;" onclick="startQuiz('mock')">
-        🚀 Launch Timed Mock Test (30 Questions)
-      </button>
+      <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+        <button class="btn btn-fat" style="flex:1; min-width:240px; justify-content:center; font-size:1.05rem;" onclick="startQuiz('fat_all')">
+          🚀 Start EVS FAT All 420 Questions
+        </button>
+        <button class="btn" style="flex:1; min-width:240px; justify-content:center; font-size:1.05rem;" onclick="startQuiz('mock')">
+          ⏱️ Launch 40-Q Mock Test
+        </button>
+      </div>
     </div>
   `;
 }
@@ -806,15 +868,16 @@ function startTopicQuiz() {
 function startQuiz(mode) {
   currentMode = mode;
   if (mode === "mock") {
-    activeQuestions = getRandomSample(masterQuestions, 30);
+    // Exactly 40 random questions sampled across entire bank
+    activeQuestions = getRandomSample(masterQuestions, 40);
+  } else if (mode === "fat_all") {
+    // All old + new questions combined together (420 questions)
+    activeQuestions = prepareQuizQuestions(masterQuestions);
+  } else if (mode === "vit_fat") {
+    const pool = masterQuestions.filter(q => q.isFatExam);
+    activeQuestions = prepareQuizQuestions(pool);
   } else if (mode === "website_official") {
     const pool = masterQuestions.filter(q => q.isWebsiteOfficial63);
-    activeQuestions = prepareQuizQuestions(pool);
-  } else if (mode === "website_all") {
-    const pool = masterQuestions.filter(q => q.isWebsiteGenerated);
-    activeQuestions = prepareQuizQuestions(pool);
-  } else if (mode === "top30") {
-    const pool = masterQuestions.filter(q => q.isTop30);
     activeQuestions = prepareQuizQuestions(pool);
   } else {
     activeQuestions = prepareQuizQuestions(masterQuestions);
@@ -837,15 +900,21 @@ function renderQuestion() {
   const q = activeQuestions[currentIndex];
   const progressPct = ((currentIndex) / activeQuestions.length) * 100;
   
-  let modeLabel = "Timed Mock Test";
-  if (currentMode === "website_official") modeLabel = "Masterdooom 63";
-  else if (currentMode === "website_all") modeLabel = "26 Topics Bank";
-  else if (currentMode === "top30") modeLabel = "Top 30 Pack";
-  else if (currentMode === "all") modeLabel = "Mega Bank (259)";
+  let modeLabel = "EVS FAT Quiz";
+  if (currentMode === "fat_all") modeLabel = "FAT All 420 MCQs";
+  else if (currentMode === "mock") modeLabel = "40-Q Timed Mock";
+  else if (currentMode === "vit_fat") modeLabel = "VIT FAT 161";
+  else if (currentMode === "website_official") modeLabel = "Masterdooom 63";
   else if (currentMode === "topic") modeLabel = currentTopic;
+
+  const isFat = q.isFatExam;
 
   app.innerHTML = `
     <div class="quiz-nav-bar">
+      <div class="brand-title" onclick="renderStartScreen()">
+        <span>EVS FAT Quiz</span>
+        <span class="badge">FAT</span>
+      </div>
       <span class="mode-badge" title="${modeLabel}">🎯 ${modeLabel}</span>
       <span class="stopwatch-badge running" title="Elapsed Time">
         ⏱️ <span id="stopwatchDisplay">${formatStopwatch(elapsedSeconds)}</span>
@@ -860,7 +929,7 @@ function renderQuestion() {
 
     <div class="quiz-body">
       <div class="meta-row">
-        <span class="source-tag">${escapeHtml(q.category)}</span>
+        <span class="source-tag ${isFat ? 'fat-tag' : ''}">${escapeHtml(q.category)}</span>
         <span class="random-tag">🔀 Shuffled Options</span>
       </div>
       <h2 class="question-title">${escapeHtml(q.question)}</h2>
@@ -916,7 +985,7 @@ function handleSelection(btn) {
   // Update score badge
   app.querySelector(".live-score").textContent = `Score: ${score} / ${currentIndex + 1}`;
 
-  // Highlight and lock (correct answer highlighted regardless of slot)
+  // Highlight and lock
   document.querySelectorAll(".option-btn").forEach(b => {
     b.classList.add("locked");
     if (b.dataset.value === q.correctAnswer) {
@@ -978,7 +1047,10 @@ function renderResults() {
 
   app.innerHTML = `
     <div class="quiz-nav-bar">
-      <span>Session Complete</span>
+      <div class="brand-title" onclick="renderStartScreen()">
+        <span>EVS FAT Quiz</span>
+        <span class="badge">FAT</span>
+      </div>
       <span class="stopwatch-badge">⏱️ Time: ${timeStr}</span>
       <span class="live-score">${score} / ${total} Correct</span>
     </div>
@@ -1000,6 +1072,7 @@ function renderResults() {
 
       <div style="display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap; margin-bottom: 2rem;">
         <button class="btn" onclick="startQuiz(currentMode)">🔄 Retake with Fresh Reshuffle</button>
+        <button class="btn btn-fat" onclick="startQuiz('mock')">⏱️ Start Another 40-Q Mock Test</button>
         <button class="btn btn-secondary" onclick="renderStartScreen()">🏠 Switch Topic/Mode</button>
       </div>
 
@@ -1052,4 +1125,4 @@ html_final = html_template.replace("__INJECTED_MASTER_QUESTIONS__", json_str)
 with open("/Users/pran/devjams26/index.html", "w") as f:
     f.write(html_final)
 
-print("Updated /Users/pran/devjams26/index.html with full question & option randomization.")
+print("Updated /Users/pran/devjams26/index.html with EVS FAT Quiz: FAT All 420 questions + 40-Q Mock Test.")
