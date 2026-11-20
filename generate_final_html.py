@@ -904,8 +904,24 @@ html_template = """<!DOCTYPE html>
       font-size: 1.25rem;
       color: var(--text-muted);
       font-weight: 600;
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.5rem;
     }
+
+    .grade-pill {
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.45rem 1.1rem;
+      border-radius: 2rem;
+      border: 1px solid transparent;
+      margin: 0.4rem 0 1.25rem;
+    }
+    .grade-s { background: rgba(16, 185, 129, 0.18); color: #34d399; border-color: rgba(16, 185, 129, 0.4); }
+    .grade-a { background: rgba(56, 189, 248, 0.18); color: #38bdf8; border-color: rgba(56, 189, 248, 0.4); }
+    .grade-b { background: rgba(99, 102, 241, 0.18); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.4); }
+    .grade-c { background: rgba(245, 158, 11, 0.18); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4); }
+    .grade-d { background: rgba(234, 179, 8, 0.18); color: #facc15; border-color: rgba(234, 179, 8, 0.4); }
+    .grade-f { background: rgba(239, 68, 68, 0.18); color: #f87171; border-color: rgba(239, 68, 68, 0.4); }
 
     .time-stats-pill {
       display: inline-flex;
@@ -1113,17 +1129,18 @@ function renderStartScreen() {
       <div class="brand-hero">
         <div style="font-size:2.2rem;">🌿</div>
         <h1>EVS FAT Quiz</h1>
-        <span class="fat-pill">FAT 2026</span>
+        <span class="fat-pill">40 Marks MCQ Pattern</span>
       </div>
       <p class="start-subtitle">
-        Comprehensive EVS FAT Exam Bank combining all 435 questions with high-yield focus revision (increased 46% dates & treaties weight), 40-Q timed mock tests (increased 40% dates & treaties weighting), and a dedicated FAT revision notes section.
+        Official 40-Mark MCQ Exam Preparation: The EVS FAT Exam consists <strong>strictly of 40 multiple-choice questions (1 mark each = 40 marks total, zero subjective writing)</strong>. Master all 435 syllabus questions with exact 40-mark timed mock tests, high-yield focus drills, and complete 18-module revision notes.
       </p>
 
       <div class="features-pill-row">
+        <span class="feature-pill" style="color:#fbbf24; border-color:rgba(245,158,11,0.35); background:rgba(245,158,11,0.12);">🎯 40 Marks MCQ Pattern</span>
         <span class="feature-pill">🎓 435 Total MCQs</span>
-        <span class="feature-pill" style="color:#60a5fa; border-color:rgba(59,130,246,0.35); background:rgba(59,130,246,0.12); cursor:pointer;" onclick="startQuiz('mock_normal')">⏱️ Normal Mock (40 Qs)</span>
-        <span class="feature-pill" style="color:#a5b4fc; border-color:rgba(99,102,241,0.35); background:rgba(99,102,241,0.12); cursor:pointer;" onclick="startQuiz('mock_weighted')">🏛️ Weighted Mock (40% Dates)</span>
-        <span class="feature-pill" style="cursor:pointer;" onclick="startQuiz('fat_focus')">⭐ 109 High-Yield Focus</span>
+        <span class="feature-pill" style="color:#60a5fa; border-color:rgba(59,130,246,0.35); background:rgba(59,130,246,0.12); cursor:pointer;" onclick="startQuiz('mock_normal')">⏱️ Normal 40-Mark Mock</span>
+        <span class="feature-pill" style="color:#a5b4fc; border-color:rgba(99,102,241,0.35); background:rgba(99,102,241,0.12); cursor:pointer;" onclick="startQuiz('mock_weighted')">🏛️ Weighted 40-Mark Mock</span>
+        <span class="feature-pill" style="cursor:pointer;" onclick="startQuiz('fat_focus')">⭐ 109 Focus MCQs</span>
         <span class="feature-pill" style="color:#22d3ee; border-color:rgba(6,182,212,0.35); background:rgba(6,182,212,0.12); cursor:pointer;" onclick="startQuiz('dates_treaties_sdg')">🏛️ Dates & Treaties Drill</span>
         <span class="feature-pill notes-pill-top" onclick="renderNotesScreen()" style="cursor:pointer;">📖 FAT Notes (18 Modules)</span>
         <span class="feature-pill">🔀 Shuffled Options</span>
@@ -1134,27 +1151,27 @@ function renderStartScreen() {
         <div class="mode-card fat-featured" onclick="startQuiz('fat_all')">
           <div>
             <h3>🎓 EVS FAT Master Bank (All 435 Questions)</h3>
-            <p>Includes all old and new questions combined: Climate Change, Carbon Footprint, Solar & Wind, Hydro, Geothermal, AI & IoT, Ecosystems, Biodiversity, and Environmental Laws.</p>
+            <p>Includes all questions combined across the entire syllabus: Climate Change, Carbon Footprint, Solar & Wind, Hydro, Geothermal, AI & IoT, Ecosystems, Biodiversity, and Environmental Laws.</p>
           </div>
           <span class="mode-badge-count">435 Questions</span>
         </div>
 
-        <!-- 2. Normal FAT Mock Test (40 Questions - Balanced Syllabus) -->
+        <!-- 2. Normal FAT Mock Test (40 Questions / 40 Marks) -->
         <div class="mode-card mock-normal" onclick="startQuiz('mock_normal')">
           <div>
-            <h3>⏱️ Normal FAT Mock Test (40 Questions — Balanced Syllabus)</h3>
-            <p>Standard official FAT Exam simulation: Generates 40 randomized questions sampled completely at random across the entire 435-question syllabus with live stopwatch tracking (⏱️ MM:SS) and pace analytics.</p>
+            <h3>⏱️ Normal FAT Mock Test (40 Marks — Exact Exam Simulation)</h3>
+            <p>Official 40-Mark Exam Pattern: 40 questions (1 mark each = 40 marks total) sampled completely at random across all 435 syllabus questions with live stopwatch tracking (⏱️ MM:SS), official grade predictions (S/A/B/C/D), and pace analytics.</p>
           </div>
-          <span class="mode-badge-count">⏱️ 40 Random · Normal Mock</span>
+          <span class="mode-badge-count">⏱️ 40 Marks · Exact Exam Pattern</span>
         </div>
 
-        <!-- 3. Weighted FAT Mock Test (40 Questions — 40% Dates/Treaties) -->
+        <!-- 3. Weighted FAT Mock Test (40 Questions / 40 Marks) -->
         <div class="mode-card mock-weighted" onclick="startQuiz('mock_weighted')">
           <div>
-            <h3>🏛️⏱️ Dates & Treaties Weighted Mock Test (40 Questions — 40% Dates)</h3>
-            <p>Targeted high-yield FAT Exam simulation: Generates 40 randomized questions with an increased proportion (40% / 16 questions) drawn from Dates, Treaties, WHO guidelines & SDGs alongside core syllabus concepts.</p>
+            <h3>🏛️⏱️ Dates & Treaties Weighted Mock (40 Marks — 40% Dates)</h3>
+            <p>Targeted 40-Mark Exam Simulation: 40 questions (1 mark each) with a guaranteed 40% weighting (16 marks) on high-frequency Dates, Treaties, WHO guidelines & SDGs alongside 24 marks from core syllabus concepts.</p>
           </div>
-          <span class="mode-badge-count">🏛️ 40 Qs · 40% Dates/Treaties</span>
+          <span class="mode-badge-count">🏛️ 40 Marks · 40% Dates/Treaties</span>
         </div>
 
         <!-- 4. FAT Focus Bank (Only Important Questions) -->
@@ -1203,10 +1220,21 @@ function renderStartScreen() {
           🚀 All 435 Questions
         </button>
         <button class="btn" style="flex:1; min-width:180px; justify-content:center; font-size:1rem; background:linear-gradient(135deg, #2563eb, #38bdf8);" onclick="startQuiz('mock_normal')">
-          ⏱️ Normal 40-Q Mock
+          ⏱️ Normal 40-Mark Mock
         </button>
         <button class="btn" style="flex:1; min-width:180px; justify-content:center; font-size:1rem; background:linear-gradient(135deg, #6366f1, #8b5cf6);" onclick="startQuiz('mock_weighted')">
-          🏛️ Weighted Mock (40% Dates)
+          🏛️ Weighted 40-Mark Mock
+        </button>
+        <button class="btn btn-secondary" style="flex:1; min-width:180px; justify-content:center; font-size:1rem;" onclick="startQuiz('fat_focus')">
+          ⭐ 109-Q Focus Bank
+        </button>
+        <button class="btn btn-secondary" style="flex:1; min-width:180px; justify-content:center; font-size:1rem; background:rgba(6,182,212,0.18); border-color:#06b6d4; color:#22d3ee;" onclick="startQuiz('dates_treaties_sdg')">
+          🏛️ Dates & Treaties
+        </button>
+        <button class="btn btn-secondary" style="flex:1; min-width:180px; justify-content:center; font-size:1rem; background:rgba(139,92,246,0.2); border-color:#8b5cf6; color:#c4b5fd;" onclick="renderNotesScreen()">
+          📖 Read FAT Notes
+        </button>
+      </div>
         </button>
         <button class="btn btn-secondary" style="flex:1; min-width:180px; justify-content:center; font-size:1rem;" onclick="startQuiz('fat_focus')">
           ⭐ 109-Q Focus Bank
@@ -1279,8 +1307,8 @@ function renderQuestion() {
   
   let modeLabel = "EVS FAT Quiz";
   if (currentMode === "fat_all") modeLabel = "FAT All 435 MCQs";
-  else if (currentMode === "mock_normal" || currentMode === "mock") modeLabel = "Normal Mock (40 Qs)";
-  else if (currentMode === "mock_weighted") modeLabel = "Weighted Mock (40% Dates)";
+  else if (currentMode === "mock_normal" || currentMode === "mock") modeLabel = "Normal Mock (40 Marks)";
+  else if (currentMode === "mock_weighted") modeLabel = "Weighted Mock (40 Marks)";
   else if (currentMode === "fat_focus") modeLabel = "FAT Focus (109 Qs)";
   else if (currentMode === "dates_treaties_sdg") modeLabel = "Dates & Treaties (91 Qs)";
   else if (currentMode === "topic") modeLabel = currentTopic;
@@ -1291,7 +1319,7 @@ function renderQuestion() {
     <div class="quiz-nav-bar">
       <div class="brand-title" onclick="renderStartScreen()">
         <span>EVS FAT Quiz</span>
-        <span class="badge">FAT</span>
+        <span class="badge">40M MCQ</span>
       </div>
       <div class="nav-actions">
         <button class="nav-notes-btn" onclick="renderNotesScreen()" title="Open FAT Revision Notes">📖 FAT Notes</button>
@@ -1300,7 +1328,7 @@ function renderQuestion() {
           ⏱️ <span id="stopwatchDisplay">${formatStopwatch(elapsedSeconds)}</span>
         </span>
         <span>Q${currentIndex + 1}/${activeQuestions.length}</span>
-        <span class="live-score">Score: ${score}</span>
+        <span class="live-score">${activeQuestions.length === 40 ? `Marks: ${score}/40` : `Score: ${score}`}</span>
       </div>
     </div>
 
@@ -1431,16 +1459,27 @@ function renderResults() {
     verdict = "Keep Practicing! Review the explanations below.";
   }
 
+  const is40Mock = (total === 40);
+  let gradeBadge = "";
+  if (is40Mock) {
+    if (score >= 36) gradeBadge = '<span class="grade-pill grade-s">🏆 S Grade (36–40 Marks / Outstanding FAT Mastery)</span>';
+    else if (score >= 32) gradeBadge = '<span class="grade-pill grade-a">🌟 A Grade (32–35 Marks / Excellent Performance)</span>';
+    else if (score >= 28) gradeBadge = '<span class="grade-pill grade-b">🎯 B Grade (28–31 Marks / Very Good)</span>';
+    else if (score >= 24) gradeBadge = '<span class="grade-pill grade-c">📖 C Grade (24–27 Marks / Good Effort)</span>';
+    else if (score >= 20) gradeBadge = '<span class="grade-pill grade-d">💡 Pass (20–23 Marks / Review Missed Concepts)</span>';
+    else gradeBadge = '<span class="grade-pill grade-f">⚠️ Below Passing (&lt;20 Marks / High Priority Revision Needed)</span>';
+  }
+
   app.innerHTML = `
     <div class="quiz-nav-bar">
       <div class="brand-title" onclick="renderStartScreen()">
         <span>EVS FAT Quiz</span>
-        <span class="badge">FAT</span>
+        <span class="badge">40M MCQ</span>
       </div>
       <div class="nav-actions">
         <button class="nav-notes-btn" onclick="renderNotesScreen()">📖 FAT Notes</button>
         <span class="stopwatch-badge">⏱️ Time: ${timeStr}</span>
-        <span class="live-score">${score} / ${total} Correct</span>
+        <span class="live-score">${is40Mock ? `${score} / 40 Marks` : `${score} / ${total} Correct`}</span>
       </div>
     </div>
     <div class="progress-track">
@@ -1450,8 +1489,9 @@ function renderResults() {
     <div class="results-screen">
       <div class="results-badge">${emoji}</div>
       <h2 style="font-size:1.75rem; font-weight:800;">${verdict}</h2>
-      <div class="results-score-big">${score} / ${total}</div>
-      <div class="results-pct">${pct}% Accuracy</div>
+      <div class="results-score-big">${score} / ${total} ${is40Mock ? "Marks" : ""}</div>
+      <div class="results-pct">${pct}% ${is40Mock ? "• Official 40-Mark MCQ Exam Score" : "Accuracy"}</div>
+      ${gradeBadge ? `<div>${gradeBadge}</div>` : ""}
 
       <div class="time-stats-pill">
         <span>⏱️ Total Time: <strong>${timeStr}</strong></span>
@@ -1461,8 +1501,8 @@ function renderResults() {
 
       <div style="display:flex; justify-content:center; gap:0.75rem; flex-wrap:wrap; margin-bottom: 2rem;">
         <button class="btn" onclick="startQuiz(currentMode)">🔄 Retake with Fresh Reshuffle</button>
-        <button class="btn btn-fat" onclick="startQuiz('mock_normal')">⏱️ Start Normal 40-Q Mock Test</button>
-        <button class="btn btn-secondary" style="border-color:#6366f1; color:#a5b4fc;" onclick="startQuiz('mock_weighted')">🏛️ Start Weighted 40-Q Mock (40% Dates)</button>
+        <button class="btn btn-fat" onclick="startQuiz('mock_normal')">⏱️ Start Normal 40-Mark Mock Test</button>
+        <button class="btn btn-secondary" style="border-color:#6366f1; color:#a5b4fc;" onclick="startQuiz('mock_weighted')">🏛️ Start Weighted 40-Mark Mock (40% Dates)</button>
         <button class="btn btn-secondary" onclick="startQuiz('fat_focus')">⭐ Practice 109-Q FAT Focus Bank</button>
         <button class="btn btn-secondary" style="border-color:#06b6d4; color:#22d3ee;" onclick="startQuiz('dates_treaties_sdg')">🏛️ Practice Dates, Treaties & SDGs</button>
         <button class="btn btn-secondary" style="border-color:#8b5cf6; color:#c4b5fd;" onclick="renderNotesScreen()">📖 Read FAT Revision Notes</button>

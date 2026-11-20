@@ -1,6 +1,9 @@
-# 🌿 EVS FAT Quiz — VIT Vellore Exam Revision & Practice Bank
+# 🌿 EVS FAT Quiz — VIT Vellore Exam Revision & Practice Bank (40-Mark MCQ Pattern)
 
-An interactive, responsive multiple-choice quiz (MCQ) web application built for Environmental Sciences (EVS) FAT exam preparation at VIT Vellore, powered by the official FAT Question Bank (W5S1, W5S2, W5S3, W6S1, AI & IoT), core high-yield exam notes, and comprehensive topic revision.
+An interactive, responsive multiple-choice quiz (MCQ) web application built specifically for the **official 40-mark MCQ Environmental Sciences (EVS) FAT exam pattern** at VIT Vellore. Powered by the official FAT Question Bank (W5S1, W5S2, W5S3, W6S1, AI & IoT), core high-yield exam notes, and comprehensive topic revision.
+
+> [!IMPORTANT]
+> **Official VIT EVS FAT Exam Pattern**: Strictly a **40-question, 40-mark MCQ examination** (1 mark per question = 40 marks total, zero subjective/theory writing, zero diagrams to draw). All theoretical concepts, numerical values, and environmental policies are tested exclusively through multiple-choice questions.
 
 ---
 
@@ -30,7 +33,7 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built for 
 - **Single Unified EVS FAT Revision Notes (18 Modules)**:
   - **Cheat Sheets & Numbers**:
     - *Module 1*: 30-statistic "Numbers, Targets & Values to Memorise" cheat sheet.
-    - *Module 18*: Last-Minute Exam Tips & VIT Examiner Marking Criteria.
+    - *Module 18*: 40-Mark MCQ Exam Strategy & Last-Minute FAT Scoring Guide.
   - **Climate Science & Carbon Accounting**:
     - *Module 2*: Climate Change Science & Global Warming (greenhouse physics, 4 evidence pillars, mitigation vs adaptation).
     - *Module 3*: Carbon Footprint & Mitigation (Scopes 1/2/3, LCA, standards, sectoral shares, CCS/CCU/DAC, offsets).
@@ -52,10 +55,10 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built for 
 
 1. 📚 **EVS FAT Master Bank (All 435 Questions)**:
    - Includes all questions combined into one mega FAT preparation bank across Climate Change, Carbon Footprint, Renewables (Solar, Wind, Hydro, Geothermal), AI & IoT, Ecosystems, Biodiversity, and Environmental Laws.
-2. ⏱️ **Normal FAT Mock Test (40 Questions — Balanced Syllabus)**:
-   - Standard official FAT Exam simulation: 40 questions sampled completely at random across the entire 435-question syllabus with live stopwatch tracking (`⏱️ MM:SS`) and pace analytics.
-3. 🏛️⏱️ **Dates & Treaties Weighted Mock Test (40 Questions — 40% Dates/Treaties)**:
-   - Targeted high-yield FAT Exam simulation: 40 questions with an increased **40% weighting (16 questions)** dedicated to Dates, Treaties, WHO guidelines & SDGs, combined with 24 core conceptual questions.
+2. ⏱️ **Normal FAT Mock Test (40 Marks — Balanced Syllabus)**:
+   - Official 40-Mark Exam Simulation: 40 questions (1 mark each) sampled completely at random across the entire 435-question syllabus with live stopwatch tracking (`⏱️ MM:SS`), official grade predictions (S/A/B/C/D), and pace analytics.
+3. 🏛️⏱️ **Dates & Treaties Weighted Mock Test (40 Marks — 40% Dates/Treaties)**:
+   - Targeted 40-Mark Exam Simulation: 40 questions (1 mark each) with a guaranteed **40% weighting (16 marks)** dedicated to Dates, Treaties, WHO guidelines & SDGs, combined with 24 marks from core conceptual questions.
 4. ⭐ **FAT Focus Bank (109 Important Questions — 46% Dates/Treaties)**:
    - Curated collection of the 109 most critical, high-frequency questions across all FAT modules, featuring an increased **46% focus (50 questions)** on core Environmental Laws, Treaties, WHO standards, and SDGs.
 5. 🏛️ **Dates, Treaties, WHO & SDGs Drill (91 Targeted Questions)**:
