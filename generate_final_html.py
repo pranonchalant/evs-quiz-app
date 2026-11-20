@@ -298,6 +298,34 @@ html_template = """<!DOCTYPE html>
       cursor: not-allowed;
     }
 
+    .option-text {
+      flex: 1;
+      word-break: break-word;
+    }
+
+    .key-hint {
+      margin-left: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 0.15rem 0.45rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 0.35rem;
+      color: #94a3b8;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+      align-self: flex-start;
+      margin-top: 0.05rem;
+      transition: all 0.2s ease;
+    }
+
+    .option-btn:hover:not(:disabled) .key-hint {
+      background: rgba(56, 189, 248, 0.16);
+      border-color: rgba(56, 189, 248, 0.45);
+      color: #38bdf8;
+    }
+
     /* Correct / Incorrect states */
     .option-btn.selected-correct {
       background: var(--correct-bg) !important;
@@ -307,6 +335,11 @@ html_template = """<!DOCTYPE html>
     }
     .option-btn.selected-correct .option-badge {
       background: #10b981;
+      color: #ffffff;
+    }
+    .option-btn.selected-correct .key-hint {
+      background: rgba(16, 185, 129, 0.25);
+      border-color: #10b981;
       color: #ffffff;
     }
 
@@ -320,6 +353,11 @@ html_template = """<!DOCTYPE html>
       background: #ef4444;
       color: #ffffff;
     }
+    .option-btn.selected-wrong .key-hint {
+      background: rgba(239, 68, 68, 0.25);
+      border-color: #ef4444;
+      color: #ffffff;
+    }
 
     .option-btn.highlight-correct {
       background: rgba(16, 185, 129, 0.18) !important;
@@ -330,9 +368,48 @@ html_template = """<!DOCTYPE html>
       background: #10b981;
       color: #ffffff;
     }
+    .option-btn.highlight-correct .key-hint {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: #10b981;
+      color: #a7f3d0;
+    }
 
     .option-btn.faded {
       opacity: 0.45;
+    }
+
+    .keyboard-helper-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      padding: 0.55rem 0.85rem;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px dashed #334155;
+      border-radius: 0.65rem;
+      color: #94a3b8;
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    .keyboard-helper-hint kbd {
+      display: inline-block;
+      padding: 0.15rem 0.4rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      background: #1e293b;
+      border: 1px solid #475569;
+      border-radius: 0.3rem;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .keyboard-helper-hint .divider {
+      color: #475569;
+      font-weight: bold;
     }
 
     /* ── Instant Feedback Box ─────────────────────────────── */
@@ -1346,20 +1423,27 @@ function renderQuestion() {
       <ul class="options-grid" id="optionsList">
         ${q.options.map((opt, i) => `
           <li>
-            <button class="option-btn" data-value="${escapeHtml(opt)}">
+            <button class="option-btn" data-value="${escapeHtml(opt)}" data-key="${i + 1}">
               <span class="option-badge">${letters[i]}</span>
-              <span>${escapeHtml(opt)}</span>
+              <span class="option-text">${escapeHtml(opt)}</span>
+              <span class="key-hint" title="Press '${i + 1}' on keyboard">[${i + 1}]</span>
             </button>
           </li>
         `).join("")}
       </ul>
 
+      <div class="keyboard-helper-hint">
+        <span>⌨️ Shortcuts: Press</span> <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> <span>to answer</span>
+        <span class="divider">•</span>
+        <span>Press</span> <kbd>Enter ↵</kbd> <span>for next question</span>
+      </div>
+
       <div id="feedbackContainer"></div>
 
       <div class="action-row" id="actionRow" style="display:none;">
         <button class="btn btn-secondary" onclick="renderStartScreen()">Quit to Menu</button>
-        <button class="btn" id="nextBtn">
-          ${currentIndex === activeQuestions.length - 1 ? "Finish & View Results 🏆" : "Next Question →"}
+        <button class="btn" id="nextBtn" onclick="goToNextQuestion()">
+          ${currentIndex === activeQuestions.length - 1 ? "Finish & View Results 🏆 [Enter ↵]" : "Next Question → [Enter ↵]"}
         </button>
       </div>
     </div>
@@ -1420,19 +1504,72 @@ function handleSelectOption(selectedBtn, q) {
     </div>
   `;
 
-  // Show Next button
+  // Show Next button and focus it
   const actionRow = document.getElementById("actionRow");
   actionRow.style.display = "flex";
 
-  document.getElementById("nextBtn").addEventListener("click", () => {
-    currentIndex++;
-    if (currentIndex < activeQuestions.length) {
-      renderQuestion();
-    } else {
-      renderResults();
-    }
-  });
+  const nextBtn = document.getElementById("nextBtn");
+  if (nextBtn) {
+    nextBtn.focus();
+  }
 }
+
+function goToNextQuestion() {
+  if (!answered) return;
+
+  const nextBtn = document.getElementById("nextBtn");
+  if (nextBtn) nextBtn.disabled = true;
+
+  currentIndex++;
+  if (currentIndex < activeQuestions.length) {
+    renderQuestion();
+  } else {
+    renderResults();
+  }
+}
+
+// ── Global Keyboard Shortcuts ──────────────────────────────────
+// Press 1, 2, 3, 4 to select options; Press Enter to proceed to next question
+window.addEventListener("keydown", (e) => {
+  // Ignore keyboard shortcuts when typing in search or other text input elements
+  const activeEl = document.activeElement;
+  if (activeEl && (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA" || activeEl.isContentEditable)) {
+    return;
+  }
+
+  // Only active when question options are currently on screen
+  const optionsList = document.getElementById("optionsList");
+  if (!optionsList) return;
+
+  const optionButtons = document.querySelectorAll(".option-btn");
+  if (!optionButtons || optionButtons.length === 0) return;
+
+  if (!answered) {
+    let targetIndex = -1;
+    if (e.key === "1" || e.code === "Digit1" || e.code === "Numpad1") targetIndex = 0;
+    else if (e.key === "2" || e.code === "Digit2" || e.code === "Numpad2") targetIndex = 1;
+    else if (e.key === "3" || e.code === "Digit3" || e.code === "Numpad3") targetIndex = 2;
+    else if (e.key === "4" || e.code === "Digit4" || e.code === "Numpad4") targetIndex = 3;
+
+    if (targetIndex >= 0 && targetIndex < optionButtons.length) {
+      e.preventDefault();
+      const targetBtn = optionButtons[targetIndex];
+      if (targetBtn && !targetBtn.disabled) {
+        const q = activeQuestions[currentIndex];
+        handleSelectOption(targetBtn, q);
+      }
+    }
+  } else {
+    if (e.key === "Enter" || e.code === "Enter" || e.code === "NumpadEnter") {
+      // If user has focused another button (e.g. Quit to Menu or FAT Notes), let native button click handle it
+      if (activeEl && activeEl.tagName === "BUTTON" && activeEl.id !== "nextBtn") {
+        return;
+      }
+      e.preventDefault();
+      goToNextQuestion();
+    }
+  }
+});
 
 // ── Screen: Results Breakdown ──────────────────────────────────
 function renderResults() {

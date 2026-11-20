@@ -20,6 +20,11 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built spec
   - Highlights the chosen option in green (correct) or red (incorrect) the instant you click.
   - Automatically highlights the correct answer in green if you picked wrong.
   - Provides a concise 1–2 sentence explanation explaining *why* the answer is correct based on syllabus facts and lecture notes.
+- **Fast Keyboard Shortcuts**:
+  - Press `1`, `2`, `3`, or `4` (standard or numpad keys) to instantly select Option A, B, C, or D without touching the mouse.
+  - Press `Enter ↵` to immediately advance to the next question (or submit and view final results on the last question).
+  - Clean visual badges `[1]`, `[2]`, `[3]`, `[4]` and helper banner keep controls visible and intuitive.
+  - Smart input isolation: keyboard navigation automatically disables while typing in the FAT Notes search bar.
 - **Dynamic Randomization**:
   - **Shuffled Options**: Option choices (A, B, C, D) are randomly shuffled for every question using the Fisher-Yates algorithm.
   - **Randomized Question Sequence**: The sequence of questions is shuffled on every attempt.
