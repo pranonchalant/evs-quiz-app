@@ -650,10 +650,15 @@ html_template = """<!DOCTYPE html>
       align-items: center;
       gap: 0.25rem;
     }
-    .count-pill.count-answered {
+    .count-pill.count-correct, .count-pill.count-answered {
       background: rgba(16, 185, 129, 0.2);
       color: #34d399;
       border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+    .count-pill.count-wrong {
+      background: rgba(239, 68, 68, 0.2);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.4);
     }
     .count-pill.count-watched {
       background: rgba(245, 158, 11, 0.2);
@@ -732,8 +737,8 @@ html_template = """<!DOCTYPE html>
     }
 
     /* Colour coded states */
-    /* 1. Answered: Green */
-    .q-box.box-answered, .legend-box.box-answered {
+    /* 1. Correct / Answered Correct: Green */
+    .q-box.box-correct, .q-box.box-answered, .legend-box.box-correct, .legend-box.box-answered {
       background: #10b981 !important;
       border: 1.5px solid #34d399 !important;
       color: #ffffff !important;
@@ -1745,14 +1750,17 @@ function initQuizState() {
 }
 
 function updatePaletteHeader() {
-  const answeredCount = questionStates.filter(s => s.answered).length;
+  const correctCount = questionStates.filter(s => s.answered && s.isCorrect).length;
+  const wrongCount = questionStates.filter(s => s.answered && !s.isCorrect).length;
+  const answeredCount = correctCount + wrongCount;
   const watchedCount = questionStates.filter(s => !s.answered && (s.watched || s.visited)).length;
   const unansweredCount = questionStates.filter(s => !s.answered && !s.watched && !s.visited).length;
 
   const countPills = document.getElementById("drawerCounts");
   if (countPills) {
     countPills.innerHTML = `
-      <span class="count-pill count-answered">✔ ${answeredCount} Answered</span>
+      <span class="count-pill count-correct">✔ ${correctCount} Correct</span>
+      <span class="count-pill count-wrong">✘ ${wrongCount} Incorrect</span>
       <span class="count-pill count-watched">👁️ ${watchedCount} Watched</span>
       <span class="count-pill count-unanswered">⏳ ${unansweredCount} Unanswered</span>
     `;
@@ -1890,7 +1898,9 @@ function renderQuestion() {
   const isFat = q.isFatExam;
 
   // Counts for drawer
-  const answeredCount = questionStates.filter(s => s.answered).length;
+  const correctCount = questionStates.filter(s => s.answered && s.isCorrect).length;
+  const wrongCount = questionStates.filter(s => s.answered && !s.isCorrect).length;
+  const answeredCount = correctCount + wrongCount;
   const watchedCount = questionStates.filter(s => !s.answered && (s.watched || s.visited)).length;
   const unansweredCount = questionStates.filter(s => !s.answered && !s.watched && !s.visited).length;
 
@@ -1908,13 +1918,15 @@ function renderQuestion() {
 
       <div class="drawer-content">
         <div class="drawer-counts" id="drawerCounts">
-          <span class="count-pill count-answered">✔ ${answeredCount} Answered</span>
+          <span class="count-pill count-correct">✔ ${correctCount} Correct</span>
+          <span class="count-pill count-wrong">✘ ${wrongCount} Incorrect</span>
           <span class="count-pill count-watched">👁️ ${watchedCount} Watched</span>
           <span class="count-pill count-unanswered">⏳ ${unansweredCount} Unanswered</span>
         </div>
 
         <div class="drawer-legend">
-          <div class="legend-item"><span class="legend-box box-answered"></span> <span>Answered (Green)</span></div>
+          <div class="legend-item"><span class="legend-box box-correct"></span> <span>Correct Answer (Green)</span></div>
+          <div class="legend-item"><span class="legend-box box-wrong"></span> <span>Incorrect Answer (Red)</span></div>
           <div class="legend-item"><span class="legend-box box-watched"></span> <span>Watched / Visited (Amber)</span></div>
           <div class="legend-item"><span class="legend-box box-unanswered"></span> <span>Unanswered (Slate)</span></div>
           <div class="legend-item"><span class="legend-box box-current"></span> <span>Current Question (Cyan Ring)</span></div>
@@ -1928,7 +1940,7 @@ function renderQuestion() {
           ${activeQuestions.map((_, i) => {
             let statusClass = "box-unanswered";
             if (questionStates[i].answered) {
-              statusClass = "box-answered";
+              statusClass = questionStates[i].isCorrect ? "box-correct" : "box-wrong";
             } else if (questionStates[i].watched || questionStates[i].visited) {
               statusClass = "box-watched";
             }
@@ -1937,7 +1949,7 @@ function renderQuestion() {
               <button class="q-box ${statusClass} ${isCurrent ? 'box-current' : ''}" 
                       id="drawer-qbox-${i}"
                       onclick="jumpToQuestion(${i})" 
-                      title="Jump to Question ${i + 1}">
+                      title="Jump to Question ${i + 1} (${questionStates[i].answered ? (questionStates[i].isCorrect ? 'Correct' : 'Incorrect') : 'Unanswered'})">
                 ${i + 1}
               </button>
             `;
@@ -2124,10 +2136,10 @@ function handleSelectOption(selectedBtn, q) {
     `;
   }
 
-  // Update box in Question Palette Drawer in place (turns it instantly Green)
+  // Update box in Question Palette Drawer in place (turns Green if correct, Red if wrong)
   const qBox = document.getElementById(`drawer-qbox-${currentIndex}`);
   if (qBox) {
-    qBox.className = "q-box box-answered box-current";
+    qBox.className = `q-box ${isCorrect ? 'box-correct' : 'box-wrong'} box-current`;
   }
 
   // Update live drawer counts, top navbar button & live score

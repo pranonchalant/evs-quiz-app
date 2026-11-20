@@ -20,11 +20,12 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built spec
   - Clean, distraction-free quiz screen: zero embedded navigator boxes inside the quiz body.
   - Convenient slide-out drawer pops out smoothly from the right side via the `🔢 Questions` top-bar button or the floating edge tab.
   - **Colour-Coded Question Boxes**:
-    - 🟩 **Answered (Green)**: Questions you have answered.
+    - 🟩 **Correct Answer (Green)**: Questions answered correctly (`#10b981`).
+    - 🟥 **Incorrect Answer (Red)**: Questions answered incorrectly (`#ef4444`).
     - 🟧 **Watched / Visited (Amber / Orange)**: Questions you have viewed or explicitly marked for review with `[👁️ Watch Question]`.
     - ⬜ **Unanswered (Neutral Slate)**: Questions not yet visited or answered.
     - 🟦 **Current Question (Glowing Cyan Ring)**: The active question currently in view.
-  - Live summary counter pills: `✔ X Answered`, `👁️ Y Watched`, and `⏳ Z Unanswered`.
+  - Live summary counter pills: `✔ X Correct`, `✘ Y Incorrect`, `👁️ Z Watched`, and `⏳ W Unanswered`.
   - Jump directly to any question by clicking its number box in the drawer (auto-closes upon selection or via <kbd>Esc</kbd> / backdrop click).
   - **Results Screen Review Palette**: Displays all question boxes colour-coded by Correct (Green) vs Incorrect/Skipped (Red); clicking any question instantly scrolls right to that question's syllabus explanation.
 - **Instant Right/Wrong Feedback**:
