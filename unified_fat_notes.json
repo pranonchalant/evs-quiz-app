@@ -3,66 +3,66 @@
     "id": "mod-1",
     "num": 1,
     "category": "Cheat Sheet & Numbers",
-    "title": "Module 1: Numbers, Targets & Values to Memorise",
+    "title": "Module 1: Numbers, Targets & Values to Memorise (Part A Cheat Sheet)",
     "badge": "Cheat Sheet",
-    "summary": "Essential numerical statistics, temperature limits, atmospheric concentrations, capacity factors, and Indian government targets frequently tested in FAT MCQs.",
+    "summary": "One-page high-yield cheat sheet containing essential numerical statistics, temperature limits, atmospheric concentrations, capacity factors, and Indian government targets frequently tested in FAT MCQs.",
     "type": "table",
     "tableHeaders": [
-      "Exam Topic / Parameter",
-      "Exact Value / Exam Fact"
+      "Topic / Environmental Indicator",
+      "Fact / Target Value to Quote in FAT Exam"
     ],
     "tableRows": [
       [
         "Earth surface temp without greenhouse effect",
-        "-18 °C (natural greenhouse keeps it at ~15 °C)"
+        "-18 °C (natural greenhouse keeps Earth at ~15 °C)"
       ],
       [
-        "Global mean warming to date",
+        "Global mean warming so far",
         "~1.1 °C above pre-industrial baseline (before 1850)"
       ],
       [
         "Atmospheric CO2 concentration",
-        "280 ppm pre-industrial -> >420 ppm currently (highest in 800,000+ yrs)"
+        "280 ppm pre-industrial -> >420 ppm now. (W5S1: highest in 3 million years; W5S2: highest in 800,000 years from ice cores)"
       ],
       [
         "Methane (CH4) warming potency",
-        "~80–84x CO2 over 20-year horizon; GWP100 = 28–34"
+        "~80–84x CO2 over 20-year horizon (W5S1: 84x; W5S2: 80x); GWP100 = 28–34 (W5S3)"
       ],
       [
         "Nitrous oxide (N2O) potency",
-        "~265x CO2 over 100-year horizon (GWP100 = 265–298)"
+        "~265x CO2 over 100-year horizon; GWP100 = 265–298"
       ],
       [
         "Sea level rise since 1900",
-        "~20 cm rise; IPCC projects 0.3 to 1.0 m rise by 2100"
+        "~20 cm rise since 1900; projected 0.3 to 1.0 m rise by 2100 (IPCC)"
       ],
       [
         "Arctic summer sea ice loss rate",
         "Declining ~13% per decade since satellite telemetry began in 1979"
       ],
       [
-        "Global ocean heat absorption",
-        ">90% of excess heat trapped; ~25–30% of anthropogenic CO2"
+        "Global ocean heat & CO2 absorption",
+        "~90% of excess heat trapped; ~25–30% (one-quarter) of anthropogenic CO2"
       ],
       [
-        "Ocean pH drop & acidity surge",
-        "Dropped ~0.1 units since industrialization = ~26% increase in acidity"
+        "Ocean acidification & pH drop",
+        "Dropped ~0.1 units since industrial revolution = ~26% rise in acidity (forms carbonic acid H2CO3)"
       ],
       [
         "Tropical coral reef loss",
-        "Support ~25% marine life; bleach at +1 °C; >99% severely degraded at +2 °C"
+        "Support ~25% of marine species; bleach at +1 °C; >99% severely degraded at +2 °C"
       ],
       [
-        "Atmospheric moisture per degree warming",
-        "~7% more water vapor per 1 °C warming (Clausius-Clapeyron relation)"
+        "Warmer air moisture capacity",
+        "~7% more water vapour per 1 °C warming (Clausius-Clapeyron relation)"
       ],
       [
-        "Global anthropogenic emissions by source",
+        "Global emission shares (W5S1/W5S2)",
         "Fossil fuels ~75%; Deforestation 10–15%; Agriculture 10–12%; Cement ~8%"
       ],
       [
-        "Sectoral GHG shares",
-        "Electricity & heat ~34%; Industry ~24%; Agri & land use ~22%; Transport ~16%; Buildings 17–19% (incl. Scope 2)"
+        "Sectoral CO2 shares (W5S3)",
+        "Electricity & heat ~34%; Industry ~24%; Agri & land use ~22%; Transport ~16%; Buildings ~6% direct (17–19% with Scope 2)"
       ],
       [
         "Cement manufacturing footprint",
@@ -74,59 +74,63 @@
       ],
       [
         "Peak clear-day solar irradiance",
-        "~1000 W/m² at solar noon (Standard Test Conditions)"
+        "~1000 W/m² at solar noon, clear day (Standard Test Conditions)"
       ],
       [
         "Solar PV module efficiencies",
         "Monocrystalline: 20–22%; Polycrystalline: 15–17%; Thin-film: 10–13%; Perovskite tandem: >30%"
       ],
       [
-        "Solar degradation & tracking gains",
-        "~0.5%/year degradation (80–85% after 25 yrs); tracking systems add 15–35% yield"
+        "Solar degradation & tracking yield",
+        "~0.5%/year degradation (80–85% output left after 25 yrs); trackers add 15–35% yield"
       ],
       [
         "Betz limit for wind turbines",
-        "59.3% (16/27) maximum theoretical aerodynamic kinetic energy extraction"
+        "59.3% (16/27) maximum theoretical aerodynamic kinetic energy extraction limit"
       ],
       [
-        "Wind capacity factors",
-        "Onshore: 35–50%; Offshore: 50–60%; Solar: 20–25%; Geothermal: 80–95% (baseload)"
+        "Capacity factors across technologies",
+        "Wind: 35–50% onshore, 50–60% offshore; Geothermal: 80–95% (baseload). (W6L2 quotes solar 20–25%, wind 25–40%)"
       ],
       [
-        "India renewable & climate targets",
-        "500 GW non-fossil by 2030; 50% electric power from non-fossil by 2030; Net-Zero by 2070"
+        "India national climate targets",
+        "500 GW non-fossil by 2030; 50% installed capacity non-fossil by 2030; Net-Zero emissions by 2070"
       ],
       [
         "Hydropower global share & efficiency",
-        "15–16% of global electricity; efficiency >90%; dam lifespan 50–100+ years"
+        "15–16% of world electricity; efficiency above 90%; dam lifespan 50–100+ years"
       ],
       [
-        "Geothermal global benchmarks",
-        "Kenya generates 47% electricity from geothermal; Iceland over 20% (nearly 100% building heat)"
+        "Geothermal global generation share",
+        "Iceland over 20% (nearly 100% building heat); Kenya generates 47% of national electricity"
       ],
       [
-        "Geothermal thermodynamic temps",
-        "Flash steam plants: >180 °C; Binary cycle plants: 100–180 °C (uses isobutane/pentane)"
+        "Geothermal plant operating temperatures",
+        "Flash steam plants: >180 °C; Binary cycle plants: 100–180 °C (uses secondary isobutane/pentane)"
       ],
       [
         "Prominent Indian hydro plants",
-        "Tehri Dam (1000 MW, Uttarakhand - Storage); Srinagar (330 MW - Run-of-river); Kadamparai (400 MW, TN - Pumped storage)"
+        "Tehri: 1000 MW, Uttarakhand (Storage); Srinagar: 330 MW, Alaknanda (Run-of-river); Kadamparai: 400 MW, TN (Pumped storage)"
+      ],
+      [
+        "Sardar Sarovar Dam displacement",
+        "Displaced ~320,000 people (major ecological and rehabilitation trade-off)"
+      ],
+      [
+        "Renewable cost falls over a decade",
+        "Solar PV and wind costs down >80% in a decade (W5S2); LCOE of solar down >90% since 2010 (W5S3)"
+      ],
+      [
+        "WHO climate health impact estimate",
+        "~250,000 extra deaths per year projected between 2030–2050 from climate impacts"
       ],
       [
         "Recycled aluminium energy savings",
-        "~95% less energy needed compared to primary smelting of bauxite ore"
+        "~95% less energy needed compared to primary smelting from bauxite ore"
       ],
       [
         "Global food waste proportion",
         "~1/3 of all food produced globally for human consumption is lost or wasted"
-      ],
-      [
-        "Sound thresholds (Noise pollution)",
-        "Whisper ~30 dB; Normal speech ~50–60 dB; Traffic ~85 dB (damage threshold); >120 dB (immediate pain/harm)"
-      ],
-      [
-        "Acid rain pH threshold",
-        "Rainwater precipitation with pH < 5.6 (driven by SO2 and NOx converting to sulfuric and nitric acids)"
       ]
     ]
   },
@@ -134,57 +138,85 @@
     "id": "mod-2",
     "num": 2,
     "category": "Climate & Carbon",
-    "title": "Module 2: Climate Change Science & Global Warming",
-    "badge": "Core Theory",
-    "summary": "Atmospheric radiation balance, greenhouse gas properties, empirical evidence pillars, anthropogenic causes, and climate policy.",
+    "title": "Module 2: Climate Change Science & Global Warming (Part B: W5S1, W5S2)",
+    "badge": "Lecture W5S1/S2",
+    "summary": "Core atmospheric physics, natural vs enhanced greenhouse effect, four independent pillars of empirical evidence, anthropogenic causes vs debunked natural factors, Indian regional vulnerabilities, mitigation vs adaptation, and policy frameworks.",
     "type": "sections",
     "sections": [
       {
         "heading": "1. Radiation Physics of the Greenhouse Effect",
-        "content": "• Solar incoming radiation: Arrives primarily as short-wave radiation (visible light and UV). The atmosphere is largely transparent to this short-wave energy, which strikes and warms Earth's surface.<br>• Terrestrial re-emission: The warmed planetary surface re-radiates energy as long-wave thermal infrared.<br>• Radiative forcing: Greenhouse gases in the troposphere absorb this outgoing long-wave infrared and re-radiate it in all directions, creating a natural thermal blanket keeping Earth at ~15 °C rather than -18 °C.<br>• Enhanced greenhouse effect: Excess accumulation of anthropogenic greenhouse gases thickens this radiative blanket, trapping surplus thermal energy in the troposphere."
+        "content": "<p><strong>Natural vs Enhanced Greenhouse Effect:</strong> The natural greenhouse effect is beneficial, maintaining Earth's average surface temperature at ~15 °C (without it, the planet would freeze at -18 °C). The <em>enhanced greenhouse effect</em> represents the excessive trapping of thermal infrared radiation driven by anthropogenic greenhouse gas emissions. <strong>Analogy: One thin natural blanket vs five heavy blankets.</strong></p><p><strong>Radiation Balance:</strong> The Sun emits <strong>short-wave solar radiation</strong> (visible and UV) that passes relatively unimpeded through atmospheric gases to heat the Earth's surface. The warmed surface re-radiates energy outward as <strong>long-wave infrared radiation (heat)</strong>. Greenhouse gas molecules absorb this outgoing infrared radiation and re-radiate it omnidirectionally, including back toward the Earth's surface, raising ambient temperatures.</p><p><strong>Global Warming:</strong> Long-term sustained increase in Earth's average surface temperature driven by the atmospheric buildup of GHGs from fossil combustion, agricultural practices, and land-use changes.</p>"
       },
       {
-        "heading": "2. Greenhouse Gases Comparison Table",
+        "heading": "2. Key Greenhouse Gases Comparison Table",
         "tableHeaders": [
           "Gas",
-          "Anthropogenic Sources",
-          "Atmospheric Lifespan & Relative Warming Power"
+          "Main Anthropogenic Sources",
+          "Key Scientific Point / Atmospheric Dynamics"
         ],
         "tableRows": [
           [
             "Carbon Dioxide (CO2)",
-            "Fossil fuel combustion (coal, oil, gas), cement production, deforestation",
-            "Centuries to millennia; baseline reference (GWP = 1); accounts for ~75% of warming"
+            "Fossil fuel combustion, deforestation, cement manufacturing",
+            "Main anthropogenic driver; persistent atmospheric lifetime lasting hundreds to thousands of years; baseline GWP = 1.0"
           ],
           [
             "Methane (CH4)",
-            "Ruminant livestock (enteric fermentation), flooded rice paddies, anaerobic landfills, natural gas leakage",
-            "Short-lived (~12 yrs) but 80–84x more potent than CO2 over 20 yrs (GWP100 = 28–34)"
+            "Livestock enteric fermentation, flooded rice paddies, landfills, natural gas leaks",
+            "Short-lived in atmosphere (~12 yrs) but extremely potent: ~80–84x CO2 over 20-year horizon; GWP100 = 28–34"
           ],
           [
             "Nitrous Oxide (N2O)",
-            "Synthetic nitrogen fertilisers, livestock manure, chemical industry",
-            "~114 years; ~265x more potent than CO2 over 100 yrs (GWP100 = 265–298)"
+            "Synthetic nitrogen fertilisers, animal manure management, industrial acids",
+            "~265x CO2 over 100-year horizon (GWP100 = 265–298); long lifetime (~114 yrs); also degrades stratospheric ozone"
           ],
           [
             "Water Vapour (H2O)",
-            "Natural evaporation amplified by warming atmosphere",
-            "Most abundant GHG by volume; acts as a powerful positive feedback amplifier (not direct driver)"
+            "Evaporation from oceans, lakes, and vegetation",
+            "Most abundant greenhouse gas by volume; acts as a feedback amplifier (positive feedback: warmer air holds ~7% more moisture per °C warming)"
           ],
           [
-            "Fluorinated Gases (HFCs, PFCs, SF6)",
+            "Fluorinated Gases (HFCs, PFCs, SF6, NF3)",
             "Refrigeration, air conditioning, electrical switchgear, semiconductor etching",
-            "Thousands to tens of thousands of times more potent than CO2; survive centuries"
+            "Thousands to tens of thousands of times more potent than CO2; synthetic gases that persist in the atmosphere for centuries"
           ]
         ]
       },
       {
-        "heading": "3. Four Independent Pillars of Evidence",
-        "content": "1. Rising Surface Temperatures: Global mean temperatures have risen ~1.1 °C above pre-industrial levels; 19 of the 20 warmest years have occurred since 2000.<br>2. Atmospheric CO2 Surge: Risen from 280 ppm pre-industrial to over 420 ppm today; validated by Antarctic ice cores spanning 800,000 years.<br>3. Melting Cryosphere & Sea Level Rise: Arctic summer sea ice shrinking ~13% per decade; global mean sea level has risen ~20 cm since 1900.<br>4. Ocean Heat & Acidification: Global oceans have absorbed >90% of excess heat and ~25–30% of anthropogenic CO2; dissolving CO2 forms carbonic acid (H2CO3), lowering ocean pH by 0.1 units (~26% acidity surge)."
+        "heading": "3. Four Independent Pillars of Empirical Evidence",
+        "content": "<ul><li><strong>Rising Global Surface Temperatures:</strong> Global average temperature is +1.1 °C above the pre-industrial baseline (before 1850). 19 of the 20 hottest years on record have occurred since 2000. Verified independently by four global agencies: <em>NASA, NOAA, UK Met Office, and the Japan Meteorological Agency (JMA)</em>.</li><li><strong>Surging Atmospheric CO2:</strong> Concentrations have surged from 280 ppm (pre-industrial) to over 420 ppm today. Antarctic ice core air bubbles confirm modern concentrations are the highest in 800,000 years (and marine sediments show highest in 3 million years).</li><li><strong>Melting Cryosphere & Sea Level Rise:</strong> Arctic summer sea ice is declining at ~13% per decade since 1979; the Greenland and Antarctic ice sheets are losing mass at accelerating rates. Global mean sea level has risen ~20 cm since 1900 (projected to rise 0.3–1.0 m by 2100 under IPCC models).</li><li><strong>Ocean Warming & Acidification:</strong> The world's oceans absorb >90% of excess planetary heat and ~25–30% of annual human CO2 emissions. Dissolved CO2 reacts with seawater to form carbonic acid (H2CO3), dropping ocean pH by ~0.1 units (~26% rise in acidity), impairing shell formation in calcifying marine organisms and tropical coral reefs.</li></ul>"
       },
       {
-        "heading": "4. Mitigation vs Adaptation",
-        "content": "• Mitigation (Treating the Root Cause): Human interventions to reduce or prevent GHG emissions and enhance carbon sinks (e.g., solar/wind buildout, energy efficiency, reforestation, CCS, electric mobility).<br>• Adaptation (Managing the Symptoms): Adjustments in ecological, social, or economic systems to minimize damage from unavoidable climate impacts (e.g., sea walls, flood defences, drought-resistant crops, early warning systems, rainwater harvesting)."
+        "heading": "4. Causes: Anthropogenic Drivers vs Why Natural Factors Do NOT Explain Warming",
+        "content": "<p><strong>Anthropogenic Causes:</strong></p><ul><li><em>Fossil Fuel Combustion:</em> Largest source (~75% of global emissions) across power plants, industrial boilers, and transport.</li><li><em>Deforestation:</em> 10–15% of emissions; burning and clearing destroys terrestrial carbon sinks.</li><li><em>Agriculture & Land Use:</em> 10–12% of emissions (ruminant enteric methane, synthetic nitrogen fertiliser N2O).</li><li><em>Industrial Processes:</em> Chemical transformation emissions (~8% from cement calcination, blast furnace iron/steel, aluminium smelting).</li><li><em>Waste Systems:</em> Anaerobic decomposition in municipal landfills producing CH4; wastewater N2O.</li></ul><p><strong>Why Natural Factors CANNOT Explain Current Warming:</strong></p><ul><li><em>Volcanoes:</em> Emit sulfur dioxide aerosols forming sulfate mists that reflect sunlight, causing temporary short-term <em>cooling</em> (1–3 years), not warming.</li><li><em>Solar Irradiance:</em> Solar output has slightly <em>decreased</em> since the 1980s while Earth's surface temperatures rose sharply.</li><li><em>Milankovitch Orbital Cycles:</em> Earth's orbital eccentricity, axial tilt, and precession drive ice ages on geological timescales of 20,000 to 100,000 years, far too slow to explain centennial warming.</li></ul>"
+      },
+      {
+        "heading": "5. Consequences & Indian Regional Vulnerabilities",
+        "content": "<ul><li><strong>Extreme Weather Events:</strong> Intense downpours and flash floods in some regions, prolonged mega-droughts in others; intensified tropical cyclones; deadlier heatwaves across India reaching <strong>45–48 °C in Rajasthan, Odisha, and Andhra Pradesh</strong>; erratic monsoon behavior affecting >1.4 billion people.</li><li><strong>Sea Level Inundation:</strong> Driven by thermal expansion and glacial melting. Major threatened Indian coastal cities include <strong>Mumbai, Kolkata, Chennai, Kochi, and the Bengal Delta</strong>; island nations (Maldives, Tuvalu) face existential survival threats.</li><li><strong>Ecosystems & Biodiversity:</strong> Terrestrial and marine species shifting poleward and to higher elevations; altered phenology (flowering, breeding, migration). The <strong>Himalayas and Western Ghats</strong> are highly vulnerable global biodiversity hotspots.</li><li><strong>Food Security:</strong> Significant yield reductions in staple grains (wheat, rice, maize) across tropical South Asia and Sub-Saharan Africa.</li><li><strong>Human Health:</strong> Proliferation of vector-borne illnesses (malaria, dengue), cardiovascular heat exhaustion, deteriorated air quality. The WHO estimates <strong>~250,000 additional deaths per year (2030–2050)</strong> due to climate change.</li></ul>"
+      },
+      {
+        "heading": "6. Mitigation vs Adaptation Comparison",
+        "tableHeaders": [
+          "Strategy",
+          "Core Meaning & Objective",
+          "Practical Engineering Examples"
+        ],
+        "tableRows": [
+          [
+            "Mitigation",
+            "Interventions that reduce, prevent, or capture greenhouse gas emissions at the source",
+            "Solar PV, wind farms, hydro, grid energy efficiency, reforestation, Carbon Capture & Storage (CCS), sustainable agriculture, landfill gas capture"
+          ],
+          [
+            "Adaptation",
+            "Adjustments in natural or human systems to moderate harm and exploit beneficial opportunities from locked-in warming",
+            "Coastal sea walls, storm surge barriers, drought-resistant crop breeding, green roofs, cool reflective pavements, rainwater harvesting, climate-resilient roads/bridges"
+          ]
+        ]
+      },
+      {
+        "heading": "7. Policy Frameworks: Paris Agreement, India NDC & NAPCC 8 Missions",
+        "content": "<ul><li><strong>IPCC & Paris Agreement (2015):</strong> The IPCC synthesises climate science to inform international policy. The Paris Agreement legally binds signatories to hold global temperature rise well below 2.0 °C and actively pursue 1.5 °C above pre-industrial levels through Nationally Determined Contributions (NDCs).</li><li><strong>India's Updated NDC Commitments:</strong> Net-Zero greenhouse gas emissions by <strong>2070</strong>; achieving <strong>50% cumulative non-fossil installed electric power capacity by 2030</strong>; deploying <strong>500 GW of non-fossil capacity by 2030</strong>.</li><li><strong>NAPCC (National Action Plan on Climate Change, 2008) — 8 National Missions:</strong><ol><li><em>National Solar Mission (NSM):</em> Exponential scale-up of grid and commercial solar power.</li><li><em>National Mission for Enhanced Energy Efficiency (NMEEE):</em> Energy savings certificates and the PAT (Perform, Achieve and Trade) industrial scheme.</li><li><em>National Mission on Sustainable Habitat:</em> Energy-efficient buildings, municipal solid waste management, and public transit.</li><li><em>National Water Mission:</em> 20% improvement in water use efficiency through conservation.</li><li><em>National Mission for Sustaining the Himalayan Ecosystem:</em> Glacial and biodiversity monitoring in the Himalayas.</li><li><em>National Mission for a Green India (GIM):</em> Enhancing tree and forest cover across 5 million hectares.</li><li><em>National Mission for Sustainable Agriculture:</em> Climate-resilient agricultural practices and soil health.</li><li><em>National Mission on Strategic Knowledge for Climate Change:</em> Climate science modelling and research networks.</li></ol></li></ul>"
       }
     ]
   },
@@ -192,43 +224,90 @@
     "id": "mod-3",
     "num": 3,
     "category": "Climate & Carbon",
-    "title": "Module 3: Carbon Footprint & Mitigation Strategies",
-    "badge": "Accounting & Standards",
-    "summary": "Carbon accounting scopes (1, 2, 3), Life Cycle Assessment (LCA), corporate standards (GHG Protocol, ISO 14064, PAS 2050), and carbon capture technologies.",
+    "title": "Module 3: Carbon Footprint & Mitigation Strategies (Part C: W5S3)",
+    "badge": "Lecture W5S3",
+    "summary": "Carbon footprint definitions, Global Warming Potential, GHG Protocol Scopes 1/2/3, Life Cycle Assessment (LCA) cradle-to-grave/cradle, sectoral emission shares, five broad mitigation areas, and carbon offsetting integrity criteria.",
     "type": "sections",
     "sections": [
       {
-        "heading": "1. Greenhouse Gas Protocol Emission Scopes",
+        "heading": "1. Definitions: Carbon Footprint & Global Warming Potential (GWP)",
+        "content": "<p><strong>Carbon Footprint:</strong> The total greenhouse gas emissions caused directly and indirectly by an individual, organisation, event, product, or service, quantified in metric tonnes of CO2 equivalent (<strong>t CO2e</strong>). It covers all primary greenhouse gases: CO2, CH4, N2O, and fluorinated gases.</p><p><strong>Global Warming Potential (GWP):</strong> A normalised metric measuring how much infrared thermal energy a given mass of a greenhouse gas traps in the atmosphere over a defined time horizon (typically 100 years, GWP100) relative to carbon dioxide (CO2 = 1.0). CH4 has a GWP100 of 28–34; N2O has a GWP100 of 265–298; fluorinated gases range from thousands to over 23,000.</p>"
+      },
+      {
+        "heading": "2. Greenhouse Gas Protocol Emission Scopes",
         "tableHeaders": [
-          "Scope Classification",
-          "Boundary & Definition",
-          "Industrial Examples"
+          "Scope",
+          "Classification",
+          "Definition & Boundary",
+          "Direct Practical Examples"
         ],
         "tableRows": [
           [
-            "Scope 1: Direct Emissions",
-            "Direct GHG emissions from sources owned or controlled by the reporting organization.",
-            "Combustion in company-owned boilers, furnaces, manufacturing chemical processes, fleet delivery trucks."
+            "Scope 1",
+            "Direct Emissions",
+            "Emissions from sources owned or operationally controlled by the reporting entity",
+            "Fuel combustion in factory boilers, on-site diesel generator sets, emissions from company-owned vehicle fleets, chemical processing"
           ],
           [
-            "Scope 2: Indirect Energy Emissions",
-            "Emissions from the generation of purchased electricity, steam, heating, or cooling consumed on-site.",
-            "Grid electricity consumed to power manufacturing machinery, office HVAC, data center servers."
+            "Scope 2",
+            "Indirect Energy Emissions",
+            "Greenhouse gas emissions from the generation of purchased electricity, steam, heating, or cooling consumed by the entity",
+            "Electricity purchased from the state grid to power university campus buildings, server rooms, and manufacturing facilities"
           ],
           [
-            "Scope 3: Value Chain Emissions",
-            "All other indirect upstream and downstream supply-chain emissions outside direct operational control.",
-            "Raw materials extraction, supplier transport, business travel, customer product use, end-of-life disposal (>70% of footprint)."
+            "Scope 3",
+            "Indirect Value-Chain Emissions",
+            "All other indirect emissions across the entire upstream and downstream supply chain (often 70–80% of total corporate footprint)",
+            "Raw material extraction, business flights, supplier freight transport, product usage phase, end-of-life landfill disposal and recycling"
           ]
         ]
       },
       {
-        "heading": "2. Life Cycle Assessment & Standards",
-        "content": "• Life Cycle Assessment (LCA): Primary engineering methodology evaluating cumulative environmental burdens from raw material extraction ('cradle') through manufacture and use to final disposal ('grave').<br>• Cradle to Cradle: Closed-loop regenerative framework where post-consumer materials are recovered, repaired, remanufactured, or recycled back into production cycles.<br>• Standards to Memorise for FAT:<br>  - GHG Protocol: Global multi-stakeholder standard for corporate greenhouse accounting.<br>  - ISO 14064: International standard for organizational greenhouse gas inventories and verification.<br>  - PAS 2050: Standard specifically assessing the life-cycle carbon footprint of products and services."
+        "heading": "3. Measurement Tools: LCA, Emission Factors & Carbon Standards",
+        "content": "<p><strong>Life Cycle Assessment (LCA):</strong> The primary engineering methodology evaluating environmental impacts from <strong>cradle-to-grave</strong> (raw material extraction -> manufacturing -> distribution -> usage -> end-of-life disposal). In circular systems, <strong>cradle-to-cradle</strong> designs focus on closed-loop reuse, remanufacturing, and recycling. <em>Example: A smartphone's carbon footprint is heavily dominated (~80%) by raw material mining, refining, and board manufacturing, rather than user charging.</em></p><p><strong>Emission Factors:</strong> Mathematical conversion coefficients translating measurable activity data (litres of petrol, kWh of electricity, tonne-km of freight) into equivalent CO2e emissions. Published by the IPCC, IEA, and national governments. <em>India's grid emission factor is relatively high (~0.7–0.8 kg CO2e/kWh) due to heavy reliance on coal power, compared to France (nuclear-dominated) and Norway (hydro-dominated).</em></p><p><strong>International Standards:</strong> Corporate greenhouse accounting uses the <strong>GHG Protocol</strong> and <strong>ISO 14064</strong>; product-level carbon footprints follow <strong>PAS 2050</strong>; national GHG inventories report to the UNFCCC using standard IPCC methodologies.</p>"
       },
       {
-        "heading": "3. Carbon Capture, Utilisation & Storage (CCS / CCU / DAC)",
-        "content": "• Carbon Capture and Storage (CCS): Capturing industrial flue gas CO2 at point source (power plants, cement kilns) and injecting it thousands of metres underground into deep saline aquifers or depleted oil fields.<br>• Carbon Capture and Utilisation (CCU): Transforming captured CO2 into commercial synthetic fuels, building aggregates, or carbonates.<br>• Direct Air Capture (DAC): Using specialized chemical contactors to scrub dilute carbon dioxide directly from the ambient free atmosphere.<br>• Carbon Offsetting Criteria: High-integrity carbon credits must satisfy 4 non-negotiable criteria: Additional (would not happen without finance), Measurable, Permanent (non-reversal), and Independently Verified."
+        "heading": "4. Sectoral Footprint & Global Emitters Table",
+        "tableHeaders": [
+          "Economic Sector",
+          "Share of Global Emissions",
+          "Key Industrial Sources & Decarbonisation Levers"
+        ],
+        "tableRows": [
+          [
+            "Electricity & Heat Generation",
+            "~34% of CO2 emissions",
+            "Coal emits ~2x the CO2 per unit energy compared to natural gas; grid decarbonisation via renewables is the highest-leverage mitigation step"
+          ],
+          [
+            "Industry & Manufacturing",
+            "~24% of emissions",
+            "Heavy industries: iron and steel, cement calcination, chemicals, aluminium smelting; process emissions require green hydrogen or CCS"
+          ],
+          [
+            "Agriculture, Forestry & Land Use",
+            "~22% of emissions",
+            "Livestock enteric fermentation (CH4), fertiliser denitrification (N2O), deforestation, peatland drainage"
+          ],
+          [
+            "Transportation",
+            "~16% of emissions",
+            "Road transit is the largest contributor (~75% of sector); aviation and maritime shipping require sustainable aviation fuels (SAF) and green hydrogen"
+          ],
+          [
+            "Buildings & Real Estate",
+            "~6% direct (~17–19% incl. Scope 2)",
+            "Space heating, cooling, water heating, cooking; solved by heat pumps, insulation, efficient appliances, LED lighting"
+          ]
+        ]
+      },
+      {
+        "heading": "5. Five Broad Mitigation Strategies",
+        "content": "<ul><li><strong>(i) Energy System Transformation / Renewables:</strong> Replacing fossil fuels with solar PV, wind, hydro, geothermal, and ocean energy. Nuclear energy (including Small Modular Reactors - SMRs) provides critical low-carbon baseload power, though it is non-renewable.</li><li><strong>(ii) Energy Efficiency:</strong> Highlighted by the IEA as the <strong>'first fuel'</strong> of the energy transition. Implementing LED lighting, variable speed drives (VSDs), high-efficiency heat pumps, industrial waste heat recovery, and stringent building codes.</li><li><strong>(iii) Carbon Capture, Utilisation & Storage (CCS / CCU / DAC):</strong><ul><li><em>CCS:</em> Capturing CO2 at point sources (power plants, cement kilns) and compressing it for permanent deep geological sequestration (depleted oil/gas fields, deep saline aquifers).</li><li><em>CCU:</em> Converting captured CO2 into synthetic fuels, building materials (carbon-cured concrete), or industrial chemicals.</li><li><em>DAC (Direct Air Capture):</em> Extracting ambient CO2 directly from open air; highly energy-intensive and expensive.</li></ul></li><li><strong>(iv) Land Use & Natural Sinks:</strong><ul><li><em>Afforestation:</em> Establishing trees on land that historically has not supported forests.</li><li><em>Reforestation:</em> Restoring and replanting degraded or harvested forest lands.</li><li><em>Sustainable Agriculture:</em> Agroforestry, reduced tillage, precision fertilisation, alternate wetting and drying (AWD) in rice paddies.</li></ul></li><li><strong>(v) Circular Economy, Transport & Market Mechanisms:</strong><ul><li><em>Circular Design:</em> Transitioning from linear 'take-make-dispose' to 3Rs/circularity: design for disassembly, material substitution, reuse, repair, remanufacture, and recycling.</li><li><em>Transport Decarbonisation:</em> Electric vehicles (EVs - zero tailpipe emissions), modal shift to public transit and freight rail, compact urban planning.</li><li><em>Carbon Pricing:</em> Carbon taxes (fixed price per tonne of CO2 emitted) and Cap-and-Trade emissions trading systems.</li></ul></li></ul>"
+      },
+      {
+        "heading": "6. Carbon Offsetting Principles & Quality Criteria",
+        "content": "<p><strong>Carbon Offsetting:</strong> Compensating for unavoidable residual greenhouse emissions by financing verified emission reductions or removals outside of one's own boundary (reforestation, clean cookstoves, renewable deployment, DAC). Traded through voluntary carbon markets or formal compliance mechanisms such as the <strong>Clean Development Mechanism (CDM)</strong> under the Kyoto Protocol.</p><p><strong>Quality & Integrity Criteria for Offsets:</strong></p><ul><li><strong>Additionality:</strong> The emission reduction would NOT have occurred in the business-as-usual scenario without the carbon finance.</li><li><strong>Measurable & Quantifiable:</strong> Calculated using robust, science-based methodologies.</li><li><strong>Permanence:</strong> Sequestered carbon must not be released back into the atmosphere (e.g. forest fires reversing forest offset credits).</li><li><strong>Independently Verified:</strong> Audited by accredited third-party registries (Verra VCS, Gold Standard).</li></ul><p><strong>Crucial Examination Principle:</strong> Offsetting is a <em>complement</em>, NOT a substitute for direct internal decarbonisation. Entities must reduce their own emissions first and offset only unavoidable residual emissions.</p>"
       }
     ]
   },
@@ -236,48 +315,109 @@
     "id": "mod-4",
     "num": 4,
     "category": "Renewable Energy",
-    "title": "Module 4: Solar Energy & Photovoltaic Engineering",
-    "badge": "Renewables",
-    "summary": "Photovoltaic physics, semiconductor p-n junctions, module architectures, Concentrated Solar Power (CSP), and Indian solar deployment schemes.",
+    "title": "Module 4: Solar Energy & Photovoltaic Engineering (Part D: W6S1 Part 1)",
+    "badge": "Lecture W6S1",
+    "summary": "Green energy concepts, solar irradiance formula, photovoltaic effect, solar thermal CSP with molten salt, comparison of monocrystalline, polycrystalline, thin-film and perovskite cells, and comprehensive matrix of 10 Indian solar schemes.",
     "type": "sections",
     "sections": [
       {
-        "heading": "1. Photovoltaic (PV) Working Principle",
-        "content": "• Photovoltaic Effect: Incident sunlight photons collide with valence electrons in a semiconductor (crystalline silicon), promoting them to the conduction band. The built-in electrostatic field at the semiconductor p-n junction directs free electrons toward electrical contacts, generating direct current (DC).<br>• Core Balance of System (BOS) Components: PV module array, Inverter (converts DC into grid-frequency AC), Charge controller, Battery bank (optional for off-grid), Mounting structures and solar trackers.<br>• Power Output Formula: Power (W) = Solar Irradiance (W/m²) × Panel Area (m²) × Module Efficiency (η).<br>• Temperature Coefficient: Solar PV efficiency decreases as cell temperature rises (negative coefficient, typically -0.35% to -0.45% per °C rise above 25 °C STC)."
+        "heading": "1. Green Energy Concepts, Irradiance & Photovoltaic Working Principle",
+        "content": "<p><strong>Renewable vs Green Energy:</strong> Renewable energy originates from natural replenishment processes (sun, wind, hydro, geothermal, biomass). <em>Green energy</em> is renewable energy generated with minimal lifecycle environmental impact (e.g. large hydro causes ecological damage and displacement; biomass combustion releases air pollutants). Fossil fuels currently provide >80% of global primary energy. The IPCC global target requires net-zero emissions by 2050.</p><p><strong>Solar Irradiance:</strong> Peak solar irradiance at Earth's surface reaches <strong>~1000 W/m²</strong> at solar noon on a clear day (Standard Test Conditions: 1000 W/m², 25 °C cell temp, AM 1.5 spectrum).<br><strong>Power Output Formula:</strong> <code>Electrical Output (W) = Solar Irradiance (W/m²) × Panel Surface Area (m²) × Module Efficiency (%)</code>.</p><p><strong>Photovoltaic (PV) Effect:</strong> Sunlight photons with energy exceeding the silicon bandgap strike the semiconductor, knocking electrons free into the conduction band. The internal electric field established at the <strong>p-n junction</strong> sweeps free electrons toward the n-type layer and holes toward the p-type layer, generating <strong>direct current (DC)</strong> electricity. Solid-state technology: no moving parts, no combustion, no working fluid.</p><p><strong>Key System Components:</strong> Solar PV array, DC-to-AC Inverter, Charge Controller, Battery Storage (optional for off-grid), Mounting Structure, Wiring & Protection, Monitoring System.</p><p><strong>Concentrated Solar Power (CSP / Solar Thermal):</strong> Mirrors (parabolic troughs, towers) concentrate sunlight onto a thermal receiver, heating a fluid (molten salt) to generate high-pressure steam that drives a conventional steam turbine. Molten salt thermal storage solves nighttime intermittency.</p>"
       },
       {
-        "heading": "2. Photovoltaic Cell Architectures",
+        "heading": "2. Photovoltaic Cell Architectures Comparison Table",
         "tableHeaders": [
-          "Cell Type",
+          "PV Cell Technology",
           "Commercial Efficiency",
-          "Manufacturing & Performance Characteristics"
+          "Manufacturing Process & Key Characteristics",
+          "Trade-Offs & Primary Applications"
         ],
         "tableRows": [
           [
-            "Monocrystalline Silicon",
+            "Monocrystalline Silicon (Mono-Si)",
             "20–22%",
-            "Sawn from single cylindrical silicon ingots (Czochralski process); highest commercial efficiency; uniform dark black appearance; higher cost."
+            "Sliced from a single cylindrical crystal ingot grown via the Czochralski process; uniform dark appearance",
+            "Highest commercial efficiency, longest lifespan (>25 yrs); higher manufacturing cost; ideal for constrained rooftops"
           ],
           [
-            "Polycrystalline Silicon",
+            "Polycrystalline Silicon (Poly-Si)",
             "15–17%",
-            "Multiple silicon crystal fragments melted together into square ingots; blue speckled pattern; lower cost; internal grain boundaries slightly reduce efficiency."
+            "Multiple silicon fragments melted and cast into square blocks; visible blue textured grain boundaries",
+            "Grain boundaries impede electron flow; cheaper manufacturing; lower space efficiency"
           ],
           [
-            "Thin-Film (CdTe, a-Si)",
+            "Thin-Film (CdTe, a-Si, CIGS)",
             "10–13%",
-            "Semiconductor materials vapor-deposited in microscopic layers on glass or metal substrates; flexible, lightweight; lower efficiency requires greater land area."
+            "Semiconductor layers deposited onto glass, plastic, or metal substrates; extremely thin (micrometres)",
+            "Lightweight, flexible, superior performance in high heat and diffuse light; suits Building-Integrated PV (BIPV)"
           ],
           [
             "Perovskite Tandem (Emerging)",
-            ">30% (lab)",
-            "Tandem layers stacked on silicon tuning solar absorption bands; low production costs; current engineering hurdle is moisture/UV durability."
+            ">30% (tandem with Si)",
+            "Synthetic perovskite crystal layers stacked on silicon to absorb complementary spectral wavelengths",
+            "Ultra-high theoretical efficiency and cheap fabrication; poor durability (degrades with moisture and UV); emerging laboratory-to-commercial transition"
           ]
         ]
       },
       {
-        "heading": "3. Concentrated Solar Power (CSP) & Key Indian Schemes",
-        "content": "• Concentrated Solar Power (CSP): Utilizes tracking heliostat mirror fields to concentrate solar radiation onto a central receiver tower, heating molten salt to >550 °C to power steam turbines with dispatchable thermal energy storage.<br>• Key Indian Solar Initiatives:<br>  - PM Surya Ghar: Muft Bijli Yojana: Rooftop solar for 1 crore households with subsidies up to ₹78,000.<br>  - PM-KUSUM: Solarization of agricultural pump sets with up to 60% subsidy to eliminate diesel irrigation pumps.<br>  - Bhadla Solar Park (Rajasthan): World's largest operational solar park with a capacity of ~2,245 MW.<br>  - International Solar Alliance (ISA): Headquartered in Gurugram, India; mobilising over $1 trillion in solar financing."
+        "heading": "3. Solar Energy in India & National Schemes Matrix",
+        "tableHeaders": [
+          "Government Scheme / Policy",
+          "Core Mandate & Target",
+          "Significance for FAT Exam"
+        ],
+        "tableRows": [
+          [
+            "PM Surya Ghar: Muft Bijli Yojana",
+            "Rooftop solar for 1 crore households",
+            "Central financial assistance / subsidy up to ₹78,000; provides up to 300 free monthly electricity units"
+          ],
+          [
+            "PM-KUSUM Scheme",
+            "Agricultural solarisation",
+            "Up to 60% subsidy for farmers to install standalone solar irrigation pumps, replacing diesel pumps"
+          ],
+          [
+            "National Solar Mission (NSM)",
+            "Flagship national solar program",
+            "Scaled India's grid-connected solar capacity from <20 MW in 2010 to >70 GW, setting long-term commercial targets"
+          ],
+          [
+            "Production Linked Incentive (PLI)",
+            "Domestic manufacturing",
+            "Financial incentives to set up GW-scale integrated silicon wafer, ingot, cell, and high-efficiency module factories"
+          ],
+          [
+            "Solar Park Scheme",
+            "Ultra-Mega Solar Power Projects",
+            "Provides plug-and-play land and grid evacuation; includes Bhadla Solar Park (Rajasthan, 2,245 MW - largest in world)"
+          ],
+          [
+            "Green Energy Corridor (GEC)",
+            "Grid evacuation infrastructure",
+            "Dedicated high-capacity transmission lines to evacuate renewable power from solar/wind parks across states"
+          ],
+          [
+            "Suryamitra Skill Development",
+            "Technical workforce skilling",
+            "National skill initiative training youth in solar PV array installation, operation, maintenance, and repair"
+          ],
+          [
+            "International Solar Alliance (ISA)",
+            "Global treaty-based alliance",
+            "Co-founded by India and France in 2015; mobilising over $1 trillion in solar investment across 120+ sun-rich nations"
+          ],
+          [
+            "OSOWOG Initiative",
+            "One Sun One World One Grid",
+            "Trans-national electricity grid interconnecting regional grids across time zones ('The Sun Never Sets')"
+          ],
+          [
+            "100% FDI Automatic Route",
+            "Foreign direct investment",
+            "100% foreign direct investment permitted under automatic route for renewable energy projects in India"
+          ]
+        ]
       }
     ]
   },
@@ -285,18 +425,87 @@
     "id": "mod-5",
     "num": 5,
     "category": "Renewable Energy",
-    "title": "Module 5: Wind Energy & Betz Limit",
-    "badge": "Renewables",
-    "summary": "Aerodynamic lift, cubic wind power physics, Betz ceiling, HAWT vs VAWT, capacity factors, and Indian coastal wind development.",
+    "title": "Module 5: Wind Energy & Betz Limit (Part D: W6S1 Part 1)",
+    "badge": "Lecture W6S1",
+    "summary": "Aerodynamics of wind, turbine working chain, cubic wind speed law, Betz limit (59.3%), HAWT vs VAWT, onshore vs offshore, NIWE Chennai, western coast preference, and detailed Solar vs Wind comparison table.",
     "type": "sections",
     "sections": [
       {
-        "heading": "1. Aerodynamics & Power Equation",
-        "content": "• Wind Formation: Atmospheric pressure differences driven by uneven solar heating of Earth's surface.<br>• Cubic Power Relation: Wind power output is proportional to the cube of wind speed: Power = 0.5 × ρ × A × v³ (where ρ = air density ~1.225 kg/m³, A = rotor swept area = π·r², v = wind speed). Doubling wind speed increases power by 2³ = 8 times.<br>• Betz Limit: German physicist Albert Betz proved in 1919 that no wind turbine can convert more than 16/27 (59.3%) of kinetic energy from wind into mechanical work.<br>• Operational Wind Speeds: Cut-in speed (3–4 m/s, turbine begins turning); Rated speed (12–15 m/s, generator reaches full capacity); Cut-out speed (~25 m/s, blades feather and brakes apply to prevent catastrophic mechanical failure)."
+        "heading": "1. Aerodynamics, Power Equation & Betz Limit",
+        "content": "<p><strong>Origin of Wind:</strong> Uneven solar heating of Earth's surface creates atmospheric pressure differences; air flows from high to low pressure, generating wind. A wind turbine converts the <strong>kinetic energy of moving air into mechanical energy, and then into electricity</strong>.</p><p><strong>Working Chain:</strong> Wind turns aerofoil blades -> Rotor turns low-speed shaft -> <strong>Gearbox steps up rotational speed (e.g. from 15-20 rpm to 1500 rpm)</strong> -> High-speed shaft spins generator -> Electricity delivered to grid via transformer.</p><p><strong>Components:</strong> Rotor blades, Hub, Low-speed shaft, Gearbox, High-speed shaft, Generator, Nacelle, Tower, Yaw mechanism (turns nacelle into wind), Pitch control (adjusts blade angle to wind speed), Brake system (aerodynamic or mechanical emergency shutdown).</p><p><strong>Wind Power Formula:</strong> <code>P = 0.5 × ρ × A × v³ × Cp</code> (where <code>ρ</code> is air density ~1.225 kg/m³, <code>A = π r²</code> is rotor swept area, <code>v</code> is wind velocity, and <code>Cp</code> is power coefficient).<br><strong>Cubic Wind Velocity Law:</strong> Power is proportional to the <strong>cube of wind speed (v³)</strong>. Doubling wind speed increases power output by <strong>8 times (2³ = 8)</strong>!</p><p><strong>The Betz Limit:</strong> Proven by Albert Betz in 1919: No wind turbine can capture more than <strong>16/27 (59.3%)</strong> of the kinetic energy in wind. Commercial modern turbines typically achieve Cp between 40% and 50%.</p>"
       },
       {
-        "heading": "2. Turbine Architectures & Indian Wind Development",
-        "content": "• Horizontal Axis Wind Turbines (HAWT): Dominant commercial design; blades rotate perpendicularly to wind direction; superior aerodynamic lift efficiency; requires yaw control to face wind.<br>• Vertical Axis Wind Turbines (VAWT): Accepts wind from any omni-directional angle without yaw adjustment; lower installation height; ideal for turbulent urban building rooftops.<br>• Onshore vs Offshore: Onshore wind has capacity factor of 35–50%; Offshore wind reaches 50–60% due to steady, stronger ocean winds without topographic roughness.<br>• Indian Geography: India's coastline is ~7,516.6 km. Western coast (Gujarat, Maharashtra, Tamil Nadu) is preferred for wind development because the eastern coast is cyclone-prone. The National Institute of Wind Energy (NIWE) is based in Chennai. Muppandal Wind Farm (Tamil Nadu) is one of the world's largest operational wind farms."
+        "heading": "2. Turbine Architectures: HAWT vs VAWT & Onshore vs Offshore",
+        "tableHeaders": [
+          "Parameter",
+          "Horizontal-Axis Wind Turbine (HAWT)",
+          "Vertical-Axis Wind Turbine (VAWT)"
+        ],
+        "tableRows": [
+          [
+            "Rotor Axis Alignment",
+            "Parallel to the ground (horizontal)",
+            "Perpendicular to the ground (vertical)"
+          ],
+          [
+            "Wind Direction Sensitivity",
+            "Requires active yaw mechanism to rotate nacelle into wind",
+            "Omnidirectional; accepts wind from any compass direction without yawing"
+          ],
+          [
+            "Aerodynamic Efficiency",
+            "High efficiency (high tip-speed ratios, uniform airflow at altitude)",
+            "Lower efficiency; blades experience aerodynamic drag on the retreat side"
+          ],
+          [
+            "Generator & Gearbox Location",
+            "Mounted high inside nacelle atop tower (harder maintenance)",
+            "Placed at ground level at tower base (easier access and servicing)"
+          ],
+          [
+            "Optimal Application",
+            "Large-scale utility wind farms (onshore and offshore)",
+            "Urban environments, turbulent winds, rooftops, small-scale distributed generation"
+          ]
+        ]
+      },
+      {
+        "heading": "3. Wind Energy in India: Geography, NIWE & National Policies",
+        "content": "<p><strong>Geography & Western Coast Preference:</strong> India has a coastline of <strong>~7,516.6 km</strong>. The <strong>Western Coast is heavily preferred</strong> over the Eastern Coast because the Bay of Bengal is prone to severe tropical cyclones that damage turbine blades and towers.</p><p><strong>Nodal Institute:</strong> <strong>NIWE (National Institute of Wind Energy)</strong>, located in <strong>Chennai, Tamil Nadu</strong>, conducts national resource mapping and turbine certification.</p><p><strong>Leading Wind States:</strong> Gujarat, Tamil Nadu, Maharashtra, Karnataka, Rajasthan, and Andhra Pradesh.</p><p><strong>Key Policies:</strong> <em>National Wind-Solar Hybrid Policy (2018)</em> (promotes hybrid plants optimising shared grid evacuation), <em>National Offshore Wind Energy Policy (2015)</em> (MNRE; offshore zones in Gujarat and Tamil Nadu), <em>Renewable Purchase Obligation (RPO)</em>, and <em>Green Energy Corridor</em>.</p>"
+      },
+      {
+        "heading": "4. Comprehensive Comparison: Solar vs Wind Energy",
+        "tableHeaders": [
+          "Comparison Metric",
+          "Solar Energy (Photovoltaic)",
+          "Wind Energy (Turbines)"
+        ],
+        "tableRows": [
+          [
+            "Primary Energy Source / Timing",
+            "Direct sunlight; available during daylight hours (peaks at solar midday)",
+            "Kinetic energy of moving air; available day and night whenever wind blows (often peaks at night/monsoon)"
+          ],
+          [
+            "Operating Noise & Mechanical Wear",
+            "Completely silent; solid-state with no moving parts; minimal wear",
+            "Generates aerodynamic and mechanical noise; moving parts (gearbox, bearings) require regular maintenance"
+          ],
+          [
+            "Best Geographical Locations",
+            "Arid, semi-arid, sunny regions; building rooftops; desert land",
+            "Coastal areas, open windy plains, mountain ridges, offshore marine waters"
+          ],
+          [
+            "Typical Capacity Factors",
+            "Lower: 20–25% (limited by daylight hours)",
+            "Higher: 35–50% onshore, 50–60% offshore"
+          ],
+          [
+            "Grid Complementarity",
+            "Complements wind: solar generates during midday peak load, while wind generates strongly during nocturnal and monsoon hours (perfect for hybrid plants)"
+          ]
+        ]
       }
     ]
   },
@@ -304,43 +513,48 @@
     "id": "mod-6",
     "num": 6,
     "category": "Renewable Energy",
-    "title": "Module 6: Hydroelectric Power Engineering",
-    "badge": "Renewables",
-    "summary": "Hydraulic head, potential-to-kinetic-to-electrical energy chain, impoundment vs run-of-river vs pumped storage, and environmental impacts.",
+    "title": "Module 6: Hydroelectric Power Engineering (Part E: W6S1 Part 2)",
+    "badge": "Lecture W6S1",
+    "summary": "Hydropower energy conversion chain, hydraulic power formula, plant classifications with Indian benchmarks (Tehri, Srinagar, Kadamparai), and environmental trade-offs including Sardar Sarovar displacement and tropical reservoir methane.",
     "type": "sections",
     "sections": [
       {
-        "heading": "1. Working Principle & Power Formula",
-        "content": "• Energy Conversion Chain: Potential Energy (water stored in reservoir at hydraulic head H) -> Kinetic Energy (rushing through pressurized penstocks) -> Mechanical Energy (rotating turbine runner) -> Electrical Energy (generator spinning in magnetic field).<br>• Power Equation: P = ρ × g × Q × H × η (where ρ = water density ~1000 kg/m³, g = 9.81 m/s², Q = volumetric discharge in m³/s, H = effective hydraulic head in metres, η = turbine-generator efficiency >90%).<br>• Core Components: Reservoir (storage), Dam structure, Penstock (high-pressure conduit pipe carrying water to turbine), Hydraulic turbine (Francis, Kaplan, Pelton), Generator, Tailrace (discharge channel)."
+        "heading": "1. Energy Conversion Chain & Hydraulic Power Formula",
+        "content": "<p><strong>Energy Transformation Chain:</strong> <code>Potential Energy (water stored at height h) -> Kinetic Energy (water rushing down penstock) -> Mechanical Energy (water turns turbine blades) -> Electrical Energy (generator rotor spins inside stator)</code>.</p><p><strong>Hydraulic Power Equation:</strong> <code>P = η × ρ × g × Q × H</code><br>where <code>P</code> = Generated electrical power (Watts), <code>η</code> = Combined turbine-generator efficiency (>90%), <code>ρ</code> = Water density (~1000 kg/m³), <code>g</code> = Gravitational acceleration (9.81 m/s²), <code>Q</code> = Volumetric discharge rate (m³/s), <code>H</code> = Net hydraulic head (effective height in metres).</p><p><strong>Major Components:</strong> Reservoir (energy storage), Dam (creates head and pressure), Penstock (pressurised water conduit), Turbine (Pelton for high head; Francis for medium head; Kaplan for low head), Generator, Transformer (steps up voltage), Transmission lines.</p><p><strong>Global Status:</strong> Hydropower is the <strong>world's largest renewable electricity source (15–16% of global electricity)</strong>; plant lifespans reach 50–100+ years.</p>"
       },
       {
-        "heading": "2. Hydropower Plant Classifications",
+        "heading": "2. Hydropower Plant Classifications & Indian Benchmarks Table",
         "tableHeaders": [
-          "Type",
-          "Operational Mechanism",
-          "Indian Benchmark"
+          "Classification",
+          "Operating Principle & Engineering Mechanism",
+          "Prominent Indian Example & Capacity"
         ],
         "tableRows": [
           [
-            "Storage / Impoundment",
-            "Large dam creating artificial reservoir storing seasonal river runoff for dispatchable power on demand.",
-            "Tehri Dam, Uttarakhand (1000 MW storage, highest dam in India)"
+            "Storage (Impoundment) Hydropower",
+            "Large dam creates expansive reservoir; stores water for dispatchable baseload and peak-load generation; reliable seasonal supply",
+            "Tehri Dam (Uttarakhand) — 1,000 MW (highest dam in India, 260.5 m, on Bhagirathi river)"
           ],
           [
-            "Run-of-the-River",
-            "Diverts natural river discharge through tunnels with little or no reservoir flooding; output varies with river flow.",
-            "Srinagar Hydroelectric Project, Alaknanda River (330 MW)"
+            "Run-of-the-River (ROR) Hydropower",
+            "Diverts river flow through penstock with little to no reservoir storage; smaller ecological footprint; output varies with river discharge",
+            "Srinagar Hydro Project (Uttarakhand) — 330 MW on Alaknanda River"
           ],
           [
-            "Pumped Storage Hydro (PSH)",
-            "Operates as a giant grid-scale rechargeable battery; pumps water uphill to upper reservoir using cheap off-peak power, releases downhill during peak demand.",
-            "Kadamparai Pumped Storage Hydro, Tamil Nadu (400 MW)"
+            "Pumped Storage Plants (PSP)",
+            "Acts as a 'giant grid battery': water pumped to upper reservoir during low-cost off-peak hours and released through turbines during peak hours",
+            "Kadamparai Pumped Storage (Tamil Nadu) — 400 MW (subterranean powerhouse in Anamalai Hills)"
+          ],
+          [
+            "Small / Micro / Pico Hydropower",
+            "Small: <25 MW; Micro: <100 kW; Pico: <5 kW; minimal civil works; powers isolated off-grid rural communities",
+            "Himalayan village micro-hydro schemes in Himachal, Uttarakhand, and Ladakh"
           ]
         ]
       },
       {
-        "heading": "3. Environmental Trade-Offs of Hydropower",
-        "content": "• Benefits: Clean baseload power, dispatchable peak shaving, black-start grid capability, co-benefits of flood control and agricultural irrigation.<br>• Ecological Challenges: Large dams submerge fertile agricultural valleys and virgin forests; displace communities (Sardar Sarovar Dam displaced ~320,000 people); obstruct fish migration pathways; trap river silt; decaying submerged organic matter in tropical reservoirs generates biogenic methane (CH4)."
+        "heading": "3. Advantages & Environmental/Social Challenges",
+        "content": "<p><strong>Advantages:</strong> Renewable, dispatchable baseload with zero direct operational emissions, exceptionally high efficiency (>90%), multi-purpose co-benefits (irrigation, water supply, flood control, fisheries). Pumped storage is the dominant form of utility grid energy storage.</p><p><strong>Challenges & Environmental Trade-Offs:</strong></p><ul><li><strong>Human Displacement:</strong> Involuntary resettlement; the <strong>Sardar Sarovar Dam</strong> on the Narmada River displaced ~320,000 people.</li><li><strong>Submergence:</strong> Inundation of fertile agricultural lands and prime forests.</li><li><strong>Methane Emissions in Tropics:</strong> Flooded vegetation decomposing anaerobically underwater releases significant methane (CH4) emissions in shallow tropical reservoirs.</li><li><strong>Ecological Disruption:</strong> Blocks fish migration routes, alters sediment transport and water temperature.</li><li><strong>Reservoir-Induced Seismicity (RIS):</strong> Massive weight of stored water can trigger seismic faults (e.g. Koyna earthquake 1967).</li><li><strong>Sedimentation:</strong> Silt accumulation reduces reservoir storage capacity and erodes turbine runners.</li></ul><p><strong>India Projects:</strong> Bhakra Nangal (Himachal/Punjab), Hirakud (Odisha), Tehri (Uttarakhand), Sardar Sarovar (Gujarat).</p>"
       }
     ]
   },
@@ -348,43 +562,92 @@
     "id": "mod-7",
     "num": 7,
     "category": "Renewable Energy",
-    "title": "Module 7: Geothermal Energy & Thermodynamic Cycles",
-    "badge": "Renewables",
-    "summary": "Geothermal gradients, dry steam, flash steam, and binary cycle thermodynamic plants, global baseload leaders, and Indian geothermal fields.",
+    "title": "Module 7: Geothermal Energy & Thermodynamic Cycles (Part E: W6S1 Part 2)",
+    "badge": "Lecture W6S1",
+    "summary": "Geothermal gradient, radioactive decay origin, baseload 24x7 characteristics, Dry steam, Flash steam, Binary cycle plants, induced seismicity (Basel project), Kenya (47%) and Iceland benchmarks, Puga Valley, and Hydro vs Geothermal comparison.",
     "type": "sections",
     "sections": [
       {
-        "heading": "1. Geothermal Science & Gradient",
-        "content": "• Origin: Thermal energy generated from the radioactive decay of deep isotopes (uranium, thorium, potassium) and primordial heat trapped during planetary accretion.<br>• Geothermal Gradient: Normal continental temperature increases by 25–30 °C per kilometre of depth into Earth's crust.<br>• Baseload Reliability: Weather-independent power available 24 hours a day, 365 days a year with an exceptionally high capacity factor of 80–95%."
+        "heading": "1. Geothermal Science, Earth Heat & Working Cycle",
+        "content": "<p><strong>Origin & Gradient:</strong> <em>Geo</em> (Earth) + <em>therme</em> (heat). Heat from primordial planet formation (20%) and ongoing <strong>radioactive decay of long-lived isotopes (80%)</strong>: Uranium-238, Thorium-232, Potassium-40. Temperature rises with depth at <strong>~25–30 °C per kilometre</strong> (geothermal gradient). Available 24/7 as baseload power (capacity factor <strong>80–95%</strong>).</p><p><strong>Working Cycle:</strong> Production wells bring hot water/steam from deep reservoirs (1–3 km) to surface -> Steam drives turbine connected to generator -> Cooled water is returned via <strong>injection wells</strong> to maintain reservoir pressure and ensure sustainability.</p>"
       },
       {
-        "heading": "2. Geothermal Plant Architectures",
+        "heading": "2. Thermodynamic Plant Architectures Comparison Table",
         "tableHeaders": [
-          "Plant Cycle",
-          "Resource Temperature",
-          "Thermodynamic Mechanism"
+          "Plant Architecture",
+          "Geothermal Resource Fluid",
+          "Thermodynamic Mechanism & Working Cycle",
+          "Key Characteristics & Example"
         ],
         "tableRows": [
           [
-            "Dry Steam Plants",
-            ">200 °C (natural dry steam)",
-            "Oldest and rarest design; natural underground steam is tapped directly from production wells to spin turbines (e.g., The Geysers, California)."
+            "Dry Steam Power Plants",
+            "Natural dry steam (>150 °C)",
+            "Steam extracted directly from production wells goes straight into the turbine; oldest and simplest cycle",
+            "Rare globally; The Geysers in California (world's largest complex, >1,500 MW)"
           ],
           [
-            "Flash Steam Plants",
-            ">180 °C (high-pressure liquid)",
-            "Most common worldwide; superheated high-pressure water is sprayed into low-pressure flash tanks, instantaneously boiling into steam. Remaining liquid is re-injected."
+            "Flash Steam Power Plants",
+            "Pressurised hot water above 180 °C",
+            "High-pressure hot water enters low-pressure flash tanks; sudden pressure drop causes water to rapidly boil ('flash') into steam that drives turbine",
+            "Most common commercial plant type; remaining hot liquid is re-injected underground"
           ],
           [
-            "Binary Cycle Plants",
-            "100–180 °C (moderate enthalpy)",
-            "Hot geothermal fluid is pumped through a heat exchanger to boil a secondary organic working fluid with a lower boiling point (isobutane or pentane). Geothermal fluid never touches turbine."
+            "Binary Cycle Power Plants",
+            "Moderate-temperature water (100–180 °C)",
+            "Geothermal water heats a secondary working fluid with lower boiling point (isobutane or isopentane) via heat exchanger; vapour drives turbine",
+            "Geothermal water never touches turbine; closed loop with virtually zero emissions; most flexible for low/medium-temp reservoirs"
           ]
         ]
       },
       {
-        "heading": "3. Global Benchmarks & Indian Geothermal Fields",
-        "content": "• Global Leaders: Kenya generates ~47% of its national electricity from geothermal; Iceland generates >20% of its electricity and heats nearly 100% of buildings geothermally.<br>• Indian Geothermal Prospects:<br>  - Puga Valley (Ladakh): Highest enthalpy geothermal field in India; active exploratory drilling.<br>  - Tattapani (Chhattisgarh): Hot springs field in central India.<br>  - Manikaran (Himachal Pradesh): Geothermal field in the Parbati valley.<br>  - Cambay Basin (Gujarat): Deep sedimentary basin geothermal potential."
+        "heading": "3. Applications, Limitations & Global vs Indian Benchmarks",
+        "content": "<p><strong>Applications:</strong> Electricity generation, district space heating, greenhouse climate control, industrial drying, aquaculture, hot water spas, geothermal heat pumps.</p><p><strong>Advantages:</strong> Baseload 24x7 (capacity factor 80–95%), tiny surface land footprint, minimal emissions, weather-independent.</p><p><strong>Limitations:</strong> High exploration/drilling costs, geographical specificity, <strong>Enhanced Geothermal Systems (EGS) induced seismicity</strong> (Basel, Switzerland project abandoned after triggering earthquakes), toxic <strong>hydrogen sulphide (H2S)</strong> emissions requiring scrubbers.</p><p><strong>Global Benchmarks:</strong> <strong>Kenya</strong> generates <strong>47%</strong> of its electricity from geothermal; <strong>Iceland</strong> generates >20% electricity and heats nearly 100% of all buildings geothermally; USA, Indonesia, Philippines, New Zealand are leading producers.</p><p><strong>Indian Fields:</strong> Moderate potential (~10,000 MW); commercial generation still limited. Key geothermal fields: <strong>Puga Valley (Ladakh)</strong>, <strong>Tattapani (Chhattisgarh)</strong>, <strong>Manikaran (Himachal Pradesh)</strong>, <strong>Cambay Basin (Gujarat)</strong>.</p>"
+      },
+      {
+        "heading": "4. Comprehensive Matrix: Hydroelectric vs Geothermal Power",
+        "tableHeaders": [
+          "Evaluation Parameter",
+          "Hydroelectric Power",
+          "Geothermal Power"
+        ],
+        "tableRows": [
+          [
+            "Primary Energy Source",
+            "Flowing surface water elevated by hydrological cycle",
+            "Subterranean heat from radioactive decay and primordial Earth heat"
+          ],
+          [
+            "Resource Location",
+            "Surface rivers, reservoirs, mountainous catchment basins",
+            "Deep hydrothermal reservoirs (1–3 km subterranean)"
+          ],
+          [
+            "Surface Land Area Requirement",
+            "Very large (expansive reservoir inundation of land and forests)",
+            "Tiny footprint (compact modular surface footprint with subterranean wells)"
+          ],
+          [
+            "Technology Maturity",
+            "Mature, globally deployed for over a century",
+            "Mature for flash/dry steam; emerging for Enhanced Geothermal Systems (EGS)"
+          ],
+          [
+            "Generation Availability",
+            "Seasonal, highly dependent on rainfall, snowmelt, and droughts",
+            "24/7 baseload, completely independent of weather or seasons"
+          ],
+          [
+            "Power Output Capacity",
+            "Very high (individual dam projects up to 22,500 MW Three Gorges)",
+            "Moderate (individual modular plants typically 10 MW to 100 MW)"
+          ],
+          [
+            "Major Environmental Risks",
+            "Displacement of populations, forest submergence, methane in tropics, dam failure",
+            "Induced micro-seismicity from hydraulic fracturing, toxic H2S degassing"
+          ]
+        ]
       }
     ]
   },
@@ -392,49 +655,61 @@
     "id": "mod-8",
     "num": 8,
     "category": "AI & IoT",
-    "title": "Module 8: AI & IoT in Environmental Monitoring",
-    "badge": "Emerging Tech",
-    "summary": "Environmental sensor matrices, real-time telemetry protocols, LSTM air quality forecasting, digital twins, and Indian case studies.",
+    "title": "Module 8: Role of AI & IoT in Environmental Monitoring (Part F)",
+    "badge": "Lecture AI & IoT",
+    "summary": "Environmental monitoring definition, IoT connected sensor matrix, predictive analytics (LSTM air quality), digital twins, e-noses, EMS under ISO 14001, IIT Kharagpur arsenic prediction, The Ocean Cleanup, NMIS and ENVIS databases.",
     "type": "sections",
     "sections": [
       {
-        "heading": "1. Environmental IoT Sensor Matrix",
+        "heading": "1. Environmental Monitoring Definition & IoT Benefits",
+        "content": "<p><strong>Definition:</strong> Systematic collection, analysis, and assessment of environmental data (air, water, soil quality, biodiversity) to detect changes, identify health risks, and predict future conditions affecting public health.</p><p><strong>Key Aspects:</strong> Data collection, risk assessment, trend analysis, policy formulation, public health protection.</p><p><strong>Methods:</strong> Ground-based sampling, satellite remote sensing observation, computational environmental modelling.</p><p><strong>IoT in Environmental Monitoring:</strong> Connected sensors collect real-time physical parameters and transmit them wirelessly (LoRaWAN, 4G/5G, NB-IoT) for cloud processing.<br><strong>Key Benefits:</strong> Real-time data telemetry, remote monitoring of hazardous/isolated zones, automated response actuation (switching on industrial scrubbers or water treatment above threshold), precision resource management (smart soil-moisture irrigation), and reduced inspection costs.</p>"
+      },
+      {
+        "heading": "2. Environmental IoT Sensor Matrix Table",
         "tableHeaders": [
-          "Domain",
-          "Sensors & Detectors",
-          "Monitored Parameters"
+          "Sensor Category",
+          "Key Environmental Parameters Measured",
+          "Primary Application & Deployment"
         ],
         "tableRows": [
           [
-            "Air Quality Telemetry",
-            "Optical dust scattering sensors, MQ-135 electrochemical arrays",
-            "PM2.5, PM10, carbon monoxide (CO), sulfur dioxide (SO2), nitrogen oxides (NOx), ground-level ozone (O3)"
+            "Air Quality Sensors",
+            "PM2.5, PM10, CO, SO2, NOx, ground-level O3, VOCs",
+            "Urban traffic junctions, industrial stacks, smart poles; identifies real-time pollution hotspots"
           ],
           [
-            "Water Quality Monitoring",
-            "Ion-selective glass electrodes, optical dissolved oxygen probes",
-            "pH, Dissolved Oxygen (DO), Electrical Conductivity (EC), Biochemical Oxygen Demand (BOD), turbidity"
+            "Water Quality Multi-Probes",
+            "pH, Dissolved Oxygen (DO), turbidity, conductivity, heavy metal ions",
+            "River basins, drinking water treatment plants, industrial sewage effluent discharge outfalls"
           ],
           [
-            "Soil & Precision Farming",
-            "Capacitive moisture sensors, optical NPK spectrophotometers",
-            "Volumetric soil moisture percentage, soil temperature, Nitrogen (N), Phosphorus (P), Potassium (K)"
+            "Soil & Agriculture Sensors",
+            "Soil volumetric moisture, temperature, pH, NPK nutrients (N, P, K)",
+            "Precision agriculture, irrigation scheduling, land degradation assessment"
           ],
           [
-            "Wildlife & Forest Conservation",
-            "Bioacoustic microphones, PIR passive infrared camera traps",
-            "Ultrasonic bat frequencies, detection of illegal logging chainsaw sounds and poaching gunshots"
+            "Bioacoustic Sensor Arrays",
+            "Audio frequency spectrum, forest soundscape acoustics",
+            "Wildlife reserves; detects illegal chainsaw logging, gunshots, and animal vocalisations"
           ],
           [
-            "Municipal Smart Waste",
-            "Ultrasonic level sensors mounted on dumpster lids",
-            "Real-time trash bin fill levels; automated dynamic route optimization for municipal waste collection fleets"
+            "Wearable Exposure Sensors",
+            "Personal micro-climate pollutants, radiation exposure",
+            "Occupational safety in chemical plants, mines, and smart wearables for citizen health tracking"
           ]
         ]
       },
       {
-        "heading": "2. Artificial Intelligence in Environmental Engineering",
-        "content": "• Long Short-Term Memory (LSTM) Networks: Recurrent deep learning models specifically designed to model non-linear temporal atmospheric time-series data to forecast air quality indices (AQI) 24–72 hours in advance.<br>• Digital Twins: Real-time physics-grounded 3D computational replicas of physical systems (e.g., wastewater treatment plants, municipal water grids) continuously updated by IoT sensor streams to simulate failure scenarios.<br>• Computer Vision & Remote Sensing: Convolutional Neural Networks (CNNs) analyzing multi-spectral drone and satellite imagery to calculate Normalized Difference Vegetation Index (NDVI) and detect illegal deforestation.<br>• Landmark Indian AI Case Study: Researchers from IIT Kharagpur developed an AI machine learning geospatial framework predicting groundwater arsenic contamination across the Ganga delta, identifying safe drinking water aquifers."
+        "heading": "3. Artificial Intelligence & Advanced Engineering Tools",
+        "content": "<p><strong>AI Analytics:</strong> AI algorithms process large sensor/satellite/drone datasets to forecast pollution surges, track deforestation, and detect ecological anomalies in real time.</p><ul><li><strong>Air Quality Forecasting:</strong> <strong>Long Short-Term Memory (LSTM)</strong> recurrent neural networks predict future air quality (AQI) from historical sensor time-series data.</li><li><strong>Water Quality & Contaminant Alerts:</strong> Real-time machine learning algorithms detect toxic chemical surges instantly.</li><li><strong>Climate Modelling:</strong> Deep learning predicts CO2 trajectories, glacier mass loss, and sea level rise.</li><li><strong>Flood Early Warning:</strong> Hydrological models predict flash floods hours ahead of peak river discharge.</li><li><strong>Biodiversity & Anti-Poaching:</strong> Computer vision classifies camera trap species; anomaly detection identifies illegal poaching/fishing patterns.</li></ul><p><strong>Advanced Enterprise AI Tools:</strong></p><ul><li><em>Geospatial AI:</em> Real-time satellite land cover mapping.</li><li><em>Digital Twins:</em> Virtual real-time replica of physical systems (e.g. digital twin of a municipal sewage treatment plant).</li><li><em>Electronic Noses (e-Noses):</em> Array of chemical sensors paired with pattern-recognition AI to classify odors and trace hazardous toxic gas leaks.</li><li><em>Cloud EHS Platforms:</em> Enterprise platforms (EHS Insight, Envirosuite) managing Environmental Management Systems (EMS) under <strong>ISO 14001 certification</strong>.</li><li><em>Smart Waste Management:</em> Bin fill sensors combined with route-optimization algorithms dynamically optimize municipal garbage collection paths.</li></ul>"
+      },
+      {
+        "heading": "4. Real-World Case Studies: IIT Kharagpur & The Ocean Cleanup",
+        "content": "<ul><li><strong>IIT Kharagpur AI Groundwater Arsenic Prediction:</strong> Researchers developed an AI/ML model predicting arsenic contamination in groundwater across the <strong>Ganga delta</strong>; maps high-risk vs safe drinking water zones; finds safe aquifers; quantifies public health exposure risks with high spatial resolution.</li><li><strong>The Ocean Cleanup AI Plastic Mapping:</strong> AI and computer vision cameras deployed on vessels and drones map, categorize, and quantify plastic debris concentration in remote ocean gyres (Great Pacific Garbage Patch), guiding cleanup vessels to high-density zones for targeted plastic extraction.</li></ul>"
+      },
+      {
+        "heading": "5. Remote Sensing & Environmental Databases (NMIS & ENVIS)",
+        "content": "<p><strong>Remote Sensing:</strong> Gathering information about an object, surface, or phenomenon from a distance without making physical contact (using aircraft or Earth-observation satellites such as Sentinel, Landsat, Cartosat). Used in agriculture, forestry, land use/land cover (LULC), and water resources.</p><p><strong>Environmental Databases:</strong> Structured digital repositories of inter-related environmental research and policy data.</p><ul><li><strong>NMIS (National Management Information System):</strong> Database managed by DST tracking R&D projects, research funding allocations, and environmental scientists across India.</li><li><strong>ENVIS (Environmental Information System):</strong> Established by MoEFCC in 1982. A nationwide decentralized network of subject-specific database centres (ENVIS Hubs) providing comprehensive environmental data to policymakers, engineers, researchers, and the public.</li></ul>"
       }
     ]
   },
@@ -731,15 +1006,15 @@
     "id": "mod-18",
     "num": 18,
     "category": "Cheat Sheet & Numbers",
-    "title": "Module 18: Last-Minute Exam Tips & VIT Examiner Marking Guide",
-    "badge": "Exam Strategy",
-    "summary": "High-yield 2-mark definitions, 5/10-mark structured answering techniques, and technical keywords that earn maximum marks in VIT EVS FAT exams.",
+    "title": "Module 18: Last-Minute Exam Tips & VIT Examiner Marking Guide (Part G)",
+    "badge": "Exam Guide",
+    "summary": "High-scoring exam strategies, verbatim 2-mark definitions, 5/10-mark structural frameworks, labelled diagram checklists, and advice on linking answers to Indian commitments and the role of engineers.",
     "type": "bullets",
     "bullets": [
-      "Frequent 2-Mark Question Definitions to Memorise verbatim: Carbon footprint (CO2e), Global Warming Potential (GWP100), Scope 1 vs 2 vs 3, Betz limit (59.3%), Photovoltaic effect (p-n junction), Flash vs Binary geothermal cycles, Run-of-river vs Pumped storage hydro, Digital Twin, Leopold Matrix.",
-      "Frequent 5/10-Mark Question Frameworks: When asked to explain the working of Solar PV / Wind Turbine / Hydro Plant / Geothermal Plant, ALWAYS begin by writing the overall energy conversion chain and drawing a clear block diagram.",
-      "Highlight Indian Commitments: VIT examiners strongly award marks for grounding answers in Indian policies: 500 GW non-fossil capacity by 2030, Net-Zero by 2070, PM Surya Ghar Muft Bijli Yojana, Bhadla Solar Park (Rajasthan), NIWE Chennai, Muppandal Wind Farm (Tamil Nadu), Tehri Dam (Uttarakhand), Puga Valley (Ladakh).",
-      "Technical Terminology Checklist: Include core scientific concepts where relevant: Clausius-Clapeyron relation (7% moisture/°C), calcination of limestone (50% cement CO2), CPCB established under Section 3 of Water Act 1974, BOD vs COD, secondary organic fluid (isobutane/pentane), LSTM for air quality time-series forecasting."
+      "Frequent 2-Mark Question Definitions to Memorise Verbatim: (1) Carbon Footprint: Total GHG emissions caused directly and indirectly by an entity, expressed in t CO2e. (2) GWP: Heat trapped by a gas relative to CO2 over 100 years (CH4 = 28–34, N2O = 265–298). (3) Mitigation vs Adaptation: Mitigation reduces/prevents emissions (renewables, CCS); adaptation copes with unavoidable warming (sea walls, green roofs). Adaptation is a complement, not a substitute. (4) Scope 1/2/3: Scope 1 = direct (boilers, company cars); Scope 2 = purchased electricity; Scope 3 = upstream/downstream value chain. (5) LCA: Life Cycle Assessment from cradle-to-grave or cradle-to-cradle. (6) CCS: Capture CO2 at source and sequester in deep geological reservoirs. (7) Run-of-River vs Storage Hydro: Run-of-river has no large reservoir and smaller impact (Srinagar 330 MW); storage has a large dam and reservoir for reliable baseload (Tehri 1000 MW). (8) Binary Cycle Geothermal: Heat exchanger vaporises secondary fluid (isobutane/pentane) with lower boiling point; brine never touches turbine; near-zero emissions (100–180 °C). (9) HAWT vs VAWT: Horizontal-Axis (HAWT) has high aerodynamic efficiency but requires yaw; Vertical-Axis (VAWT) is omnidirectional and suits turbulent urban winds. (10) PV Effect: Photons excite electrons in crystalline silicon; internal electric field at p-n junction directs electrons to produce direct current (DC). (11) Remote Sensing & ENVIS: Remote sensing = collecting data without physical contact; ENVIS = MoEFCC nationwide environmental information system network.",
+      "Frequent 5/10-Mark Question Frameworks: (1) Causes & Consequences of Global Warming: Structure with 4 anthropogenic sources (fossil fuels ~75%, deforestation 10–15%, agriculture 10–12%, cement ~8%) + why natural factors do NOT explain it (solar decreased since 1980s, volcanoes cause cooling, orbital cycles are geological). Then give 5 consequences (extreme weather, sea level rise, ecosystem shifts, food security, health with 250k deaths/yr). (2) Mitigation Strategies: Structure into 5 areas: Energy transformation (renewables, SMRs), Energy efficiency (IEA 'first fuel'), Carbon capture (CCS, CCU, DAC), Land sinks (afforestation vs reforestation), and Circular economy (3Rs, EVs, carbon pricing). (3) Working Principle of Power Plants (with Labelled Flow/Diagram): Solar PV (Sunlight -> photons -> p-n junction -> DC current -> inverter -> AC grid); Wind Turbine (Moving air -> blades -> rotor -> shaft -> gearbox steps up speed -> generator -> grid); Hydro Plant (Reservoir potential -> penstock kinetic -> turbine mechanical -> generator electrical); Geothermal Plant (Production well -> flash tank/heat exchanger -> steam turbine -> generator -> injection well). (4) Comparative Tables: Memorise the exact comparison parameters for Solar vs Wind (Source, Noise, Location, Capacity Factor) and Hydro vs Geothermal (Resource, Land Footprint, Maturity, Availability, Output). (5) AI & IoT in Environmental Monitoring: Explain IoT sensors -> wireless telemetry -> cloud AI analytics (LSTM for air quality, CNNs for species, digital twins for water plants) + cite IIT Kharagpur Ganga delta arsenic prediction and The Ocean Cleanup plastic mapping case studies!",
+      "Always Link Answers to India Commitments & Real-World Schemes: VIT examiners strongly award marks for grounding answers in official Indian targets and schemes: (1) India Targets: 500 GW non-fossil capacity by 2030, 50% installed capacity non-fossil by 2030, Net-Zero emissions by 2070. (2) Key Schemes: PM Surya Ghar (1 crore households, ₹78k subsidy), PM-KUSUM (60% solar irrigation pump subsidy), National Solar Mission, Bhadla Solar Park (largest in world, 2245 MW, Rajasthan), NIWE Chennai (wind institute, western coast preferred), Tehri Dam (1000 MW storage), Kadamparai TN (400 MW pumped storage).",
+      "Emphasise the Role of Engineers in Environmental Solutions: Examiners look for engineering application-based points: Civil (dam design, penstock hydraulics, turbine foundations), Mechanical (turbine aerofoils, pitch/yaw gears, geothermal heat exchangers), Electrical (inverters, grid transformers, Green Energy Corridor, smart grids), Chemical (corrosion-resistant alloys against geothermal mineral scaling, battery chemistries), and Computer Science (AI LSTM forecasting, IoT sensor networks, digital twins, cloud EHS systems)."
     ]
   }
 ]
