@@ -454,54 +454,191 @@ html_template = """<!DOCTYPE html>
       font-size: 0.92rem;
     }
 
-    /* ── Question Navigator & Palette ────────────────────── */
-    .palette-container {
-      background: #111a30;
-      border: 1px solid #283a63;
-      border-radius: 0.85rem;
-      margin-bottom: 1.25rem;
-      overflow: hidden;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    /* ── Slide-Out Pop-Up Drawer on the Right ─────────────── */
+    .drawer-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
     }
 
-    .palette-header {
+    .drawer-panel {
+      position: fixed;
+      top: 0;
+      right: -380px;
+      width: 360px;
+      max-width: 90vw;
+      height: 100vh;
+      background: #0f172a;
+      border-left: 1.5px solid #283a63;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.55);
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .drawer-panel.open {
+      right: 0;
+    }
+
+    .drawer-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 0.75rem;
-      padding: 0.75rem 1rem;
+      padding: 1.15rem 1.25rem;
       background: #17233f;
       border-bottom: 1px solid #233457;
-      cursor: pointer;
-      user-select: none;
-      flex-wrap: wrap;
     }
-
-    .palette-header:hover {
-      background: #1c2b4d;
-    }
-
-    .palette-title-group {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      flex-wrap: wrap;
-    }
-
-    .palette-title {
+    .drawer-title {
+      font-size: 1.05rem;
       font-weight: 700;
-      font-size: 0.92rem;
       color: #f1f5f9;
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.5rem;
+    }
+    .drawer-close-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: all 0.2s ease;
+    }
+    .drawer-close-btn:hover {
+      background: #ef4444;
+      color: #ffffff;
+      border-color: #ef4444;
     }
 
-    .palette-counts {
+    .drawer-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .drawer-content::-webkit-scrollbar {
+      width: 6px;
+    }
+    .drawer-content::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+
+    .drawer-counts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .drawer-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      background: #162038;
+      border: 1px solid #233457;
+      border-radius: 0.65rem;
+      padding: 0.75rem 0.9rem;
+      font-size: 0.78rem;
+      color: #cbd5e1;
+    }
+    .drawer-legend .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .drawer-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.55rem;
+      padding: 0.25rem 0;
+    }
+
+    .drawer-footer {
+      padding: 1rem 1.25rem;
+      background: #131d34;
+      border-top: 1px solid #233457;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .nav-drawer-btn {
+      background: rgba(56, 189, 248, 0.14);
+      border: 1.5px solid rgba(56, 189, 248, 0.45);
+      color: #38bdf8;
+      padding: 0.4rem 0.85rem;
+      border-radius: 0.55rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      flex-wrap: wrap;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .nav-drawer-btn:hover {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #38bdf8;
+      transform: translateY(-1px);
+    }
+
+    .floating-palette-tab {
+      position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #17233f;
+      border: 1.5px solid #38bdf8;
+      border-right: none;
+      border-radius: 0.75rem 0 0 0.75rem;
+      padding: 0.7rem 0.5rem;
+      color: #38bdf8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      z-index: 990;
+      box-shadow: -4px 0 15px rgba(0, 0, 0, 0.45);
+      transition: all 0.2s ease;
+      font-size: 0.75rem;
+      font-weight: 700;
+      font-family: inherit;
+    }
+    .floating-palette-tab:hover {
+      background: #0284c7;
+      color: #ffffff;
+      padding-left: 0.7rem;
+    }
+    .floating-palette-tab .tab-text {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      text-transform: uppercase;
     }
 
     .count-pill {
@@ -527,48 +664,6 @@ html_template = """<!DOCTYPE html>
       background: rgba(148, 163, 184, 0.15);
       color: #94a3b8;
       border: 1px solid rgba(148, 163, 184, 0.3);
-    }
-
-    .palette-toggle-btn {
-      background: #253966;
-      border: 1px solid #3b5284;
-      color: #cbd5e1;
-      padding: 0.3rem 0.65rem;
-      border-radius: 0.45rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-family: inherit;
-    }
-    .palette-toggle-btn:hover {
-      background: #314a84;
-      color: #ffffff;
-      border-color: #38bdf8;
-    }
-
-    .palette-submit-btn {
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid rgba(16, 185, 129, 0.4);
-      color: #34d399;
-      padding: 0.3rem 0.65rem;
-      border-radius: 0.45rem;
-      font-size: 0.78rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-family: inherit;
-    }
-    .palette-submit-btn:hover {
-      background: #10b981;
-      color: #ffffff;
-    }
-
-    .palette-body {
-      padding: 0.85rem 1rem;
-    }
-    .palette-body.collapsed {
-      display: none;
     }
 
     .palette-legend {
@@ -1382,7 +1477,7 @@ let score = 0;
 let answered = false;
 let userAnswers = [];
 let questionStates = [];
-let paletteCollapsed = false;
+let isDrawerOpen = false;
 let currentMode = "fat_all";
 let currentTopic = "";
 
@@ -1644,7 +1739,7 @@ function initQuizState() {
   if (questionStates[0]) {
     questionStates[0].visited = true;
   }
-  paletteCollapsed = false;
+  isDrawerOpen = false;
   startStopwatch();
   renderQuestion();
 }
@@ -1654,7 +1749,7 @@ function updatePaletteHeader() {
   const watchedCount = questionStates.filter(s => !s.answered && (s.watched || s.visited)).length;
   const unansweredCount = questionStates.filter(s => !s.answered && !s.watched && !s.visited).length;
 
-  const countPills = document.getElementById("paletteCounts");
+  const countPills = document.getElementById("drawerCounts");
   if (countPills) {
     countPills.innerHTML = `
       <span class="count-pill count-answered">✔ ${answeredCount} Answered</span>
@@ -1663,27 +1758,43 @@ function updatePaletteHeader() {
     `;
   }
 
+  const navDrawerBtn = document.getElementById("navDrawerBtn");
+  if (navDrawerBtn) {
+    navDrawerBtn.innerHTML = `🔢 Questions (${answeredCount}/${activeQuestions.length})`;
+  }
+
   const liveScoreEl = document.getElementById("liveScoreDisplay");
   if (liveScoreEl) {
     liveScoreEl.textContent = activeQuestions.length === 40 ? `Marks: ${score}/40` : `Score: ${score}`;
   }
 }
 
-function togglePalette() {
-  paletteCollapsed = !paletteCollapsed;
-  const body = document.getElementById("paletteBody");
-  const btn = document.getElementById("paletteToggleBtn");
-  if (body) {
-    body.classList.toggle("collapsed", paletteCollapsed);
-  }
-  if (btn) {
-    btn.textContent = paletteCollapsed ? "Show Palette ▼" : "Hide Palette ▲";
+function openQuestionDrawer() {
+  isDrawerOpen = true;
+  const panel = document.getElementById("questionDrawerPanel");
+  const backdrop = document.getElementById("questionDrawerBackdrop");
+  if (panel) panel.classList.add("open");
+  if (backdrop) backdrop.classList.add("open");
+}
+
+function closeQuestionDrawer() {
+  isDrawerOpen = false;
+  const panel = document.getElementById("questionDrawerPanel");
+  const backdrop = document.getElementById("questionDrawerBackdrop");
+  if (panel) panel.classList.remove("open");
+  if (backdrop) backdrop.classList.remove("open");
+}
+
+function toggleQuestionDrawer() {
+  if (isDrawerOpen) {
+    closeQuestionDrawer();
+  } else {
+    openQuestionDrawer();
   }
 }
 
 function jumpToQuestion(targetIndex) {
   if (targetIndex < 0 || targetIndex >= activeQuestions.length) return;
-  if (targetIndex === currentIndex) return;
 
   if (questionStates[currentIndex]) {
     questionStates[currentIndex].visited = true;
@@ -1694,6 +1805,7 @@ function jumpToQuestion(targetIndex) {
     questionStates[currentIndex].visited = true;
   }
 
+  closeQuestionDrawer();
   renderQuestion();
 }
 
@@ -1744,6 +1856,7 @@ function submitExamEarly() {
     const confirmSubmit = confirm("You have " + unansweredCount + " unanswered questions.\\n\\nAre you sure you want to finish and submit your exam now?");
     if (!confirmSubmit) return;
   }
+  closeQuestionDrawer();
   renderResults();
 }
 
@@ -1776,12 +1889,74 @@ function renderQuestion() {
 
   const isFat = q.isFatExam;
 
-  // Counts for palette
+  // Counts for drawer
   const answeredCount = questionStates.filter(s => s.answered).length;
   const watchedCount = questionStates.filter(s => !s.answered && (s.watched || s.visited)).length;
   const unansweredCount = questionStates.filter(s => !s.answered && !s.watched && !s.visited).length;
 
   app.innerHTML = `
+    <!-- ── Slide-Out Pop-Up Drawer on the Right ── -->
+    <div class="drawer-backdrop ${isDrawerOpen ? 'open' : ''}" id="questionDrawerBackdrop" onclick="closeQuestionDrawer()"></div>
+    <div class="drawer-panel ${isDrawerOpen ? 'open' : ''}" id="questionDrawerPanel">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <span>🔢 Question Palette</span>
+          <span style="font-size:0.75rem; color:#94a3b8; font-weight:normal;">(${activeQuestions.length} Qs)</span>
+        </div>
+        <button class="drawer-close-btn" onclick="closeQuestionDrawer()" title="Close Drawer (Esc)">✕</button>
+      </div>
+
+      <div class="drawer-content">
+        <div class="drawer-counts" id="drawerCounts">
+          <span class="count-pill count-answered">✔ ${answeredCount} Answered</span>
+          <span class="count-pill count-watched">👁️ ${watchedCount} Watched</span>
+          <span class="count-pill count-unanswered">⏳ ${unansweredCount} Unanswered</span>
+        </div>
+
+        <div class="drawer-legend">
+          <div class="legend-item"><span class="legend-box box-answered"></span> <span>Answered (Green)</span></div>
+          <div class="legend-item"><span class="legend-box box-watched"></span> <span>Watched / Visited (Amber)</span></div>
+          <div class="legend-item"><span class="legend-box box-unanswered"></span> <span>Unanswered (Slate)</span></div>
+          <div class="legend-item"><span class="legend-box box-current"></span> <span>Current Question (Cyan Ring)</span></div>
+        </div>
+
+        <div style="font-size:0.8rem; font-weight:700; color:#cbd5e1; margin-top:0.25rem;">
+          Select a Question Number to Jump:
+        </div>
+
+        <div class="drawer-grid">
+          ${activeQuestions.map((_, i) => {
+            let statusClass = "box-unanswered";
+            if (questionStates[i].answered) {
+              statusClass = "box-answered";
+            } else if (questionStates[i].watched || questionStates[i].visited) {
+              statusClass = "box-watched";
+            }
+            const isCurrent = (i === currentIndex);
+            return `
+              <button class="q-box ${statusClass} ${isCurrent ? 'box-current' : ''}" 
+                      id="drawer-qbox-${i}"
+                      onclick="jumpToQuestion(${i})" 
+                      title="Jump to Question ${i + 1}">
+                ${i + 1}
+              </button>
+            `;
+          }).join("")}
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <button class="btn btn-secondary" style="flex:1; padding:0.6rem; font-size:0.85rem;" onclick="closeQuestionDrawer()">Close</button>
+        <button class="btn" style="flex:1.5; padding:0.6rem; font-size:0.85rem; background:linear-gradient(135deg, #10b981 0%, #059669 100%);" onclick="submitExamEarly()">🏆 Submit Exam</button>
+      </div>
+    </div>
+
+    <!-- ── Floating Side Tab on Right Edge ── -->
+    <button class="floating-palette-tab" onclick="openQuestionDrawer()" title="Open Question Palette">
+      <span>🔢</span>
+      <span class="tab-text">Questions</span>
+    </button>
+
     <div class="quiz-nav-bar">
       <div class="brand-title" onclick="renderStartScreen()">
         <span>EVS FAT Quiz</span>
@@ -1789,6 +1964,7 @@ function renderQuestion() {
       </div>
       <div class="nav-actions">
         <button class="nav-notes-btn" onclick="renderNotesScreen()" title="Open FAT Revision Notes">📖 FAT Notes</button>
+        <button class="nav-drawer-btn" id="navDrawerBtn" onclick="openQuestionDrawer()" title="Open Colour-Coded Question Palette">🔢 Questions (${answeredCount}/${activeQuestions.length})</button>
         <span class="mode-badge" title="${modeLabel}">🎯 ${modeLabel}</span>
         <span class="stopwatch-badge running" title="Elapsed Time">
           ⏱️ <span id="stopwatchDisplay">${formatStopwatch(elapsedSeconds)}</span>
@@ -1802,58 +1978,8 @@ function renderQuestion() {
       <div class="progress-fill" style="width:${progressPct}%"></div>
     </div>
 
+    <!-- ── Clean Quiz Body (Zero Embedded Navigator) ── -->
     <div class="quiz-body">
-      <!-- ── Question Navigator / Palette ── -->
-      <div class="palette-container">
-        <div class="palette-header" onclick="togglePalette()">
-          <div class="palette-title-group">
-            <span class="palette-title">🔢 Question Navigator</span>
-            <div class="palette-counts" id="paletteCounts">
-              <span class="count-pill count-answered">✔ ${answeredCount} Answered</span>
-              <span class="count-pill count-watched">👁️ ${watchedCount} Watched</span>
-              <span class="count-pill count-unanswered">⏳ ${unansweredCount} Unanswered</span>
-            </div>
-          </div>
-          <div style="display:flex; align-items:center; gap:0.5rem;" onclick="event.stopPropagation()">
-            <button class="palette-submit-btn" type="button" onclick="submitExamEarly()" title="Submit entire exam">
-              🏆 Submit Exam
-            </button>
-            <button class="palette-toggle-btn" id="paletteToggleBtn" type="button" onclick="togglePalette()">
-              ${paletteCollapsed ? "Show Palette ▼" : "Hide Palette ▲"}
-            </button>
-          </div>
-        </div>
-
-        <div class="palette-body ${paletteCollapsed ? 'collapsed' : ''}" id="paletteBody">
-          <div class="palette-legend">
-            <span class="legend-item"><span class="legend-box box-answered"></span> Answered (Green)</span>
-            <span class="legend-item"><span class="legend-box box-watched"></span> Watched / Visited (Amber)</span>
-            <span class="legend-item"><span class="legend-box box-unanswered"></span> Unanswered (Slate)</span>
-            <span class="legend-item"><span class="legend-box box-current"></span> Current (Cyan Ring)</span>
-          </div>
-          <div class="question-grid">
-            ${activeQuestions.map((_, i) => {
-              let statusClass = "box-unanswered";
-              if (questionStates[i].answered) {
-                statusClass = "box-answered";
-              } else if (questionStates[i].watched || questionStates[i].visited) {
-                statusClass = "box-watched";
-              }
-              const isCurrent = (i === currentIndex);
-              return `
-                <button class="q-box ${statusClass} ${isCurrent ? 'box-current' : ''}" 
-                        id="qbox-${i}"
-                        onclick="jumpToQuestion(${i})" 
-                        title="Go to Question ${i + 1}">
-                  ${i + 1}
-                </button>
-              `;
-            }).join("")}
-          </div>
-        </div>
-      </div>
-
-      <!-- ── Question Content ── -->
       <div class="meta-row">
         <span class="source-tag ${isFat ? 'fat-tag' : ''}">${escapeHtml(q.category)}</span>
         <span class="random-tag">🔀 Shuffled Options</span>
@@ -1998,13 +2124,13 @@ function handleSelectOption(selectedBtn, q) {
     `;
   }
 
-  // Update box in Question Palette in place (turns it instantly Green)
-  const qBox = document.getElementById(`qbox-${currentIndex}`);
+  // Update box in Question Palette Drawer in place (turns it instantly Green)
+  const qBox = document.getElementById(`drawer-qbox-${currentIndex}`);
   if (qBox) {
     qBox.className = "q-box box-answered box-current";
   }
 
-  // Update live palette header counts & live score
+  // Update live drawer counts, top navbar button & live score
   updatePaletteHeader();
 
   // Update action row to Next button
@@ -2024,8 +2150,15 @@ function handleSelectOption(selectedBtn, q) {
 }
 
 // ── Global Keyboard Shortcuts ──────────────────────────────────
-// Press 1, 2, 3, 4 to select options; Enter to advance; Arrows to navigate
+// Press 1, 2, 3, 4 to select options; Enter to advance; Arrows to navigate; Esc to close drawer
 window.addEventListener("keydown", (e) => {
+  // If drawer is open and user presses Escape, close it
+  if (e.key === "Escape" && isDrawerOpen) {
+    e.preventDefault();
+    closeQuestionDrawer();
+    return;
+  }
+
   // Ignore keyboard shortcuts when typing in search or other text input elements
   const activeEl = document.activeElement;
   if (activeEl && (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA" || activeEl.isContentEditable)) {
