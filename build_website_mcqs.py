@@ -1,4 +1,4 @@
-# Script to generate comprehensive questions from https://masterdooom.github.io/evs/
+# Script to generate comprehensive questions from https://evs-study-hub/
 import json, ast, re
 
 with open("/Users/pran/devjams26/website_dump.json") as f:
@@ -100,7 +100,7 @@ for idx, (q, opts, ans_idx) in enumerate(raw_site_qs):
 
     website_questions.append({
         "id": idx + 1,
-        "source": "masterdooom.github.io/evs (Official 63)",
+        "source": "evs-study-hub (Official 63)",
         "isOfficial63": True,
         "category": cat,
         "question": q,
@@ -114,7 +114,7 @@ additional_topic_questions = [
     # Topic 1: Earth as a Life Support System
     {
         "id": 64,
-        "source": "masterdooom.github.io/evs (Topic 1: Life Support)",
+        "source": "evs-study-hub (Topic 1: Life Support)",
         "isOfficial63": False,
         "category": "Earth as a Life Support System",
         "question": "Which boundary separates the troposphere from the stratosphere?",
@@ -124,7 +124,7 @@ additional_topic_questions = [
     },
     {
         "id": 65,
-        "source": "masterdooom.github.io/evs (Topic 1: Life Support)",
+        "source": "evs-study-hub (Topic 1: Life Support)",
         "isOfficial63": False,
         "category": "Earth as a Life Support System",
         "question": "The lithosphere primarily comprises:",
@@ -135,7 +135,7 @@ additional_topic_questions = [
     # Topic 2: Ecosystem Core Concepts
     {
         "id": 66,
-        "source": "masterdooom.github.io/evs (Topic 2: Core Concepts)",
+        "source": "evs-study-hub (Topic 2: Core Concepts)",
         "isOfficial63": False,
         "category": "Ecosystem — Core Concepts",
         "question": "The term 'Ecology' was coined in 1866 by:",
@@ -145,7 +145,7 @@ additional_topic_questions = [
     },
     {
         "id": 67,
-        "source": "masterdooom.github.io/evs (Topic 2: Core Concepts)",
+        "source": "evs-study-hub (Topic 2: Core Concepts)",
         "isOfficial63": False,
         "category": "Ecosystem — Core Concepts",
         "question": "Which of the following is an artificial (man-made) ecosystem?",
@@ -156,7 +156,7 @@ additional_topic_questions = [
     # Topic 3 & 4: Energy flow & Thermodynamics
     {
         "id": 68,
-        "source": "masterdooom.github.io/evs (Topic 4: Energy Flow)",
+        "source": "evs-study-hub (Topic 4: Energy Flow)",
         "isOfficial63": False,
         "category": "Ecosystem & Energy Flow",
         "question": "Which biome exhibits the highest Net Primary Productivity (NPP) according to the notes?",
@@ -166,7 +166,7 @@ additional_topic_questions = [
     },
     {
         "id": 69,
-        "source": "masterdooom.github.io/evs (Topic 4: Energy Flow)",
+        "source": "evs-study-hub (Topic 4: Energy Flow)",
         "isOfficial63": False,
         "category": "Ecosystem & Energy Flow",
         "question": "Why does the Second Law of Thermodynamics explain unidirectional energy flow in ecosystems?",
@@ -177,7 +177,7 @@ additional_topic_questions = [
     # Topic 5: Succession
     {
         "id": 70,
-        "source": "masterdooom.github.io/evs (Topic 5: Succession)",
+        "source": "evs-study-hub (Topic 5: Succession)",
         "isOfficial63": False,
         "category": "Ecological Succession",
         "question": "According to the notes, secondary succession is roughly how much faster than primary succession?",
@@ -187,7 +187,7 @@ additional_topic_questions = [
     },
     {
         "id": 71,
-        "source": "masterdooom.github.io/evs (Topic 5: Succession)",
+        "source": "evs-study-hub (Topic 5: Succession)",
         "isOfficial63": False,
         "category": "Ecological Succession",
         "question": "The Polyclimax Theory of ecological succession was proposed by:",
@@ -198,7 +198,7 @@ additional_topic_questions = [
     # Topic 7 & 8: Species Status & Conservation
     {
         "id": 72,
-        "source": "masterdooom.github.io/evs (Topic 7: Species Status)",
+        "source": "evs-study-hub (Topic 7: Species Status)",
         "isOfficial63": False,
         "category": "Biodiversity & Conservation",
         "question": "An amensal relationship is represented by:",
@@ -208,7 +208,7 @@ additional_topic_questions = [
     },
     {
         "id": 73,
-        "source": "masterdooom.github.io/evs (Topic 8: Conservation)",
+        "source": "evs-study-hub (Topic 8: Conservation)",
         "isOfficial63": False,
         "category": "Biodiversity & Conservation",
         "question": "In a Biosphere Reserve, human settlements and sustainable eco-friendly practices are permitted primarily in the:",
@@ -219,7 +219,7 @@ additional_topic_questions = [
     # Topic 9: GM Crops
     {
         "id": 74,
-        "source": "masterdooom.github.io/evs (Topic 9: GM Crops)",
+        "source": "evs-study-hub (Topic 9: GM Crops)",
         "isOfficial63": False,
         "category": "Genetically Modified Crops",
         "question": "Bt toxins encoded by Cry genes are toxic to target insects because they:",
@@ -230,7 +230,7 @@ additional_topic_questions = [
     # Topic 10: Air Pollution & Smog
     {
         "id": 75,
-        "source": "masterdooom.github.io/evs (Topic 10: Air Pollution)",
+        "source": "evs-study-hub (Topic 10: Air Pollution)",
         "isOfficial63": False,
         "category": "Air Pollution",
         "question": "Which of the following is a primary ingredient and indicator of photochemical smog?",
@@ -241,7 +241,7 @@ additional_topic_questions = [
     # Topic 11: Water Pollution & Indicators
     {
         "id": 76,
-        "source": "masterdooom.github.io/evs (Topic 11: Water Pollution)",
+        "source": "evs-study-hub (Topic 11: Water Pollution)",
         "isOfficial63": False,
         "category": "Water Pollution & Management",
         "question": "What is the relationship between Biochemical Oxygen Demand (BOD) and water quality?",
@@ -252,7 +252,7 @@ additional_topic_questions = [
     # Topic 13 & 14: Noise & Thermal
     {
         "id": 77,
-        "source": "masterdooom.github.io/evs (Topic 13: Noise)",
+        "source": "evs-study-hub (Topic 13: Noise)",
         "isOfficial63": False,
         "category": "Noise, Thermal & Soil",
         "question": "Under the Noise Rules 2000 in India, ambient daytime noise standard for a Silent Zone is:",
@@ -263,7 +263,7 @@ additional_topic_questions = [
     # Topic 16: Waste & Circular Economy
     {
         "id": 78,
-        "source": "masterdooom.github.io/evs (Topic 16: Circular Economy)",
+        "source": "evs-study-hub (Topic 16: Circular Economy)",
         "isOfficial63": False,
         "category": "Circular Economy & Solid Waste",
         "question": "The biogas produced during anaerobic digestion consists predominantly of:",
@@ -274,7 +274,7 @@ additional_topic_questions = [
     # Topic 18: Chemical Hazards - BPA & Mercury
     {
         "id": 79,
-        "source": "masterdooom.github.io/evs (Topic 18: BPA & Mercury)",
+        "source": "evs-study-hub (Topic 18: BPA & Mercury)",
         "isOfficial63": False,
         "category": "Chemical Hazards (BPA & Mercury)",
         "question": "Bisphenol A (BPA) poses human health risks primarily because it mimics which hormone?",
@@ -284,7 +284,7 @@ additional_topic_questions = [
     },
     {
         "id": 80,
-        "source": "masterdooom.github.io/evs (Topic 18: BPA & Mercury)",
+        "source": "evs-study-hub (Topic 18: BPA & Mercury)",
         "isOfficial63": False,
         "category": "Chemical Hazards (BPA & Mercury)",
         "question": "The neurological disease resulting from methylmercury toxicity was first recognized around which Japanese bay?",
@@ -295,7 +295,7 @@ additional_topic_questions = [
     # Topic 20: EIA
     {
         "id": 81,
-        "source": "masterdooom.github.io/evs (Topic 20: EIA)",
+        "source": "evs-study-hub (Topic 20: EIA)",
         "isOfficial63": False,
         "category": "Environmental Impact Assessment (EIA)",
         "question": "What is the primary role of the Environmental Management Plan (EMP) in an EIA report?",
@@ -306,7 +306,7 @@ additional_topic_questions = [
     # Topic 21 & 22: Environmental Acts
     {
         "id": 82,
-        "source": "masterdooom.github.io/evs (Topic 21: Water Act)",
+        "source": "evs-study-hub (Topic 21: Water Act)",
         "isOfficial63": False,
         "category": "Indian Environmental Laws",
         "question": "The Water Act 1974 consists of how many chapters and sections?",
@@ -316,7 +316,7 @@ additional_topic_questions = [
     },
     {
         "id": 83,
-        "source": "masterdooom.github.io/evs (Topic 22: EPA 1986)",
+        "source": "evs-study-hub (Topic 22: EPA 1986)",
         "isOfficial63": False,
         "category": "Indian Environmental Laws",
         "question": "The Environment (Protection) Act, 1986 was enacted under which Article of the Constitution of India?",
@@ -327,7 +327,7 @@ additional_topic_questions = [
     # Topic 23: Godavarman judgment
     {
         "id": 84,
-        "source": "masterdooom.github.io/evs (Topic 23: Forest & Wildlife)",
+        "source": "evs-study-hub (Topic 23: Forest & Wildlife)",
         "isOfficial63": False,
         "category": "Indian Environmental Laws",
         "question": "The 1996 Supreme Court T.N. Godavarman judgment held that 'forest' must be understood according to its:",
@@ -338,7 +338,7 @@ additional_topic_questions = [
     # Topic 25: Paris Agreement
     {
         "id": 85,
-        "source": "masterdooom.github.io/evs (Topic 25: Paris Agreement)",
+        "source": "evs-study-hub (Topic 25: Paris Agreement)",
         "isOfficial63": False,
         "category": "Kyoto, Paris & SDGs",
         "question": "Article 4 of the Paris Agreement commits nations to reach global peaking of emissions and achieve:",
@@ -349,7 +349,7 @@ additional_topic_questions = [
     # Topic 26: SDGs
     {
         "id": 86,
-        "source": "masterdooom.github.io/evs (Topic 26: SDGs)",
+        "source": "evs-study-hub (Topic 26: SDGs)",
         "isOfficial63": False,
         "category": "Sustainable Development Goals",
         "question": "Which SDG is dedicated to 'Life on Land' (conserving terrestrial ecosystems, combating desertification and stopping biodiversity loss)?",
@@ -364,4 +364,4 @@ all_website_generated = website_questions + additional_topic_questions
 with open("/Users/pran/devjams26/website_mcqs.json", "w") as f:
     json.dump(all_website_generated, f, indent=2)
 
-print(f"Generated {len(all_website_generated)} MCQs directly from masterdooom.github.io/evs ({len(website_questions)} official + {len(additional_topic_questions)} high-yield topic MCQs).")
+print(f"Generated {len(all_website_generated)} MCQs directly from evs-study-hub ({len(website_questions)} official + {len(additional_topic_questions)} high-yield topic MCQs).")

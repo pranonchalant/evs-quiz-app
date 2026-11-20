@@ -533,6 +533,21 @@ html_template = """<!DOCTYPE html>
       background: linear-gradient(145deg, #17233f, #132e3b);
     }
 
+    /* Dates, Treaties, WHO & SDGs Card */
+    .mode-card.treaties-featured {
+      border-color: #06b6d4;
+      background: linear-gradient(145deg, #17233f, #0c2b3a);
+    }
+    .mode-card.treaties-featured:hover {
+      border-color: #22d3ee;
+      background: #113649;
+    }
+    .mode-card.treaties-featured .mode-badge-count {
+      color: #22d3ee;
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+    }
+
     /* Notes Card */
     .mode-card.notes-card {
       border-color: #8b5cf6;
@@ -1085,8 +1100,9 @@ function renderStartScreen() {
       </p>
 
       <div class="features-pill-row">
-        <span class="feature-pill">🎓 420 Total MCQs</span>
+        <span class="feature-pill">🎓 435 Total MCQs</span>
         <span class="feature-pill">⭐ 65 High-Yield Focus</span>
+        <span class="feature-pill" style="color:#22d3ee; border-color:rgba(6,182,212,0.35); background:rgba(6,182,212,0.12); cursor:pointer;" onclick="startQuiz('dates_treaties_sdg')">🏛️ Dates & Treaties Drill</span>
         <span class="feature-pill">⏱️ 40-Q Timed Mock</span>
         <span class="feature-pill notes-pill-top" onclick="renderNotesScreen()" style="cursor:pointer;">📖 FAT Notes (18 Modules)</span>
         <span class="feature-pill">🔀 Shuffled Options</span>
@@ -1096,10 +1112,10 @@ function renderStartScreen() {
         <!-- 1. FAT All Questions Combined (Old + New) -->
         <div class="mode-card fat-featured" onclick="startQuiz('fat_all')">
           <div>
-            <h3>🎓 EVS FAT Master Bank (All 420 Questions)</h3>
+            <h3>🎓 EVS FAT Master Bank (All 435 Questions)</h3>
             <p>Includes all old and new questions combined: Climate Change, Carbon Footprint, Solar & Wind, Hydro, Geothermal, AI & IoT, Ecosystems, Biodiversity, and Environmental Laws.</p>
           </div>
-          <span class="mode-badge-count">420 Questions</span>
+          <span class="mode-badge-count">435 Questions</span>
         </div>
 
         <!-- 2. Timed Mock Test (40 Questions) -->
@@ -1120,7 +1136,16 @@ function renderStartScreen() {
           <span class="mode-badge-count">⭐ 65 Important MCQs</span>
         </div>
 
-        <!-- 4. Single Unified FAT Notes Section -->
+        <!-- 4. Dates, Treaties, WHO & SDGs Drill -->
+        <div class="mode-card treaties-featured" onclick="startQuiz('dates_treaties_sdg')">
+          <div>
+            <h3>🏛️ Dates, Treaties, WHO & SDGs Bank (91 Questions)</h3>
+            <p>Targeted exam drill testing ONLY historical dates & enactment years of environmental acts, international climate treaties (Paris, Kyoto, Montreal, Kigali, Basel, Stockholm, Minamata, Ramsar, CITES), WHO health standards, and UN Sustainable Development Goals.</p>
+          </div>
+          <span class="mode-badge-count">🏛️ 91 Target MCQs</span>
+        </div>
+
+        <!-- 5. Single Unified FAT Notes Section -->
         <div class="mode-card notes-card" onclick="renderNotesScreen()">
           <div>
             <h3>📖 EVS FAT Revision Notes (All 18 Modules & Cheat Sheets)</h3>
@@ -1144,17 +1169,20 @@ function renderStartScreen() {
       </div>
 
       <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
-        <button class="btn btn-fat" style="flex:1; min-width:220px; justify-content:center; font-size:1.02rem;" onclick="startQuiz('fat_all')">
-          🚀 Start EVS FAT All 420 Questions
+        <button class="btn btn-fat" style="flex:1; min-width:200px; justify-content:center; font-size:1.02rem;" onclick="startQuiz('fat_all')">
+          🚀 Start All 435 Questions
         </button>
-        <button class="btn" style="flex:1; min-width:220px; justify-content:center; font-size:1.02rem;" onclick="startQuiz('mock')">
+        <button class="btn" style="flex:1; min-width:200px; justify-content:center; font-size:1.02rem;" onclick="startQuiz('mock')">
           ⏱️ Launch 40-Q Mock Test
         </button>
-        <button class="btn btn-secondary" style="flex:1; min-width:220px; justify-content:center; font-size:1.02rem;" onclick="startQuiz('fat_focus')">
-          ⭐ Launch 65-Q FAT Focus Bank
+        <button class="btn btn-secondary" style="flex:1; min-width:200px; justify-content:center; font-size:1.02rem;" onclick="startQuiz('fat_focus')">
+          ⭐ Launch 65-Q Focus Bank
         </button>
-        <button class="btn btn-secondary" style="flex:1; min-width:220px; justify-content:center; font-size:1.02rem; background:rgba(139,92,246,0.2); border-color:#8b5cf6; color:#c4b5fd;" onclick="renderNotesScreen()">
-          📖 Read FAT Revision Notes
+        <button class="btn btn-secondary" style="flex:1; min-width:200px; justify-content:center; font-size:1.02rem; background:rgba(6,182,212,0.18); border-color:#06b6d4; color:#22d3ee;" onclick="startQuiz('dates_treaties_sdg')">
+          🏛️ Launch Dates & Treaties
+        </button>
+        <button class="btn btn-secondary" style="flex:1; min-width:200px; justify-content:center; font-size:1.02rem; background:rgba(139,92,246,0.2); border-color:#8b5cf6; color:#c4b5fd;" onclick="renderNotesScreen()">
+          📖 Read FAT Notes
         </button>
       </div>
     </div>
@@ -1180,8 +1208,12 @@ function startQuiz(mode) {
     // Only the curated 65 important questions
     const pool = masterQuestions.filter(q => q.isFatFocus);
     activeQuestions = prepareQuizQuestions(pool);
+  } else if (mode === "dates_treaties_sdg") {
+    // Dedicated quiz for Dates, Treaties, WHO, and SDGs (91 questions)
+    const pool = masterQuestions.filter(q => q.isDatesTreatiesSdg);
+    activeQuestions = prepareQuizQuestions(pool);
   } else {
-    // All old + new questions combined together (420 questions)
+    // All old + new questions combined together (435 questions)
     activeQuestions = prepareQuizQuestions(masterQuestions);
   }
   initQuizState();
@@ -1204,9 +1236,10 @@ function renderQuestion() {
   const progressPct = ((currentIndex) / activeQuestions.length) * 100;
   
   let modeLabel = "EVS FAT Quiz";
-  if (currentMode === "fat_all") modeLabel = "FAT All 420 MCQs";
+  if (currentMode === "fat_all") modeLabel = "FAT All 435 MCQs";
   else if (currentMode === "mock") modeLabel = "40-Q Timed Mock";
   else if (currentMode === "fat_focus") modeLabel = "FAT Focus (65 Qs)";
+  else if (currentMode === "dates_treaties_sdg") modeLabel = "Dates & Treaties (91 Qs)";
   else if (currentMode === "topic") modeLabel = currentTopic;
 
   const isFat = q.isFatExam;
@@ -1387,6 +1420,7 @@ function renderResults() {
         <button class="btn" onclick="startQuiz(currentMode)">🔄 Retake with Fresh Reshuffle</button>
         <button class="btn btn-fat" onclick="startQuiz('mock')">⏱️ Start Another 40-Q Mock Test</button>
         <button class="btn btn-secondary" onclick="startQuiz('fat_focus')">⭐ Practice FAT Focus Bank</button>
+        <button class="btn btn-secondary" style="border-color:#06b6d4; color:#22d3ee;" onclick="startQuiz('dates_treaties_sdg')">🏛️ Practice Dates, Treaties & SDGs</button>
         <button class="btn btn-secondary" style="border-color:#8b5cf6; color:#c4b5fd;" onclick="renderNotesScreen()">📖 Read FAT Revision Notes</button>
         <button class="btn btn-secondary" onclick="renderStartScreen()">🏠 Switch Topic/Mode</button>
       </div>

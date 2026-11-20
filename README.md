@@ -48,17 +48,19 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built for 
 
 ---
 
-## 📚 Exam Modes & Question Banks (420 MCQs Total)
+## 📚 Exam Modes & Question Banks (435 MCQs Total)
 
-1. 📚 **EVS FAT Master Bank (All 420 Questions)**:
-   - Includes all old and new questions combined into one mega FAT preparation bank across Climate Change, Carbon Footprint, Renewables (Solar, Wind, Hydro, Geothermal), AI & IoT, Ecosystems, Biodiversity, and Environmental Laws.
+1. 📚 **EVS FAT Master Bank (All 435 Questions)**:
+   - Includes all questions combined into one mega FAT preparation bank across Climate Change, Carbon Footprint, Renewables (Solar, Wind, Hydro, Geothermal), AI & IoT, Ecosystems, Biodiversity, and Environmental Laws.
 2. ⏱️ **Timed Mock Test (40 Random Questions)**:
-   - 40 randomly sampled questions from the full 420 question pool with live stopwatch tracking on top and average pace analytics.
+   - 40 randomly sampled questions from the full 435 question pool with live stopwatch tracking on top and average pace analytics.
 3. ⭐ **FAT Focus Bank (65 Important Questions)**:
    - Curated collection of **ONLY the most critical, high-frequency questions** across all FAT modules and core environmental laws — 0% filler, 100% exam-critical.
-4. 📖 **EVS FAT Revision Notes & Cheat Sheets**:
+4. 🏛️ **Dates, Treaties, WHO & SDGs Drill (91 Targeted Questions)**:
+   - Targeted rapid-fire exam drill testing ONLY historical dates & enactment years of environmental acts (Wildlife 1972, Water 1974, Air 1981, EPA 1986, Forest 1980, Biodiversity 2002), international treaties (Ramsar 1971, CITES 1973, Montreal 1987, Basel 1989, Rio 1992, Kyoto 1997, Stockholm 2001, Minamata 2013, Paris 2015, Kigali 2016), WHO health guidelines (PM2.5, arsenic, noise limits), and UN Sustainable Development Goals (all 17 SDGs, 169 targets).
+5. 📖 **EVS FAT Revision Notes & Cheat Sheets**:
    - Integrated revision viewer with live search and 18 syllabus modules for comprehensive FAT exam preparation.
-5. 🏷️ **Practice by Section**:
+6. 🏷️ **Practice by Section**:
    - Filter and focus on individual syllabus sections (Climate Change, Carbon Footprint, Solar Energy, Wind Energy, Hydro & Geothermal, AI & IoT, etc.).
 
 ---
