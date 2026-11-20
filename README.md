@@ -52,10 +52,10 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built for 
 
 1. 📚 **EVS FAT Master Bank (All 435 Questions)**:
    - Includes all questions combined into one mega FAT preparation bank across Climate Change, Carbon Footprint, Renewables (Solar, Wind, Hydro, Geothermal), AI & IoT, Ecosystems, Biodiversity, and Environmental Laws.
-2. ⏱️ **Timed Mock Test (40 Random Questions)**:
-   - 40 randomly sampled questions from the full 435 question pool with live stopwatch tracking on top and average pace analytics.
-3. ⭐ **FAT Focus Bank (65 Important Questions)**:
-   - Curated collection of **ONLY the most critical, high-frequency questions** across all FAT modules and core environmental laws — 0% filler, 100% exam-critical.
+2. ⏱️ **Timed Mock Test (40 Questions — 40% Dates, Treaties & SDGs)**:
+   - Official FAT Exam simulation: 40 randomly sampled questions with an increased **40% weighting (16 questions)** dedicated to Dates, Treaties, WHO guidelines & SDGs, combined with 24 core conceptual questions, live stopwatch tracking (`⏱️ MM:SS`), and pace analytics.
+3. ⭐ **FAT Focus Bank (109 Important Questions — 46% Dates/Treaties)**:
+   - Curated collection of the 109 most critical, high-frequency questions across all FAT modules, featuring an increased **46% focus (50 questions)** on core Environmental Laws, Treaties, WHO standards, and SDGs.
 4. 🏛️ **Dates, Treaties, WHO & SDGs Drill (91 Targeted Questions)**:
    - Targeted rapid-fire exam drill testing ONLY historical dates & enactment years of environmental acts (Wildlife 1972, Water 1974, Air 1981, EPA 1986, Forest 1980, Biodiversity 2002), international treaties (Ramsar 1971, CITES 1973, Montreal 1987, Basel 1989, Rio 1992, Kyoto 1997, Stockholm 2001, Minamata 2013, Paris 2015, Kigali 2016), WHO health guidelines (PM2.5, arsenic, noise limits), and UN Sustainable Development Goals (all 17 SDGs, 169 targets).
 5. 📖 **EVS FAT Revision Notes & Cheat Sheets**:
