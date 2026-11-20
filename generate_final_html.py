@@ -454,6 +454,261 @@ html_template = """<!DOCTYPE html>
       font-size: 0.92rem;
     }
 
+    /* ── Question Navigator & Palette ────────────────────── */
+    .palette-container {
+      background: #111a30;
+      border: 1px solid #283a63;
+      border-radius: 0.85rem;
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    .palette-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: #17233f;
+      border-bottom: 1px solid #233457;
+      cursor: pointer;
+      user-select: none;
+      flex-wrap: wrap;
+    }
+
+    .palette-header:hover {
+      background: #1c2b4d;
+    }
+
+    .palette-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+
+    .palette-title {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .palette-counts {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .count-pill {
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .count-pill.count-answered {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+    .count-pill.count-watched {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+    .count-pill.count-unanswered {
+      background: rgba(148, 163, 184, 0.15);
+      color: #94a3b8;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .palette-toggle-btn {
+      background: #253966;
+      border: 1px solid #3b5284;
+      color: #cbd5e1;
+      padding: 0.3rem 0.65rem;
+      border-radius: 0.45rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .palette-toggle-btn:hover {
+      background: #314a84;
+      color: #ffffff;
+      border-color: #38bdf8;
+    }
+
+    .palette-submit-btn {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      padding: 0.3rem 0.65rem;
+      border-radius: 0.45rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .palette-submit-btn:hover {
+      background: #10b981;
+      color: #ffffff;
+    }
+
+    .palette-body {
+      padding: 0.85rem 1rem;
+    }
+    .palette-body.collapsed {
+      display: none;
+    }
+
+    .palette-legend {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      font-size: 0.76rem;
+      color: #94a3b8;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .legend-box {
+      width: 14px;
+      height: 14px;
+      border-radius: 0.25rem;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .question-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+      gap: 0.45rem;
+      max-height: 190px;
+      overflow-y: auto;
+      padding: 0.25rem 0.15rem;
+    }
+
+    .question-grid::-webkit-scrollbar {
+      width: 6px;
+    }
+    .question-grid::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+
+    .q-box {
+      aspect-ratio: 1;
+      min-width: 34px;
+      min-height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      position: relative;
+      user-select: none;
+      padding: 0;
+    }
+    .q-box:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.15);
+    }
+
+    /* Colour coded states */
+    /* 1. Answered: Green */
+    .q-box.box-answered, .legend-box.box-answered {
+      background: #10b981 !important;
+      border: 1.5px solid #34d399 !important;
+      color: #ffffff !important;
+      box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);
+    }
+
+    /* 2. Watched / Visited: Amber / Orange */
+    .q-box.box-watched, .legend-box.box-watched {
+      background: #f59e0b !important;
+      border: 1.5px solid #fbbf24 !important;
+      color: #0f172a !important;
+      font-weight: 800 !important;
+      box-shadow: 0 2px 6px rgba(245, 158, 11, 0.25);
+    }
+
+    /* 3. Unanswered: Neutral Slate */
+    .q-box.box-unanswered, .legend-box.box-unanswered {
+      background: #1e293b;
+      border: 1.5px solid #334155;
+      color: #94a3b8;
+    }
+
+    /* 4. Current question outline / active ring */
+    .q-box.box-current, .legend-box.box-current {
+      box-shadow: 0 0 0 2.5px #38bdf8, 0 0 12px rgba(56, 189, 248, 0.6) !important;
+      transform: scale(1.08);
+      z-index: 2;
+    }
+    .legend-box.box-current {
+      border: 2px solid #38bdf8;
+      background: #0284c7;
+      box-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+    }
+
+    /* 5. Incorrect (Results Palette) */
+    .q-box.box-wrong, .legend-box.box-wrong {
+      background: #ef4444 !important;
+      border: 1.5px solid #f87171 !important;
+      color: #ffffff !important;
+      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.25);
+    }
+
+    /* Watch toggle button on question card */
+    .watch-tag-btn {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+      padding: 0.22rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      margin-left: auto;
+    }
+    .watch-tag-btn:hover {
+      background: rgba(245, 158, 11, 0.25);
+      border-color: #f59e0b;
+    }
+    .watch-tag-btn.active {
+      background: #f59e0b;
+      color: #0f172a;
+      border-color: #fbbf24;
+      font-weight: 700;
+    }
+
     /* ── Action Buttons ───────────────────────────────────── */
     .action-row {
       margin-top: 1.75rem;
@@ -1099,6 +1354,11 @@ html_template = """<!DOCTYPE html>
       .question-title { font-size: 1.1rem; }
       .option-btn { font-size: 0.93rem; padding: 0.9rem 1.1rem; }
       .results-score-big { font-size: 3rem; }
+      .palette-header { padding: 0.6rem 0.75rem; }
+      .palette-title { font-size: 0.85rem; }
+      .question-grid { grid-template-columns: repeat(auto-fill, minmax(32px, 1fr)); gap: 0.35rem; max-height: 150px; }
+      .q-box { min-width: 30px; min-height: 30px; font-size: 0.75rem; }
+      .palette-legend { gap: 0.5rem; font-size: 0.7rem; }
     }
   </style>
 </head>
@@ -1121,6 +1381,8 @@ let currentIndex = 0;
 let score = 0;
 let answered = false;
 let userAnswers = [];
+let questionStates = [];
+let paletteCollapsed = false;
 let currentMode = "fat_all";
 let currentTopic = "";
 
@@ -1370,17 +1632,139 @@ function initQuizState() {
   app.classList.remove("wide-mode");
   currentIndex = 0;
   score = 0;
-  userAnswers = [];
   answered = false;
+  userAnswers = new Array(activeQuestions.length).fill(null);
+  questionStates = activeQuestions.map(() => ({
+    visited: false,
+    watched: false,
+    answered: false,
+    selectedValue: null,
+    isCorrect: null
+  }));
+  if (questionStates[0]) {
+    questionStates[0].visited = true;
+  }
+  paletteCollapsed = false;
   startStopwatch();
   renderQuestion();
 }
 
+function updatePaletteHeader() {
+  const answeredCount = questionStates.filter(s => s.answered).length;
+  const watchedCount = questionStates.filter(s => !s.answered && (s.watched || s.visited)).length;
+  const unansweredCount = questionStates.filter(s => !s.answered && !s.watched && !s.visited).length;
+
+  const countPills = document.getElementById("paletteCounts");
+  if (countPills) {
+    countPills.innerHTML = `
+      <span class="count-pill count-answered">✔ ${answeredCount} Answered</span>
+      <span class="count-pill count-watched">👁️ ${watchedCount} Watched</span>
+      <span class="count-pill count-unanswered">⏳ ${unansweredCount} Unanswered</span>
+    `;
+  }
+
+  const liveScoreEl = document.getElementById("liveScoreDisplay");
+  if (liveScoreEl) {
+    liveScoreEl.textContent = activeQuestions.length === 40 ? `Marks: ${score}/40` : `Score: ${score}`;
+  }
+}
+
+function togglePalette() {
+  paletteCollapsed = !paletteCollapsed;
+  const body = document.getElementById("paletteBody");
+  const btn = document.getElementById("paletteToggleBtn");
+  if (body) {
+    body.classList.toggle("collapsed", paletteCollapsed);
+  }
+  if (btn) {
+    btn.textContent = paletteCollapsed ? "Show Palette ▼" : "Hide Palette ▲";
+  }
+}
+
+function jumpToQuestion(targetIndex) {
+  if (targetIndex < 0 || targetIndex >= activeQuestions.length) return;
+  if (targetIndex === currentIndex) return;
+
+  if (questionStates[currentIndex]) {
+    questionStates[currentIndex].visited = true;
+  }
+
+  currentIndex = targetIndex;
+  if (questionStates[currentIndex]) {
+    questionStates[currentIndex].visited = true;
+  }
+
+  renderQuestion();
+}
+
+function goToNextQuestion() {
+  if (questionStates[currentIndex]) {
+    questionStates[currentIndex].visited = true;
+  }
+
+  if (currentIndex < activeQuestions.length - 1) {
+    currentIndex++;
+    if (questionStates[currentIndex]) {
+      questionStates[currentIndex].visited = true;
+    }
+    renderQuestion();
+  } else {
+    // Reached last question
+    if (questionStates[currentIndex].answered) {
+      renderResults();
+    } else {
+      submitExamEarly();
+    }
+  }
+}
+
+function goToPrevQuestion() {
+  if (questionStates[currentIndex]) {
+    questionStates[currentIndex].visited = true;
+  }
+
+  if (currentIndex > 0) {
+    currentIndex--;
+    if (questionStates[currentIndex]) {
+      questionStates[currentIndex].visited = true;
+    }
+    renderQuestion();
+  }
+}
+
+function toggleWatchCurrentQuestion() {
+  if (!questionStates[currentIndex]) return;
+  questionStates[currentIndex].watched = !questionStates[currentIndex].watched;
+  renderQuestion();
+}
+
+function submitExamEarly() {
+  const unansweredCount = questionStates.filter(s => !s.answered).length;
+  if (unansweredCount > 0) {
+    const confirmSubmit = confirm("You have " + unansweredCount + " unanswered questions.\\n\\nAre you sure you want to finish and submit your exam now?");
+    if (!confirmSubmit) return;
+  }
+  renderResults();
+}
+
 // ── Screen: Question View ──────────────────────────────────────
 function renderQuestion() {
-  answered = false;
   const q = activeQuestions[currentIndex];
-  const progressPct = ((currentIndex) / activeQuestions.length) * 100;
+  if (!questionStates[currentIndex]) {
+    questionStates[currentIndex] = {
+      visited: true,
+      watched: false,
+      answered: false,
+      selectedValue: null,
+      isCorrect: null
+    };
+  }
+  questionStates[currentIndex].visited = true;
+
+  const state = questionStates[currentIndex];
+  answered = state.answered;
+
+  const progressPct = ((currentIndex + 1) / activeQuestions.length) * 100;
   
   let modeLabel = "EVS FAT Quiz";
   if (currentMode === "fat_all") modeLabel = "FAT All 435 MCQs";
@@ -1391,6 +1775,11 @@ function renderQuestion() {
   else if (currentMode === "topic") modeLabel = currentTopic;
 
   const isFat = q.isFatExam;
+
+  // Counts for palette
+  const answeredCount = questionStates.filter(s => s.answered).length;
+  const watchedCount = questionStates.filter(s => !s.answered && (s.watched || s.visited)).length;
+  const unansweredCount = questionStates.filter(s => !s.answered && !s.watched && !s.visited).length;
 
   app.innerHTML = `
     <div class="quiz-nav-bar">
@@ -1405,7 +1794,7 @@ function renderQuestion() {
           ⏱️ <span id="stopwatchDisplay">${formatStopwatch(elapsedSeconds)}</span>
         </span>
         <span>Q${currentIndex + 1}/${activeQuestions.length}</span>
-        <span class="live-score">${activeQuestions.length === 40 ? `Marks: ${score}/40` : `Score: ${score}`}</span>
+        <span class="live-score" id="liveScoreDisplay">${activeQuestions.length === 40 ? `Marks: ${score}/40` : `Score: ${score}`}</span>
       </div>
     </div>
 
@@ -1414,46 +1803,144 @@ function renderQuestion() {
     </div>
 
     <div class="quiz-body">
+      <!-- ── Question Navigator / Palette ── -->
+      <div class="palette-container">
+        <div class="palette-header" onclick="togglePalette()">
+          <div class="palette-title-group">
+            <span class="palette-title">🔢 Question Navigator</span>
+            <div class="palette-counts" id="paletteCounts">
+              <span class="count-pill count-answered">✔ ${answeredCount} Answered</span>
+              <span class="count-pill count-watched">👁️ ${watchedCount} Watched</span>
+              <span class="count-pill count-unanswered">⏳ ${unansweredCount} Unanswered</span>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem;" onclick="event.stopPropagation()">
+            <button class="palette-submit-btn" type="button" onclick="submitExamEarly()" title="Submit entire exam">
+              🏆 Submit Exam
+            </button>
+            <button class="palette-toggle-btn" id="paletteToggleBtn" type="button" onclick="togglePalette()">
+              ${paletteCollapsed ? "Show Palette ▼" : "Hide Palette ▲"}
+            </button>
+          </div>
+        </div>
+
+        <div class="palette-body ${paletteCollapsed ? 'collapsed' : ''}" id="paletteBody">
+          <div class="palette-legend">
+            <span class="legend-item"><span class="legend-box box-answered"></span> Answered (Green)</span>
+            <span class="legend-item"><span class="legend-box box-watched"></span> Watched / Visited (Amber)</span>
+            <span class="legend-item"><span class="legend-box box-unanswered"></span> Unanswered (Slate)</span>
+            <span class="legend-item"><span class="legend-box box-current"></span> Current (Cyan Ring)</span>
+          </div>
+          <div class="question-grid">
+            ${activeQuestions.map((_, i) => {
+              let statusClass = "box-unanswered";
+              if (questionStates[i].answered) {
+                statusClass = "box-answered";
+              } else if (questionStates[i].watched || questionStates[i].visited) {
+                statusClass = "box-watched";
+              }
+              const isCurrent = (i === currentIndex);
+              return `
+                <button class="q-box ${statusClass} ${isCurrent ? 'box-current' : ''}" 
+                        id="qbox-${i}"
+                        onclick="jumpToQuestion(${i})" 
+                        title="Go to Question ${i + 1}">
+                  ${i + 1}
+                </button>
+              `;
+            }).join("")}
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Question Content ── -->
       <div class="meta-row">
         <span class="source-tag ${isFat ? 'fat-tag' : ''}">${escapeHtml(q.category)}</span>
         <span class="random-tag">🔀 Shuffled Options</span>
+        <button class="watch-tag-btn ${state.watched ? 'active' : ''}" onclick="toggleWatchCurrentQuestion()" title="Toggle Watched status for review">
+          ${state.watched ? "👁️ Watched (Marked)" : "👁️ Watch Question"}
+        </button>
       </div>
+
       <h2 class="question-title">${escapeHtml(q.question)}</h2>
 
       <ul class="options-grid" id="optionsList">
-        ${q.options.map((opt, i) => `
-          <li>
-            <button class="option-btn" data-value="${escapeHtml(opt)}" data-key="${i + 1}">
-              <span class="option-badge">${letters[i]}</span>
-              <span class="option-text">${escapeHtml(opt)}</span>
-              <span class="key-hint" title="Press '${i + 1}' on keyboard">[${i + 1}]</span>
-            </button>
-          </li>
-        `).join("")}
+        ${q.options.map((opt, i) => {
+          let btnClass = "option-btn";
+          if (state.answered) {
+            const isSelected = (opt === state.selectedValue);
+            const isCorrectAnswer = (opt === q.correctAnswer);
+            if (isCorrectAnswer) {
+              btnClass += isSelected ? " selected-correct" : " highlight-correct";
+            } else if (isSelected && !state.isCorrect) {
+              btnClass += " selected-wrong";
+            } else {
+              btnClass += " faded";
+            }
+          }
+          return `
+            <li>
+              <button class="${btnClass}" data-value="${escapeHtml(opt)}" data-key="${i + 1}" ${state.answered ? "disabled" : ""}>
+                <span class="option-badge">${letters[i]}</span>
+                <span class="option-text">${escapeHtml(opt)}</span>
+                <span class="key-hint" title="Press '${i + 1}' on keyboard">[${i + 1}]</span>
+              </button>
+            </li>
+          `;
+        }).join("")}
       </ul>
 
       <div class="keyboard-helper-hint">
         <span>⌨️ Shortcuts: Press</span> <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> <span>to answer</span>
         <span class="divider">•</span>
         <span>Press</span> <kbd>Enter ↵</kbd> <span>for next question</span>
+        <span class="divider">•</span>
+        <span>Arrows</span> <kbd>←</kbd> <kbd>→</kbd> <span>to navigate</span>
       </div>
 
-      <div id="feedbackContainer"></div>
+      <div id="feedbackContainer">
+        ${state.answered ? `
+          <div class="feedback-box ${state.isCorrect ? 'is-correct' : 'is-wrong'}">
+            <div class="feedback-status">
+              ${state.isCorrect ? "✔ Correct!" : "✘ Incorrect"}
+            </div>
+            <div class="feedback-explanation">
+              ${escapeHtml(q.explanation)}
+            </div>
+          </div>
+        ` : ""}
+      </div>
 
-      <div class="action-row" id="actionRow" style="display:none;">
+      <div class="action-row" id="actionRow">
+        ${currentIndex > 0 ? `<button class="btn btn-secondary" onclick="goToPrevQuestion()">← Prev</button>` : ""}
         <button class="btn btn-secondary" onclick="renderStartScreen()">Quit to Menu</button>
-        <button class="btn" id="nextBtn" onclick="goToNextQuestion()">
-          ${currentIndex === activeQuestions.length - 1 ? "Finish & View Results 🏆 [Enter ↵]" : "Next Question → [Enter ↵]"}
-        </button>
+        ${state.answered ? `
+          <button class="btn" id="nextBtn" onclick="goToNextQuestion()">
+            ${currentIndex === activeQuestions.length - 1 ? "Finish & View Results 🏆 [Enter ↵]" : "Next Question → [Enter ↵]"}
+          </button>
+        ` : `
+          <button class="btn btn-secondary" onclick="toggleWatchCurrentQuestion()">
+            ${state.watched ? "👁️ Unmark Watched" : "👁️ Mark as Watched"}
+          </button>
+          <button class="btn" id="nextBtn" onclick="goToNextQuestion()">
+            ${currentIndex === activeQuestions.length - 1 ? "Finish & View Results 🏆" : "Skip to Next →"}
+          </button>
+        `}
+        <button class="btn btn-secondary" style="border-color:#10b981; color:#34d399;" onclick="submitExamEarly()">🏆 Submit Exam</button>
       </div>
     </div>
   `;
 
-  // Attach option click listeners
-  const optionButtons = document.querySelectorAll(".option-btn");
-  optionButtons.forEach(btn => {
-    btn.addEventListener("click", () => handleSelectOption(btn, q));
-  });
+  // Attach option click listeners if not yet answered
+  if (!state.answered) {
+    const optionButtons = document.querySelectorAll(".option-btn");
+    optionButtons.forEach(btn => {
+      btn.addEventListener("click", () => handleSelectOption(btn, q));
+    });
+  } else {
+    const nextBtn = document.getElementById("nextBtn");
+    if (nextBtn) nextBtn.focus();
+  }
 }
 
 function handleSelectOption(selectedBtn, q) {
@@ -1463,15 +1950,20 @@ function handleSelectOption(selectedBtn, q) {
   const selectedValue = selectedBtn.getAttribute("data-value");
   const isCorrect = (selectedValue === q.correctAnswer);
 
-  if (isCorrect) score++;
+  questionStates[currentIndex].answered = true;
+  questionStates[currentIndex].selectedValue = selectedValue;
+  questionStates[currentIndex].isCorrect = isCorrect;
+  questionStates[currentIndex].visited = true;
 
-  userAnswers.push({
+  userAnswers[currentIndex] = {
     question: q.question,
     selected: selectedValue,
     correct: q.correctAnswer,
     isCorrect: isCorrect,
     explanation: q.explanation
-  });
+  };
+
+  score = questionStates.filter(s => s.answered && s.isCorrect).length;
 
   const buttons = document.querySelectorAll(".option-btn");
   buttons.forEach(btn => {
@@ -1493,43 +1985,46 @@ function handleSelectOption(selectedBtn, q) {
 
   // Render Instant Feedback Box
   const feedbackBox = document.getElementById("feedbackContainer");
-  feedbackBox.innerHTML = `
-    <div class="feedback-box ${isCorrect ? 'is-correct' : 'is-wrong'}">
-      <div class="feedback-status">
-        ${isCorrect ? "✔ Correct!" : "✘ Incorrect"}
+  if (feedbackBox) {
+    feedbackBox.innerHTML = `
+      <div class="feedback-box ${isCorrect ? 'is-correct' : 'is-wrong'}">
+        <div class="feedback-status">
+          ${isCorrect ? "✔ Correct!" : "✘ Incorrect"}
+        </div>
+        <div class="feedback-explanation">
+          ${escapeHtml(q.explanation)}
+        </div>
       </div>
-      <div class="feedback-explanation">
-        ${escapeHtml(q.explanation)}
-      </div>
-    </div>
-  `;
-
-  // Show Next button and focus it
-  const actionRow = document.getElementById("actionRow");
-  actionRow.style.display = "flex";
-
-  const nextBtn = document.getElementById("nextBtn");
-  if (nextBtn) {
-    nextBtn.focus();
+    `;
   }
-}
 
-function goToNextQuestion() {
-  if (!answered) return;
+  // Update box in Question Palette in place (turns it instantly Green)
+  const qBox = document.getElementById(`qbox-${currentIndex}`);
+  if (qBox) {
+    qBox.className = "q-box box-answered box-current";
+  }
 
-  const nextBtn = document.getElementById("nextBtn");
-  if (nextBtn) nextBtn.disabled = true;
+  // Update live palette header counts & live score
+  updatePaletteHeader();
 
-  currentIndex++;
-  if (currentIndex < activeQuestions.length) {
-    renderQuestion();
-  } else {
-    renderResults();
+  // Update action row to Next button
+  const actionRow = document.getElementById("actionRow");
+  if (actionRow) {
+    actionRow.innerHTML = `
+      ${currentIndex > 0 ? `<button class="btn btn-secondary" onclick="goToPrevQuestion()">← Prev</button>` : ""}
+      <button class="btn btn-secondary" onclick="renderStartScreen()">Quit to Menu</button>
+      <button class="btn" id="nextBtn" onclick="goToNextQuestion()">
+        ${currentIndex === activeQuestions.length - 1 ? "Finish & View Results 🏆 [Enter ↵]" : "Next Question → [Enter ↵]"}
+      </button>
+      <button class="btn btn-secondary" style="border-color:#10b981; color:#34d399;" onclick="submitExamEarly()">🏆 Submit Exam</button>
+    `;
+    const nextBtn = document.getElementById("nextBtn");
+    if (nextBtn) nextBtn.focus();
   }
 }
 
 // ── Global Keyboard Shortcuts ──────────────────────────────────
-// Press 1, 2, 3, 4 to select options; Press Enter to proceed to next question
+// Press 1, 2, 3, 4 to select options; Enter to advance; Arrows to navigate
 window.addEventListener("keydown", (e) => {
   // Ignore keyboard shortcuts when typing in search or other text input elements
   const activeEl = document.activeElement;
@@ -1544,7 +2039,9 @@ window.addEventListener("keydown", (e) => {
   const optionButtons = document.querySelectorAll(".option-btn");
   if (!optionButtons || optionButtons.length === 0) return;
 
-  if (!answered) {
+  const currentState = questionStates[currentIndex] || {};
+
+  if (!currentState.answered) {
     let targetIndex = -1;
     if (e.key === "1" || e.code === "Digit1" || e.code === "Numpad1") targetIndex = 0;
     else if (e.key === "2" || e.code === "Digit2" || e.code === "Numpad2") targetIndex = 1;
@@ -1558,16 +2055,27 @@ window.addEventListener("keydown", (e) => {
         const q = activeQuestions[currentIndex];
         handleSelectOption(targetBtn, q);
       }
+      return;
     }
-  } else {
-    if (e.key === "Enter" || e.code === "Enter" || e.code === "NumpadEnter") {
-      // If user has focused another button (e.g. Quit to Menu or FAT Notes), let native button click handle it
-      if (activeEl && activeEl.tagName === "BUTTON" && activeEl.id !== "nextBtn") {
-        return;
-      }
-      e.preventDefault();
-      goToNextQuestion();
+  }
+
+  if (e.key === "Enter" || e.code === "Enter" || e.code === "NumpadEnter") {
+    if (activeEl && activeEl.tagName === "BUTTON" && activeEl.id !== "nextBtn") {
+      return;
     }
+    e.preventDefault();
+    goToNextQuestion();
+    return;
+  }
+
+  if (e.key === "ArrowRight") {
+    e.preventDefault();
+    goToNextQuestion();
+    return;
+  } else if (e.key === "ArrowLeft") {
+    e.preventDefault();
+    goToPrevQuestion();
+    return;
   }
 });
 
@@ -1576,9 +2084,11 @@ function renderResults() {
   stopStopwatch();
   app.classList.remove("wide-mode");
   const total = activeQuestions.length;
+  score = questionStates.filter(s => s.answered && s.isCorrect).length;
   const pct = Math.round((score / total) * 100);
   const timeStr = formatStopwatch(elapsedSeconds);
   const avgSecPerQ = total > 0 ? Math.round(elapsedSeconds / total) : 0;
+  const mistakeCount = total - score;
 
   let emoji = "🏆";
   let verdict = "Outstanding Mastery!";
@@ -1646,28 +2156,63 @@ function renderResults() {
         <button class="btn btn-secondary" onclick="renderStartScreen()">🏠 Switch Topic/Mode</button>
       </div>
 
+      <!-- ── Results Question Review Palette ── -->
+      <div class="results-palette-summary" style="margin-bottom: 2rem; background:#111a30; border:1px solid #283a63; border-radius:0.85rem; padding:1.2rem;">
+        <h3 style="font-size:1.05rem; font-weight:700; margin-bottom:0.75rem; color:#f1f5f9; display:flex; align-items:center; justify-content:center; gap:0.5rem;">
+          <span>📊 Question Review Palette (${total} Questions)</span>
+        </h3>
+        <p style="text-align:center; font-size:0.82rem; color:#94a3b8; margin-bottom:0.75rem;">
+          Click any question box below to jump directly to its explanation:
+        </p>
+        <div class="palette-legend" style="justify-content:center; margin-bottom:0.75rem;">
+          <span class="legend-item"><span class="legend-box box-answered"></span> Correct (${score})</span>
+          <span class="legend-item"><span class="legend-box box-wrong"></span> Incorrect / Skipped (${mistakeCount})</span>
+        </div>
+        <div class="question-grid" style="max-height:160px;">
+          ${activeQuestions.map((_, i) => {
+            const isCorr = (userAnswers[i] && userAnswers[i].isCorrect);
+            return `
+              <button class="q-box ${isCorr ? 'box-answered' : 'box-wrong'}" 
+                      onclick="document.getElementById('review-item-${i}')?.scrollIntoView({behavior:'smooth', block:'center'})" 
+                      title="Jump to Q${i + 1} (${isCorr ? 'Correct' : 'Incorrect'})">
+                ${i + 1}
+              </button>
+            `;
+          }).join("")}
+        </div>
+      </div>
+
       <div class="review-section">
         <h3>
           <span>Detailed Answer Review</span>
-          <span style="font-size:0.85rem; color:var(--text-muted); font-weight:normal;">${userAnswers.filter(a => !a.isCorrect).length} mistakes</span>
+          <span style="font-size:0.85rem; color:var(--text-muted); font-weight:normal;">${mistakeCount} mistakes / skipped</span>
         </h3>
         
         <ul class="review-list">
-          ${userAnswers.map((item, idx) => `
-            <li class="review-item ${item.isCorrect ? "is-correct" : "is-wrong"}">
-              <div class="review-q">
-                <span style="color:${item.isCorrect ? "#34d399" : "#f87171"}">${item.isCorrect ? "✔" : "✘"}</span>
-                Q${idx + 1}: ${escapeHtml(item.question)}
-              </div>
-              <div class="review-ans">
-                <strong>Your answer:</strong> ${escapeHtml(item.selected)} 
-                ${!item.isCorrect ? `&bull; <strong style="color:#34d399">Correct:</strong> ${escapeHtml(item.correct)}` : ""}
-              </div>
-              <div class="review-explanation">
-                💡 <strong>Why:</strong> ${escapeHtml(item.explanation)}
-              </div>
-            </li>
-          `).join("")}
+          ${activeQuestions.map((q, idx) => {
+            const item = userAnswers[idx] || {
+              question: q.question,
+              selected: "Not Answered / Skipped",
+              correct: q.correctAnswer,
+              isCorrect: false,
+              explanation: q.explanation
+            };
+            return `
+              <li class="review-item ${item.isCorrect ? "is-correct" : "is-wrong"}" id="review-item-${idx}">
+                <div class="review-q">
+                  <span style="color:${item.isCorrect ? "#34d399" : "#f87171"}">${item.isCorrect ? "✔" : "✘"}</span>
+                  Q${idx + 1}: ${escapeHtml(item.question)}
+                </div>
+                <div class="review-ans">
+                  <strong>Your answer:</strong> ${escapeHtml(item.selected)} 
+                  ${!item.isCorrect ? `&bull; <strong style="color:#34d399">Correct:</strong> ${escapeHtml(item.correct)}` : ""}
+                </div>
+                <div class="review-explanation">
+                  💡 <strong>Why:</strong> ${escapeHtml(item.explanation)}
+                </div>
+              </li>
+            `;
+          }).join("")}
         </ul>
       </div>
     </div>

@@ -16,6 +16,16 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built spec
 
 ## 🎯 Features
 
+- **Interactive Question Navigator & Colour-Coded Palette**:
+  - Full CBT-style Question Grid displaying all question numbers (e.g. 1–40 in Mock Tests) for complete visual tracking and instant navigation.
+  - **Colour-Coded Status Boxes**:
+    - 🟩 **Answered (Green)**: Questions that have been answered.
+    - 🟧 **Watched / Visited (Amber / Orange)**: Questions that have been visited/viewed or explicitly marked for review with `[👁️ Watch Question]`.
+    - ⬜ **Unanswered (Neutral Slate)**: Questions that have not been visited or answered yet.
+    - 🟦 **Current Question (Glowing Cyan Ring)**: The active question currently in view.
+  - Live summary counter pills: `✔ X Answered`, `👁️ Y Watched`, and `⏳ Z Unanswered`.
+  - Jump directly to any question by clicking its number box, or navigate using `← Prev`, `Skip to Next →`, or keyboard arrows `<kbd>←</kbd>` / `<kbd>→</kbd>`.
+  - **Results Screen Review Palette**: Full grid showing Correct (Green) vs Incorrect/Skipped (Red); clicking any box smoothly scrolls right to that question's syllabus explanation.
 - **Instant Right/Wrong Feedback**:
   - Highlights the chosen option in green (correct) or red (incorrect) the instant you click.
   - Automatically highlights the correct answer in green if you picked wrong.
