@@ -52,15 +52,17 @@ An interactive, responsive multiple-choice quiz (MCQ) web application built for 
 
 1. 📚 **EVS FAT Master Bank (All 435 Questions)**:
    - Includes all questions combined into one mega FAT preparation bank across Climate Change, Carbon Footprint, Renewables (Solar, Wind, Hydro, Geothermal), AI & IoT, Ecosystems, Biodiversity, and Environmental Laws.
-2. ⏱️ **Timed Mock Test (40 Questions — 40% Dates, Treaties & SDGs)**:
-   - Official FAT Exam simulation: 40 randomly sampled questions with an increased **40% weighting (16 questions)** dedicated to Dates, Treaties, WHO guidelines & SDGs, combined with 24 core conceptual questions, live stopwatch tracking (`⏱️ MM:SS`), and pace analytics.
-3. ⭐ **FAT Focus Bank (109 Important Questions — 46% Dates/Treaties)**:
+2. ⏱️ **Normal FAT Mock Test (40 Questions — Balanced Syllabus)**:
+   - Standard official FAT Exam simulation: 40 questions sampled completely at random across the entire 435-question syllabus with live stopwatch tracking (`⏱️ MM:SS`) and pace analytics.
+3. 🏛️⏱️ **Dates & Treaties Weighted Mock Test (40 Questions — 40% Dates/Treaties)**:
+   - Targeted high-yield FAT Exam simulation: 40 questions with an increased **40% weighting (16 questions)** dedicated to Dates, Treaties, WHO guidelines & SDGs, combined with 24 core conceptual questions.
+4. ⭐ **FAT Focus Bank (109 Important Questions — 46% Dates/Treaties)**:
    - Curated collection of the 109 most critical, high-frequency questions across all FAT modules, featuring an increased **46% focus (50 questions)** on core Environmental Laws, Treaties, WHO standards, and SDGs.
-4. 🏛️ **Dates, Treaties, WHO & SDGs Drill (91 Targeted Questions)**:
+5. 🏛️ **Dates, Treaties, WHO & SDGs Drill (91 Targeted Questions)**:
    - Targeted rapid-fire exam drill testing ONLY historical dates & enactment years of environmental acts (Wildlife 1972, Water 1974, Air 1981, EPA 1986, Forest 1980, Biodiversity 2002), international treaties (Ramsar 1971, CITES 1973, Montreal 1987, Basel 1989, Rio 1992, Kyoto 1997, Stockholm 2001, Minamata 2013, Paris 2015, Kigali 2016), WHO health guidelines (PM2.5, arsenic, noise limits), and UN Sustainable Development Goals (all 17 SDGs, 169 targets).
-5. 📖 **EVS FAT Revision Notes & Cheat Sheets**:
-   - Integrated revision viewer with live search and 18 syllabus modules for comprehensive FAT exam preparation.
-6. 🏷️ **Practice by Section**:
+6. 📖 **EVS FAT Revision Notes & Cheat Sheets (18 Modules)**:
+   - Integrated revision viewer with live search and 18 syllabus modules for comprehensive FAT exam preparation (including full W5S1, W5S2, W5S3, W6S1, W6L2, AI & IoT lecture notes).
+7. 🏷️ **Practice by Section**:
    - Filter and focus on individual syllabus sections (Climate Change, Carbon Footprint, Solar Energy, Wind Energy, Hydro & Geothermal, AI & IoT, etc.).
 
 ---
